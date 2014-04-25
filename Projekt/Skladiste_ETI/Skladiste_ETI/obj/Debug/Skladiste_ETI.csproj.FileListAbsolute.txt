@@ -1,0 +1,10 @@
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe.config
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.pdb
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.exe
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.pdb
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Login.resources
+c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Main.resources

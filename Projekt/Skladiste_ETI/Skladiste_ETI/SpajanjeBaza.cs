@@ -77,7 +77,7 @@ private set
            
         }
 
-        class student { }
+        
     }
 }
 

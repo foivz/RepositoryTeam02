@@ -34,7 +34,7 @@ namespace Skladiste_ETI
                 UserInformation.CurrentLoggedInUser = (string)re["prezime"];
                 new Main().Show();
                 this.Hide();
-                MessageBox.Show("Welcome " + UserInformation.CurrentLoggedInUser);
+              
             }
             else
                 MessageBox.Show("inavlid username and password");

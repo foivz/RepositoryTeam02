@@ -16,8 +16,86 @@ namespace Skladiste_ETI
         {
             
             InitializeComponent();
-            this.label1.Text = UserInformation.CurrentLoggedInUser;
+         
+            this.label1.Text = "Ulogirani korisnik : " + UserInformation.CurrentLoggedInUser;
+            
+
         }
+
+        private void btnArtikl_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnArtikl, "Upravljanje artiklima");
+        }
+
+        private void btnOtpremanje_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip2 = new System.Windows.Forms.ToolTip();
+            ToolTip2.SetToolTip(this.btnOtpremanje, "Otpremanje robe");
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip3 = new System.Windows.Forms.ToolTip();
+            ToolTip3.SetToolTip(this.btnZaprimanje, "Zaprimanje robe");
+        }
+
+        private void btnArtikl_Click(object sender, EventArgs e)
+        {
+            new Artikli().Show();
+            this.Close();
+        }
+
+        private void unesiArtiklToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Artikli().Show();
+            this.Close();
+        }
+
+        private void btnOtpremanje_Click(object sender, EventArgs e)
+        {
+            
+            btnOtpremanje.Visible = false;
+            btnIzdatnice.Visible = true;
+            btnOtpremnica.Visible = true;
+        }
+
+        private void btnZaprimanje_Click(object sender, EventArgs e)
+        {
+            btnZaprimanje.Visible = false;
+            btnPredatnica.Visible = true;
+            btnPrimka.Visible = true;
+        }
+
+        private void izraditiOtpremniceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Otpremnice().Show();
+            this.Close();
+        }
+
+        private void izraditiIzdatniceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Izdatnice().Show();
+            this.Close();
+        }
+
+        private void izrdaPrimkeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Primke().Show();
+            this.Close();
+        }
+
+        private void izradaPredatniceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Predatnice().Show();
+            this.Close();
+        }
+
+     
+
+      
+
+     
 
       
     }

@@ -76,6 +76,8 @@ private set
             return command.ExecuteNonQuery(); 
            
         }
+
+        class student { }
     }
 }
 

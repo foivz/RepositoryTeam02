@@ -20,10 +20,9 @@ namespace Skladiste_ETI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-
-            string sqlUpit = ("SELECT prezime,sifra FROM Ime WHERE prezime='" + txtUser.Text + "' and sifra='" + txtPass.Text + "'");
+            string sqlUpit = ("SELECT ime,prezime,password FROM Korisnici WHERE prezime='" + txtUser.Text + "' and password='" + txtPass.Text + "'");
 
             SQLiteDataReader re = SpajanjeBaza.Instance.DohvatiDataReader(sqlUpit);
 
@@ -34,12 +33,14 @@ namespace Skladiste_ETI
                 UserInformation.CurrentLoggedInUser = (string)re["prezime"];
                 new Main().Show();
                 this.Hide();
-              
+
             }
             else
-                MessageBox.Show("inavlid username and password");
+                MessageBox.Show("Inavlid username or password");
             re.Close();
         }
+
+       
 
        
     }

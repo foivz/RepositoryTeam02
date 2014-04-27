@@ -43,8 +43,6 @@
             this.izradaPredatniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.btnIzdatnice = new System.Windows.Forms.Button();
             this.btnOtpremnica = new System.Windows.Forms.Button();
             this.btnPrimka = new System.Windows.Forms.Button();
@@ -182,6 +180,8 @@
             this.btnIzdatnice.TabIndex = 6;
             this.btnIzdatnice.UseVisualStyleBackColor = true;
             this.btnIzdatnice.Visible = false;
+            this.btnIzdatnice.Click += new System.EventHandler(this.btnIzdatnice_Click);
+            this.btnIzdatnice.MouseHover += new System.EventHandler(this.btnIzdatnice_MouseHover);
             // 
             // btnOtpremnica
             // 
@@ -194,6 +194,8 @@
             this.btnOtpremnica.TabIndex = 7;
             this.btnOtpremnica.UseVisualStyleBackColor = true;
             this.btnOtpremnica.Visible = false;
+            this.btnOtpremnica.Click += new System.EventHandler(this.btnOtpremnica_Click);
+            this.btnOtpremnica.MouseHover += new System.EventHandler(this.btnOtpremnica_MouseHover);
             // 
             // btnPrimka
             // 
@@ -206,6 +208,8 @@
             this.btnPrimka.TabIndex = 8;
             this.btnPrimka.UseVisualStyleBackColor = true;
             this.btnPrimka.Visible = false;
+            this.btnPrimka.Click += new System.EventHandler(this.btnPrimka_Click);
+            this.btnPrimka.MouseHover += new System.EventHandler(this.btnPrimka_MouseHover);
             // 
             // btnPredatnica
             // 
@@ -218,6 +222,8 @@
             this.btnPredatnica.TabIndex = 9;
             this.btnPredatnica.UseVisualStyleBackColor = true;
             this.btnPredatnica.Visible = false;
+            this.btnPredatnica.Click += new System.EventHandler(this.btnPredatnica_Click);
+            this.btnPredatnica.MouseEnter += new System.EventHandler(this.btnPredatnica_MouseEnter);
             // 
             // Main
             // 
@@ -261,8 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem izradaPredatniceToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.ToolTip toolTip3;
         private System.Windows.Forms.Button btnIzdatnice;
         private System.Windows.Forms.Button btnOtpremnica;
         private System.Windows.Forms.Button btnPrimka;

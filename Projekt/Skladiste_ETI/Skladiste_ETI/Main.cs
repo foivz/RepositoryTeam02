@@ -30,14 +30,14 @@ namespace Skladiste_ETI
 
         private void btnOtpremanje_MouseHover(object sender, EventArgs e)
         {
-            System.Windows.Forms.ToolTip ToolTip2 = new System.Windows.Forms.ToolTip();
-            ToolTip2.SetToolTip(this.btnOtpremanje, "Otpremanje robe");
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnOtpremanje, "Otpremanje robe");
         }
 
         private void button3_MouseHover(object sender, EventArgs e)
         {
-            System.Windows.Forms.ToolTip ToolTip3 = new System.Windows.Forms.ToolTip();
-            ToolTip3.SetToolTip(this.btnZaprimanje, "Zaprimanje robe");
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnZaprimanje, "Zaprimanje robe");
         }
 
         private void btnArtikl_Click(object sender, EventArgs e)
@@ -89,6 +89,54 @@ namespace Skladiste_ETI
         {
             new Predatnice().Show();
             this.Close();
+        }
+
+        private void btnOtpremnica_Click(object sender, EventArgs e)
+        {
+            new Otpremnice().Show();
+            this.Close();
+        }
+
+        private void btnIzdatnice_Click(object sender, EventArgs e)
+        {
+            new Izdatnice().Show();
+            this.Close();
+        }
+
+        private void btnPrimka_Click(object sender, EventArgs e)
+        {
+            new Primke().Show();
+            this.Close();
+        }
+
+        private void btnPredatnica_Click(object sender, EventArgs e)
+        {
+            new Predatnice().Show();
+            this.Close();
+        }
+
+        private void btnOtpremnica_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnOtpremnica, "Izraditi otpremnice");
+        }
+
+        private void btnIzdatnice_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnIzdatnice, "Izraditi izdatnice");
+        }
+
+        private void btnPrimka_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPrimka, "Izraditi primke");
+        }
+
+        private void btnPredatnica_MouseEnter(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPredatnica, "Izraditi izdatnice");
         }
 
      

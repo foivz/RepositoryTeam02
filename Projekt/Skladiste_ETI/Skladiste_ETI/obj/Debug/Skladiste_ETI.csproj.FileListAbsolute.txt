@@ -10,3 +10,6 @@ c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_
 c:\users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Main.resources
 C:\Users\embalint\Documents\Visual Studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Artikli.resources
 C:\Users\embalint\documents\visual studio 2012\Projects\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Otpremnice.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe.config
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.exe
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.pdb

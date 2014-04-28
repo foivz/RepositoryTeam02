@@ -17,7 +17,7 @@ namespace Skladiste_ETI
             
             InitializeComponent();
          
-            this.label1.Text = "Ulogirani korisnik : " + UserInformation.CurrentLoggedInUser;
+            this.lblUlogiran.Text = "Ulogirani korisnik : " + UserInformation.CurrentLoggedInUser;
             
 
         }
@@ -67,29 +67,7 @@ namespace Skladiste_ETI
             btnPrimka.Visible = true;
         }
 
-        private void izraditiOtpremniceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Otpremnice().Show();
-            this.Close();
-        }
-
-        private void izraditiIzdatniceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Izdatnice().Show();
-            this.Close();
-        }
-
-        private void izrdaPrimkeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Primke().Show();
-            this.Close();
-        }
-
-        private void izradaPredatniceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Predatnice().Show();
-            this.Close();
-        }
+      
 
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
@@ -138,6 +116,8 @@ namespace Skladiste_ETI
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(this.btnPredatnica, "Izraditi izdatnice");
         }
+
+       
 
      
 

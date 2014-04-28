@@ -18,6 +18,7 @@ namespace Skladiste_ETI
         public Login()
         {
             InitializeComponent();
+            txtPass.PasswordChar = '*';
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace Skladiste_ETI
             if (re.Read())
             {
                 //spremanje imena u klasu userinformation koja je public da mogu druge forme citat
-                UserInformation.CurrentLoggedInUser = (string)re["prezime"];
+                UserInformation.CurrentLoggedInUser = (string)re["ime"] +" " + (string)re["prezime"];
                 new Main().Show();
                 this.Hide();
 
@@ -39,6 +40,13 @@ namespace Skladiste_ETI
                 MessageBox.Show("Inavlid username or password");
             re.Close();
         }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+    
 
        
 

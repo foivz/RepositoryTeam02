@@ -32,7 +32,7 @@ namespace Skladiste_ETI
             {
                 //spremanje imena u klasu userinformation koja je public da mogu druge forme citat
                 UserInformation.CurrentLoggedInUser = (string)re["ime"] +" " + (string)re["prezime"];
-                new GlavnaForma().Show();
+                new Main().Show();
                 this.Hide();
 
             }

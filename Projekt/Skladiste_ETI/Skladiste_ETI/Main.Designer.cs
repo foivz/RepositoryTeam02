@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class GlavnaForma
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForma));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnArtikl = new System.Windows.Forms.Button();
             this.btnOtpremanje = new System.Windows.Forms.Button();
             this.btnZaprimanje = new System.Windows.Forms.Button();

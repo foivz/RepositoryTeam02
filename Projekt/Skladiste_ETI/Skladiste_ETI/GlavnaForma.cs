@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Skladiste_ETI
 {
-    public partial class Main : Form
+    public partial class GlavnaForma : Form
     {
-        public Main()
+        public GlavnaForma()
         {
             
             InitializeComponent();

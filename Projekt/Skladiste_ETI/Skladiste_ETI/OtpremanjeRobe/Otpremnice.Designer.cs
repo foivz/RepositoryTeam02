@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class Otpremnice
+    partial class frmOtpremnice
     {
         /// <summary>
         /// Required designer variable.
@@ -40,13 +40,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Otpremnice
+            // frmOtpremnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Otpremnice";
+            this.Name = "frmOtpremnice";
             this.Text = "Otpremnice";
             this.Load += new System.EventHandler(this.Otpremnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

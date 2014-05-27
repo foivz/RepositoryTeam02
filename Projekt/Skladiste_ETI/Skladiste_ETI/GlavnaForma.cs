@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Skladiste_ETI
 {
-    public partial class GlavnaForma : Form
+    public partial class frmMain : Form
     {
-        public GlavnaForma()
+        public frmMain()
         {
             
             InitializeComponent();
@@ -42,13 +42,13 @@ namespace Skladiste_ETI
 
         private void btnArtikl_Click(object sender, EventArgs e)
         {
-            new Artikli().Show();
+            new frmArtikli().Show();
             this.Close();
         }
 
         private void unesiArtiklToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Artikli().Show();
+            new frmArtikli().Show();
             this.Close();
         }
 
@@ -71,25 +71,25 @@ namespace Skladiste_ETI
 
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
-            new Otpremnice().Show();
+            new frmOtpremnice().Show();
             this.Close();
         }
 
         private void btnIzdatnice_Click(object sender, EventArgs e)
         {
-            new Izdatnice().Show();
+            new frmIzdatnice().Show();
             this.Close();
         }
 
         private void btnPrimka_Click(object sender, EventArgs e)
         {
-            new Primke().Show();
+            new frmPrimke().Show();
             this.Close();
         }
 
         private void btnPredatnica_Click(object sender, EventArgs e)
         {
-            new Predatnice().Show();
+            new frmPredatnice().Show();
             this.Close();
         }
 

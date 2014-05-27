@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Skladiste_ETI
 {
-    public partial class Primke : Form
+    public partial class frmPrimke : Form
     {
-        public Primke()
+        public frmPrimke()
         {
             InitializeComponent();
         }

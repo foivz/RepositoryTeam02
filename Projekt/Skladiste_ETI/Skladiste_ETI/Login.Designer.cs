@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class frmLogin
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -95,7 +95,7 @@
             this.btnIzlaz.UseVisualStyleBackColor = true;
             this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
-            // frmLogin
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,8 @@
             this.Controls.Add(this.txtUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmLogin";
-            this.Text = "Prijava";
+            this.Name = "Login";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

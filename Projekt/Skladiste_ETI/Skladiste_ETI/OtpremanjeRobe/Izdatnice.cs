@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Skladiste_ETI
 {
-    public partial class frmIzdatnice : Form
+    public partial class Izdatnice : Form
     {
-        public frmIzdatnice()
+        public Izdatnice()
         {
             InitializeComponent();
         }

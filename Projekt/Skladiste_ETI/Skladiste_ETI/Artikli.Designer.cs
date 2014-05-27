@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class frmArtikli
+    partial class Artikli
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // frmArtikli
+            // Artikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 417);
-            this.Name = "frmArtikli";
+            this.Name = "Artikli";
             this.Text = "Artikli";
             this.ResumeLayout(false);
 

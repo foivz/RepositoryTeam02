@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class frmPrimke
+    partial class Primke
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmPrimke
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "frmPrimke";
             this.Text = "Primke";
-            this.ResumeLayout(false);
-
         }
 
         #endregion

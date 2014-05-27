@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using Finisar.SQLite;
 namespace Skladiste_ETI
 {
-    public partial class frmOtpremnice : Form
+    public partial class Otpremnice : Form
     {
-        public frmOtpremnice()
+        public Otpremnice()
         {
             InitializeComponent();
         }

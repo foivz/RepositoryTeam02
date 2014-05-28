@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.btnArtikl = new System.Windows.Forms.Button();
+            this.btnArtikli = new System.Windows.Forms.Button();
             this.btnOtpremanje = new System.Windows.Forms.Button();
             this.btnZaprimanje = new System.Windows.Forms.Button();
             this.lblUlogiran = new System.Windows.Forms.Label();
@@ -41,20 +41,20 @@
             this.btnPredatnica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnArtikl
+            // btnArtikli
             // 
-            this.btnArtikl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnArtikl.FlatAppearance.BorderSize = 0;
-            this.btnArtikl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArtikl.Image = ((System.Drawing.Image)(resources.GetObject("btnArtikl.Image")));
-            this.btnArtikl.Location = new System.Drawing.Point(23, 126);
-            this.btnArtikl.Name = "btnArtikl";
-            this.btnArtikl.Size = new System.Drawing.Size(180, 156);
-            this.btnArtikl.TabIndex = 1;
-            this.btnArtikl.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnArtikl.UseVisualStyleBackColor = false;
-            this.btnArtikl.Click += new System.EventHandler(this.btnArtikl_Click);
-            this.btnArtikl.MouseHover += new System.EventHandler(this.btnArtikl_MouseHover);
+            this.btnArtikli.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnArtikli.FlatAppearance.BorderSize = 0;
+            this.btnArtikli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArtikli.Image = ((System.Drawing.Image)(resources.GetObject("btnArtikli.Image")));
+            this.btnArtikli.Location = new System.Drawing.Point(23, 126);
+            this.btnArtikli.Name = "btnArtikli";
+            this.btnArtikli.Size = new System.Drawing.Size(180, 156);
+            this.btnArtikli.TabIndex = 1;
+            this.btnArtikli.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnArtikli.UseVisualStyleBackColor = false;
+            this.btnArtikli.Click += new System.EventHandler(this.btnArtikl_Click);
+            this.btnArtikli.MouseHover += new System.EventHandler(this.btnArtikl_MouseHover);
             // 
             // btnOtpremanje
             // 
@@ -164,7 +164,7 @@
             this.Controls.Add(this.lblUlogiran);
             this.Controls.Add(this.btnZaprimanje);
             this.Controls.Add(this.btnOtpremanje);
-            this.Controls.Add(this.btnArtikl);
+            this.Controls.Add(this.btnArtikli);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -176,7 +176,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnArtikl;
+        private System.Windows.Forms.Button btnArtikli;
         private System.Windows.Forms.Button btnOtpremanje;
         private System.Windows.Forms.Button btnZaprimanje;
         private System.Windows.Forms.Label lblUlogiran;

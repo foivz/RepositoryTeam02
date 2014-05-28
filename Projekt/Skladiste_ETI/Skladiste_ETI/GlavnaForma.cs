@@ -25,7 +25,7 @@ namespace Skladiste_ETI
         private void btnArtikl_MouseHover(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnArtikli, "Upravljanje artiklima");
+            ToolTip1.SetToolTip(this.btnArtikl, "Upravljanje artiklima");
         }
 
         private void btnOtpremanje_MouseHover(object sender, EventArgs e)

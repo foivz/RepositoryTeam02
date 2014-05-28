@@ -31,13 +31,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="SQLite.NET, Version=0.21.1869.3794, Culture=neutral, PublicKeyToken=c273bd375e695f9c">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\SQLite.NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,10 +59,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Artikli.cs">
+    <Compile Include="artikli.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dokument.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="korisnik.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mjesto.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="poslovni_partner.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrijavaSingleton\Prijava.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Artikli.Designer.cs">
+    <Compile Include="PrijavaSingleton\Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladisteModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladisteModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SkladisteModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SkladisteModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladisteModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="stavke.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_dokumenta.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_korisnika.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpravljanjeArtiklima\Artikli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpravljanjeArtiklima\Artikli.Designer.cs">
       <DependentUpon>Artikli.cs</DependentUpon>
     </Compile>
     <Compile Include="OtpremanjeRobe\Izdatnice.cs">
@@ -59,12 +115,6 @@
     </Compile>
     <Compile Include="OtpremanjeRobe\Izdatnice.Designer.cs">
       <DependentUpon>Izdatnice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prijava.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Prijava.Designer.cs">
-      <DependentUpon>Prijava.cs</DependentUpon>
     </Compile>
     <Compile Include="GlavnaForma.cs">
       <SubType>Form</SubType>
@@ -93,7 +143,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingletonSpajanje\SpajanjeBaza.cs" />
-    <EmbeddedResource Include="Artikli.resx">
+    <EmbeddedResource Include="PrijavaSingleton\Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpravljanjeArtiklima\Artikli.resx">
       <DependentUpon>Artikli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtpremanjeRobe\Izdatnice.resx">
@@ -101,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ZaprimanjeRobe\Predatnice.resx">
       <DependentUpon>Predatnice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prijava.resx">
-      <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
@@ -124,6 +174,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,12 +184,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SkladisteModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SkladisteModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SkladisteModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SkladisteModel.edmx</DependentUpon>
+      <LastGenOutput>SkladisteModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SkladisteModel.edmx.diagram">
+      <DependentUpon>SkladisteModel.edmx</DependentUpon>
+    </None>
+    <None Include="SkladisteModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SkladisteModel.edmx</DependentUpon>
+      <LastGenOutput>SkladisteModel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administracija\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

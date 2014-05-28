@@ -15,13 +15,14 @@ C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.pdb
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.pdb
-C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmArtikli.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmIzdatnice.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPredatnice.resources
-C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLogin.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmMain.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmOtpremnice.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPrimke.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\EntityFramework.dll
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\EntityFramework.xml
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLoginEF.resources

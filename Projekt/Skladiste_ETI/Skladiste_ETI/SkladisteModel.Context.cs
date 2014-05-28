@@ -13,10 +13,10 @@ namespace Skladiste_ETI
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class T02_DBEntities1 : DbContext
+    public partial class T02_DBEntities : DbContext
     {
-        public T02_DBEntities1()
-            : base("name=T02_DBEntities1")
+        public T02_DBEntities()
+            : base("name=T02_DBEntities")
         {
         }
     

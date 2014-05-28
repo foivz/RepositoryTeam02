@@ -70,8 +70,8 @@
     <Property Name="ime" Type="varchar" MaxLength="45" />
     <Property Name="prezime" Type="varchar" MaxLength="45" />
     <Property Name="br_telefona" Type="varchar" MaxLength="10" />
-    <Property Name="username" Type="varchar" MaxLength="30" />
-    <Property Name="password" Type="varchar" MaxLength="30" />
+    <Property Name="kor_ime" Type="varchar" MaxLength="30" />
+    <Property Name="lozinka" Type="varchar" MaxLength="30" />
     <Property Name="status" Type="varchar" MaxLength="20" />
     <Property Name="tip_korisnika_id_tipa" Type="int" Nullable="false" />
   </EntityType>

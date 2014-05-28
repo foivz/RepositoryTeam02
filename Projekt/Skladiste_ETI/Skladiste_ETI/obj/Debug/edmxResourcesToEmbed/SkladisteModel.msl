@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="T02_DBModelStoreContainer" CdmEntityContainer="T02_DBEntities1">
+  <EntityContainerMapping StorageEntityContainer="T02_DBModelStoreContainer" CdmEntityContainer="T02_DBEntities">
     <EntitySetMapping Name="artikli">
       <EntityTypeMapping TypeName="T02_DBModel.artikli">
         <MappingFragment StoreEntitySet="artikli">
@@ -34,8 +34,8 @@
           <ScalarProperty Name="ime" ColumnName="ime" />
           <ScalarProperty Name="prezime" ColumnName="prezime" />
           <ScalarProperty Name="br_telefona" ColumnName="br_telefona" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="kor_ime" ColumnName="kor_ime" />
+          <ScalarProperty Name="lozinka" ColumnName="lozinka" />
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="tip_korisnika_id_tipa" ColumnName="tip_korisnika_id_tipa" />
         </MappingFragment>

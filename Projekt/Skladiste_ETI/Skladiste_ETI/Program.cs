@@ -16,7 +16,7 @@ namespace Skladiste_ETI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLoginEF());
+            Application.Run(new frmLogin());
         }
     }
 }

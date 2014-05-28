@@ -23,8 +23,8 @@ namespace Skladiste_ETI
         public string ime { get; set; }
         public string prezime { get; set; }
         public string br_telefona { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        public string kor_ime { get; set; }
+        public string lozinka { get; set; }
         public string status { get; set; }
         public int tip_korisnika_id_tipa { get; set; }
     

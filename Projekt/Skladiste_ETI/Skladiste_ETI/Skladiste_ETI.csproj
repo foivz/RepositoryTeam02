@@ -74,10 +74,10 @@
     <Compile Include="poslovni_partner.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PrijavaSingleton\Prijava.cs">
+    <Compile Include="Prijava.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrijavaSingleton\Prijava.Designer.cs">
+    <Compile Include="Prijava.Designer.cs">
       <DependentUpon>Prijava.cs</DependentUpon>
     </Compile>
     <Compile Include="SkladisteModel.Context.cs">
@@ -143,7 +143,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingletonSpajanje\SpajanjeBaza.cs" />
-    <EmbeddedResource Include="PrijavaSingleton\Prijava.resx">
+    <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpravljanjeArtiklima\Artikli.resx">

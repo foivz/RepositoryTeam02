@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="T02_DBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="T02_DBEntities1" p1:LazyLoadingEnabled="true">
+  <EntityContainer Name="T02_DBEntities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="artikli" EntityType="T02_DBModel.artikli" />
     <EntitySet Name="dokument" EntityType="T02_DBModel.dokument" />
     <EntitySet Name="korisnik" EntityType="T02_DBModel.korisnik" />
@@ -76,8 +76,8 @@
     <Property Name="ime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="prezime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="br_telefona" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="username" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-    <Property Name="password" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="kor_ime" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="lozinka" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
     <Property Name="status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="tip_korisnika_id_tipa" Type="Int32" Nullable="false" />
     <NavigationProperty Name="dokument" Relationship="T02_DBModel.Ref_dokument_to_korisnik" FromRole="korisnik" ToRole="dokument" />

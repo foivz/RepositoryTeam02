@@ -75,8 +75,8 @@
           <Property Name="ime" Type="varchar" MaxLength="45" />
           <Property Name="prezime" Type="varchar" MaxLength="45" />
           <Property Name="br_telefona" Type="varchar" MaxLength="10" />
-          <Property Name="username" Type="varchar" MaxLength="30" />
-          <Property Name="password" Type="varchar" MaxLength="30" />
+          <Property Name="kor_ime" Type="varchar" MaxLength="30" />
+          <Property Name="lozinka" Type="varchar" MaxLength="30" />
           <Property Name="status" Type="varchar" MaxLength="20" />
           <Property Name="tip_korisnika_id_tipa" Type="int" Nullable="false" />
         </EntityType>
@@ -210,7 +210,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="T02_DBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="T02_DBEntities1" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="T02_DBEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="artikli" EntityType="T02_DBModel.artikli" />
           <EntitySet Name="dokument" EntityType="T02_DBModel.dokument" />
           <EntitySet Name="korisnik" EntityType="T02_DBModel.korisnik" />
@@ -286,8 +286,8 @@
           <Property Name="ime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="prezime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="br_telefona" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-          <Property Name="username" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-          <Property Name="password" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="kor_ime" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="lozinka" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
           <Property Name="status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="tip_korisnika_id_tipa" Type="Int32" Nullable="false" />
           <NavigationProperty Name="dokument" Relationship="T02_DBModel.Ref_dokument_to_korisnik" FromRole="korisnik" ToRole="dokument" />
@@ -429,7 +429,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="T02_DBModelStoreContainer" CdmEntityContainer="T02_DBEntities1">
+        <EntityContainerMapping StorageEntityContainer="T02_DBModelStoreContainer" CdmEntityContainer="T02_DBEntities">
           <EntitySetMapping Name="artikli">
             <EntityTypeMapping TypeName="T02_DBModel.artikli">
               <MappingFragment StoreEntitySet="artikli">
@@ -463,8 +463,8 @@
                 <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="prezime" ColumnName="prezime" />
                 <ScalarProperty Name="br_telefona" ColumnName="br_telefona" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="kor_ime" ColumnName="kor_ime" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="tip_korisnika_id_tipa" ColumnName="tip_korisnika_id_tipa" />
               </MappingFragment>

@@ -12,10 +12,10 @@ using Finisar.SQLite;
 
 namespace Skladiste_ETI
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
 
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
             txtPass.PasswordChar = '*';
@@ -32,7 +32,7 @@ namespace Skladiste_ETI
             {
                 //spremanje imena u klasu userinformation koja je public da mogu druge forme citat
                 UserInformation.CurrentLoggedInUser = (string)re["ime"] +" " + (string)re["prezime"];
-                new Main().Show();
+                new frmMain().Show();
                 this.Hide();
 
             }

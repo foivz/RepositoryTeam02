@@ -17,7 +17,15 @@ namespace Skladiste_ETI
             
             InitializeComponent();
          
-            this.lblUlogiran.Text = "Ulogirani korisnik : " + UserInformation.CurrentLoggedInUser;
+            this.lblUser.Text = UserInformation.CurrentLoggedInUser;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            string date = DateTime.Now.ToString("d/M/yyyy");
+            string day = DateTime.Now.DayOfWeek.ToString();
+            label8.Text = date;
+            label9.Text = day;
             
 
         }
@@ -58,6 +66,9 @@ namespace Skladiste_ETI
             btnOtpremanje.Visible = false;
             btnIzdatnice.Visible = true;
             btnOtpremnica.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            label6.Visible = false;
         }
 
         private void btnZaprimanje_Click(object sender, EventArgs e)
@@ -65,6 +76,9 @@ namespace Skladiste_ETI
             btnZaprimanje.Visible = false;
             btnPredatnica.Visible = true;
             btnPrimka.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label7.Visible = false;
         }
 
       
@@ -114,8 +128,15 @@ namespace Skladiste_ETI
         private void btnPredatnica_MouseEnter(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnPredatnica, "Izraditi izdatnice");
+            ToolTip1.SetToolTip(this.btnPredatnica, "Izraditi predatnice");
         }
+
+        private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+      
 
        
 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Finisar.SQLite;
+
 
 
 namespace Skladiste_ETI
@@ -18,39 +18,47 @@ namespace Skladiste_ETI
         public frmLogin()
         {
             InitializeComponent();
+            txtUser.Select();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            string userName = txtUser.Text;
-            string passWord = txtPass.Text;
-
-            using (T02_DBEntities db = new T02_DBEntities()) {
-
-                korisnik user = db.korisnik.FirstOrDefault(u => u.kor_ime.Equals(userName) && u.lozinka.Equals(passWord));
-
-                if (user != null)
-                {
-
-                    frmMain glavnaForma = new frmMain();
-                    glavnaForma.Show();
-                    this.Hide();
-                }
-                else {
-
-                    MessageBox.Show("Netočno korisničko ime ili lozinka!");
-                
-                }
-            }
-
-        }
+  
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string userName = txtUser.Text;
+            string passWord = txtPass.Text;
+
+            using (T02_DBEntities db = new T02_DBEntities())
+            {
+
+                //sprema u varijablu user korisnika sa unešenim imenom i lozinkom
+                //FirstOrdDefault traži u sekvenci prvu vrijednost sa zadanim parametrima ili vraća default(null)
+                korisnik user = db.korisnik.FirstOrDefault(u => u.kor_ime.Equals(userName) && u.lozinka.Equals(passWord));
+
+                if (user != null)
+                {
+
+                    UserInformation.CurrentLoggedInUser = userName;
+                    frmMain glavnaForma = new frmMain();
+                    glavnaForma.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MsgBox poruka = new MsgBox();
+                    poruka.ShowDialog();
+
+                }//else
+            }//using
+            
+        }
+
+  
     }
 }
         internal class UserInformation

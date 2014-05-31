@@ -35,7 +35,7 @@
             this.btnZaprimanje = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnIzdatnice = new System.Windows.Forms.Button();
+            this.btnIzdatnica = new System.Windows.Forms.Button();
             this.btnOtpremnica = new System.Windows.Forms.Button();
             this.btnPrimka = new System.Windows.Forms.Button();
             this.btnPredatnica = new System.Windows.Forms.Button();
@@ -46,14 +46,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aplikacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odjavaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upravljanjeArtiklimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otpremanjeRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zaprimanjeRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administracijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izraditiIzdatniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izraditiOtpremniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zaprimanjeRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izraditiPrimkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izraditiPredatniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.poslovniPartneriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +66,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnLogOff = new System.Windows.Forms.Button();
+            this.btnZaposlenici = new System.Windows.Forms.Button();
+            this.btnPartneri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +86,6 @@
             this.btnArtikli.TabIndex = 1;
             this.btnArtikli.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnArtikli.UseVisualStyleBackColor = false;
-            this.btnArtikli.Click += new System.EventHandler(this.btnArtikl_Click);
             this.btnArtikli.MouseHover += new System.EventHandler(this.btnArtikl_MouseHover);
             // 
             // btnOtpremanje
@@ -95,7 +99,6 @@
             this.btnOtpremanje.Size = new System.Drawing.Size(180, 156);
             this.btnOtpremanje.TabIndex = 2;
             this.btnOtpremanje.UseVisualStyleBackColor = false;
-            this.btnOtpremanje.Click += new System.EventHandler(this.btnOtpremanje_Click);
             this.btnOtpremanje.MouseHover += new System.EventHandler(this.btnOtpremanje_MouseHover);
             // 
             // btnZaprimanje
@@ -109,33 +112,32 @@
             this.btnZaprimanje.Size = new System.Drawing.Size(180, 156);
             this.btnZaprimanje.TabIndex = 3;
             this.btnZaprimanje.UseVisualStyleBackColor = false;
-            this.btnZaprimanje.Click += new System.EventHandler(this.btnZaprimanje_Click);
-            this.btnZaprimanje.MouseHover += new System.EventHandler(this.button3_MouseHover);
+            this.btnZaprimanje.MouseHover += new System.EventHandler(this.btnZaprimanje_MouseHover);
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUser.ForeColor = System.Drawing.Color.Red;
-            this.lblUser.Location = new System.Drawing.Point(272, 72);
+            this.lblUser.Location = new System.Drawing.Point(334, 70);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(129, 32);
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "UserName";
             // 
-            // btnIzdatnice
+            // btnIzdatnica
             // 
-            this.btnIzdatnice.FlatAppearance.BorderSize = 0;
-            this.btnIzdatnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzdatnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzdatnice.Image")));
-            this.btnIzdatnice.Location = new System.Drawing.Point(327, 195);
-            this.btnIzdatnice.Name = "btnIzdatnice";
-            this.btnIzdatnice.Size = new System.Drawing.Size(127, 124);
-            this.btnIzdatnice.TabIndex = 6;
-            this.btnIzdatnice.UseVisualStyleBackColor = true;
-            this.btnIzdatnice.Visible = false;
-            this.btnIzdatnice.Click += new System.EventHandler(this.btnIzdatnice_Click);
-            this.btnIzdatnice.MouseHover += new System.EventHandler(this.btnIzdatnice_MouseHover);
+            this.btnIzdatnica.FlatAppearance.BorderSize = 0;
+            this.btnIzdatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzdatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnIzdatnica.Image")));
+            this.btnIzdatnica.Location = new System.Drawing.Point(327, 195);
+            this.btnIzdatnica.Name = "btnIzdatnica";
+            this.btnIzdatnica.Size = new System.Drawing.Size(127, 124);
+            this.btnIzdatnica.TabIndex = 6;
+            this.btnIzdatnica.UseVisualStyleBackColor = true;
+            this.btnIzdatnica.Visible = false;
+            this.btnIzdatnica.Click += new System.EventHandler(this.btnIzdatnica_Click);
+            this.btnIzdatnica.MouseHover += new System.EventHandler(this.btnIzdatnice_MouseHover);
             // 
             // btnOtpremnica
             // 
@@ -184,7 +186,7 @@
             this.lblUlogiran.AutoSize = true;
             this.lblUlogiran.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUlogiran.ForeColor = System.Drawing.Color.Red;
-            this.lblUlogiran.Location = new System.Drawing.Point(51, 72);
+            this.lblUlogiran.Location = new System.Drawing.Point(113, 70);
             this.lblUlogiran.Name = "lblUlogiran";
             this.lblUlogiran.Size = new System.Drawing.Size(215, 32);
             this.lblUlogiran.TabIndex = 10;
@@ -206,7 +208,7 @@
             this.lblZaposlenik.AutoSize = true;
             this.lblZaposlenik.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZaposlenik.ForeColor = System.Drawing.Color.Red;
-            this.lblZaposlenik.Location = new System.Drawing.Point(51, 104);
+            this.lblZaposlenik.Location = new System.Drawing.Point(113, 102);
             this.lblZaposlenik.Name = "lblZaposlenik";
             this.lblZaposlenik.Size = new System.Drawing.Size(85, 32);
             this.lblZaposlenik.TabIndex = 12;
@@ -217,7 +219,7 @@
             this.lblUloga.AutoSize = true;
             this.lblUloga.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUloga.ForeColor = System.Drawing.Color.Red;
-            this.lblUloga.Location = new System.Drawing.Point(272, 104);
+            this.lblUloga.Location = new System.Drawing.Point(334, 102);
             this.lblUloga.Name = "lblUloga";
             this.lblUloga.Size = new System.Drawing.Size(79, 32);
             this.lblUloga.TabIndex = 13;
@@ -240,7 +242,8 @@
             // aplikacijaToolStripMenuItem
             // 
             this.aplikacijaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izlazToolStripMenuItem});
+            this.izlazToolStripMenuItem,
+            this.odjavaToolStripMenuItem});
             this.aplikacijaToolStripMenuItem.Name = "aplikacijaToolStripMenuItem";
             this.aplikacijaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.aplikacijaToolStripMenuItem.Text = "Aplikacija";
@@ -248,9 +251,16 @@
             // izlazToolStripMenuItem
             // 
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
-            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click_1);
+            // 
+            // odjavaToolStripMenuItem
+            // 
+            this.odjavaToolStripMenuItem.Name = "odjavaToolStripMenuItem";
+            this.odjavaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.odjavaToolStripMenuItem.Text = "Odjava";
+            this.odjavaToolStripMenuItem.Click += new System.EventHandler(this.btnLogOff_Click);
             // 
             // upravljanjeArtiklimaToolStripMenuItem
             // 
@@ -267,6 +277,20 @@
             this.otpremanjeRobeToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
             this.otpremanjeRobeToolStripMenuItem.Text = "Otpremanje robe";
             // 
+            // izraditiIzdatniceToolStripMenuItem
+            // 
+            this.izraditiIzdatniceToolStripMenuItem.Name = "izraditiIzdatniceToolStripMenuItem";
+            this.izraditiIzdatniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.izraditiIzdatniceToolStripMenuItem.Text = "Izraditi izdatnice";
+            this.izraditiIzdatniceToolStripMenuItem.Click += new System.EventHandler(this.btnIzdatnica_Click);
+            // 
+            // izraditiOtpremniceToolStripMenuItem
+            // 
+            this.izraditiOtpremniceToolStripMenuItem.Name = "izraditiOtpremniceToolStripMenuItem";
+            this.izraditiOtpremniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.izraditiOtpremniceToolStripMenuItem.Text = "Izraditi otpremnice";
+            this.izraditiOtpremniceToolStripMenuItem.Click += new System.EventHandler(this.btnOtpremnica_Click);
+            // 
             // zaprimanjeRobeToolStripMenuItem
             // 
             this.zaprimanjeRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -276,6 +300,20 @@
             this.zaprimanjeRobeToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.zaprimanjeRobeToolStripMenuItem.Text = "Zaprimanje robe";
             // 
+            // izraditiPrimkeToolStripMenuItem
+            // 
+            this.izraditiPrimkeToolStripMenuItem.Name = "izraditiPrimkeToolStripMenuItem";
+            this.izraditiPrimkeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.izraditiPrimkeToolStripMenuItem.Text = "Izraditi primke";
+            this.izraditiPrimkeToolStripMenuItem.Click += new System.EventHandler(this.btnPrimka_Click);
+            // 
+            // izraditiPredatniceToolStripMenuItem
+            // 
+            this.izraditiPredatniceToolStripMenuItem.Name = "izraditiPredatniceToolStripMenuItem";
+            this.izraditiPredatniceToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.izraditiPredatniceToolStripMenuItem.Text = "Izraditi predatnice";
+            this.izraditiPredatniceToolStripMenuItem.Click += new System.EventHandler(this.btnPredatnica_Click);
+            // 
             // administracijaToolStripMenuItem
             // 
             this.administracijaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -284,30 +322,6 @@
             this.administracijaToolStripMenuItem.Name = "administracijaToolStripMenuItem";
             this.administracijaToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.administracijaToolStripMenuItem.Text = "Administracija";
-            // 
-            // izraditiIzdatniceToolStripMenuItem
-            // 
-            this.izraditiIzdatniceToolStripMenuItem.Name = "izraditiIzdatniceToolStripMenuItem";
-            this.izraditiIzdatniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.izraditiIzdatniceToolStripMenuItem.Text = "Izraditi izdatnice";
-            // 
-            // izraditiOtpremniceToolStripMenuItem
-            // 
-            this.izraditiOtpremniceToolStripMenuItem.Name = "izraditiOtpremniceToolStripMenuItem";
-            this.izraditiOtpremniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.izraditiOtpremniceToolStripMenuItem.Text = "Izraditi otpremnice";
-            // 
-            // izraditiPrimkeToolStripMenuItem
-            // 
-            this.izraditiPrimkeToolStripMenuItem.Name = "izraditiPrimkeToolStripMenuItem";
-            this.izraditiPrimkeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.izraditiPrimkeToolStripMenuItem.Text = "Izraditi primke";
-            // 
-            // izraditiPredatniceToolStripMenuItem
-            // 
-            this.izraditiPredatniceToolStripMenuItem.Name = "izraditiPredatniceToolStripMenuItem";
-            this.izraditiPredatniceToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.izraditiPredatniceToolStripMenuItem.Text = "Izraditi predatnice";
             // 
             // zaposleniciToolStripMenuItem
             // 
@@ -325,7 +339,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(335, 179);
+            this.label1.Location = new System.Drawing.Point(335, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 14;
@@ -335,7 +349,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(335, 474);
+            this.label2.Location = new System.Drawing.Point(335, 484);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 13);
             this.label2.TabIndex = 15;
@@ -345,7 +359,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(512, 179);
+            this.label3.Location = new System.Drawing.Point(512, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 16;
@@ -355,7 +369,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(512, 474);
+            this.label4.Location = new System.Drawing.Point(512, 484);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 17;
@@ -364,7 +378,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(116, 375);
+            this.label5.Location = new System.Drawing.Point(116, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 13);
             this.label5.TabIndex = 18;
@@ -373,7 +387,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 375);
+            this.label6.Location = new System.Drawing.Point(335, 391);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 13);
             this.label6.TabIndex = 19;
@@ -382,7 +396,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(512, 375);
+            this.label7.Location = new System.Drawing.Point(512, 391);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 20;
@@ -392,21 +406,66 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(971, 240);
+            this.label8.Location = new System.Drawing.Point(974, 240);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 28);
+            this.label8.Size = new System.Drawing.Size(76, 28);
             this.label8.TabIndex = 21;
-            this.label8.Text = "label8";
+            this.label8.Text = "datum";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(1063, 240);
+            this.label9.Location = new System.Drawing.Point(1070, 240);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 28);
+            this.label9.Size = new System.Drawing.Size(50, 28);
             this.label9.TabIndex = 22;
-            this.label9.Text = "label9";
+            this.label9.Text = "dan";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(889, 240);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 28);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Today:";
+            // 
+            // btnLogOff
+            // 
+            this.btnLogOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLogOff.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOff.Image")));
+            this.btnLogOff.Location = new System.Drawing.Point(506, 70);
+            this.btnLogOff.Name = "btnLogOff";
+            this.btnLogOff.Size = new System.Drawing.Size(96, 85);
+            this.btnLogOff.TabIndex = 24;
+            this.btnLogOff.UseVisualStyleBackColor = false;
+            this.btnLogOff.Click += new System.EventHandler(this.btnLogOff_Click);
+            // 
+            // btnZaposlenici
+            // 
+            this.btnZaposlenici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZaposlenici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnZaposlenici.Image = ((System.Drawing.Image)(resources.GetObject("btnZaposlenici.Image")));
+            this.btnZaposlenici.Location = new System.Drawing.Point(311, 528);
+            this.btnZaposlenici.Name = "btnZaposlenici";
+            this.btnZaposlenici.Size = new System.Drawing.Size(165, 164);
+            this.btnZaposlenici.TabIndex = 25;
+            this.btnZaposlenici.UseVisualStyleBackColor = true;
+            // 
+            // btnPartneri
+            // 
+            this.btnPartneri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPartneri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPartneri.Image = ((System.Drawing.Image)(resources.GetObject("btnPartneri.Image")));
+            this.btnPartneri.Location = new System.Drawing.Point(506, 540);
+            this.btnPartneri.Name = "btnPartneri";
+            this.btnPartneri.Size = new System.Drawing.Size(149, 141);
+            this.btnPartneri.TabIndex = 26;
+            this.btnPartneri.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -415,6 +474,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1212, 750);
+            this.Controls.Add(this.btnPartneri);
+            this.Controls.Add(this.btnZaposlenici);
+            this.Controls.Add(this.btnLogOff);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -431,7 +494,7 @@
             this.Controls.Add(this.btnPredatnica);
             this.Controls.Add(this.btnPrimka);
             this.Controls.Add(this.btnOtpremnica);
-            this.Controls.Add(this.btnIzdatnice);
+            this.Controls.Add(this.btnIzdatnica);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnZaprimanje);
             this.Controls.Add(this.btnOtpremanje);
@@ -460,7 +523,7 @@
         private System.Windows.Forms.Button btnZaprimanje;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button btnIzdatnice;
+        private System.Windows.Forms.Button btnIzdatnica;
         private System.Windows.Forms.Button btnOtpremnica;
         private System.Windows.Forms.Button btnPrimka;
         private System.Windows.Forms.Button btnPredatnica;
@@ -490,5 +553,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem odjavaToolStripMenuItem;
+        private System.Windows.Forms.Button btnLogOff;
+        private System.Windows.Forms.Button btnZaposlenici;
+        private System.Windows.Forms.Button btnPartneri;
     }
 }

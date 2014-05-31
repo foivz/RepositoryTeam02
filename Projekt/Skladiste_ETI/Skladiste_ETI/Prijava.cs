@@ -44,9 +44,10 @@ namespace Skladiste_ETI
                 {
 
                     UserInformation.CurrentLoggedInUser = userName;
-                    frmMain glavnaForma = new frmMain();
+                    frmMain glavnaForma = new frmMain(txtUser.Text);
                     glavnaForma.Show();
                     this.Hide();
+                    
                 }
                 else
                 {
@@ -57,6 +58,7 @@ namespace Skladiste_ETI
             }//using
             
         }
+       
 
   
     }

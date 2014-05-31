@@ -12,20 +12,26 @@ namespace Skladiste_ETI
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        public frmMain(string username)
         {
             
             InitializeComponent();
+            using (var db = new T02_DBEntities()) 
+            
+            {
+
+                
+
+        
+            }
          
             this.lblUser.Text = UserInformation.CurrentLoggedInUser;
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
-            string date = DateTime.Now.ToString("d/M/yyyy");
-            string day = DateTime.Now.DayOfWeek.ToString();
-            label8.Text = date;
-            label9.Text = day;
+            label8.Text = DateTime.Now.ToString("d/M/yyyy");
+            label9.Text = DateTime.Now.DayOfWeek.ToString();
             
 
         }
@@ -38,40 +44,16 @@ namespace Skladiste_ETI
 
         private void btnOtpremanje_MouseHover(object sender, EventArgs e)
         {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnOtpremanje, "Otpremanje robe");
-        }
 
-        private void button3_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnZaprimanje, "Zaprimanje robe");
-        }
-
-        private void btnArtikl_Click(object sender, EventArgs e)
-        {
-            new frmArtikli().Show();
-            this.Close();
-        }
-
-        private void unesiArtiklToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new frmArtikli().Show();
-            this.Close();
-        }
-
-        private void btnOtpremanje_Click(object sender, EventArgs e)
-        {
-            
             btnOtpremanje.Visible = false;
-            btnIzdatnice.Visible = true;
+            btnIzdatnica.Visible = true;
             btnOtpremnica.Visible = true;
             label1.Visible = true;
             label2.Visible = true;
             label6.Visible = false;
         }
 
-        private void btnZaprimanje_Click(object sender, EventArgs e)
+        private void btnZaprimanje_MouseHover(object sender, EventArgs e)
         {
             btnZaprimanje.Visible = false;
             btnPredatnica.Visible = true;
@@ -81,7 +63,7 @@ namespace Skladiste_ETI
             label7.Visible = false;
         }
 
-      
+   
 
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
@@ -89,7 +71,7 @@ namespace Skladiste_ETI
             this.Close();
         }
 
-        private void btnIzdatnice_Click(object sender, EventArgs e)
+        private void btnIzdatnica_Click(object sender, EventArgs e)
         {
             new frmIzdatnice().Show();
             this.Close();
@@ -116,7 +98,7 @@ namespace Skladiste_ETI
         private void btnIzdatnice_MouseHover(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnIzdatnice, "Izraditi izdatnice");
+            ToolTip1.SetToolTip(this.btnIzdatnica, "Izraditi izdatnice");
         }
 
         private void btnPrimka_MouseHover(object sender, EventArgs e)
@@ -136,16 +118,18 @@ namespace Skladiste_ETI
             Application.Exit();
         }
 
-      
+        private void btnLogOff_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin prijava = new frmLogin();
+            prijava.Show();
+        }
 
-       
+        private void izlazToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
      
-
-      
-
-     
-
-      
     }
 }

@@ -416,7 +416,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(1070, 240);
+            this.label9.Location = new System.Drawing.Point(1081, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 28);
             this.label9.TabIndex = 22;
@@ -444,6 +444,7 @@
             this.btnLogOff.TabIndex = 24;
             this.btnLogOff.UseVisualStyleBackColor = false;
             this.btnLogOff.Click += new System.EventHandler(this.btnLogOff_Click);
+            this.btnLogOff.MouseHover += new System.EventHandler(this.btnLogOff_MouseHover);
             // 
             // btnZaposlenici
             // 
@@ -455,6 +456,7 @@
             this.btnZaposlenici.Size = new System.Drawing.Size(165, 164);
             this.btnZaposlenici.TabIndex = 25;
             this.btnZaposlenici.UseVisualStyleBackColor = true;
+            this.btnZaposlenici.MouseHover += new System.EventHandler(this.btnZaposlenici_MouseHover);
             // 
             // btnPartneri
             // 
@@ -466,6 +468,7 @@
             this.btnPartneri.Size = new System.Drawing.Size(149, 141);
             this.btnPartneri.TabIndex = 26;
             this.btnPartneri.UseVisualStyleBackColor = true;
+            this.btnPartneri.MouseHover += new System.EventHandler(this.btnPartneri_MouseHover);
             // 
             // frmMain
             // 
@@ -506,7 +509,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Upravljanje skladištem";
+            this.Text = "Warehouse Digital - Standard Edition";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

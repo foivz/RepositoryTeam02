@@ -16,13 +16,29 @@ namespace Skladiste_ETI
         {
             
             InitializeComponent();
+
+            
             using (var db = new T02_DBEntities()) 
             
             {
-
+                //formatira string upita sa parametrom username kojeg mu proslijeđuje konstruktor
+                string upit = string.Format("SELECT tip_korisnika_id_tipa FROM korisnik WHERE kor_ime = '{0}'", username);
                 
+                
+                int uloga = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();//dohvaća id_tipa iz konteksta
 
-        
+                if (uloga == 1)
+                {
+
+                    lblUloga.Text = "Skladištar";
+
+                }
+                else {
+
+                    lblUloga.Text = "Administrator";
+                
+                }
+                
             }
          
             this.lblUser.Text = UserInformation.CurrentLoggedInUser;
@@ -30,7 +46,7 @@ namespace Skladiste_ETI
             label2.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
-            label8.Text = DateTime.Now.ToString("d/M/yyyy");
+            label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label9.Text = DateTime.Now.DayOfWeek.ToString();
             
 
@@ -128,6 +144,24 @@ namespace Skladiste_ETI
         private void izlazToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnLogOff_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnLogOff, "Odjava");
+        }
+
+        private void btnZaposlenici_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnZaposlenici, "Administracija zaposlenika");
+        }
+
+        private void btnPartneri_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPartneri, "Poslovni partneri");
         }
 
      

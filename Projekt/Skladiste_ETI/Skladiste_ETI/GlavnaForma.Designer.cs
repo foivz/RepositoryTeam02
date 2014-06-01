@@ -70,6 +70,8 @@
             this.btnLogOff = new System.Windows.Forms.Button();
             this.btnZaposlenici = new System.Windows.Forms.Button();
             this.btnPartneri = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -235,6 +237,7 @@
             this.administracijaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.menuStrip1.Size = new System.Drawing.Size(1212, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -369,7 +372,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(512, 484);
+            this.label4.Location = new System.Drawing.Point(524, 484);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 17;
@@ -404,6 +407,8 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.Location = new System.Drawing.Point(974, 240);
@@ -414,6 +419,8 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.Location = new System.Drawing.Point(1081, 240);
@@ -424,6 +431,8 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.Location = new System.Drawing.Point(889, 240);
@@ -456,6 +465,7 @@
             this.btnZaposlenici.Size = new System.Drawing.Size(165, 164);
             this.btnZaposlenici.TabIndex = 25;
             this.btnZaposlenici.UseVisualStyleBackColor = true;
+            this.btnZaposlenici.Click += new System.EventHandler(this.btnZaposlenici_Click);
             this.btnZaposlenici.MouseHover += new System.EventHandler(this.btnZaposlenici_MouseHover);
             // 
             // btnPartneri
@@ -468,7 +478,28 @@
             this.btnPartneri.Size = new System.Drawing.Size(149, 141);
             this.btnPartneri.TabIndex = 26;
             this.btnPartneri.UseVisualStyleBackColor = true;
+            this.btnPartneri.Click += new System.EventHandler(this.btnPartneri_Click);
             this.btnPartneri.MouseHover += new System.EventHandler(this.btnPartneri_MouseHover);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(363, 695);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Zaposlenici";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(531, 695);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 13);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Poslovni partneri";
             // 
             // frmMain
             // 
@@ -477,6 +508,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1212, 750);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnPartneri);
             this.Controls.Add(this.btnZaposlenici);
             this.Controls.Add(this.btnLogOff);
@@ -561,5 +594,7 @@
         private System.Windows.Forms.Button btnLogOff;
         private System.Windows.Forms.Button btnZaposlenici;
         private System.Windows.Forms.Button btnPartneri;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

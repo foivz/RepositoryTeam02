@@ -16,7 +16,7 @@ namespace Skladiste_ETI
         {
             
             InitializeComponent();
-
+            
             
             using (var db = new T02_DBEntities()) 
             
@@ -25,7 +25,7 @@ namespace Skladiste_ETI
                 string upit = string.Format("SELECT tip_korisnika_id_tipa FROM korisnik WHERE kor_ime = '{0}'", username);
                 
                 
-                int uloga = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();//dohvaća id_tipa iz konteksta
+                int uloga = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();//dohvaća id_tipa iz konteksta T02_DBEntities
 
                 if (uloga == 1)
                 {
@@ -164,6 +164,17 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnPartneri, "Poslovni partneri");
         }
 
-     
+        private void btnZaposlenici_Click(object sender, EventArgs e)
+        {
+            Administracija.frmZaposlenici zaposlenici = new Administracija.frmZaposlenici();
+            zaposlenici.Show();
+        }
+
+        private void btnPartneri_Click(object sender, EventArgs e)
+        {
+            Administracija.frmPartneri partneri = new Administracija.frmPartneri();
+            partneri.Show();
+        }
+
     }
 }

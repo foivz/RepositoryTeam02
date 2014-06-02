@@ -203,6 +203,7 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\korisnik.datasource" />
+    <None Include="Properties\DataSources\poslovni_partner.datasource" />
     <None Include="Properties\DataSources\tip_korisnika.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

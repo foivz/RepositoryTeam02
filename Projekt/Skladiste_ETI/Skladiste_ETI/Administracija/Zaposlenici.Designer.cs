@@ -31,6 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmZaposlenici));
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
+            this.idkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -50,20 +61,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.idkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
-            this.grbDodajZaposlenika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
+            this.grbDodajZaposlenika.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvZaposlenici
@@ -92,6 +92,84 @@
             this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenici.Size = new System.Drawing.Size(647, 255);
             this.dgvZaposlenici.TabIndex = 0;
+            // 
+            // idkorisnikaDataGridViewTextBoxColumn
+            // 
+            this.idkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "id_korisnika";
+            this.idkorisnikaDataGridViewTextBoxColumn.HeaderText = "id_korisnika";
+            this.idkorisnikaDataGridViewTextBoxColumn.Name = "idkorisnikaDataGridViewTextBoxColumn";
+            this.idkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idkorisnikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // brtelefonaDataGridViewTextBoxColumn
+            // 
+            this.brtelefonaDataGridViewTextBoxColumn.DataPropertyName = "br_telefona";
+            this.brtelefonaDataGridViewTextBoxColumn.HeaderText = "Broj telefona";
+            this.brtelefonaDataGridViewTextBoxColumn.Name = "brtelefonaDataGridViewTextBoxColumn";
+            this.brtelefonaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korimeDataGridViewTextBoxColumn
+            // 
+            this.korimeDataGridViewTextBoxColumn.DataPropertyName = "kor_ime";
+            this.korimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.korimeDataGridViewTextBoxColumn.Name = "korimeDataGridViewTextBoxColumn";
+            this.korimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lozinkaDataGridViewTextBoxColumn
+            // 
+            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "Lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            this.lozinkaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipkorisnikaidtipaDataGridViewTextBoxColumn
+            // 
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika_id_tipa";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika_id_tipa";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Name = "tipkorisnikaidtipaDataGridViewTextBoxColumn";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dokumentDataGridViewTextBoxColumn
+            // 
+            this.dokumentDataGridViewTextBoxColumn.DataPropertyName = "dokument";
+            this.dokumentDataGridViewTextBoxColumn.HeaderText = "dokument";
+            this.dokumentDataGridViewTextBoxColumn.Name = "dokumentDataGridViewTextBoxColumn";
+            this.dokumentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dokumentDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipkorisnikaDataGridViewTextBoxColumn
+            // 
+            this.tipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika";
+            this.tipkorisnikaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika";
+            this.tipkorisnikaDataGridViewTextBoxColumn.Name = "tipkorisnikaDataGridViewTextBoxColumn";
+            this.tipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipkorisnikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // korisnikBindingSource
+            // 
+            this.korisnikBindingSource.DataSource = typeof(Skladiste_ETI.korisnik);
             // 
             // btnAdd
             // 
@@ -282,84 +360,6 @@
             this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
             this.dataGridViewComboBoxColumn1.ReadOnly = true;
             // 
-            // idkorisnikaDataGridViewTextBoxColumn
-            // 
-            this.idkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "id_korisnika";
-            this.idkorisnikaDataGridViewTextBoxColumn.HeaderText = "id_korisnika";
-            this.idkorisnikaDataGridViewTextBoxColumn.Name = "idkorisnikaDataGridViewTextBoxColumn";
-            this.idkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idkorisnikaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // brtelefonaDataGridViewTextBoxColumn
-            // 
-            this.brtelefonaDataGridViewTextBoxColumn.DataPropertyName = "br_telefona";
-            this.brtelefonaDataGridViewTextBoxColumn.HeaderText = "Broj telefona";
-            this.brtelefonaDataGridViewTextBoxColumn.Name = "brtelefonaDataGridViewTextBoxColumn";
-            this.brtelefonaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korimeDataGridViewTextBoxColumn
-            // 
-            this.korimeDataGridViewTextBoxColumn.DataPropertyName = "kor_ime";
-            this.korimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.korimeDataGridViewTextBoxColumn.Name = "korimeDataGridViewTextBoxColumn";
-            this.korimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lozinkaDataGridViewTextBoxColumn
-            // 
-            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "Lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
-            this.lozinkaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipkorisnikaidtipaDataGridViewTextBoxColumn
-            // 
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika_id_tipa";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika_id_tipa";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Name = "tipkorisnikaidtipaDataGridViewTextBoxColumn";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dokumentDataGridViewTextBoxColumn
-            // 
-            this.dokumentDataGridViewTextBoxColumn.DataPropertyName = "dokument";
-            this.dokumentDataGridViewTextBoxColumn.HeaderText = "dokument";
-            this.dokumentDataGridViewTextBoxColumn.Name = "dokumentDataGridViewTextBoxColumn";
-            this.dokumentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dokumentDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipkorisnikaDataGridViewTextBoxColumn
-            // 
-            this.tipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika";
-            this.tipkorisnikaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika";
-            this.tipkorisnikaDataGridViewTextBoxColumn.Name = "tipkorisnikaDataGridViewTextBoxColumn";
-            this.tipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipkorisnikaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // korisnikBindingSource
-            // 
-            this.korisnikBindingSource.DataSource = typeof(Skladiste_ETI.korisnik);
-            // 
             // frmZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,9 +378,9 @@
             this.Text = "Administracija zaposlenika";
             this.Load += new System.EventHandler(this.frmZaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
             this.grbDodajZaposlenika.ResumeLayout(false);
             this.grbDodajZaposlenika.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

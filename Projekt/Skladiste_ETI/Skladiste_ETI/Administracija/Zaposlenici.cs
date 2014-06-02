@@ -69,6 +69,13 @@ namespace Skladiste_ETI.Administracija
                 db.korisnik.Add(zaposlenik);
                 db.SaveChanges();
 
+                txtIme.Text = "";
+                txtPrezime.Text = "";
+                txtBrTelefona.Text = "";
+                txtKorIme.Text = "";
+                txtLozinka.Text = "";
+                txtStatus.Text = "";
+
                 if (chkBoxAdmin.Checked == true)
                 {
                     string upit = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
@@ -138,11 +145,6 @@ namespace Skladiste_ETI.Administracija
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(this.btnOK, "Potvrda unosa");
         }
-
-
-
-
-
 
 
 

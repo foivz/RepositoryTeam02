@@ -26,13 +26,11 @@ C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\EntityFramework.dll
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\EntityFramework.xml
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLogin.resources
-C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.MsgBox.resources
-<<<<<<< HEAD
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Administracija.frmPartneri.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Administracija.frmZaposlenici.resources
 =======
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe.config
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.exe
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.pdb
->>>>>>> 05c0e58dc51e4585c037b58195e40f8c9b28eed0
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache

@@ -9,54 +9,52 @@
     <EntitySet Name="stavke" EntityType="T02_DBModel.Store.stavke" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="tip_dokumenta" EntityType="T02_DBModel.Store.tip_dokumenta" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="tip_korisnika" EntityType="T02_DBModel.Store.tip_korisnika" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="korisnik_tip_korisnika_id_tipa_fkey" Association="T02_DBModel.Store.korisnik_tip_korisnika_id_tipa_fkey">
-      <End Role="tip_korisnika" EntitySet="tip_korisnika" />
-      <End Role="korisnik" EntitySet="korisnik" />
-    </AssociationSet>
-    <AssociationSet Name="Ref_artikli_to_mjesto" Association="T02_DBModel.Store.Ref_artikli_to_mjesto">
+    <AssociationSet Name="FK_artikli_references_mjesto" Association="T02_DBModel.Store.FK_artikli_references_mjesto">
       <End Role="mjesto" EntitySet="mjesto" />
       <End Role="artikli" EntitySet="artikli" />
     </AssociationSet>
-    <AssociationSet Name="Ref_dokument_has_artikli_to_artikli" Association="T02_DBModel.Store.Ref_dokument_has_artikli_to_artikli">
-      <End Role="artikli" EntitySet="artikli" />
-      <End Role="stavke" EntitySet="stavke" />
-    </AssociationSet>
-    <AssociationSet Name="Ref_dokument_has_artikli_to_dokument" Association="T02_DBModel.Store.Ref_dokument_has_artikli_to_dokument">
-      <End Role="dokument" EntitySet="dokument" />
-      <End Role="stavke" EntitySet="stavke" />
-    </AssociationSet>
-    <AssociationSet Name="Ref_dokument_to_korisnik" Association="T02_DBModel.Store.Ref_dokument_to_korisnik">
+    <AssociationSet Name="FK_dokument_references_korisnik" Association="T02_DBModel.Store.FK_dokument_references_korisnik">
       <End Role="korisnik" EntitySet="korisnik" />
       <End Role="dokument" EntitySet="dokument" />
     </AssociationSet>
-    <AssociationSet Name="Ref_dokument_to_poslovni_partner" Association="T02_DBModel.Store.Ref_dokument_to_poslovni_partner">
+    <AssociationSet Name="FK_dokument_references_poslovni_partner" Association="T02_DBModel.Store.FK_dokument_references_poslovni_partner">
       <End Role="poslovni_partner" EntitySet="poslovni_partner" />
       <End Role="dokument" EntitySet="dokument" />
     </AssociationSet>
-    <AssociationSet Name="Ref_dokument_to_tip_dokumenta" Association="T02_DBModel.Store.Ref_dokument_to_tip_dokumenta">
+    <AssociationSet Name="FK_dokument_references_tip_dokumenta" Association="T02_DBModel.Store.FK_dokument_references_tip_dokumenta">
       <End Role="tip_dokumenta" EntitySet="tip_dokumenta" />
       <End Role="dokument" EntitySet="dokument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_korisnik_references_tip_korisnika" Association="T02_DBModel.Store.FK_korisnik_references_tip_korisnika">
+      <End Role="tip_korisnika" EntitySet="tip_korisnika" />
+      <End Role="korisnik" EntitySet="korisnik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavke_references_artikli" Association="T02_DBModel.Store.FK_stavke_references_artikli">
+      <End Role="artikli" EntitySet="artikli" />
+      <End Role="stavke" EntitySet="stavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavke_references_dokument" Association="T02_DBModel.Store.FK_stavke_references_dokument">
+      <End Role="dokument" EntitySet="dokument" />
+      <End Role="stavke" EntitySet="stavke" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="artikli">
     <Key>
       <PropertyRef Name="id_artikla" />
     </Key>
-    <Property Name="id_artikla" Type="int" Nullable="false" />
-    <Property Name="br_serije" Type="int" />
-    <Property Name="naziv" Type="varchar" MaxLength="45" />
-    <Property Name="trenutna_kolicina" Type="int" />
-    <Property Name="cijena" Type="real" />
-    <Property Name="frekvencija_izlaska_id_frekvencije" Type="int" />
-    <Property Name="minimalna_kolicina" Type="int" />
-    <Property Name="mjesto_id_mjesta" Type="int" />
+    <Property Name="id_artikla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="br_serije" Type="int" Nullable="false" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="cijena" Type="real" Nullable="false" />
+    <Property Name="kolicina" Type="float" Nullable="false" />
+    <Property Name="mjesto_id_mjesta" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="dokument">
     <Key>
       <PropertyRef Name="id_dokumenta" />
     </Key>
-    <Property Name="id_dokumenta" Type="int" Nullable="false" />
-    <Property Name="korisnik_id_korisnika" Type="int" />
+    <Property Name="id_dokumenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="korisnik_id_korisnika" Type="int" Nullable="false" />
     <Property Name="tip_dokumenta_id_tipa" Type="int" Nullable="false" />
     <Property Name="poslovni_partner_id_partnera" Type="int" Nullable="false" />
     <Property Name="datum" Type="date" />
@@ -66,29 +64,28 @@
     <Key>
       <PropertyRef Name="id_korisnika" />
     </Key>
-    <Property Name="id_korisnika" Type="int" Nullable="false" />
+    <Property Name="id_korisnika" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ime" Type="varchar" MaxLength="45" />
     <Property Name="prezime" Type="varchar" MaxLength="45" />
     <Property Name="br_telefona" Type="varchar" MaxLength="10" />
     <Property Name="kor_ime" Type="varchar" MaxLength="30" />
     <Property Name="lozinka" Type="varchar" MaxLength="30" />
     <Property Name="status" Type="varchar" MaxLength="20" />
-    <Property Name="tip_korisnika_id_tipa" Type="int" Nullable="false" />
+    <Property Name="tip_korisnika_id_tipa" Type="int" />
   </EntityType>
   <EntityType Name="mjesto">
     <Key>
       <PropertyRef Name="id_mjesta" />
     </Key>
-    <Property Name="id_mjesta" Type="int" Nullable="false" />
-    <Property Name="polica" Type="int" />
-    <Property Name="sektor" Type="varchar" MaxLength="45" />
-    <Property Name="kolicina" Type="real" />
+    <Property Name="id_mjesta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="polica" Type="int" Nullable="false" />
+    <Property Name="sektor" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <EntityType Name="poslovni_partner">
     <Key>
       <PropertyRef Name="id_partnera" />
     </Key>
-    <Property Name="id_partnera" Type="int" Nullable="false" />
+    <Property Name="id_partnera" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="naziv" Type="varchar" MaxLength="45" />
     <Property Name="adresa" Type="varchar" MaxLength="45" />
     <Property Name="br_telefona" Type="varchar" MaxLength="45" />
@@ -97,39 +94,27 @@
     <Key>
       <PropertyRef Name="id_stavke" />
     </Key>
-    <Property Name="id_stavke" Type="int" Nullable="false" />
+    <Property Name="id_stavke" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="dokument_id_dokumenta" Type="int" Nullable="false" />
     <Property Name="artikli_id_artikla" Type="int" Nullable="false" />
-    <Property Name="kolicina" Type="real" />
+    <Property Name="kolicina" Type="real" Nullable="false" />
   </EntityType>
   <EntityType Name="tip_dokumenta">
     <Key>
       <PropertyRef Name="id_tipa" />
     </Key>
-    <Property Name="id_tipa" Type="int" Nullable="false" />
-    <Property Name="naziv" Type="varchar" MaxLength="45" />
+    <Property Name="id_tipa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <EntityType Name="tip_korisnika">
     <Key>
       <PropertyRef Name="id_tipa" />
     </Key>
-    <Property Name="id_tipa" Type="int" Nullable="false" />
-    <Property Name="naziv" Type="varchar" MaxLength="45" />
+    <Property Name="id_tipa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
-  <Association Name="korisnik_tip_korisnika_id_tipa_fkey">
-    <End Role="tip_korisnika" Type="T02_DBModel.Store.tip_korisnika" Multiplicity="1" />
-    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tip_korisnika">
-        <PropertyRef Name="id_tipa" />
-      </Principal>
-      <Dependent Role="korisnik">
-        <PropertyRef Name="tip_korisnika_id_tipa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Ref_artikli_to_mjesto">
-    <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="0..1" />
+  <Association Name="FK_artikli_references_mjesto">
+    <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="1" />
     <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="mjesto">
@@ -140,32 +125,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Ref_dokument_has_artikli_to_artikli">
-    <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="1" />
-    <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="artikli">
-        <PropertyRef Name="id_artikla" />
-      </Principal>
-      <Dependent Role="stavke">
-        <PropertyRef Name="artikli_id_artikla" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Ref_dokument_has_artikli_to_dokument">
-    <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="1" />
-    <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="dokument">
-        <PropertyRef Name="id_dokumenta" />
-      </Principal>
-      <Dependent Role="stavke">
-        <PropertyRef Name="dokument_id_dokumenta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Ref_dokument_to_korisnik">
-    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="0..1" />
+  <Association Name="FK_dokument_references_korisnik">
+    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="korisnik">
@@ -176,7 +137,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Ref_dokument_to_poslovni_partner">
+  <Association Name="FK_dokument_references_poslovni_partner">
     <End Role="poslovni_partner" Type="T02_DBModel.Store.poslovni_partner" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
@@ -188,7 +149,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Ref_dokument_to_tip_dokumenta">
+  <Association Name="FK_dokument_references_tip_dokumenta">
     <End Role="tip_dokumenta" Type="T02_DBModel.Store.tip_dokumenta" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
@@ -197,6 +158,42 @@
       </Principal>
       <Dependent Role="dokument">
         <PropertyRef Name="tip_dokumenta_id_tipa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_korisnik_references_tip_korisnika">
+    <End Role="tip_korisnika" Type="T02_DBModel.Store.tip_korisnika" Multiplicity="0..1" />
+    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tip_korisnika">
+        <PropertyRef Name="id_tipa" />
+      </Principal>
+      <Dependent Role="korisnik">
+        <PropertyRef Name="tip_korisnika_id_tipa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavke_references_artikli">
+    <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="1" />
+    <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artikli">
+        <PropertyRef Name="id_artikla" />
+      </Principal>
+      <Dependent Role="stavke">
+        <PropertyRef Name="artikli_id_artikla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavke_references_dokument">
+    <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="1" />
+    <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dokument">
+        <PropertyRef Name="id_dokumenta" />
+      </Principal>
+      <Dependent Role="stavke">
+        <PropertyRef Name="dokument_id_dokumenta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

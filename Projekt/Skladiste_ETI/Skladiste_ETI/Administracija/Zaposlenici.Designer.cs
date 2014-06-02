@@ -35,6 +35,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.grbDodajZaposlenika = new System.Windows.Forms.GroupBox();
+            this.chkBoxAdmin = new System.Windows.Forms.CheckBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
             this.txtKorIme = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.idkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +61,6 @@
             this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chkBoxAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             this.grbDodajZaposlenika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
@@ -68,6 +69,7 @@
             // dgvZaposlenici
             // 
             this.dgvZaposlenici.AllowUserToAddRows = false;
+            this.dgvZaposlenici.AllowUserToDeleteRows = false;
             this.dgvZaposlenici.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvZaposlenici.AutoGenerateColumns = false;
@@ -102,6 +104,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
             // 
             // btnDelete
             // 
@@ -113,6 +116,8 @@
             this.btnDelete.Size = new System.Drawing.Size(116, 101);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
             // 
             // btnExit
             // 
@@ -125,6 +130,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // grbDodajZaposlenika
             // 
@@ -148,6 +154,16 @@
             this.grbDodajZaposlenika.TabIndex = 4;
             this.grbDodajZaposlenika.TabStop = false;
             this.grbDodajZaposlenika.Text = "Unos zaposlenika";
+            // 
+            // chkBoxAdmin
+            // 
+            this.chkBoxAdmin.AutoSize = true;
+            this.chkBoxAdmin.Location = new System.Drawing.Point(395, 110);
+            this.chkBoxAdmin.Name = "chkBoxAdmin";
+            this.chkBoxAdmin.Size = new System.Drawing.Size(88, 17);
+            this.chkBoxAdmin.TabIndex = 13;
+            this.chkBoxAdmin.Text = "Adiministrator";
+            this.chkBoxAdmin.UseVisualStyleBackColor = true;
             // 
             // txtStatus
             // 
@@ -256,6 +272,15 @@
             this.btnOK.TabIndex = 0;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.MouseHover += new System.EventHandler(this.btnOK_MouseHover);
+            // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.DataPropertyName = "tip_korisnika";
+            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn1.HeaderText = "Uloga";
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.ReadOnly = true;
             // 
             // idkorisnikaDataGridViewTextBoxColumn
             // 
@@ -335,16 +360,6 @@
             // 
             this.korisnikBindingSource.DataSource = typeof(Skladiste_ETI.korisnik);
             // 
-            // chkBoxAdmin
-            // 
-            this.chkBoxAdmin.AutoSize = true;
-            this.chkBoxAdmin.Location = new System.Drawing.Point(395, 110);
-            this.chkBoxAdmin.Name = "chkBoxAdmin";
-            this.chkBoxAdmin.Size = new System.Drawing.Size(88, 17);
-            this.chkBoxAdmin.TabIndex = 13;
-            this.chkBoxAdmin.Text = "Adiministrator";
-            this.chkBoxAdmin.UseVisualStyleBackColor = true;
-            // 
             // frmZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +372,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvZaposlenici);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmZaposlenici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracija zaposlenika";
@@ -372,16 +388,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvZaposlenici;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idkorisnikaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brtelefonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn korimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipkorisnikaidtipaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dokumentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipkorisnikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource korisnikBindingSource;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
@@ -401,5 +407,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.CheckBox chkBoxAdmin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idkorisnikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brtelefonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipkorisnikaidtipaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dokumentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipkorisnikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
     }
 }

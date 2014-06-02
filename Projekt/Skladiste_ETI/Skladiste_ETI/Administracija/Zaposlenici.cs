@@ -30,8 +30,9 @@ namespace Skladiste_ETI.Administracija
                 listaZaposlenika = new BindingList<korisnik>(db.korisnik.ToList());
             
             }
+            
             korisnikBindingSource.DataSource = listaZaposlenika;
-        
+
         }
 
         private void frmZaposlenici_Load(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace Skladiste_ETI.Administracija
 
                 korisnik zaposlenik = new korisnik 
                 {
+                    
                     ime = txtIme.Text,
                     prezime = txtPrezime.Text,
                     br_telefona = txtBrTelefona.Text,
@@ -63,9 +65,85 @@ namespace Skladiste_ETI.Administracija
                     status = txtStatus.Text
                 
                 };
+
+                db.korisnik.Add(zaposlenik);
+                db.SaveChanges();
+
+                if (chkBoxAdmin.Checked == true)
+                {
+                    string upit = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
+                    db.Database.ExecuteSqlCommand(upit);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    string upit2 = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
+                    db.Database.ExecuteSqlCommand(upit2);
+                    db.SaveChanges();
+                }
+            
+            }//using
+
+            PrikaziZaposlenike();//osvježi listu nakon dodavanja
+        
+        }//click
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            korisnik odabraniZaposlenik = korisnikBindingSource.Current as korisnik;
+
+            if (odabraniZaposlenik != null) {
+
+                if (MessageBox.Show("Da li ste sigurni da želite obrisati zaposlenika?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    using (var db = new T02_DBEntities()) 
+                    {
+                        db.korisnik.Attach(odabraniZaposlenik);
+                        db.korisnik.Remove(odabraniZaposlenik);
+                        db.SaveChanges();
+                    
+                    }
+                
+                }
             
             }
+            PrikaziZaposlenike();//prikazi zaposlenike nakon brisanja
+
         }
+
+        private void btnAdd_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnAdd, "Unos zaposlenika");
+
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnDelete, "Brisanje zaposlenika");
+
+        }
+
+        private void btnExit_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnExit, "Izlaz");
+
+        }
+
+        private void btnOK_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnOK, "Potvrda unosa");
+        }
+
+
+
+
+
+
 
 
     }

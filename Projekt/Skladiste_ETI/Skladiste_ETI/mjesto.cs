@@ -20,9 +20,8 @@ namespace Skladiste_ETI
         }
     
         public int id_mjesta { get; set; }
-        public Nullable<int> polica { get; set; }
+        public int polica { get; set; }
         public string sektor { get; set; }
-        public Nullable<float> kolicina { get; set; }
     
         public virtual ICollection<artikli> artikli { get; set; }
     }

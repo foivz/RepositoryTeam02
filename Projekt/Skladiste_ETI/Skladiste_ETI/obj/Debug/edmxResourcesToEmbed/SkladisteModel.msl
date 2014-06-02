@@ -7,10 +7,8 @@
           <ScalarProperty Name="id_artikla" ColumnName="id_artikla" />
           <ScalarProperty Name="br_serije" ColumnName="br_serije" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
-          <ScalarProperty Name="trenutna_kolicina" ColumnName="trenutna_kolicina" />
           <ScalarProperty Name="cijena" ColumnName="cijena" />
-          <ScalarProperty Name="frekvencija_izlaska_id_frekvencije" ColumnName="frekvencija_izlaska_id_frekvencije" />
-          <ScalarProperty Name="minimalna_kolicina" ColumnName="minimalna_kolicina" />
+          <ScalarProperty Name="kolicina" ColumnName="kolicina" />
           <ScalarProperty Name="mjesto_id_mjesta" ColumnName="mjesto_id_mjesta" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -47,7 +45,6 @@
           <ScalarProperty Name="id_mjesta" ColumnName="id_mjesta" />
           <ScalarProperty Name="polica" ColumnName="polica" />
           <ScalarProperty Name="sektor" ColumnName="sektor" />
-          <ScalarProperty Name="kolicina" ColumnName="kolicina" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -26,7 +26,7 @@ namespace Skladiste_ETI
         public string kor_ime { get; set; }
         public string lozinka { get; set; }
         public string status { get; set; }
-        public int tip_korisnika_id_tipa { get; set; }
+        public Nullable<int> tip_korisnika_id_tipa { get; set; }
     
         public virtual ICollection<dokument> dokument { get; set; }
         public virtual tip_korisnika tip_korisnika { get; set; }

@@ -103,7 +103,7 @@
             this.grbDodajPartnera.Controls.Add(this.btnOK);
             this.grbDodajPartnera.Location = new System.Drawing.Point(198, 12);
             this.grbDodajPartnera.Name = "grbDodajPartnera";
-            this.grbDodajPartnera.Size = new System.Drawing.Size(393, 133);
+            this.grbDodajPartnera.Size = new System.Drawing.Size(496, 133);
             this.grbDodajPartnera.TabIndex = 6;
             this.grbDodajPartnera.TabStop = false;
             this.grbDodajPartnera.Text = "Unos poslovnog partnera";
@@ -161,7 +161,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
-            this.btnOK.Location = new System.Drawing.Point(280, 19);
+            this.btnOK.Location = new System.Drawing.Point(293, 19);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(96, 89);
             this.btnOK.TabIndex = 0;
@@ -186,7 +186,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(346, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(466, 237);
             this.dataGridView1.TabIndex = 7;
             // 
             // poslovnipartnerBindingSource
@@ -207,6 +207,7 @@
             this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
             this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nazivDataGridViewTextBoxColumn.Width = 150;
             // 
             // adresaDataGridViewTextBoxColumn
             // 
@@ -214,6 +215,7 @@
             this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
             this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresaDataGridViewTextBoxColumn.Width = 150;
             // 
             // brtelefonaDataGridViewTextBoxColumn
             // 
@@ -221,6 +223,7 @@
             this.brtelefonaDataGridViewTextBoxColumn.HeaderText = "Broj telefona";
             this.brtelefonaDataGridViewTextBoxColumn.Name = "brtelefonaDataGridViewTextBoxColumn";
             this.brtelefonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brtelefonaDataGridViewTextBoxColumn.Width = 120;
             // 
             // dokumentDataGridViewTextBoxColumn
             // 
@@ -235,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(605, 404);
+            this.ClientSize = new System.Drawing.Size(713, 404);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grbDodajPartnera);
             this.Controls.Add(this.btnExit);
@@ -268,11 +271,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource poslovnipartnerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpartneraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brtelefonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dokumentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource poslovnipartnerBindingSource;
     }
 }

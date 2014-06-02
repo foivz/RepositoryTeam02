@@ -331,12 +331,14 @@
             this.zaposleniciToolStripMenuItem.Name = "zaposleniciToolStripMenuItem";
             this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.zaposleniciToolStripMenuItem.Text = "Zaposlenici";
+            this.zaposleniciToolStripMenuItem.Click += new System.EventHandler(this.btnZaposlenici_Click);
             // 
             // poslovniPartneriToolStripMenuItem
             // 
             this.poslovniPartneriToolStripMenuItem.Name = "poslovniPartneriToolStripMenuItem";
             this.poslovniPartneriToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.poslovniPartneriToolStripMenuItem.Text = "Poslovni partneri";
+            this.poslovniPartneriToolStripMenuItem.Click += new System.EventHandler(this.btnPartneri_Click);
             // 
             // label1
             // 

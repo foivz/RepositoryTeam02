@@ -50,7 +50,7 @@ namespace Skladiste_ETI
             label9.Text = DateTime.Now.DayOfWeek.ToString();
             
 
-        }
+        }//konstruktor
 
         private void btnArtikl_MouseHover(object sender, EventArgs e)
         {

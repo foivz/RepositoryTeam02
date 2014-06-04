@@ -12,32 +12,62 @@ namespace Skladiste_ETI.Administracija
 {
     public partial class frmZaposlenici : Form
     {
+        
         public frmZaposlenici()
         {
             InitializeComponent();
-            grbDodajZaposlenika.Visible = false;
+            
         }
 
         
         /// <summary>
         /// prikazuje zaposlenike u datagridview kojemu je datasource lista zaposlenika iz db konteksta
         /// </summary>
-        private void PrikaziZaposlenike() {
+        private void PrikaziZaposlenike(tip_korisnika uloga) {
 
-            BindingList<korisnik> listaZaposlenika = null;
-            using (var db = new T02_DBEntities()){
-
-                listaZaposlenika = new BindingList<korisnik>(db.korisnik.ToList());
-            
+            BindingList<korisnik> korisnici = null;
+            using (var db = new T02_DBEntities())
+            {
+                db.tip_korisnika.Attach(uloga);
+                korisnici = new BindingList<korisnik>(uloga.korisnik.ToList<korisnik>());
+                
             }
+            korisnikBindingSource.DataSource = korisnici;
             
-            korisnikBindingSource.DataSource = listaZaposlenika;
+        }
+
+        /// <summary>
+        /// prikazuje moguće tipove korisnika u sustavu
+        /// </summary>
+        private void PrikaziTipKorisnika()
+        {
+
+            BindingList<tip_korisnika> uloga = null;
+            using (var db = new T02_DBEntities())
+            {
+                uloga = new BindingList<tip_korisnika>(db.tip_korisnika.ToList<tip_korisnika>());
+
+            }
+            tipkorisnikaBindingSource.DataSource = uloga;
 
         }
 
+        private void dgvUloga_SelectionChanged(object sender, EventArgs e)
+        {
+            tip_korisnika selektiraniTip = tipkorisnikaBindingSource.Current as tip_korisnika;
+            if (selektiraniTip != null)
+            {
+                PrikaziZaposlenike(selektiraniTip);
+            }
+        }
+
+
         private void frmZaposlenici_Load(object sender, EventArgs e)
         {
-            PrikaziZaposlenike();
+            PrikaziTipKorisnika();
+            PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+            
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -45,29 +75,74 @@ namespace Skladiste_ETI.Administracija
             this.Close();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            grbDodajZaposlenika.Show();
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
-            using(var db = new T02_DBEntities()){
+            if (txtIme.Text == "") 
+            {
+                MessageBox.Show("Niste unijeli ime zaposlenika!");
+            }
+            else if (txtPrezime.Text == "") 
+            {
+                MessageBox.Show("Niste unijeli prezime zaposlenika!");
+            }
+            else if (txtBrTelefona.Text == "")
+            {
+                MessageBox.Show("Niste unijeli broj telefona!");
+            }
+            else if (txtKorIme.Text == "")
+            {
+                MessageBox.Show("Niste unijeli korisničko ime zapsolenika!");
+            }
+            else if (txtLozinka.Text == "")
+            {
+                MessageBox.Show("Niste unijeli lozinku!");
+            }
+            else if (txtStatus.Text == "")
+            {
+                MessageBox.Show("Niste unijeli status!");
+            }
 
-                korisnik zaposlenik = new korisnik 
+            else
+            {
+
+                using (var db = new T02_DBEntities())
                 {
-                    
-                    ime = txtIme.Text,
-                    prezime = txtPrezime.Text,
-                    br_telefona = txtBrTelefona.Text,
-                    kor_ime = txtKorIme.Text,
-                    lozinka = txtLozinka.Text,
-                    status = txtStatus.Text
-                
-                };
 
-                db.korisnik.Add(zaposlenik);
-                db.SaveChanges();
+                    korisnik zaposlenik = new korisnik
+                    {
+
+                        ime = txtIme.Text,
+                        prezime = txtPrezime.Text,
+                        br_telefona = txtBrTelefona.Text,
+                        kor_ime = txtKorIme.Text,
+                        lozinka = txtLozinka.Text,
+                        status = txtStatus.Text
+
+                    };
+
+                    db.korisnik.Add(zaposlenik);
+                    db.SaveChanges();
+
+
+                    if (chkBoxAdmin.Checked == true)
+                    {
+                        string upit = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
+                        db.Database.ExecuteSqlCommand(upit);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        string upit2 = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 1 WHERE kor_ime = '{0}'", txtKorIme.Text);
+                        db.Database.ExecuteSqlCommand(upit2);
+                        db.SaveChanges();
+                    }
+
+                    PrikaziTipKorisnika();
+                    PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+
+                }//using
+
+
 
                 txtIme.Text = "";
                 txtPrezime.Text = "";
@@ -75,26 +150,12 @@ namespace Skladiste_ETI.Administracija
                 txtKorIme.Text = "";
                 txtLozinka.Text = "";
                 txtStatus.Text = "";
+                chkBoxAdmin.Checked = false;
 
-                if (chkBoxAdmin.Checked == true)
-                {
-                    string upit = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
-                    db.Database.ExecuteSqlCommand(upit);
-                    db.SaveChanges();
-                }
-                else
-                {
-                    string upit2 = string.Format("UPDATE korisnik SET tip_korisnika_id_tipa = 2 WHERE kor_ime = '{0}'", txtKorIme.Text);
-                    db.Database.ExecuteSqlCommand(upit2);
-                    db.SaveChanges();
-                }
-            
-            }//using
-
-            PrikaziZaposlenike();//osvježi listu nakon dodavanja
-        
+            }//else
         }//click
 
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
@@ -106,7 +167,7 @@ namespace Skladiste_ETI.Administracija
                 {
                     using (var db = new T02_DBEntities()) 
                     {
-                        db.korisnik.Attach(odabraniZaposlenik);
+                        db.korisnik.Attach(odabraniZaposlenik);//registracija odabranog zaposlenika iz datagridviewa
                         db.korisnik.Remove(odabraniZaposlenik);
                         db.SaveChanges();
                     
@@ -115,16 +176,10 @@ namespace Skladiste_ETI.Administracija
                 }
             
             }
-            PrikaziZaposlenike();//prikazi zaposlenike nakon brisanja
+            PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
 
         }
 
-        private void btnAdd_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnAdd, "Unos zaposlenika");
-
-        }
 
         private void btnDelete_MouseHover(object sender, EventArgs e)
         {
@@ -148,5 +203,6 @@ namespace Skladiste_ETI.Administracija
 
 
 
+        public string vbCrLf { get; set; }
     }
 }

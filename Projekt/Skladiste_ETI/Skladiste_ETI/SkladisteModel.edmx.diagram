@@ -4,24 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="745af9eb1f2040859aa03bfbc4a1ba43" Name="Diagram1">
-        <EntityTypeShape EntityType="T02_DBModel.artikli" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+      <Diagram DiagramId="b95bef823389456ba903a75e2fd0b43b" Name="Diagram1">
+        <EntityTypeShape EntityType="T02_DBModel.artikli" Width="1.5" PointX="5.625" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.dokument" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.korisnik" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.mjesto" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.poslovni_partner" Width="1.875" PointX="5.875" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.mjesto" Width="1.5" PointX="2.875" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.poslovni_partner" Width="1.75" PointX="2.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.stavke" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.tip_dokumenta" Width="1.5" PointX="2.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.tip_dokumenta" Width="1.5" PointX="5.625" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.tip_korisnika" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <AssociationConnector Association="T02_DBModel.FK_artikli_references_mjesto" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_stavke_references_artikli" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_dokument_references_korisnik" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_dokument_references_poslovni_partner" ManuallyRouted="false" />
-        <AssociationConnector Association="T02_DBModel.FK_dokument_references_tip_dokumenta" ManuallyRouted="true" >
-          <ConnectorPoint PointX="4" PointY="5.7064653577302629" />
-          <ConnectorPoint PointX="5.53125" PointY="5.7064653577302629" />
-          <ConnectorPoint PointX="5.53125" PointY="3.9417936197916665" />
-        </AssociationConnector>
+        <AssociationConnector Association="T02_DBModel.FK_dokument_references_tip_dokumenta" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_stavke_references_dokument" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_korisnik_references_tip_korisnika" ManuallyRouted="false" />
       </Diagram>

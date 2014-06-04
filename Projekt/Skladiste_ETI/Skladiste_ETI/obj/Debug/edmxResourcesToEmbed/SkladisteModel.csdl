@@ -59,8 +59,8 @@
     <Property Name="korisnik_id_korisnika" Type="Int32" Nullable="false" />
     <Property Name="tip_dokumenta_id_tipa" Type="Int32" Nullable="false" />
     <Property Name="poslovni_partner_id_partnera" Type="Int32" Nullable="false" />
-    <Property Name="datum" Type="DateTime" Precision="0" />
-    <Property Name="status" Type="Boolean" />
+    <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="korisnik" Relationship="T02_DBModel.FK_dokument_references_korisnik" FromRole="dokument" ToRole="korisnik" />
     <NavigationProperty Name="poslovni_partner" Relationship="T02_DBModel.FK_dokument_references_poslovni_partner" FromRole="dokument" ToRole="poslovni_partner" />
     <NavigationProperty Name="tip_dokumenta" Relationship="T02_DBModel.FK_dokument_references_tip_dokumenta" FromRole="dokument" ToRole="tip_dokumenta" />
@@ -71,12 +71,12 @@
       <PropertyRef Name="id_korisnika" />
     </Key>
     <Property Name="id_korisnika" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="ime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
-    <Property Name="prezime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
-    <Property Name="br_telefona" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="kor_ime" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-    <Property Name="lozinka" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-    <Property Name="status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ime" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="prezime" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="br_telefona" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="kor_ime" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="lozinka" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="tip_korisnika_id_tipa" Type="Int32" />
     <NavigationProperty Name="dokument" Relationship="T02_DBModel.FK_dokument_references_korisnik" FromRole="korisnik" ToRole="dokument" />
     <NavigationProperty Name="tip_korisnika" Relationship="T02_DBModel.FK_korisnik_references_tip_korisnika" FromRole="korisnik" ToRole="tip_korisnika" />
@@ -95,9 +95,9 @@
       <PropertyRef Name="id_partnera" />
     </Key>
     <Property Name="id_partnera" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
-    <Property Name="adresa" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
-    <Property Name="br_telefona" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="adresa" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="br_telefona" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="dokument" Relationship="T02_DBModel.FK_dokument_references_poslovni_partner" FromRole="poslovni_partner" ToRole="dokument" />
   </EntityType>
   <EntityType Name="stavke">

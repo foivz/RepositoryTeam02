@@ -57,20 +57,20 @@
     <Property Name="korisnik_id_korisnika" Type="int" Nullable="false" />
     <Property Name="tip_dokumenta_id_tipa" Type="int" Nullable="false" />
     <Property Name="poslovni_partner_id_partnera" Type="int" Nullable="false" />
-    <Property Name="datum" Type="date" />
-    <Property Name="status" Type="bit" />
+    <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="korisnik">
     <Key>
       <PropertyRef Name="id_korisnika" />
     </Key>
     <Property Name="id_korisnika" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ime" Type="varchar" MaxLength="45" />
-    <Property Name="prezime" Type="varchar" MaxLength="45" />
-    <Property Name="br_telefona" Type="varchar" MaxLength="10" />
-    <Property Name="kor_ime" Type="varchar" MaxLength="30" />
-    <Property Name="lozinka" Type="varchar" MaxLength="30" />
-    <Property Name="status" Type="varchar" MaxLength="20" />
+    <Property Name="ime" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="prezime" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="br_telefona" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="kor_ime" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="lozinka" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="20" />
     <Property Name="tip_korisnika_id_tipa" Type="int" />
   </EntityType>
   <EntityType Name="mjesto">
@@ -86,9 +86,9 @@
       <PropertyRef Name="id_partnera" />
     </Key>
     <Property Name="id_partnera" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="naziv" Type="varchar" MaxLength="45" />
-    <Property Name="adresa" Type="varchar" MaxLength="45" />
-    <Property Name="br_telefona" Type="varchar" MaxLength="45" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="adresa" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="br_telefona" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <EntityType Name="stavke">
     <Key>

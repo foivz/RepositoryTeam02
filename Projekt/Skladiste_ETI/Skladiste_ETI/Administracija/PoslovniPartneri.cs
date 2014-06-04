@@ -15,14 +15,10 @@ namespace Skladiste_ETI.Administracija
         public frmPartneri()
         {
             InitializeComponent();
-            grbDodajPartnera.Visible = false;
+            
         }
 
-        private void btnAddParner_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnAddPartner, "Unos partnera");
-        }
+     
 
         private void btnDeletePartner_MouseHover(object sender, EventArgs e)
         {
@@ -75,27 +71,44 @@ namespace Skladiste_ETI.Administracija
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            using (var db = new T02_DBEntities())
-            {
 
-                poslovni_partner partner = new poslovni_partner
+            if (txtNaziv.Text == "")
+            {
+                MessageBox.Show("Niste unijeli naziz poslovnog partnera!");
+            }
+            else if (txtAdresa.Text == "")
+            {
+                MessageBox.Show("Niste unijeli adresu partnera!");
+            }
+            else if (txtBrTelefona.Text == "")
+            {
+                MessageBox.Show("Niste unijeli broj telefona!");
+            }
+            else
+            {
+                using (var db = new T02_DBEntities())
                 {
 
-                    naziv = txtNaziv.Text,
-                    adresa = txtAdresa.Text,
-                    br_telefona = txtBrTelefona.Text
+                    poslovni_partner partner = new poslovni_partner
+                    {
 
-                };
+                        naziv = txtNaziv.Text,
+                        adresa = txtAdresa.Text,
+                        br_telefona = txtBrTelefona.Text
 
-                db.poslovni_partner.Add(partner);
-                db.SaveChanges();
+                    };
+
+                    db.poslovni_partner.Add(partner);
+                    db.SaveChanges();
+
+                }//using
 
                 txtNaziv.Text = "";
                 txtAdresa.Text = "";
                 txtBrTelefona.Text = "";
 
-            }//using
-            PrikaziPartnere();//prikazi partnere nakon unosa
+                PrikaziPartnere();//prikazi partnere nakon unosa
+            }//else
         }//click
 
         private void btnDeletePartner_Click(object sender, EventArgs e)

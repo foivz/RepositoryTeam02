@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPartneri));
-            this.btnAddPartner = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDeletePartner = new System.Windows.Forms.Button();
             this.grbDodajPartnera = new System.Windows.Forms.GroupBox();
@@ -42,36 +41,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.poslovnipartnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idpartneraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poslovnipartnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grbDodajPartnera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poslovnipartnerBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAddPartner
-            // 
-            this.btnAddPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddPartner.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPartner.Image")));
-            this.btnAddPartner.Location = new System.Drawing.Point(42, 37);
-            this.btnAddPartner.Name = "btnAddPartner";
-            this.btnAddPartner.Size = new System.Drawing.Size(116, 102);
-            this.btnAddPartner.TabIndex = 2;
-            this.btnAddPartner.UseVisualStyleBackColor = true;
-            this.btnAddPartner.Click += new System.EventHandler(this.btnAddPartner_Click);
-            this.btnAddPartner.MouseHover += new System.EventHandler(this.btnAddParner_MouseHover);
             // 
             // btnExit
             // 
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(42, 272);
+            this.btnExit.Location = new System.Drawing.Point(26, 274);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(116, 101);
             this.btnExit.TabIndex = 5;
@@ -84,7 +72,7 @@
             this.btnDeletePartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDeletePartner.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePartner.Image")));
-            this.btnDeletePartner.Location = new System.Drawing.Point(42, 155);
+            this.btnDeletePartner.Location = new System.Drawing.Point(26, 155);
             this.btnDeletePartner.Name = "btnDeletePartner";
             this.btnDeletePartner.Size = new System.Drawing.Size(116, 101);
             this.btnDeletePartner.TabIndex = 4;
@@ -94,6 +82,8 @@
             // 
             // grbDodajPartnera
             // 
+            this.grbDodajPartnera.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbDodajPartnera.Controls.Add(this.txtBrTelefona);
             this.grbDodajPartnera.Controls.Add(this.txtAdresa);
             this.grbDodajPartnera.Controls.Add(this.txtNaziv);
@@ -103,7 +93,7 @@
             this.grbDodajPartnera.Controls.Add(this.btnOK);
             this.grbDodajPartnera.Location = new System.Drawing.Point(198, 12);
             this.grbDodajPartnera.Name = "grbDodajPartnera";
-            this.grbDodajPartnera.Size = new System.Drawing.Size(496, 133);
+            this.grbDodajPartnera.Size = new System.Drawing.Size(465, 133);
             this.grbDodajPartnera.TabIndex = 6;
             this.grbDodajPartnera.TabStop = false;
             this.grbDodajPartnera.Text = "Unos poslovnog partnera";
@@ -132,27 +122,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 79);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(36, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.Size = new System.Drawing.Size(79, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Broj telefona:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 54);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(36, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(48, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Adresa:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 27);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(36, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Naziv:";
             // 
@@ -173,6 +169,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -182,16 +181,21 @@
             this.brtelefonaDataGridViewTextBoxColumn,
             this.dokumentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.poslovnipartnerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(228, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(198, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(466, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(465, 237);
             this.dataGridView1.TabIndex = 7;
             // 
-            // poslovnipartnerBindingSource
+            // pictureBox1
             // 
-            this.poslovnipartnerBindingSource.DataSource = typeof(Skladiste_ETI.poslovni_partner);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 133);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // idpartneraDataGridViewTextBoxColumn
             // 
@@ -233,17 +237,21 @@
             this.dokumentDataGridViewTextBoxColumn.ReadOnly = true;
             this.dokumentDataGridViewTextBoxColumn.Visible = false;
             // 
+            // poslovnipartnerBindingSource
+            // 
+            this.poslovnipartnerBindingSource.DataSource = typeof(Skladiste_ETI.poslovni_partner);
+            // 
             // frmPartneri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(713, 404);
+            this.ClientSize = new System.Drawing.Size(674, 404);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grbDodajPartnera);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeletePartner);
-            this.Controls.Add(this.btnAddPartner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPartneri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -252,6 +260,7 @@
             this.grbDodajPartnera.ResumeLayout(false);
             this.grbDodajPartnera.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poslovnipartnerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -259,7 +268,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddPartner;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDeletePartner;
         private System.Windows.Forms.GroupBox grbDodajPartnera;
@@ -277,5 +285,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brtelefonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dokumentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

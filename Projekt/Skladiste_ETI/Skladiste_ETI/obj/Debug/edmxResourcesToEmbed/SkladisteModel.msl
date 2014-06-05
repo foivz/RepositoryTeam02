@@ -5,10 +5,10 @@
       <EntityTypeMapping TypeName="T02_DBModel.artikli">
         <MappingFragment StoreEntitySet="artikli">
           <ScalarProperty Name="id_artikla" ColumnName="id_artikla" />
-          <ScalarProperty Name="br_serije" ColumnName="br_serije" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
           <ScalarProperty Name="cijena" ColumnName="cijena" />
           <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+          <ScalarProperty Name="masa" ColumnName="masa" />
           <ScalarProperty Name="mjesto_id_mjesta" ColumnName="mjesto_id_mjesta" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -22,6 +22,9 @@
           <ScalarProperty Name="poslovni_partner_id_partnera" ColumnName="poslovni_partner_id_partnera" />
           <ScalarProperty Name="datum" ColumnName="datum" />
           <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="osnova" ColumnName="osnova" />
+          <ScalarProperty Name="način_otpreme" ColumnName="način_otpreme" />
+          <ScalarProperty Name="način_dopreme" ColumnName="način_dopreme" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -65,6 +68,7 @@
           <ScalarProperty Name="dokument_id_dokumenta" ColumnName="dokument_id_dokumenta" />
           <ScalarProperty Name="artikli_id_artikla" ColumnName="artikli_id_artikla" />
           <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+          <ScalarProperty Name="masa" ColumnName="masa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

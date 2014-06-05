@@ -31,6 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmZaposlenici));
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
+            this.idkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.grbDodajZaposlenika = new System.Windows.Forms.GroupBox();
@@ -50,29 +61,18 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dgvUloga = new System.Windows.Forms.DataGridView();
-            this.lblUputa = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idtipaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipkorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dokumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblUputa = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
             this.grbDodajZaposlenika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUloga)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipkorisnikaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvZaposlenici
@@ -102,6 +102,84 @@
             this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenici.Size = new System.Drawing.Size(648, 298);
             this.dgvZaposlenici.TabIndex = 0;
+            // 
+            // idkorisnikaDataGridViewTextBoxColumn
+            // 
+            this.idkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "id_korisnika";
+            this.idkorisnikaDataGridViewTextBoxColumn.HeaderText = "id_korisnika";
+            this.idkorisnikaDataGridViewTextBoxColumn.Name = "idkorisnikaDataGridViewTextBoxColumn";
+            this.idkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idkorisnikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // brtelefonaDataGridViewTextBoxColumn
+            // 
+            this.brtelefonaDataGridViewTextBoxColumn.DataPropertyName = "br_telefona";
+            this.brtelefonaDataGridViewTextBoxColumn.HeaderText = "Broj telefona";
+            this.brtelefonaDataGridViewTextBoxColumn.Name = "brtelefonaDataGridViewTextBoxColumn";
+            this.brtelefonaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korimeDataGridViewTextBoxColumn
+            // 
+            this.korimeDataGridViewTextBoxColumn.DataPropertyName = "kor_ime";
+            this.korimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.korimeDataGridViewTextBoxColumn.Name = "korimeDataGridViewTextBoxColumn";
+            this.korimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lozinkaDataGridViewTextBoxColumn
+            // 
+            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "Lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            this.lozinkaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipkorisnikaidtipaDataGridViewTextBoxColumn
+            // 
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika_id_tipa";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika_id_tipa";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Name = "tipkorisnikaidtipaDataGridViewTextBoxColumn";
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dokumentDataGridViewTextBoxColumn
+            // 
+            this.dokumentDataGridViewTextBoxColumn.DataPropertyName = "dokument";
+            this.dokumentDataGridViewTextBoxColumn.HeaderText = "dokument";
+            this.dokumentDataGridViewTextBoxColumn.Name = "dokumentDataGridViewTextBoxColumn";
+            this.dokumentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dokumentDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipkorisnikaDataGridViewTextBoxColumn
+            // 
+            this.tipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika";
+            this.tipkorisnikaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika";
+            this.tipkorisnikaDataGridViewTextBoxColumn.Name = "tipkorisnikaDataGridViewTextBoxColumn";
+            this.tipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipkorisnikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // korisnikBindingSource
+            // 
+            this.korisnikBindingSource.DataSource = typeof(Skladiste_ETI.korisnik);
             // 
             // btnDelete
             // 
@@ -152,7 +230,7 @@
             this.grbDodajZaposlenika.Size = new System.Drawing.Size(645, 151);
             this.grbDodajZaposlenika.TabIndex = 4;
             this.grbDodajZaposlenika.TabStop = false;
-            this.grbDodajZaposlenika.Text = "Unos zaposlenika";
+            this.grbDodajZaposlenika.Text = "Unos korisnika";
             // 
             // chkBoxAdmin
             // 
@@ -320,27 +398,6 @@
             this.dgvUloga.TabIndex = 5;
             this.dgvUloga.SelectionChanged += new System.EventHandler(this.dgvUloga_SelectionChanged);
             // 
-            // lblUputa
-            // 
-            this.lblUputa.AutoSize = true;
-            this.lblUputa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUputa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUputa.ForeColor = System.Drawing.Color.Red;
-            this.lblUputa.Location = new System.Drawing.Point(12, 149);
-            this.lblUputa.Name = "lblUputa";
-            this.lblUputa.Size = new System.Drawing.Size(141, 22);
-            this.lblUputa.TabIndex = 6;
-            this.lblUputa.Text = "Odaberite prikaz:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 129);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // idtipaDataGridViewTextBoxColumn
             // 
             this.idtipaDataGridViewTextBoxColumn.DataPropertyName = "id_tipa";
@@ -368,83 +425,26 @@
             // 
             this.tipkorisnikaBindingSource.DataSource = typeof(Skladiste_ETI.tip_korisnika);
             // 
-            // idkorisnikaDataGridViewTextBoxColumn
+            // lblUputa
             // 
-            this.idkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "id_korisnika";
-            this.idkorisnikaDataGridViewTextBoxColumn.HeaderText = "id_korisnika";
-            this.idkorisnikaDataGridViewTextBoxColumn.Name = "idkorisnikaDataGridViewTextBoxColumn";
-            this.idkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idkorisnikaDataGridViewTextBoxColumn.Visible = false;
+            this.lblUputa.AutoSize = true;
+            this.lblUputa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUputa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUputa.ForeColor = System.Drawing.Color.Red;
+            this.lblUputa.Location = new System.Drawing.Point(12, 149);
+            this.lblUputa.Name = "lblUputa";
+            this.lblUputa.Size = new System.Drawing.Size(141, 22);
+            this.lblUputa.TabIndex = 6;
+            this.lblUputa.Text = "Odaberite prikaz:";
             // 
-            // imeDataGridViewTextBoxColumn
+            // pictureBox1
             // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // brtelefonaDataGridViewTextBoxColumn
-            // 
-            this.brtelefonaDataGridViewTextBoxColumn.DataPropertyName = "br_telefona";
-            this.brtelefonaDataGridViewTextBoxColumn.HeaderText = "Broj telefona";
-            this.brtelefonaDataGridViewTextBoxColumn.Name = "brtelefonaDataGridViewTextBoxColumn";
-            this.brtelefonaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korimeDataGridViewTextBoxColumn
-            // 
-            this.korimeDataGridViewTextBoxColumn.DataPropertyName = "kor_ime";
-            this.korimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.korimeDataGridViewTextBoxColumn.Name = "korimeDataGridViewTextBoxColumn";
-            this.korimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lozinkaDataGridViewTextBoxColumn
-            // 
-            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "Lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
-            this.lozinkaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipkorisnikaidtipaDataGridViewTextBoxColumn
-            // 
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika_id_tipa";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika_id_tipa";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Name = "tipkorisnikaidtipaDataGridViewTextBoxColumn";
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipkorisnikaidtipaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dokumentDataGridViewTextBoxColumn
-            // 
-            this.dokumentDataGridViewTextBoxColumn.DataPropertyName = "dokument";
-            this.dokumentDataGridViewTextBoxColumn.HeaderText = "dokument";
-            this.dokumentDataGridViewTextBoxColumn.Name = "dokumentDataGridViewTextBoxColumn";
-            this.dokumentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dokumentDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipkorisnikaDataGridViewTextBoxColumn
-            // 
-            this.tipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "tip_korisnika";
-            this.tipkorisnikaDataGridViewTextBoxColumn.HeaderText = "tip_korisnika";
-            this.tipkorisnikaDataGridViewTextBoxColumn.Name = "tipkorisnikaDataGridViewTextBoxColumn";
-            this.tipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipkorisnikaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // korisnikBindingSource
-            // 
-            this.korisnikBindingSource.DataSource = typeof(Skladiste_ETI.korisnik);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 129);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // frmZaposlenici
             // 
@@ -463,15 +463,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmZaposlenici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administracija zaposlenika";
+            this.Text = "Administracija korisnika";
             this.Load += new System.EventHandler(this.frmZaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
             this.grbDodajZaposlenika.ResumeLayout(false);
             this.grbDodajZaposlenika.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUloga)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipkorisnikaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

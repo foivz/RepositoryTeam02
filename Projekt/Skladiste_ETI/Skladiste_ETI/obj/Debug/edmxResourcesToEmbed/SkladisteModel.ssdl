@@ -43,22 +43,25 @@
       <PropertyRef Name="id_artikla" />
     </Key>
     <Property Name="id_artikla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="br_serije" Type="int" Nullable="false" />
     <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="cijena" Type="real" Nullable="false" />
     <Property Name="kolicina" Type="float" Nullable="false" />
-    <Property Name="mjesto_id_mjesta" Type="int" Nullable="false" />
+    <Property Name="masa" Type="float" Nullable="false" />
+    <Property Name="mjesto_id_mjesta" Type="int" />
   </EntityType>
   <EntityType Name="dokument">
     <Key>
       <PropertyRef Name="id_dokumenta" />
     </Key>
     <Property Name="id_dokumenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="korisnik_id_korisnika" Type="int" Nullable="false" />
-    <Property Name="tip_dokumenta_id_tipa" Type="int" Nullable="false" />
-    <Property Name="poslovni_partner_id_partnera" Type="int" Nullable="false" />
+    <Property Name="korisnik_id_korisnika" Type="int" />
+    <Property Name="tip_dokumenta_id_tipa" Type="int" />
+    <Property Name="poslovni_partner_id_partnera" Type="int" />
     <Property Name="datum" Type="date" Nullable="false" />
     <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="osnova" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="način_otpreme" Type="varchar" MaxLength="50" />
+    <Property Name="način_dopreme" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="korisnik">
     <Key>
@@ -95,9 +98,10 @@
       <PropertyRef Name="id_stavke" />
     </Key>
     <Property Name="id_stavke" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="dokument_id_dokumenta" Type="int" Nullable="false" />
-    <Property Name="artikli_id_artikla" Type="int" Nullable="false" />
+    <Property Name="dokument_id_dokumenta" Type="int" />
+    <Property Name="artikli_id_artikla" Type="int" />
     <Property Name="kolicina" Type="real" Nullable="false" />
+    <Property Name="masa" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="tip_dokumenta">
     <Key>
@@ -114,7 +118,7 @@
     <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <Association Name="FK_artikli_references_mjesto">
-    <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="1" />
+    <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="0..1" />
     <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="mjesto">
@@ -126,7 +130,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_korisnik">
-    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="1" />
+    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="0..1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="korisnik">
@@ -138,7 +142,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_poslovni_partner">
-    <End Role="poslovni_partner" Type="T02_DBModel.Store.poslovni_partner" Multiplicity="1" />
+    <End Role="poslovni_partner" Type="T02_DBModel.Store.poslovni_partner" Multiplicity="0..1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="poslovni_partner">
@@ -150,7 +154,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_tip_dokumenta">
-    <End Role="tip_dokumenta" Type="T02_DBModel.Store.tip_dokumenta" Multiplicity="1" />
+    <End Role="tip_dokumenta" Type="T02_DBModel.Store.tip_dokumenta" Multiplicity="0..1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tip_dokumenta">
@@ -174,7 +178,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_stavke_references_artikli">
-    <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="1" />
+    <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="0..1" />
     <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="artikli">
@@ -186,7 +190,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_stavke_references_dokument">
-    <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="1" />
+    <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="0..1" />
     <End Role="stavke" Type="T02_DBModel.Store.stavke" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dokument">

@@ -20,11 +20,11 @@ namespace Skladiste_ETI
         }
     
         public int id_artikla { get; set; }
-        public int br_serije { get; set; }
         public string naziv { get; set; }
         public float cijena { get; set; }
         public double kolicina { get; set; }
-        public int mjesto_id_mjesta { get; set; }
+        public double masa { get; set; }
+        public Nullable<int> mjesto_id_mjesta { get; set; }
     
         public virtual mjesto mjesto { get; set; }
         public virtual ICollection<stavke> stavke { get; set; }

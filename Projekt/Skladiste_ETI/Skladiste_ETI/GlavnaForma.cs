@@ -84,25 +84,25 @@ namespace Skladiste_ETI
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
             new frmOtpremnice().Show();
-            this.Close();
+           
         }
 
         private void btnIzdatnica_Click(object sender, EventArgs e)
         {
             new frmIzdatnice().Show();
-            this.Close();
+            
         }
 
         private void btnPrimka_Click(object sender, EventArgs e)
         {
             new frmPrimke().Show();
-            this.Close();
+            
         }
 
         private void btnPredatnica_Click(object sender, EventArgs e)
         {
             new frmPredatnice().Show();
-            this.Close();
+            
         }
 
         private void btnOtpremnica_MouseHover(object sender, EventArgs e)

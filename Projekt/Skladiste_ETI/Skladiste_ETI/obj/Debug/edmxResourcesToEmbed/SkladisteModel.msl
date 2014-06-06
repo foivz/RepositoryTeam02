@@ -23,8 +23,7 @@
           <ScalarProperty Name="datum" ColumnName="datum" />
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="osnova" ColumnName="osnova" />
-          <ScalarProperty Name="način_otpreme" ColumnName="način_otpreme" />
-          <ScalarProperty Name="način_dopreme" ColumnName="način_dopreme" />
+          <ScalarProperty Name="način_trans" ColumnName="način_trans" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

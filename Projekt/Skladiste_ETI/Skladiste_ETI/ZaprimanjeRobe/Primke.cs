@@ -15,7 +15,7 @@ namespace Skladiste_ETI
         public frmPrimke()
         {
             List<korisnik> zaposlenici = new List<korisnik>();
-            
+            List<artikli> roba = new List<artikli>();
             InitializeComponent();
 
             using(var db = new T02_DBEntities())
@@ -24,7 +24,7 @@ namespace Skladiste_ETI
                 cmbPartner.DisplayMember = "naziv";
                 cmbPartner.ValueMember = "id_partnera";
 
-                zaposlenici = db.korisnik.Take(20).Select(z => new korisnik()//napravi novu listu sa imenom i prezimenom
+                zaposlenici = db.korisnik.Select(z => new korisnik()//napravi novu listu sa imenom i prezimenom
                 {
                     id_zaposlenika = z.id_korisnika,
                     zaposlenik = z.ime + " " + z.prezime//ubaci u listu ime i prezime
@@ -37,10 +37,17 @@ namespace Skladiste_ETI
                 cmbKorisnik.ValueMember = "id_zaposlenika";
 
 
-                cmbNazivArtikla.DataSource = db.artikli.ToList();
-                cmbNazivArtikla.DisplayMember = "naziv";
-                cmbNazivArtikla.ValueMember = "id_artikla";
-                
+                roba = db.artikli.AsEnumerable().Select(a => new artikli()//napravi novu listu sa id i nazivom artikla
+                {
+                    ida = a.id_artikla,
+                    naziv_artikla= a.id_artikla + " | " + a.naziv//ubaci u listu id i naziv
+
+
+                }).ToList();
+
+                cmbNazivArtikla.DataSource = roba;//prikazi listu sa id i nazivom artikla
+                cmbNazivArtikla.DisplayMember = "naziv_artikla";
+                cmbNazivArtikla.ValueMember = "ida";
                 
             }//using
         }//konstruktor
@@ -51,10 +58,28 @@ namespace Skladiste_ETI
             public string zaposlenik { get; set; }
         }
 
+        public class artikli
+        {
+            public int ida { get; set; }
+            public string naziv_artikla { get; set; }
+        }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnOK_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnOK, "Potvrda unosa primke");
+        }
+
+        private void btnExit_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnExit, "Izlaz");
         }
 
 

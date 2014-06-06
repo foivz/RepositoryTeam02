@@ -121,6 +121,7 @@
             // 
             // cmbKorisnik
             // 
+            this.cmbKorisnik.DisplayMember = "id_korisnika";
             this.cmbKorisnik.FormattingEnabled = true;
             this.cmbKorisnik.Location = new System.Drawing.Point(303, 58);
             this.cmbKorisnik.Name = "cmbKorisnik";
@@ -150,9 +151,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 16);
+            this.label3.Size = new System.Drawing.Size(126, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Način dopreme:";
+            this.label3.Text = "Način transporta:";
             // 
             // label2
             // 
@@ -206,6 +207,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // btnOK
             // 
@@ -217,6 +219,7 @@
             this.btnOK.Size = new System.Drawing.Size(103, 77);
             this.btnOK.TabIndex = 8;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.MouseHover += new System.EventHandler(this.btnOK_MouseHover);
             // 
             // txtCijena
             // 

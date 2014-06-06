@@ -23,11 +23,10 @@ namespace Skladiste_ETI
         public Nullable<int> korisnik_id_korisnika { get; set; }
         public Nullable<int> tip_dokumenta_id_tipa { get; set; }
         public Nullable<int> poslovni_partner_id_partnera { get; set; }
-        public System.DateTime datum { get; set; }
-        public bool status { get; set; }
+        public Nullable<System.DateTime> datum { get; set; }
+        public Nullable<bool> status { get; set; }
         public string osnova { get; set; }
-        public string način_otpreme { get; set; }
-        public string način_dopreme { get; set; }
+        public string način_trans { get; set; }
     
         public virtual korisnik korisnik { get; set; }
         public virtual poslovni_partner poslovni_partner { get; set; }

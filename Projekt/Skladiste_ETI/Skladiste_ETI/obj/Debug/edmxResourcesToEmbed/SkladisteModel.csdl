@@ -59,11 +59,10 @@
     <Property Name="korisnik_id_korisnika" Type="Int32" />
     <Property Name="tip_dokumenta_id_tipa" Type="Int32" />
     <Property Name="poslovni_partner_id_partnera" Type="Int32" />
-    <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="status" Type="Boolean" Nullable="false" />
-    <Property Name="osnova" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="način_otpreme" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="način_dopreme" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="datum" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="osnova" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="način_trans" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="korisnik" Relationship="T02_DBModel.FK_dokument_references_korisnik" FromRole="dokument" ToRole="korisnik" />
     <NavigationProperty Name="poslovni_partner" Relationship="T02_DBModel.FK_dokument_references_poslovni_partner" FromRole="dokument" ToRole="poslovni_partner" />
     <NavigationProperty Name="tip_dokumenta" Relationship="T02_DBModel.FK_dokument_references_tip_dokumenta" FromRole="dokument" ToRole="tip_dokumenta" />

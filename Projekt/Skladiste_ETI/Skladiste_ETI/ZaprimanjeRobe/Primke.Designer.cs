@@ -44,13 +44,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.txtCijena = new System.Windows.Forms.TextBox();
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.txtMasa = new System.Windows.Forms.TextBox();
             this.cmbNazivArtikla = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -121,13 +119,11 @@
             // 
             // cmbKorisnik
             // 
-            this.cmbKorisnik.DisplayMember = "id_korisnika";
             this.cmbKorisnik.FormattingEnabled = true;
             this.cmbKorisnik.Location = new System.Drawing.Point(303, 58);
             this.cmbKorisnik.Name = "cmbKorisnik";
             this.cmbKorisnik.Size = new System.Drawing.Size(200, 24);
             this.cmbKorisnik.TabIndex = 5;
-            this.cmbKorisnik.ValueMember = "id_korisnika";
             // 
             // cmbPartner
             // 
@@ -179,13 +175,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.btnOK);
-            this.groupBox2.Controls.Add(this.txtCijena);
             this.groupBox2.Controls.Add(this.txtKolicina);
             this.groupBox2.Controls.Add(this.txtMasa);
             this.groupBox2.Controls.Add(this.cmbNazivArtikla);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
@@ -219,25 +213,19 @@
             this.btnOK.Size = new System.Drawing.Size(103, 77);
             this.btnOK.TabIndex = 8;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             this.btnOK.MouseHover += new System.EventHandler(this.btnOK_MouseHover);
-            // 
-            // txtCijena
-            // 
-            this.txtCijena.Location = new System.Drawing.Point(97, 68);
-            this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(200, 22);
-            this.txtCijena.TabIndex = 7;
             // 
             // txtKolicina
             // 
-            this.txtKolicina.Location = new System.Drawing.Point(97, 96);
+            this.txtKolicina.Location = new System.Drawing.Point(97, 65);
             this.txtKolicina.Name = "txtKolicina";
             this.txtKolicina.Size = new System.Drawing.Size(200, 22);
             this.txtKolicina.TabIndex = 6;
             // 
             // txtMasa
             // 
-            this.txtMasa.Location = new System.Drawing.Point(97, 124);
+            this.txtMasa.Location = new System.Drawing.Point(97, 90);
             this.txtMasa.Name = "txtMasa";
             this.txtMasa.Size = new System.Drawing.Size(200, 22);
             this.txtMasa.TabIndex = 5;
@@ -253,7 +241,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 127);
+            this.label8.Location = new System.Drawing.Point(24, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 16);
             this.label8.TabIndex = 3;
@@ -262,20 +250,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 99);
+            this.label7.Location = new System.Drawing.Point(24, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 2;
             this.label7.Text = "Količina:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Cijena:";
             // 
             // label5
             // 
@@ -323,13 +302,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.TextBox txtMasa;
         private System.Windows.Forms.ComboBox cmbNazivArtikla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnOK;

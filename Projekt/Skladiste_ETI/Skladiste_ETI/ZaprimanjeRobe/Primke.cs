@@ -16,18 +16,27 @@ namespace Skladiste_ETI
         {
             List<korisnik> zaposlenici = new List<korisnik>();
             List<artikli> roba = new List<artikli>();
+            List<poslovni_partner> partner = new List<poslovni_partner>();
             InitializeComponent();
 
             using(var db = new T02_DBEntities())
             {
-                cmbPartner.DataSource = db.poslovni_partner.ToList();
-                cmbPartner.DisplayMember = "naziv";
-                cmbPartner.ValueMember = "id_partnera";
 
-                zaposlenici = db.korisnik.Select(z => new korisnik()//napravi novu listu sa imenom i prezimenom
+                partner = db.poslovni_partner.AsEnumerable().Select(p => new poslovni_partner()//napravi novu listu sa id i nazivom
+                {
+                    idPartnera = p.id_partnera,
+                    pos_partner = p.id_partnera + " " + p.naziv
+
+                }).ToList();
+
+                cmbPartner.DataSource = partner;
+                cmbPartner.DisplayMember = "pos_partner";
+                cmbPartner.ValueMember = "idPartnera";
+
+                zaposlenici = db.korisnik.AsEnumerable().Select(z => new korisnik()//napravi novu listu sa imenom i prezimenom
                 {
                     id_zaposlenika = z.id_korisnika,
-                    zaposlenik = z.ime + " " + z.prezime//ubaci u listu ime i prezime
+                    zaposlenik =z.id_korisnika + " " + z.ime + " " + z.prezime//ubaci u listu ime i prezime
                    
 
                 }).ToList();
@@ -40,7 +49,7 @@ namespace Skladiste_ETI
                 roba = db.artikli.AsEnumerable().Select(a => new artikli()//napravi novu listu sa id i nazivom artikla
                 {
                     ida = a.id_artikla,
-                    naziv_artikla= a.id_artikla + " | " + a.naziv//ubaci u listu id i naziv
+                    naziv_artikla= a.id_artikla + " " + a.naziv//ubaci u listu id i naziv
 
 
                 }).ToList();
@@ -48,6 +57,7 @@ namespace Skladiste_ETI
                 cmbNazivArtikla.DataSource = roba;//prikazi listu sa id i nazivom artikla
                 cmbNazivArtikla.DisplayMember = "naziv_artikla";
                 cmbNazivArtikla.ValueMember = "ida";
+                
                 
             }//using
         }//konstruktor
@@ -64,6 +74,11 @@ namespace Skladiste_ETI
             public string naziv_artikla { get; set; }
         }
 
+        public class poslovni_partner 
+        {
+            public int idPartnera { get; set; }
+            public string pos_partner { get; set;}
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -81,6 +96,104 @@ namespace Skladiste_ETI
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(this.btnExit, "Izlaz");
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if(txtNacinDopreme.Text == "")
+            {
+                MessageBox.Show("Niste unijeli način dopreme!");
+            }
+            else if(txtOsnova.Text == "")
+            {
+                MessageBox.Show("Niste unijeli popratni dokument!");
+            }
+            else if(txtKolicina.Text == "")
+            {
+                MessageBox.Show("Niste unijeli dopremljenu količinu robe!");
+            }
+            else if(txtMasa.Text == "")
+            {
+                MessageBox.Show("Niste unijeli dopremljenu masu robe!");
+            }
+            else{
+
+
+
+            using (var db = new T02_DBEntities())
+            {
+                DateTime datum1;
+                datum1 = dtpDatum.Value;
+                string idKorisnika = "";
+                string idPartnera1 = "";
+                foreach(char a in cmbKorisnik.Text)
+                {
+                    if(a == ' ')break;
+                    else
+                    {
+                        idKorisnika += a;
+                    }
+
+                }
+
+                foreach (char a in cmbPartner.Text) 
+                {
+                    if (a == ' ') break;
+                    else 
+                    {
+                        idPartnera1 += a;
+                    }
+                }
+
+
+                dokument dokument = new dokument
+                {
+                    
+                    korisnik_id_korisnika = int.Parse(idKorisnika),
+                    tip_dokumenta_id_tipa = 1,
+                    poslovni_partner_id_partnera = int.Parse(idPartnera1),
+                    datum = datum1,
+                    status = true,
+                    osnova = txtOsnova.Text,
+                    način_trans = txtNacinDopreme.Text
+
+                    
+                };
+                db.dokument.Add(dokument);
+                db.SaveChanges();
+
+                string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
+                int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
+                string idArtikla1 = "";
+
+                foreach (char a in cmbNazivArtikla.Text) 
+                {
+                    if (a == ' ') break;
+                    else 
+                    {
+                        idArtikla1 += a;
+                    }
+                
+                }
+
+                stavke stavke = new stavke
+                {
+                    dokument_id_dokumenta = id_dokumenta,
+                    artikli_id_artikla = int.Parse(idArtikla1),
+                    kolicina = int.Parse(txtKolicina.Text),
+                    masa = int.Parse(txtMasa.Text)
+
+                };
+                db.stavke.Add(stavke);
+                db.SaveChanges();
+
+            }//using
+
+            MessageBox.Show("Primka je uspješno unesena!");
+            this.Close();
+           
+            }//else
+
+        }//click
 
 
 

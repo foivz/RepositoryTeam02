@@ -176,5 +176,10 @@ namespace Skladiste_ETI
             partneri.Show();
         }
 
+        private void btnArtikli_Click(object sender, EventArgs e)
+        {
+            new frmArtikli().Show();
+        }
+
     }
 }

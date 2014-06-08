@@ -88,6 +88,7 @@
             this.btnArtikli.TabIndex = 1;
             this.btnArtikli.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnArtikli.UseVisualStyleBackColor = false;
+            this.btnArtikli.Click += new System.EventHandler(this.btnArtikli_Click);
             this.btnArtikli.MouseHover += new System.EventHandler(this.btnArtikl_MouseHover);
             // 
             // btnOtpremanje
@@ -270,6 +271,7 @@
             this.upravljanjeArtiklimaToolStripMenuItem.Name = "upravljanjeArtiklimaToolStripMenuItem";
             this.upravljanjeArtiklimaToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.upravljanjeArtiklimaToolStripMenuItem.Text = "Upravljanje artiklima";
+            this.upravljanjeArtiklimaToolStripMenuItem.Click += new System.EventHandler(this.btnArtikli_Click);
             // 
             // otpremanjeRobeToolStripMenuItem
             // 

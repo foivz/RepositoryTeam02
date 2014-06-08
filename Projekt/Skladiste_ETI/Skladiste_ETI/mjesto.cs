@@ -24,5 +24,8 @@ namespace Skladiste_ETI
         public string sektor { get; set; }
     
         public virtual ICollection<artikli> artikli { get; set; }
+
+        public int idMjesta { get; set; }
+        public string lista_mjesta { get; set; }
     }
 }

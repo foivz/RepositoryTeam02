@@ -231,15 +231,17 @@ namespace Skladiste_ETI
                         db.artikli.Remove(odabraniArtikl);
                         db.SaveChanges();
 
+                        PrikaziMjesto();
+                        PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                        MessageBox.Show("Artikl je uspješno obrisan!");
+
                     }//using
 
-                }
+                }//if
 
             }
             
-            PrikaziMjesto();
-            PrikaziArtikle(mjestoBindingSource.Current as mjesto);
-            MessageBox.Show("Artikl je uspješno obrisan!");
+            
             ;
         }//click
 
@@ -279,10 +281,14 @@ namespace Skladiste_ETI
             int odabrani_redak = dgvMjesto.CurrentCell.RowIndex;
             string trenutna_pozicija = dgvMjesto.Rows[odabrani_redak].Cells[0].Value.ToString() + " | " + dgvMjesto.Rows[odabrani_redak].Cells[1].Value.ToString() + " | "+ dgvMjesto.Rows[odabrani_redak].Cells[2].Value.ToString();
 
+            int odabrani_redak2 = dgvArtikli.CurrentCell.RowIndex;
+            string id_artikla = dgvArtikli.Rows[odabrani_redak2].Cells[0].Value.ToString();
+
             if (selektiraniArtikl != null) 
             {
-                UpravljanjeArtiklima.frmIzmjenaArtikla forma = new UpravljanjeArtiklima.frmIzmjenaArtikla(selektiraniArtikl, trenutna_pozicija);
+                UpravljanjeArtiklima.frmIzmjenaArtikla forma = new UpravljanjeArtiklima.frmIzmjenaArtikla(selektiraniArtikl, trenutna_pozicija,id_artikla);
                 forma.ShowDialog();
+                PrikaziMjesto();
                 PrikaziArtikle(mjestoBindingSource.Current as mjesto);
             }
         }

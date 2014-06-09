@@ -14,11 +14,13 @@ namespace Skladiste_ETI.UpravljanjeArtiklima
     {
         private artikli artiklZaIzmjenu;
         private string trenutna_poz;
-        public frmIzmjenaArtikla(artikli artikl, string trenutna_pozicija)
+        private string idArtikla;
+        public frmIzmjenaArtikla(artikli artikl, string trenutna_pozicija, string id_artikla)
         {
             InitializeComponent();
             artiklZaIzmjenu = artikl;
             trenutna_poz = trenutna_pozicija;
+            idArtikla = id_artikla;
 
             List<mjesto> pozicija = new List<mjesto>();
 
@@ -62,7 +64,7 @@ namespace Skladiste_ETI.UpravljanjeArtiklima
             {
                 string idNovePozicije = "";
 
-                foreach (char a in txtTrenutnaPozicija.Text)
+                foreach (char a in cmbNovaPozicija.Text)
                 {
                     if (a == ' ') break;
                     else 
@@ -77,18 +79,16 @@ namespace Skladiste_ETI.UpravljanjeArtiklima
                 artiklZaIzmjenu.cijena = float.Parse(txtCijenaZaIzmjenu.Text);
                 artiklZaIzmjenu.kolicina = float.Parse(txtKolicinaZaIzmjenu.Text);
                 artiklZaIzmjenu.masa = float.Parse(txtMasaZaIzmjenu.Text);
-                artiklZaIzmjenu.mjesto_id_mjesta = int.Parse(idNovePozicije);
 
+                
+                string upit = string.Format("UPDATE artikli SET mjesto_id_mjesta = '{0}' WHERE id_artikla = '{1}'", idNovePozicije, idArtikla);
+                db.Database.ExecuteSqlCommand(upit);
                 db.SaveChanges();
-            }
-        }
-
-
-
-
-
-
-            
+                MessageBox.Show("Podaci o artiklu su uspješno izmijenjeni!");
+                this.Close();
+            }//using
+        }//click
+ 
     }
 
 }

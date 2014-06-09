@@ -108,6 +108,7 @@ namespace Skladiste_ETI.Administracija
                 txtBrTelefona.Text = "";
 
                 PrikaziPartnere();//prikazi partnere nakon unosa
+                MessageBox.Show("Partner uspješno dodan!");
             }//else
         }//click
 
@@ -125,13 +126,15 @@ namespace Skladiste_ETI.Administracija
                         db.poslovni_partner.Attach(odabraniPartner);
                         db.poslovni_partner.Remove(odabraniPartner);
                         db.SaveChanges();
+                        PrikaziPartnere();//prikazi partnere nakon brisanja
+                        MessageBox.Show("Partner uspješno obrisan!");
 
                     }
 
                 }
 
             }
-            PrikaziPartnere();//prikazi partnere nakon brisanja
+            
         }//click
 
 

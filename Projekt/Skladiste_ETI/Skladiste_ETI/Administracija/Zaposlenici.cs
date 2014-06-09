@@ -139,6 +139,7 @@ namespace Skladiste_ETI.Administracija
 
                     PrikaziTipKorisnika();
                     PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+                    MessageBox.Show("Zaposlenik uspješno dodan!");
 
                 }//using
 
@@ -170,13 +171,15 @@ namespace Skladiste_ETI.Administracija
                         db.korisnik.Attach(odabraniZaposlenik);//registracija odabranog zaposlenika iz datagridviewa
                         db.korisnik.Remove(odabraniZaposlenik);
                         db.SaveChanges();
+                        PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+                        MessageBox.Show("Zaposlenik uspješno obrisan!");
                     
                     }
                 
                 }
             
             }
-            PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+            
 
         }
 

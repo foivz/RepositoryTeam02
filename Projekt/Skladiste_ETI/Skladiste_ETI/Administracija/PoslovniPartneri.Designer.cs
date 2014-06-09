@@ -100,24 +100,30 @@
             // 
             // txtBrTelefona
             // 
+            this.txtBrTelefona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtBrTelefona.Location = new System.Drawing.Point(117, 76);
             this.txtBrTelefona.Name = "txtBrTelefona";
-            this.txtBrTelefona.Size = new System.Drawing.Size(129, 20);
+            this.txtBrTelefona.Size = new System.Drawing.Size(129, 21);
             this.txtBrTelefona.TabIndex = 9;
+            this.txtBrTelefona.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtAdresa
             // 
+            this.txtAdresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtAdresa.Location = new System.Drawing.Point(117, 50);
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(129, 20);
+            this.txtAdresa.Size = new System.Drawing.Size(129, 21);
             this.txtAdresa.TabIndex = 8;
+            this.txtAdresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNaziv
             // 
+            this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtNaziv.Location = new System.Drawing.Point(117, 24);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(129, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(129, 21);
             this.txtNaziv.TabIndex = 7;
+            this.txtNaziv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 

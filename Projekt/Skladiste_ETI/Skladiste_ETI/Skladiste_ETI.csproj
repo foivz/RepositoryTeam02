@@ -146,6 +146,12 @@
     <Compile Include="OtpremanjeRobe\Otpremnice.Designer.cs">
       <DependentUpon>Otpremnice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpravljanjeArtiklima\IzmjenaArtikla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpravljanjeArtiklima\IzmjenaArtikla.Designer.cs">
+      <DependentUpon>IzmjenaArtikla.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZaprimanjeRobe\Predatnice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtpremanjeRobe\Izdatnice.resx">
       <DependentUpon>Izdatnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpravljanjeArtiklima\IzmjenaArtikla.resx">
+      <DependentUpon>IzmjenaArtikla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZaprimanjeRobe\Predatnice.resx">
       <DependentUpon>Predatnice.cs</DependentUpon>

@@ -53,6 +53,8 @@
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.txtMasa = new System.Windows.Forms.TextBox();
             this.grbUnosArtikla = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbMjesto = new System.Windows.Forms.ComboBox();
             this.idartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,8 +69,6 @@
             this.sektorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artikliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbMjesto = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -88,6 +88,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
             // 
             // btnDelete
             // 
@@ -100,6 +101,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
             // 
             // btnchange
             // 
@@ -111,6 +113,8 @@
             this.btnchange.Size = new System.Drawing.Size(111, 93);
             this.btnchange.TabIndex = 2;
             this.btnchange.UseVisualStyleBackColor = true;
+            this.btnchange.Click += new System.EventHandler(this.btnchange_Click);
+            this.btnchange.MouseHover += new System.EventHandler(this.btnchange_MouseHover);
             // 
             // btnExit
             // 
@@ -123,6 +127,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // dgvMjesto
             // 
@@ -206,17 +211,21 @@
             // 
             // txtSektor
             // 
+            this.txtSektor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtSektor.Location = new System.Drawing.Point(85, 54);
             this.txtSektor.Name = "txtSektor";
-            this.txtSektor.Size = new System.Drawing.Size(100, 20);
+            this.txtSektor.Size = new System.Drawing.Size(100, 21);
             this.txtSektor.TabIndex = 3;
+            this.txtSektor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPolica
             // 
+            this.txtPolica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPolica.Location = new System.Drawing.Point(85, 28);
             this.txtPolica.Name = "txtPolica";
-            this.txtPolica.Size = new System.Drawing.Size(100, 20);
+            this.txtPolica.Size = new System.Drawing.Size(100, 21);
             this.txtPolica.TabIndex = 2;
+            this.txtPolica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblSektor
             // 
@@ -251,6 +260,7 @@
             this.btnAddGoods.TabIndex = 16;
             this.btnAddGoods.UseVisualStyleBackColor = true;
             this.btnAddGoods.Click += new System.EventHandler(this.btnAddGoods_Click);
+            this.btnAddGoods.MouseHover += new System.EventHandler(this.btnAddGoods_MouseHover);
             // 
             // label5
             // 
@@ -298,31 +308,39 @@
             // 
             // txtNaziv
             // 
+            this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtNaziv.Location = new System.Drawing.Point(79, 25);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(119, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(119, 21);
             this.txtNaziv.TabIndex = 12;
+            this.txtNaziv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCijena
             // 
+            this.txtCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtCijena.Location = new System.Drawing.Point(79, 51);
             this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(119, 20);
+            this.txtCijena.Size = new System.Drawing.Size(119, 21);
             this.txtCijena.TabIndex = 13;
+            this.txtCijena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtKolicina
             // 
+            this.txtKolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtKolicina.Location = new System.Drawing.Point(79, 77);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(119, 20);
+            this.txtKolicina.Size = new System.Drawing.Size(119, 21);
             this.txtKolicina.TabIndex = 14;
+            this.txtKolicina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMasa
             // 
+            this.txtMasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtMasa.Location = new System.Drawing.Point(79, 103);
             this.txtMasa.Name = "txtMasa";
-            this.txtMasa.Size = new System.Drawing.Size(119, 20);
+            this.txtMasa.Size = new System.Drawing.Size(119, 21);
             this.txtMasa.TabIndex = 15;
+            this.txtMasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // grbUnosArtikla
             // 
@@ -344,6 +362,26 @@
             this.grbUnosArtikla.TabStop = false;
             this.grbUnosArtikla.Text = "Unos artikla";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(6, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Pozicija:";
+            // 
+            // cmbMjesto
+            // 
+            this.cmbMjesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbMjesto.FormattingEnabled = true;
+            this.cmbMjesto.Location = new System.Drawing.Point(77, 129);
+            this.cmbMjesto.Name = "cmbMjesto";
+            this.cmbMjesto.Size = new System.Drawing.Size(121, 23);
+            this.cmbMjesto.TabIndex = 17;
+            // 
             // idartiklaDataGridViewTextBoxColumn
             // 
             this.idartiklaDataGridViewTextBoxColumn.DataPropertyName = "id_artikla";
@@ -361,21 +399,21 @@
             // cijenaDataGridViewTextBoxColumn
             // 
             this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
-            this.cijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.cijenaDataGridViewTextBoxColumn.HeaderText = "Cijena/kn";
             this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
             this.cijenaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kolicinaDataGridViewTextBoxColumn
             // 
             this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina/paleta";
             this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
             this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // masaDataGridViewTextBoxColumn
             // 
             this.masaDataGridViewTextBoxColumn.DataPropertyName = "masa";
-            this.masaDataGridViewTextBoxColumn.HeaderText = "Masa";
+            this.masaDataGridViewTextBoxColumn.HeaderText = "Masa/kg";
             this.masaDataGridViewTextBoxColumn.Name = "masaDataGridViewTextBoxColumn";
             this.masaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -440,25 +478,6 @@
             // 
             this.mjestoBindingSource.DataSource = typeof(Skladiste_ETI.mjesto);
             // 
-            // cmbMjesto
-            // 
-            this.cmbMjesto.FormattingEnabled = true;
-            this.cmbMjesto.Location = new System.Drawing.Point(77, 129);
-            this.cmbMjesto.Name = "cmbMjesto";
-            this.cmbMjesto.Size = new System.Drawing.Size(121, 21);
-            this.cmbMjesto.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(6, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Pozicija:";
-            // 
             // frmArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,14 +523,6 @@
         private System.Windows.Forms.BindingSource mjestoBindingSource;
         private System.Windows.Forms.DataGridView dgvArtikli;
         private System.Windows.Forms.BindingSource artikliBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idartiklaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn masaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mjestoidmjestaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mjestoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stavkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAddPosition;
         private System.Windows.Forms.TextBox txtSektor;
@@ -531,5 +542,13 @@
         private System.Windows.Forms.GroupBox grbUnosArtikla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbMjesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idartiklaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mjestoidmjestaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mjestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stavkeDataGridViewTextBoxColumn;
     }
 }

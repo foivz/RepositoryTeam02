@@ -49,10 +49,10 @@
           </Key>
           <Property Name="id_artikla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
-          <Property Name="cijena" Type="real" Nullable="false" />
+          <Property Name="cijena" Type="float" Nullable="false" />
           <Property Name="kolicina" Type="float" Nullable="false" />
           <Property Name="masa" Type="float" Nullable="false" />
-          <Property Name="mjesto_id_mjesta" Type="int" />
+          <Property Name="mjesto_id_mjesta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="dokument">
           <Key>
@@ -104,7 +104,7 @@
           <Property Name="id_stavke" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="dokument_id_dokumenta" Type="int" />
           <Property Name="artikli_id_artikla" Type="int" />
-          <Property Name="kolicina" Type="real" Nullable="false" />
+          <Property Name="kolicina" Type="float" Nullable="false" />
           <Property Name="masa" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="tip_dokumenta">
@@ -122,7 +122,7 @@
           <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
         </EntityType>
         <Association Name="FK_artikli_references_mjesto">
-          <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="0..1" />
+          <End Role="mjesto" Type="T02_DBModel.Store.mjesto" Multiplicity="1" />
           <End Role="artikli" Type="T02_DBModel.Store.artikli" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="mjesto">
@@ -254,10 +254,10 @@
           </Key>
           <Property Name="id_artikla" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
-          <Property Name="cijena" Type="Single" Nullable="false" />
+          <Property Name="cijena" Type="Double" Nullable="false" />
           <Property Name="kolicina" Type="Double" Nullable="false" />
           <Property Name="masa" Type="Double" Nullable="false" />
-          <Property Name="mjesto_id_mjesta" Type="Int32" />
+          <Property Name="mjesto_id_mjesta" Type="Int32" Nullable="false" />
           <NavigationProperty Name="mjesto" Relationship="T02_DBModel.FK_artikli_references_mjesto" FromRole="artikli" ToRole="mjesto" />
           <NavigationProperty Name="stavke" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="artikli" ToRole="stavke" />
         </EntityType>
@@ -319,7 +319,7 @@
           <Property Name="id_stavke" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="dokument_id_dokumenta" Type="Int32" />
           <Property Name="artikli_id_artikla" Type="Int32" />
-          <Property Name="kolicina" Type="Single" Nullable="false" />
+          <Property Name="kolicina" Type="Double" Nullable="false" />
           <Property Name="masa" Type="Double" Nullable="false" />
           <NavigationProperty Name="artikli" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="stavke" ToRole="artikli" />
           <NavigationProperty Name="dokument" Relationship="T02_DBModel.FK_stavke_references_dokument" FromRole="stavke" ToRole="dokument" />
@@ -341,7 +341,7 @@
           <NavigationProperty Name="korisnik" Relationship="T02_DBModel.FK_korisnik_references_tip_korisnika" FromRole="tip_korisnika" ToRole="korisnik" />
         </EntityType>
         <Association Name="FK_artikli_references_mjesto">
-          <End Role="mjesto" Type="T02_DBModel.mjesto" Multiplicity="0..1" />
+          <End Role="mjesto" Type="T02_DBModel.mjesto" Multiplicity="1" />
           <End Role="artikli" Type="T02_DBModel.artikli" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="mjesto">

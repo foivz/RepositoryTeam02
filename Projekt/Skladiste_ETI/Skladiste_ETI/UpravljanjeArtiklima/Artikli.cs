@@ -24,7 +24,7 @@ namespace Skladiste_ETI
                 pozicija = db.mjesto.AsEnumerable().Select(m => new mjesto()//napravi novu listu sa id i nazivom
                 {
                     idMjesta = m.id_mjesta,
-                    lista_mjesta = m.id_mjesta + " " + m.polica + " " +m.sektor
+                    lista_mjesta = m.id_mjesta + " | " + m.polica + " | " +m.sektor
                 
                 }).ToList();
 
@@ -104,8 +104,10 @@ namespace Skladiste_ETI
                     txtPolica.Text = "";
                     txtSektor.Text = "";
 
-                    MessageBox.Show("Uspješno dodana pozicija!");
+
                     PrikaziMjesto();
+                    PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                    MessageBox.Show("Uspješno dodana pozicija!");
                     
                 }//using
             }//else
@@ -121,17 +123,27 @@ namespace Skladiste_ETI
                 {
                     using (var db = new T02_DBEntities())
                     {
-                        db.mjesto.Attach(odabranoMjesto);
-                        db.mjesto.Remove(odabranoMjesto);
-                        db.SaveChanges();
-
+                        try
+                        {
+                            db.mjesto.Attach(odabranoMjesto);
+                            db.mjesto.Remove(odabranoMjesto);
+                            db.SaveChanges();
+                            PrikaziMjesto();
+                            PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                            MessageBox.Show("Uspješno obrisana pozicija!");
+                        }
+                        catch {
+                            MessageBox.Show("Nije moguće obrisati poziciju u skladištu koja sadrži robu!");
+                            PrikaziMjesto();
+                            PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                        }
                     }//using
 
                 }
 
             }
-            MessageBox.Show("Uspješno obrisana pozicija!");
-            PrikaziMjesto();
+            
+            
             
         }//click
 
@@ -173,9 +185,9 @@ namespace Skladiste_ETI
                     artikli roba = new artikli
                     {
                         naziv = txtNaziv.Text,
-                        cijena = int.Parse(txtCijena.Text),
-                        kolicina = int.Parse(txtKolicina.Text),
-                        masa = int.Parse(txtMasa.Text),
+                        cijena = float.Parse(txtCijena.Text),
+                        kolicina = float.Parse(txtKolicina.Text),
+                        masa = float.Parse(txtMasa.Text),
                         mjesto_id_mjesta = int.Parse(id_pozicije)
                     };
 
@@ -190,9 +202,10 @@ namespace Skladiste_ETI
                 txtKolicina.Text = "";
                 txtMasa.Text = "";
 
-                MessageBox.Show("Artikl je uspješno dodan!");
+                
                 PrikaziMjesto();
                 PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                MessageBox.Show("Artikl je uspješno dodan!");
                 
             }//else
         }//click
@@ -223,11 +236,58 @@ namespace Skladiste_ETI
                 }
 
             }
-            MessageBox.Show("Artikl je uspješno obrisan!");
+            
             PrikaziMjesto();
             PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+            MessageBox.Show("Artikl je uspješno obrisan!");
             ;
         }//click
+
+        private void btnAdd_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnAdd, "Unos novog artikla");
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnDelete, "Brisanje artikla");
+        }
+
+        private void btnchange_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnchange, "Izmjena artikla");
+        }
+
+        private void btnExit_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnExit, "Izlaz");
+        }
+
+        private void btnAddGoods_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnAddGoods, "Potvrda unosa");
+        }
+
+        private void btnchange_Click(object sender, EventArgs e)
+        {
+            artikli selektiraniArtikl = artikliBindingSource.Current as artikli;
+            int odabrani_redak = dgvMjesto.CurrentCell.RowIndex;
+            string trenutna_pozicija = dgvMjesto.Rows[odabrani_redak].Cells[0].Value.ToString() + " | " + dgvMjesto.Rows[odabrani_redak].Cells[1].Value.ToString() + " | "+ dgvMjesto.Rows[odabrani_redak].Cells[2].Value.ToString();
+
+            if (selektiraniArtikl != null) 
+            {
+                UpravljanjeArtiklima.frmIzmjenaArtikla forma = new UpravljanjeArtiklima.frmIzmjenaArtikla(selektiraniArtikl, trenutna_pozicija);
+                forma.ShowDialog();
+                PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+            }
+        }
+
+        
 
     }
 }

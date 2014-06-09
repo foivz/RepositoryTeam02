@@ -246,49 +246,55 @@
             // 
             // txtStatus
             // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtStatus.Location = new System.Drawing.Point(395, 76);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(128, 20);
+            this.txtStatus.Size = new System.Drawing.Size(128, 21);
             this.txtStatus.TabIndex = 12;
             this.txtStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLozinka
             // 
+            this.txtLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtLozinka.Location = new System.Drawing.Point(395, 51);
             this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(128, 20);
+            this.txtLozinka.Size = new System.Drawing.Size(128, 21);
             this.txtLozinka.TabIndex = 11;
             this.txtLozinka.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtKorIme
             // 
+            this.txtKorIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtKorIme.Location = new System.Drawing.Point(395, 22);
             this.txtKorIme.Name = "txtKorIme";
-            this.txtKorIme.Size = new System.Drawing.Size(128, 20);
+            this.txtKorIme.Size = new System.Drawing.Size(128, 21);
             this.txtKorIme.TabIndex = 10;
             this.txtKorIme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBrTelefona
             // 
+            this.txtBrTelefona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtBrTelefona.Location = new System.Drawing.Point(117, 76);
             this.txtBrTelefona.Name = "txtBrTelefona";
-            this.txtBrTelefona.Size = new System.Drawing.Size(129, 20);
+            this.txtBrTelefona.Size = new System.Drawing.Size(129, 21);
             this.txtBrTelefona.TabIndex = 9;
             this.txtBrTelefona.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPrezime
             // 
+            this.txtPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPrezime.Location = new System.Drawing.Point(117, 50);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(129, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(129, 21);
             this.txtPrezime.TabIndex = 8;
             this.txtPrezime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtIme
             // 
+            this.txtIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtIme.Location = new System.Drawing.Point(117, 24);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(129, 20);
+            this.txtIme.Size = new System.Drawing.Size(129, 21);
             this.txtIme.TabIndex = 7;
             this.txtIme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

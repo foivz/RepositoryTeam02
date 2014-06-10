@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
-            this.dgvPartneri = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idpartneraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.poslovnipartnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbDodajPartnera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPartneri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poslovnipartnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -171,28 +171,28 @@
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             this.btnOK.MouseHover += new System.EventHandler(this.btnOK_MouseHover);
             // 
-            // dgvPartneri
+            // dataGridView1
             // 
-            this.dgvPartneri.AllowUserToAddRows = false;
-            this.dgvPartneri.AllowUserToDeleteRows = false;
-            this.dgvPartneri.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPartneri.AutoGenerateColumns = false;
-            this.dgvPartneri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPartneri.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpartneraDataGridViewTextBoxColumn,
             this.nazivDataGridViewTextBoxColumn,
             this.adresaDataGridViewTextBoxColumn,
             this.brtelefonaDataGridViewTextBoxColumn,
             this.dokumentDataGridViewTextBoxColumn});
-            this.dgvPartneri.DataSource = this.poslovnipartnerBindingSource;
-            this.dgvPartneri.Location = new System.Drawing.Point(198, 155);
-            this.dgvPartneri.Name = "dgvPartneri";
-            this.dgvPartneri.ReadOnly = true;
-            this.dgvPartneri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPartneri.Size = new System.Drawing.Size(465, 237);
-            this.dgvPartneri.TabIndex = 7;
+            this.dataGridView1.DataSource = this.poslovnipartnerBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(198, 155);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(465, 237);
+            this.dataGridView1.TabIndex = 7;
             // 
             // idpartneraDataGridViewTextBoxColumn
             // 
@@ -254,7 +254,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(674, 404);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgvPartneri);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grbDodajPartnera);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeletePartner);
@@ -265,7 +265,7 @@
             this.Load += new System.EventHandler(this.frmPartneri_Load);
             this.grbDodajPartnera.ResumeLayout(false);
             this.grbDodajPartnera.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPartneri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poslovnipartnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -284,7 +284,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.DataGridView dgvPartneri;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource poslovnipartnerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpartneraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;

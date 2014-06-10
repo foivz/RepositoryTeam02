@@ -16,12 +16,6 @@ namespace Skladiste_ETI.Administracija
         public frmZaposlenici()
         {
             InitializeComponent();
-
-            foreach (DataGridViewColumn c in dgvZaposlenici.Columns)
-            {
-                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
-
-            }
             
         }
 

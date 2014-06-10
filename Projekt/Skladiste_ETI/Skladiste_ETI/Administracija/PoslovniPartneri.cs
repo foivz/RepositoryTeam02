@@ -15,7 +15,11 @@ namespace Skladiste_ETI.Administracija
         public frmPartneri()
         {
             InitializeComponent();
-            
+
+            foreach (DataGridViewColumn c in dgvPartneri.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+            }
         }
 
      

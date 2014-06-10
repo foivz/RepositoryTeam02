@@ -26,9 +26,10 @@ namespace Skladiste_ETI
             InitializeComponent();
 
 
+
             var stanje = new[] 
                 {
-                    "Kreirana", "Odobrena"
+                    "kreirana", "odobrena"
 
                 };
 

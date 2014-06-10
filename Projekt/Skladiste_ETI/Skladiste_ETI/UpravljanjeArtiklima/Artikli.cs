@@ -15,6 +15,17 @@ namespace Skladiste_ETI
         public frmArtikli()
         {
             InitializeComponent();
+
+            foreach (DataGridViewColumn c in dgvArtikli.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+            }
+
+            foreach (DataGridViewColumn c in dgvMjesto.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+            }
+
             grbUnosArtikla.Visible = false;
 
             List<mjesto> pozicija = new List<mjesto>();

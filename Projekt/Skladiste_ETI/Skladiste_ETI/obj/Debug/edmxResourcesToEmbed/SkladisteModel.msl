@@ -87,5 +87,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateArtikliDoprema" FunctionName="T02_DBModel.Store.UpdateArtikliDoprema" />
   </EntityContainerMapping>
 </Mapping>

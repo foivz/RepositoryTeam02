@@ -12,6 +12,11 @@ namespace Skladiste_ETI
 {
     public partial class frmPredatnice : Form
     {
+
+        private int id_artiklaParametar = 0;
+        private float dopremljenaKolicinaParametar = 0;
+        private float dopremljenaMasaParametar = 0;
+
         public frmPredatnice()
         {
 
@@ -164,6 +169,15 @@ namespace Skladiste_ETI
 
                     };
                     db.stavke.Add(stavke);
+
+                    //spremi parametre za pohranjenu proceduru
+                    id_artiklaParametar = int.Parse(idArtikla1);
+                    dopremljenaKolicinaParametar = float.Parse(txtKolicina.Text);
+                    dopremljenaMasaParametar = float.Parse(txtMasa.Text);
+
+                    //izvrši pohranjenu proceduru nakon zaprimanja robe na skladište
+                    db.UpdateArtikliDoprema(id_artiklaParametar, dopremljenaKolicinaParametar, dopremljenaMasaParametar);
+
                     db.SaveChanges();
 
                     txtKolicina.Text = "";

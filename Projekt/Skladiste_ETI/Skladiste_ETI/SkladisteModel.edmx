@@ -205,6 +205,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="UpdateArtikliDoprema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDArtikla" Type="int" Mode="In" />
+          <Parameter Name="DopremljenaKolicina" Type="float" Mode="In" />
+          <Parameter Name="DopremljenaMasa" Type="float" Mode="In" />
+        </Function>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
@@ -247,6 +252,11 @@
             <End Role="tip_korisnika" EntitySet="tip_korisnika" />
             <End Role="korisnik" EntitySet="korisnik" />
           </AssociationSet>
+          <FunctionImport Name="UpdateArtikliDoprema">
+            <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+            <Parameter Name="DopremljenaKolicina" Mode="In" Type="Double" />
+            <Parameter Name="DopremljenaMasa" Mode="In" Type="Double" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="artikli">
           <Key>
@@ -516,6 +526,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UpdateArtikliDoprema" FunctionName="T02_DBModel.Store.UpdateArtikliDoprema" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

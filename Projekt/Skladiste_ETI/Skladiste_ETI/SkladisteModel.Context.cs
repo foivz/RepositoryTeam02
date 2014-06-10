@@ -12,6 +12,9 @@ namespace Skladiste_ETI
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class T02_DBEntities : DbContext
     {
@@ -33,5 +36,22 @@ namespace Skladiste_ETI
         public DbSet<stavke> stavke { get; set; }
         public DbSet<tip_dokumenta> tip_dokumenta { get; set; }
         public DbSet<tip_korisnika> tip_korisnika { get; set; }
+    
+        public virtual int UpdateArtikliDoprema(Nullable<int> iDArtikla, Nullable<double> dopremljenaKolicina, Nullable<double> dopremljenaMasa)
+        {
+            var iDArtiklaParameter = iDArtikla.HasValue ?
+                new ObjectParameter("IDArtikla", iDArtikla) :
+                new ObjectParameter("IDArtikla", typeof(int));
+    
+            var dopremljenaKolicinaParameter = dopremljenaKolicina.HasValue ?
+                new ObjectParameter("DopremljenaKolicina", dopremljenaKolicina) :
+                new ObjectParameter("DopremljenaKolicina", typeof(double));
+    
+            var dopremljenaMasaParameter = dopremljenaMasa.HasValue ?
+                new ObjectParameter("DopremljenaMasa", dopremljenaMasa) :
+                new ObjectParameter("DopremljenaMasa", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateArtikliDoprema", iDArtiklaParameter, dopremljenaKolicinaParameter, dopremljenaMasaParameter);
+        }
     }
 }

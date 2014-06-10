@@ -200,4 +200,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="UpdateArtikliDoprema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDArtikla" Type="int" Mode="In" />
+    <Parameter Name="DopremljenaKolicina" Type="float" Mode="In" />
+    <Parameter Name="DopremljenaMasa" Type="float" Mode="In" />
+  </Function>
 </Schema>

@@ -8,12 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Skladiste_ETI
 {
     public partial class frmPrimke : Form
     {
+        private int id_artiklaParametar = 0;
+        private float dopremljenaKolicinaParametar = 0;
+        private float dopremljenaMasaParametar = 0;
+        
         public frmPrimke()
         {
+            
             List<korisnik> zaposlenici = new List<korisnik>();
             List<artikli> roba = new List<artikli>();
             List<poslovni_partner> partner = new List<poslovni_partner>();
@@ -178,6 +184,8 @@ namespace Skladiste_ETI
                 int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
                 string idArtikla1 = "";
 
+                
+
                 foreach (char a in cmbNazivArtikla.Text) 
                 {
                     if (a == ' ') break;
@@ -197,8 +205,17 @@ namespace Skladiste_ETI
 
                 };
                 db.stavke.Add(stavke);
-                db.SaveChanges();
 
+                //spremi parametre za pohranjenu proceduru
+                id_artiklaParametar = int.Parse(idArtikla1);
+                dopremljenaKolicinaParametar = float.Parse(txtKolicina.Text);
+                dopremljenaMasaParametar = float.Parse(txtMasa.Text);
+
+                //izvrši pohranjenu proceduru nakon zaprimanja robe na skladište
+                db.UpdateArtikliDoprema(id_artiklaParametar, dopremljenaKolicinaParametar, dopremljenaMasaParametar);
+
+                db.SaveChanges();
+                
                 txtKolicina.Text = "";
                 txtMasa.Text = "";
 

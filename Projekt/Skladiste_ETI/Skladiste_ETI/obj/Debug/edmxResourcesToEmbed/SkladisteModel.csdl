@@ -37,6 +37,11 @@
       <End Role="tip_korisnika" EntitySet="tip_korisnika" />
       <End Role="korisnik" EntitySet="korisnik" />
     </AssociationSet>
+    <FunctionImport Name="UpdateArtikliDoprema">
+      <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+      <Parameter Name="DopremljenaKolicina" Mode="In" Type="Double" />
+      <Parameter Name="DopremljenaMasa" Mode="In" Type="Double" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="artikli">
     <Key>

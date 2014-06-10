@@ -24,7 +24,7 @@ namespace Skladiste_ETI
         public Nullable<int> tip_dokumenta_id_tipa { get; set; }
         public Nullable<int> poslovni_partner_id_partnera { get; set; }
         public Nullable<System.DateTime> datum { get; set; }
-        public Nullable<bool> status { get; set; }
+        public string stanje { get; set; }
         public string osnova { get; set; }
         public string način_trans { get; set; }
     

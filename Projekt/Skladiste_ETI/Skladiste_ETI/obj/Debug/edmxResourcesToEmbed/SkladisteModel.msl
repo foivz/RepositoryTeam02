@@ -21,7 +21,7 @@
           <ScalarProperty Name="tip_dokumenta_id_tipa" ColumnName="tip_dokumenta_id_tipa" />
           <ScalarProperty Name="poslovni_partner_id_partnera" ColumnName="poslovni_partner_id_partnera" />
           <ScalarProperty Name="datum" ColumnName="datum" />
-          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="stanje" ColumnName="stanje" />
           <ScalarProperty Name="osnova" ColumnName="osnova" />
           <ScalarProperty Name="način_trans" ColumnName="način_trans" />
         </MappingFragment>

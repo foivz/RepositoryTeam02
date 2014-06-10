@@ -50,6 +50,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cmbStanje = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,6 +71,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cmbStanje);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dtpDatum);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtOsnova);
@@ -82,14 +87,14 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(139, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 191);
+            this.groupBox1.Size = new System.Drawing.Size(523, 211);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opis primke";
             // 
             // dtpDatum
             // 
-            this.dtpDatum.Location = new System.Drawing.Point(303, 144);
+            this.dtpDatum.Location = new System.Drawing.Point(303, 172);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 22);
             this.dtpDatum.TabIndex = 9;
@@ -97,7 +102,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 149);
+            this.label9.Location = new System.Drawing.Point(24, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 8;
@@ -173,6 +178,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.btnOK);
             this.groupBox2.Controls.Add(this.txtKolicina);
@@ -183,9 +189,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
-            this.groupBox2.Location = new System.Drawing.Point(139, 209);
+            this.groupBox2.Location = new System.Drawing.Point(139, 229);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 255);
+            this.groupBox2.Size = new System.Drawing.Size(523, 235);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dostavljeni artikli";
@@ -265,6 +271,32 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Naziv:";
             // 
+            // cmbStanje
+            // 
+            this.cmbStanje.FormattingEnabled = true;
+            this.cmbStanje.Location = new System.Drawing.Point(303, 144);
+            this.cmbStanje.Name = "cmbStanje";
+            this.cmbStanje.Size = new System.Drawing.Size(200, 24);
+            this.cmbStanje.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Stanje*:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 204);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(342, 16);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "*Napomena: primka uvijek ima stanje \"kreirana\"!";
+            // 
             // frmPrimke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,5 +342,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.ComboBox cmbStanje;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
     }
 }

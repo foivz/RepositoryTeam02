@@ -63,7 +63,7 @@
           <Property Name="tip_dokumenta_id_tipa" Type="int" />
           <Property Name="poslovni_partner_id_partnera" Type="int" />
           <Property Name="datum" Type="date" />
-          <Property Name="status" Type="bit" />
+          <Property Name="stanje" Type="varchar" MaxLength="50" />
           <Property Name="osnova" Type="varchar" MaxLength="50" />
           <Property Name="način_trans" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -270,7 +270,7 @@
           <Property Name="tip_dokumenta_id_tipa" Type="Int32" />
           <Property Name="poslovni_partner_id_partnera" Type="Int32" />
           <Property Name="datum" Type="DateTime" Precision="0" />
-          <Property Name="status" Type="Boolean" />
+          <Property Name="stanje" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="osnova" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="način_trans" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="korisnik" Relationship="T02_DBModel.FK_dokument_references_korisnik" FromRole="dokument" ToRole="korisnik" />
@@ -450,7 +450,7 @@
                 <ScalarProperty Name="tip_dokumenta_id_tipa" ColumnName="tip_dokumenta_id_tipa" />
                 <ScalarProperty Name="poslovni_partner_id_partnera" ColumnName="poslovni_partner_id_partnera" />
                 <ScalarProperty Name="datum" ColumnName="datum" />
-                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="stanje" ColumnName="stanje" />
                 <ScalarProperty Name="osnova" ColumnName="osnova" />
                 <ScalarProperty Name="način_trans" ColumnName="način_trans" />
               </MappingFragment>

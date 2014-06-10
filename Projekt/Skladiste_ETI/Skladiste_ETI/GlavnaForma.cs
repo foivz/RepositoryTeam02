@@ -31,7 +31,7 @@ namespace Skladiste_ETI
                 {
 
                     lblUloga.Text = "Skladištar";
-
+                    
                 }
                 else {
 

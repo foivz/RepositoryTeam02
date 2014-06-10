@@ -19,6 +19,16 @@ namespace Skladiste_ETI
             List<poslovni_partner> partner = new List<poslovni_partner>();
             InitializeComponent();
 
+
+            var stanje = new[] 
+                {
+                    "Kreirana", "Odobrena"
+
+                };
+
+            cmbStanje.DataSource = stanje;
+
+
             using(var db = new T02_DBEntities())
             {
 
@@ -152,7 +162,7 @@ namespace Skladiste_ETI
                     tip_dokumenta_id_tipa = 1,
                     poslovni_partner_id_partnera = int.Parse(idPartnera1),
                     datum = datum1,
-                    status = true,
+                    stanje = cmbStanje.Text,
                     osnova = txtOsnova.Text,
                     način_trans = txtNacinDopreme.Text
 
@@ -160,6 +170,9 @@ namespace Skladiste_ETI
                 };
                 db.dokument.Add(dokument);
                 db.SaveChanges();
+
+                txtNacinDopreme.Text = "";
+                txtOsnova.Text = "";
 
                 string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
                 int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
@@ -179,12 +192,15 @@ namespace Skladiste_ETI
                 {
                     dokument_id_dokumenta = id_dokumenta,
                     artikli_id_artikla = int.Parse(idArtikla1),
-                    kolicina = int.Parse(txtKolicina.Text),
-                    masa = int.Parse(txtMasa.Text)
+                    kolicina = float.Parse(txtKolicina.Text),
+                    masa = float.Parse(txtMasa.Text)
 
                 };
                 db.stavke.Add(stavke);
                 db.SaveChanges();
+
+                txtKolicina.Text = "";
+                txtMasa.Text = "";
 
             }//using
 

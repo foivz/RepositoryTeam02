@@ -58,7 +58,7 @@
     <Property Name="tip_dokumenta_id_tipa" Type="int" />
     <Property Name="poslovni_partner_id_partnera" Type="int" />
     <Property Name="datum" Type="date" />
-    <Property Name="status" Type="bit" />
+    <Property Name="stanje" Type="varchar" MaxLength="50" />
     <Property Name="osnova" Type="varchar" MaxLength="50" />
     <Property Name="način_trans" Type="varchar" MaxLength="50" />
   </EntityType>

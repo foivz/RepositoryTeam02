@@ -19,6 +19,10 @@ namespace Skladiste_ETI
         {
             InitializeComponent();
             txtUser.Select();
+
+            //ovo obavezno obrisati kad bu app gotova!!
+            txtUser.Text = "tonovosel";
+            txtPass.Text = "abc123";
         }
 
   

@@ -181,5 +181,17 @@ namespace Skladiste_ETI
             new frmArtikli().Show();
         }
 
+        private void btnPregledDokumenata_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPregledDokumenata, "Pregled dokumenata skladišta");
+
+        }
+
+        private void btnPregledDokumenata_Click(object sender, EventArgs e)
+        {
+            new Dokumenti.frmPregledDokumenata().Show();
+        }
+
     }
 }

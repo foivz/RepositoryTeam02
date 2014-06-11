@@ -72,6 +72,8 @@
             this.btnPartneri = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnPregledDokumenata = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -505,6 +507,28 @@
             this.label12.TabIndex = 28;
             this.label12.Text = "Poslovni partneri";
             // 
+            // btnPregledDokumenata
+            // 
+            this.btnPregledDokumenata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPregledDokumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPregledDokumenata.Image = ((System.Drawing.Image)(resources.GetObject("btnPregledDokumenata.Image")));
+            this.btnPregledDokumenata.Location = new System.Drawing.Point(690, 255);
+            this.btnPregledDokumenata.Name = "btnPregledDokumenata";
+            this.btnPregledDokumenata.Size = new System.Drawing.Size(123, 110);
+            this.btnPregledDokumenata.TabIndex = 29;
+            this.btnPregledDokumenata.UseVisualStyleBackColor = true;
+            this.btnPregledDokumenata.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
+            this.btnPregledDokumenata.MouseHover += new System.EventHandler(this.btnPregledDokumenata_MouseHover);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(691, 391);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 13);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Pregled dokumenata";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -512,6 +536,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1220, 750);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.btnPregledDokumenata);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnPartneri);
@@ -600,5 +626,7 @@
         private System.Windows.Forms.Button btnPartneri;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnPregledDokumenata;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -35,3 +35,4 @@ C:\Users\Iva\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_E
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.pdb
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.UpravljanjeArtiklima.frmIzmjenaArtikla.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPregledDokumenata.resources

@@ -77,6 +77,12 @@
     <Compile Include="dokument.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dokumenti\frmPregledDokumenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dokumenti\frmPregledDokumenata.Designer.cs">
+      <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
+    </Compile>
     <Compile Include="korisnik.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     <EmbeddedResource Include="Administracija\Zaposlenici.resx">
       <DependentUpon>Zaposlenici.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dokumenti\frmPregledDokumenata.resx">
+      <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +221,7 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\artikli.datasource" />
+    <None Include="Properties\DataSources\dokument.datasource" />
     <None Include="Properties\DataSources\korisnik.datasource" />
     <None Include="Properties\DataSources\mjesto.datasource" />
     <None Include="Properties\DataSources\poslovni_partner.datasource" />

@@ -20,6 +20,8 @@ namespace Skladiste_ETI.Administracija
             {
                 c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
             }
+
+            dgvPartneri.Columns[2].Width = 220;
         }
 
      
@@ -125,14 +127,21 @@ namespace Skladiste_ETI.Administracija
 
                 if (MessageBox.Show("Da li ste sigurni da želite obrisati partnera?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    using (var db = new T02_DBEntities())
+                    try
                     {
-                        db.poslovni_partner.Attach(odabraniPartner);
-                        db.poslovni_partner.Remove(odabraniPartner);
-                        db.SaveChanges();
-                        PrikaziPartnere();//prikazi partnere nakon brisanja
-                        MessageBox.Show("Partner uspješno obrisan!");
+                        using (var db = new T02_DBEntities())
+                        {
+                            db.poslovni_partner.Attach(odabraniPartner);
+                            db.poslovni_partner.Remove(odabraniPartner);
+                            db.SaveChanges();
+                            PrikaziPartnere();//prikazi partnere nakon brisanja
+                            MessageBox.Show("Partner uspješno obrisan!");
 
+                        }
+
+                    }
+                    catch {
+                        MessageBox.Show("Ne možete obrisati partnera koji je vezan za neki dokument!");
                     }
 
                 }

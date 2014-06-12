@@ -29,7 +29,7 @@ namespace Skladiste_ETI
 
             var stanje = new[] 
                 {
-                    "kreirana", "odobrena"
+                    "Kreirana", "Odobrena"
 
                 };
 

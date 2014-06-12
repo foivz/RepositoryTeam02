@@ -170,14 +170,22 @@ namespace Skladiste_ETI.Administracija
 
                 if (MessageBox.Show("Da li ste sigurni da želite obrisati zaposlenika?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    using (var db = new T02_DBEntities()) 
+                    try
                     {
-                        db.korisnik.Attach(odabraniZaposlenik);//registracija odabranog zaposlenika iz datagridviewa
-                        db.korisnik.Remove(odabraniZaposlenik);
-                        db.SaveChanges();
-                        PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
-                        MessageBox.Show("Zaposlenik uspješno obrisan!");
-                    
+                        using (var db = new T02_DBEntities())
+                        {
+                            db.korisnik.Attach(odabraniZaposlenik);//registracija odabranog zaposlenika iz datagridviewa
+                            db.korisnik.Remove(odabraniZaposlenik);
+                            db.SaveChanges();
+                            PrikaziZaposlenike(tipkorisnikaBindingSource.Current as tip_korisnika);
+                            MessageBox.Show("Zaposlenik uspješno obrisan!");
+
+                        }
+
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Ne možete obrisati korisnika koji je kreirao dokumente!");
                     }
                 
                 }

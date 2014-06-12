@@ -22,11 +22,12 @@ namespace Skladiste_ETI
 
             List<korisnik> zaposlenici = new List<korisnik>();
             List<artikli> roba = new List<artikli>();
+            List<poslovni_partner> partner = new List<poslovni_partner>();
             InitializeComponent();
 
             var stanje = new[] 
                 {
-                    "kreirana", "odobrena"
+                    "Kreirana", "Odobrena"
 
                 };
 
@@ -58,6 +59,18 @@ namespace Skladiste_ETI
                 cmbNazivArtikla.DisplayMember = "naziv_artikla";
                 cmbNazivArtikla.ValueMember = "ida";
 
+                partner = db.poslovni_partner.AsEnumerable().Select(p => new poslovni_partner()//napravi novu listu sa id i nazivom
+                {
+                    idPartnera = p.id_partnera,
+                    pos_partner = p.id_partnera + " " + p.naziv
+
+                }).ToList();
+
+                cmbPartner.DataSource = partner;
+                cmbPartner.DisplayMember = "pos_partner";
+                cmbPartner.ValueMember = "idPartnera";
+
+
 
             }//using
         }
@@ -72,6 +85,12 @@ namespace Skladiste_ETI
         {
             public int ida { get; set; }
             public string naziv_artikla { get; set; }
+        }
+
+        public class poslovni_partner 
+        {
+            public int idPartnera { get; set; }
+            public string pos_partner { get; set; }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -116,6 +135,7 @@ namespace Skladiste_ETI
                     DateTime datum1;
                     datum1 = dtpDatum.Value;
                     string idKorisnika = "";
+                    string idPartnera1 = "";
 
                     foreach (char a in cmbKorisnik.Text)
                     {
@@ -127,12 +147,21 @@ namespace Skladiste_ETI
 
                     }
 
+                    foreach(char a in cmbPartner.Text)
+                    {
+                        if (a == ' ') break;
+                        else 
+                        {
+                            idPartnera1 += a;
+                        }
+                    }
+
                     dokument dokument = new dokument
                     {
 
                         korisnik_id_korisnika = int.Parse(idKorisnika),
                         tip_dokumenta_id_tipa = 2,
-                        poslovni_partner_id_partnera = null,
+                        poslovni_partner_id_partnera = int.Parse(idPartnera1),
                         datum = datum1,
                         stanje = cmbStanje.Text,
                         osnova = txtOsnova.Text,

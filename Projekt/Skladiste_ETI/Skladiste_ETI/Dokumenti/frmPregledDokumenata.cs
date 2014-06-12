@@ -14,6 +14,8 @@ namespace Skladiste_ETI.Dokumenti
     {
         T02_DBEntities context = new T02_DBEntities();
 
+     
+
         public frmPregledDokumenata()
         {
             InitializeComponent();
@@ -44,8 +46,6 @@ namespace Skladiste_ETI.Dokumenti
         {
             
             public int id_stavke { get; set; }
-            public int id_dokumenta { get; set; }
-            public int id_artikla { get; set; }
             public string naziv_artikla { get; set; }
             public double kolicina { get; set; }
             public double masa { get; set; }
@@ -110,7 +110,7 @@ namespace Skladiste_ETI.Dokumenti
         private void btnChange_MouseHover(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnChange, "Izmjena dokumenta");
+            ToolTip1.SetToolTip(this.btnChange, "Izmjena stavki");
         }
 
         private void btnExit_MouseHover(object sender, EventArgs e)
@@ -127,27 +127,35 @@ namespace Skladiste_ETI.Dokumenti
             return id_dok;
         }
 
+     
+
         private void dgvDokumenti_SelectionChanged(object sender, EventArgs e)
         {
-            int IDDok = int.Parse(DohvatiIDDokumenta());
 
-            var stavke = from stav in context.stavke
-                         join dok in context.dokument on stav.dokument_id_dokumenta equals IDDok
+            int IDDok = int.Parse(DohvatiIDDokumenta());
+            
+
+            var stavke = (from stav in context.stavke
                          join artikl in context.artikli on stav.artikli_id_artikla equals artikl.id_artikla
+                         where stav.dokument_id_dokumenta == IDDok
                          select new stavke
                          {
                              id_stavke = stav.id_stavke,
-                             id_dokumenta = dok.id_dokumenta,
-                             id_artikla =artikl.id_artikla,
                              naziv_artikla = artikl.naziv,
                              kolicina = stav.kolicina,
                              masa = stav.masa,
                              cijena = artikl.cijena
 
 
-                         };
+                         }).ToList();
 
-            dgvStavke.DataSource = stavke.ToList();
+            dgvStavke.DataSource = stavke;
+
+            dgvStavke.Columns[0].HeaderText = "ID Stavke";
+            dgvStavke.Columns[1].HeaderText = "Naziv artikla";
+            dgvStavke.Columns[2].HeaderText = "Količina";
+            dgvStavke.Columns[3].HeaderText = "Masa";
+            dgvStavke.Columns[4].HeaderText = "Cijena";
            
         }
 

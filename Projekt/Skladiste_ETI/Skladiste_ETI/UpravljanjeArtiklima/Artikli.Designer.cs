@@ -35,7 +35,13 @@
             this.btnchange = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvMjesto = new System.Windows.Forms.DataGridView();
+            this.idmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sektorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mjestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvArtikli = new System.Windows.Forms.DataGridView();
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDeletePosition = new System.Windows.Forms.Button();
             this.btnAddPosition = new System.Windows.Forms.Button();
@@ -63,18 +69,12 @@
             this.mjestoidmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sektorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mjestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.grbUnosArtikla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -151,6 +151,39 @@
             this.dgvMjesto.TabIndex = 4;
             this.dgvMjesto.SelectionChanged += new System.EventHandler(this.dgvMjesto_SelectionChanged);
             // 
+            // idmjestaDataGridViewTextBoxColumn
+            // 
+            this.idmjestaDataGridViewTextBoxColumn.DataPropertyName = "id_mjesta";
+            this.idmjestaDataGridViewTextBoxColumn.HeaderText = "ID mjesta";
+            this.idmjestaDataGridViewTextBoxColumn.Name = "idmjestaDataGridViewTextBoxColumn";
+            this.idmjestaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // policaDataGridViewTextBoxColumn
+            // 
+            this.policaDataGridViewTextBoxColumn.DataPropertyName = "polica";
+            this.policaDataGridViewTextBoxColumn.HeaderText = "Polica";
+            this.policaDataGridViewTextBoxColumn.Name = "policaDataGridViewTextBoxColumn";
+            this.policaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sektorDataGridViewTextBoxColumn
+            // 
+            this.sektorDataGridViewTextBoxColumn.DataPropertyName = "sektor";
+            this.sektorDataGridViewTextBoxColumn.HeaderText = "Sektor";
+            this.sektorDataGridViewTextBoxColumn.Name = "sektorDataGridViewTextBoxColumn";
+            this.sektorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // artikliDataGridViewTextBoxColumn
+            // 
+            this.artikliDataGridViewTextBoxColumn.DataPropertyName = "artikli";
+            this.artikliDataGridViewTextBoxColumn.HeaderText = "artikli";
+            this.artikliDataGridViewTextBoxColumn.Name = "artikliDataGridViewTextBoxColumn";
+            this.artikliDataGridViewTextBoxColumn.ReadOnly = true;
+            this.artikliDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mjestoBindingSource
+            // 
+            this.mjestoBindingSource.DataSource = typeof(Skladiste_ETI.mjesto);
+            // 
             // dgvArtikli
             // 
             this.dgvArtikli.AllowUserToAddRows = false;
@@ -173,6 +206,10 @@
             this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArtikli.Size = new System.Drawing.Size(546, 348);
             this.dgvArtikli.TabIndex = 5;
+            // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataSource = typeof(Skladiste_ETI.artikli);
             // 
             // groupBox1
             // 
@@ -406,7 +443,7 @@
             // kolicinaDataGridViewTextBoxColumn
             // 
             this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina/paleta";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina/paleta na skladištu";
             this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
             this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -441,43 +478,6 @@
             this.stavkeDataGridViewTextBoxColumn.ReadOnly = true;
             this.stavkeDataGridViewTextBoxColumn.Visible = false;
             // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataSource = typeof(Skladiste_ETI.artikli);
-            // 
-            // idmjestaDataGridViewTextBoxColumn
-            // 
-            this.idmjestaDataGridViewTextBoxColumn.DataPropertyName = "id_mjesta";
-            this.idmjestaDataGridViewTextBoxColumn.HeaderText = "ID mjesta";
-            this.idmjestaDataGridViewTextBoxColumn.Name = "idmjestaDataGridViewTextBoxColumn";
-            this.idmjestaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // policaDataGridViewTextBoxColumn
-            // 
-            this.policaDataGridViewTextBoxColumn.DataPropertyName = "polica";
-            this.policaDataGridViewTextBoxColumn.HeaderText = "Polica";
-            this.policaDataGridViewTextBoxColumn.Name = "policaDataGridViewTextBoxColumn";
-            this.policaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sektorDataGridViewTextBoxColumn
-            // 
-            this.sektorDataGridViewTextBoxColumn.DataPropertyName = "sektor";
-            this.sektorDataGridViewTextBoxColumn.HeaderText = "Sektor";
-            this.sektorDataGridViewTextBoxColumn.Name = "sektorDataGridViewTextBoxColumn";
-            this.sektorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // artikliDataGridViewTextBoxColumn
-            // 
-            this.artikliDataGridViewTextBoxColumn.DataPropertyName = "artikli";
-            this.artikliDataGridViewTextBoxColumn.HeaderText = "artikli";
-            this.artikliDataGridViewTextBoxColumn.Name = "artikliDataGridViewTextBoxColumn";
-            this.artikliDataGridViewTextBoxColumn.ReadOnly = true;
-            this.artikliDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mjestoBindingSource
-            // 
-            this.mjestoBindingSource.DataSource = typeof(Skladiste_ETI.mjesto);
-            // 
             // frmArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,13 +498,13 @@
             this.Text = "Upravljanje artiklima";
             this.Load += new System.EventHandler(this.frmArtikli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grbUnosArtikla.ResumeLayout(false);
             this.grbUnosArtikla.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

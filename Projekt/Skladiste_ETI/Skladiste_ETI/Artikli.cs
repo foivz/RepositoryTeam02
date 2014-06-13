@@ -22,8 +22,8 @@ namespace Skladiste_ETI
         public int id_artikla { get; set; }
         public string naziv { get; set; }
         public double cijena { get; set; }
-        public double kolicina { get; set; }
-        public double masa { get; set; }
+        public int kolicina { get; set; }
+        public int masa { get; set; }
         public int mjesto_id_mjesta { get; set; }
     
         public virtual mjesto mjesto { get; set; }

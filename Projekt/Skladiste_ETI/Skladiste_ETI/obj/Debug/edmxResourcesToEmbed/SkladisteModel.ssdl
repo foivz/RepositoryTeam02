@@ -45,8 +45,8 @@
     <Property Name="id_artikla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="cijena" Type="float" Nullable="false" />
-    <Property Name="kolicina" Type="float" Nullable="false" />
-    <Property Name="masa" Type="float" Nullable="false" />
+    <Property Name="kolicina" Type="int" Nullable="false" />
+    <Property Name="masa" Type="int" Nullable="false" />
     <Property Name="mjesto_id_mjesta" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="dokument">
@@ -99,8 +99,8 @@
     <Property Name="id_stavke" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="dokument_id_dokumenta" Type="int" />
     <Property Name="artikli_id_artikla" Type="int" />
-    <Property Name="kolicina" Type="float" Nullable="false" />
-    <Property Name="masa" Type="float" Nullable="false" />
+    <Property Name="kolicina" Type="int" Nullable="false" />
+    <Property Name="masa" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tip_dokumenta">
     <Key>
@@ -204,5 +204,23 @@
     <Parameter Name="IDArtikla" Type="int" Mode="In" />
     <Parameter Name="DopremljenaKolicina" Type="float" Mode="In" />
     <Parameter Name="DopremljenaMasa" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateArtikliOtprema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDArtikla" Type="int" Mode="In" />
+    <Parameter Name="OtpremljenaKolicina" Type="float" Mode="In" />
+    <Parameter Name="OtpremljenaMasa" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateArtikliStavkeMinus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDArtikla" Type="int" Mode="In" />
+    <Parameter Name="NovaKolicina" Type="float" Mode="In" />
+    <Parameter Name="NovaMasa" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateArtikliStavkePlus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDArtikla" Type="int" Mode="In" />
+    <Parameter Name="NovaKolicina" Type="float" Mode="In" />
+    <Parameter Name="NovaMasa" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateDokumentStanje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDDokumenta" Type="int" Mode="In" />
   </Function>
 </Schema>

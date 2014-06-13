@@ -40,6 +40,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOdobri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDokumenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,7 +91,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(23, 301);
+            this.btnExit.Location = new System.Drawing.Point(23, 642);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 96);
             this.btnExit.TabIndex = 3;
@@ -182,12 +183,26 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
+            // btnOdobri
+            // 
+            this.btnOdobri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdobri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnOdobri.Image = ((System.Drawing.Image)(resources.GetObject("btnOdobri.Image")));
+            this.btnOdobri.Location = new System.Drawing.Point(23, 305);
+            this.btnOdobri.Name = "btnOdobri";
+            this.btnOdobri.Size = new System.Drawing.Size(114, 92);
+            this.btnOdobri.TabIndex = 28;
+            this.btnOdobri.UseVisualStyleBackColor = true;
+            this.btnOdobri.Click += new System.EventHandler(this.btnOdobri_Click);
+            this.btnOdobri.MouseHover += new System.EventHandler(this.btnOdobri_MouseHover);
+            // 
             // frmPregledDokumenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1229, 750);
+            this.Controls.Add(this.btnOdobri);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -226,5 +241,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnOdobri;
     }
 }

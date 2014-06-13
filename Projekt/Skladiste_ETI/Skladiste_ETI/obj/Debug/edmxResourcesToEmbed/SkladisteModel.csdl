@@ -42,6 +42,24 @@
       <Parameter Name="DopremljenaKolicina" Mode="In" Type="Double" />
       <Parameter Name="DopremljenaMasa" Mode="In" Type="Double" />
     </FunctionImport>
+    <FunctionImport Name="UpdateArtikliOtprema">
+      <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+      <Parameter Name="OtpremljenaKolicina" Mode="In" Type="Double" />
+      <Parameter Name="OtpremljenaMasa" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateArtikliStavkeMinus">
+      <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+      <Parameter Name="NovaKolicina" Mode="In" Type="Double" />
+      <Parameter Name="NovaMasa" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateArtikliStavkePlus">
+      <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+      <Parameter Name="NovaKolicina" Mode="In" Type="Double" />
+      <Parameter Name="NovaMasa" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateDokumentStanje">
+      <Parameter Name="IDDokumenta" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="artikli">
     <Key>
@@ -50,8 +68,8 @@
     <Property Name="id_artikla" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="cijena" Type="Double" Nullable="false" />
-    <Property Name="kolicina" Type="Double" Nullable="false" />
-    <Property Name="masa" Type="Double" Nullable="false" />
+    <Property Name="kolicina" Type="Int32" Nullable="false" />
+    <Property Name="masa" Type="Int32" Nullable="false" />
     <Property Name="mjesto_id_mjesta" Type="Int32" Nullable="false" />
     <NavigationProperty Name="mjesto" Relationship="T02_DBModel.FK_artikli_references_mjesto" FromRole="artikli" ToRole="mjesto" />
     <NavigationProperty Name="stavke" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="artikli" ToRole="stavke" />
@@ -114,8 +132,8 @@
     <Property Name="id_stavke" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="dokument_id_dokumenta" Type="Int32" />
     <Property Name="artikli_id_artikla" Type="Int32" />
-    <Property Name="kolicina" Type="Double" Nullable="false" />
-    <Property Name="masa" Type="Double" Nullable="false" />
+    <Property Name="kolicina" Type="Int32" Nullable="false" />
+    <Property Name="masa" Type="Int32" Nullable="false" />
     <NavigationProperty Name="artikli" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="stavke" ToRole="artikli" />
     <NavigationProperty Name="dokument" Relationship="T02_DBModel.FK_stavke_references_dokument" FromRole="stavke" ToRole="dokument" />
   </EntityType>

@@ -17,8 +17,8 @@ namespace Skladiste_ETI
         public int id_stavke { get; set; }
         public Nullable<int> dokument_id_dokumenta { get; set; }
         public Nullable<int> artikli_id_artikla { get; set; }
-        public double kolicina { get; set; }
-        public double masa { get; set; }
+        public int kolicina { get; set; }
+        public int masa { get; set; }
     
         public virtual artikli artikli { get; set; }
         public virtual dokument dokument { get; set; }

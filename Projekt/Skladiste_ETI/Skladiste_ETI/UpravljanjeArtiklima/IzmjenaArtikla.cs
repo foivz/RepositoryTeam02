@@ -77,8 +77,8 @@ namespace Skladiste_ETI.UpravljanjeArtiklima
 
                 artiklZaIzmjenu.naziv = txtNazivZaIzmjenu.Text;
                 artiklZaIzmjenu.cijena = float.Parse(txtCijenaZaIzmjenu.Text);
-                artiklZaIzmjenu.kolicina = float.Parse(txtKolicinaZaIzmjenu.Text);
-                artiklZaIzmjenu.masa = float.Parse(txtMasaZaIzmjenu.Text);
+                artiklZaIzmjenu.kolicina = int.Parse(txtKolicinaZaIzmjenu.Text);
+                artiklZaIzmjenu.masa = int.Parse(txtMasaZaIzmjenu.Text);
 
                 if(txtTrenutnaPozicija.Text != cmbNovaPozicija.Text && chkChangePosition.Checked == true){
                 string upit = string.Format("UPDATE artikli SET mjesto_id_mjesta = '{0}' WHERE id_artikla = '{1}'", idNovePozicije, idArtikla);

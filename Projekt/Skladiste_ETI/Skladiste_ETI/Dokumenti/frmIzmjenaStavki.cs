@@ -13,13 +13,14 @@ namespace Skladiste_ETI.Dokumenti
     public partial class frmIzmjenaStavki : Form
     {
         private int id_stav1;
-        private float novaKolicina;
-        private float novaMasa;
-        private float kolicinaNaSk;
-        private float masaNaSk;
+        private int novaKolicina;
+        private int novaMasa;
+        private int kolicinaNaSk;
+        private int masaNaSk;
         private int idArt;
-        
-        public frmIzmjenaStavki(string naziv, string kolicina, string masa, string id_stav, string kolNaSk, string masNaSk, string idArtikla)
+        private string tip_dok;
+
+        public frmIzmjenaStavki(string naziv, string kolicina, string masa, string id_stav, string kolNaSk, string masNaSk, string idArtikla, string tip_dokumenta)
         {
             //inicijalizacija liste
             
@@ -27,13 +28,14 @@ namespace Skladiste_ETI.Dokumenti
 
             //proslijeđeni podaci kroz kontruktor
             txtTrenutniArtikl.Text = naziv;
-            txtTrenutnaKolicina.Text = kolicina;
-            txtTrenutnaMasa.Text = masa;
+            label4.Text = kolicina;
+            label5.Text = masa;
             id_stav1 = int.Parse(id_stav);
 
-            kolicinaNaSk = float.Parse(kolNaSk);
-            masaNaSk = float.Parse(masNaSk);
+            kolicinaNaSk = int.Parse(kolNaSk);
+            masaNaSk = int.Parse(masNaSk);
             idArt = int.Parse(idArtikla);
+            tip_dok = tip_dokumenta;
 
         }//konstruktor
 
@@ -50,28 +52,50 @@ namespace Skladiste_ETI.Dokumenti
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            novaKolicina = float.Parse(txtTrenutnaKolicina.Text);
-            novaMasa = float.Parse(txtTrenutnaMasa.Text);
-            
+            novaKolicina = int.Parse(txtNovaKolicina.Text);
+            novaMasa = int.Parse(txtNovaMasa.Text);
 
+            int razlikaKolicina = (novaKolicina - int.Parse(label4.Text))*(-1);
+            int razlikaMasa = (novaMasa - int.Parse(label5.Text))*(-1);
 
             using (var db = new T02_DBEntities()) 
             
             {
-                if(novaKolicina < kolicinaNaSk && novaMasa < masaNaSk){
+                if(tip_dok == "Izdatnica"){
+
+                    if(novaKolicina < kolicinaNaSk && novaMasa < masaNaSk){
                 
-                string upit = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'",idArt, novaKolicina, novaMasa, id_stav1);
-                db.Database.ExecuteSqlCommand(upit);
-                db.SaveChanges();
-                MessageBox.Show("Podaci o stavki izmijenjeni!");
-                
-                }
+                    string upit = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'",idArt, novaKolicina, novaMasa, id_stav1);
+                    db.Database.ExecuteSqlCommand(upit);
+
+                        //izvrši proceduru nad količinom u skladištu
+                        
+                        db.UpdateArtikliStavkeMinus(idArt, razlikaKolicina, razlikaMasa);
+                        db.SaveChanges();
+                        MessageBox.Show("Stavka otpremnice uspješno izmijenjena!");
+                        this.Close();
+                    }
                 
                 else{
                     
                     MessageBox.Show("Ne možete unijeti masu ili količinu koja prelazi zalihe na skladištu!");
                 
                 }//else
+                
+                }//if
+                
+                if(tip_dok == "Primka" || tip_dok == "Predatnica")
+                {
+                    string upit2 = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'", idArt, novaKolicina, novaMasa, id_stav1);
+                    db.Database.ExecuteSqlCommand(upit2);
+
+                    //izvrši proceduru
+                    db.UpdateArtikliStavkeMinus(idArt, razlikaKolicina, razlikaMasa);
+                    
+                    db.SaveChanges();
+                    MessageBox.Show("Stavka primke/predatnice uspješno izmijenjena!");
+                    this.Close();
+                }//if
             
             }//using
 

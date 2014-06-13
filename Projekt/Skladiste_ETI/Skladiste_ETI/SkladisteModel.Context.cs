@@ -53,5 +53,65 @@ namespace Skladiste_ETI
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateArtikliDoprema", iDArtiklaParameter, dopremljenaKolicinaParameter, dopremljenaMasaParameter);
         }
+    
+        public virtual int UpdateArtikliOtprema(Nullable<int> iDArtikla, Nullable<double> otpremljenaKolicina, Nullable<double> otpremljenaMasa)
+        {
+            var iDArtiklaParameter = iDArtikla.HasValue ?
+                new ObjectParameter("IDArtikla", iDArtikla) :
+                new ObjectParameter("IDArtikla", typeof(int));
+    
+            var otpremljenaKolicinaParameter = otpremljenaKolicina.HasValue ?
+                new ObjectParameter("OtpremljenaKolicina", otpremljenaKolicina) :
+                new ObjectParameter("OtpremljenaKolicina", typeof(double));
+    
+            var otpremljenaMasaParameter = otpremljenaMasa.HasValue ?
+                new ObjectParameter("OtpremljenaMasa", otpremljenaMasa) :
+                new ObjectParameter("OtpremljenaMasa", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateArtikliOtprema", iDArtiklaParameter, otpremljenaKolicinaParameter, otpremljenaMasaParameter);
+        }
+    
+        public virtual int UpdateArtikliStavkeMinus(Nullable<int> iDArtikla, Nullable<double> novaKolicina, Nullable<double> novaMasa)
+        {
+            var iDArtiklaParameter = iDArtikla.HasValue ?
+                new ObjectParameter("IDArtikla", iDArtikla) :
+                new ObjectParameter("IDArtikla", typeof(int));
+    
+            var novaKolicinaParameter = novaKolicina.HasValue ?
+                new ObjectParameter("NovaKolicina", novaKolicina) :
+                new ObjectParameter("NovaKolicina", typeof(double));
+    
+            var novaMasaParameter = novaMasa.HasValue ?
+                new ObjectParameter("NovaMasa", novaMasa) :
+                new ObjectParameter("NovaMasa", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateArtikliStavkeMinus", iDArtiklaParameter, novaKolicinaParameter, novaMasaParameter);
+        }
+    
+        public virtual int UpdateArtikliStavkePlus(Nullable<int> iDArtikla, Nullable<double> novaKolicina, Nullable<double> novaMasa)
+        {
+            var iDArtiklaParameter = iDArtikla.HasValue ?
+                new ObjectParameter("IDArtikla", iDArtikla) :
+                new ObjectParameter("IDArtikla", typeof(int));
+    
+            var novaKolicinaParameter = novaKolicina.HasValue ?
+                new ObjectParameter("NovaKolicina", novaKolicina) :
+                new ObjectParameter("NovaKolicina", typeof(double));
+    
+            var novaMasaParameter = novaMasa.HasValue ?
+                new ObjectParameter("NovaMasa", novaMasa) :
+                new ObjectParameter("NovaMasa", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateArtikliStavkePlus", iDArtiklaParameter, novaKolicinaParameter, novaMasaParameter);
+        }
+    
+        public virtual int UpdateDokumentStanje(Nullable<int> iDDokumenta)
+        {
+            var iDDokumentaParameter = iDDokumenta.HasValue ?
+                new ObjectParameter("IDDokumenta", iDDokumenta) :
+                new ObjectParameter("IDDokumenta", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateDokumentStanje", iDDokumentaParameter);
+        }
     }
 }

@@ -197,8 +197,8 @@ namespace Skladiste_ETI
                     {
                         naziv = txtNaziv.Text,
                         cijena = float.Parse(txtCijena.Text),
-                        kolicina = float.Parse(txtKolicina.Text),
-                        masa = float.Parse(txtMasa.Text),
+                        kolicina = int.Parse(txtKolicina.Text),
+                        masa = int.Parse(txtMasa.Text),
                         mjesto_id_mjesta = int.Parse(id_pozicije)
                     };
 

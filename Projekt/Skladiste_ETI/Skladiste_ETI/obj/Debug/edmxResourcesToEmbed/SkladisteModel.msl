@@ -88,5 +88,9 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="UpdateArtikliDoprema" FunctionName="T02_DBModel.Store.UpdateArtikliDoprema" />
+    <FunctionImportMapping FunctionImportName="UpdateArtikliOtprema" FunctionName="T02_DBModel.Store.UpdateArtikliOtprema" />
+    <FunctionImportMapping FunctionImportName="UpdateArtikliStavkeMinus" FunctionName="T02_DBModel.Store.UpdateArtikliStavkeMinus" />
+    <FunctionImportMapping FunctionImportName="UpdateArtikliStavkePlus" FunctionName="T02_DBModel.Store.UpdateArtikliStavkePlus" />
+    <FunctionImportMapping FunctionImportName="UpdateDokumentStanje" FunctionName="T02_DBModel.Store.UpdateDokumentStanje" />
   </EntityContainerMapping>
 </Mapping>

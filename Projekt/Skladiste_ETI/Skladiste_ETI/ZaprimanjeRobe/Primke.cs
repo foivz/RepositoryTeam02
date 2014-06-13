@@ -14,8 +14,8 @@ namespace Skladiste_ETI
     public partial class frmPrimke : Form
     {
         private int id_artiklaParametar = 0;
-        private float dopremljenaKolicinaParametar = 0;
-        private float dopremljenaMasaParametar = 0;
+        private int dopremljenaKolicinaParametar = 0;
+        private int dopremljenaMasaParametar = 0;
         
         public frmPrimke()
         {
@@ -228,16 +228,16 @@ namespace Skladiste_ETI
                     {
                         dokument_id_dokumenta = id_dokumenta,
                         artikli_id_artikla = int.Parse(idArtikla1),
-                        kolicina = float.Parse(txtKolicina.Text),
-                        masa = float.Parse(txtMasa.Text)
+                        kolicina = int.Parse(txtKolicina.Text),
+                        masa = int.Parse(txtMasa.Text)
 
                     };
                     db.stavke.Add(stavke);
 
                     //spremi parametre za pohranjenu proceduru
                     id_artiklaParametar = int.Parse(idArtikla1);
-                    dopremljenaKolicinaParametar = float.Parse(txtKolicina.Text);
-                    dopremljenaMasaParametar = float.Parse(txtMasa.Text);
+                    dopremljenaKolicinaParametar = int.Parse(txtKolicina.Text);
+                    dopremljenaMasaParametar = int.Parse(txtMasa.Text);
 
                     //izvrši pohranjenu proceduru nakon zaprimanja robe na skladište
                     db.UpdateArtikliDoprema(id_artiklaParametar, dopremljenaKolicinaParametar, dopremljenaMasaParametar);

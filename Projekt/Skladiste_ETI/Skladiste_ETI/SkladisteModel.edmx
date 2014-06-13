@@ -50,8 +50,8 @@
           <Property Name="id_artikla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="cijena" Type="float" Nullable="false" />
-          <Property Name="kolicina" Type="float" Nullable="false" />
-          <Property Name="masa" Type="float" Nullable="false" />
+          <Property Name="kolicina" Type="int" Nullable="false" />
+          <Property Name="masa" Type="int" Nullable="false" />
           <Property Name="mjesto_id_mjesta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="dokument">
@@ -104,8 +104,8 @@
           <Property Name="id_stavke" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="dokument_id_dokumenta" Type="int" />
           <Property Name="artikli_id_artikla" Type="int" />
-          <Property Name="kolicina" Type="float" Nullable="false" />
-          <Property Name="masa" Type="float" Nullable="false" />
+          <Property Name="kolicina" Type="int" Nullable="false" />
+          <Property Name="masa" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tip_dokumenta">
           <Key>
@@ -210,6 +210,24 @@
           <Parameter Name="DopremljenaKolicina" Type="float" Mode="In" />
           <Parameter Name="DopremljenaMasa" Type="float" Mode="In" />
         </Function>
+        <Function Name="UpdateArtikliOtprema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDArtikla" Type="int" Mode="In" />
+          <Parameter Name="OtpremljenaKolicina" Type="float" Mode="In" />
+          <Parameter Name="OtpremljenaMasa" Type="float" Mode="In" />
+        </Function>
+        <Function Name="UpdateArtikliStavkeMinus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDArtikla" Type="int" Mode="In" />
+          <Parameter Name="NovaKolicina" Type="float" Mode="In" />
+          <Parameter Name="NovaMasa" Type="float" Mode="In" />
+        </Function>
+        <Function Name="UpdateArtikliStavkePlus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDArtikla" Type="int" Mode="In" />
+          <Parameter Name="NovaKolicina" Type="float" Mode="In" />
+          <Parameter Name="NovaMasa" Type="float" Mode="In" />
+        </Function>
+        <Function Name="UpdateDokumentStanje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDDokumenta" Type="int" Mode="In" />
+        </Function>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
@@ -257,6 +275,24 @@
             <Parameter Name="DopremljenaKolicina" Mode="In" Type="Double" />
             <Parameter Name="DopremljenaMasa" Mode="In" Type="Double" />
           </FunctionImport>
+          <FunctionImport Name="UpdateArtikliOtprema">
+            <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+            <Parameter Name="OtpremljenaKolicina" Mode="In" Type="Double" />
+            <Parameter Name="OtpremljenaMasa" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateArtikliStavkeMinus">
+            <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+            <Parameter Name="NovaKolicina" Mode="In" Type="Double" />
+            <Parameter Name="NovaMasa" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateArtikliStavkePlus">
+            <Parameter Name="IDArtikla" Mode="In" Type="Int32" />
+            <Parameter Name="NovaKolicina" Mode="In" Type="Double" />
+            <Parameter Name="NovaMasa" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateDokumentStanje">
+            <Parameter Name="IDDokumenta" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="artikli">
           <Key>
@@ -265,8 +301,8 @@
           <Property Name="id_artikla" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="cijena" Type="Double" Nullable="false" />
-          <Property Name="kolicina" Type="Double" Nullable="false" />
-          <Property Name="masa" Type="Double" Nullable="false" />
+          <Property Name="kolicina" Type="Int32" Nullable="false" />
+          <Property Name="masa" Type="Int32" Nullable="false" />
           <Property Name="mjesto_id_mjesta" Type="Int32" Nullable="false" />
           <NavigationProperty Name="mjesto" Relationship="T02_DBModel.FK_artikli_references_mjesto" FromRole="artikli" ToRole="mjesto" />
           <NavigationProperty Name="stavke" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="artikli" ToRole="stavke" />
@@ -329,8 +365,8 @@
           <Property Name="id_stavke" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="dokument_id_dokumenta" Type="Int32" />
           <Property Name="artikli_id_artikla" Type="Int32" />
-          <Property Name="kolicina" Type="Double" Nullable="false" />
-          <Property Name="masa" Type="Double" Nullable="false" />
+          <Property Name="kolicina" Type="Int32" Nullable="false" />
+          <Property Name="masa" Type="Int32" Nullable="false" />
           <NavigationProperty Name="artikli" Relationship="T02_DBModel.FK_stavke_references_artikli" FromRole="stavke" ToRole="artikli" />
           <NavigationProperty Name="dokument" Relationship="T02_DBModel.FK_stavke_references_dokument" FromRole="stavke" ToRole="dokument" />
         </EntityType>
@@ -527,6 +563,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="UpdateArtikliDoprema" FunctionName="T02_DBModel.Store.UpdateArtikliDoprema" />
+          <FunctionImportMapping FunctionImportName="UpdateArtikliOtprema" FunctionName="T02_DBModel.Store.UpdateArtikliOtprema" />
+          <FunctionImportMapping FunctionImportName="UpdateArtikliStavkeMinus" FunctionName="T02_DBModel.Store.UpdateArtikliStavkeMinus" />
+          <FunctionImportMapping FunctionImportName="UpdateArtikliStavkePlus" FunctionName="T02_DBModel.Store.UpdateArtikliStavkePlus" />
+          <FunctionImportMapping FunctionImportName="UpdateDokumentStanje" FunctionName="T02_DBModel.Store.UpdateDokumentStanje" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

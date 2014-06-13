@@ -49,10 +49,10 @@ namespace Skladiste_ETI.Dokumenti
             public int id_stavke { get; set; }
             public int id_artikla { get; set; }
             public string naziv_artikla { get; set; }
-            public double kolicina { get; set; }
-            public double kol_na_skladistu { get; set; }
-            public double masa { get; set; }
-            public double masa_na_skladistu { get; set; }
+            public int kolicina { get; set; }
+            public int kol_na_skladistu { get; set; }
+            public int masa { get; set; }
+            public int masa_na_skladistu { get; set; }
             public double cijena { get; set; }
             public double ukupno { get; set; }
 
@@ -124,6 +124,12 @@ namespace Skladiste_ETI.Dokumenti
             ToolTip1.SetToolTip(this.btnExit, "Izlaz");
         }
 
+        private void btnOdobri_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnOdobri, "Odobri izdatnicu");
+        }
+
         private string DohvatiIDDokumenta() 
         {
             int odabrani_redak = dgvDokumenti.CurrentCell.RowIndex;
@@ -177,6 +183,7 @@ namespace Skladiste_ETI.Dokumenti
         {
 
             int odabrani_redak = dgvStavke.CurrentCell.RowIndex;
+            int odabrani_redak2 = dgvDokumenti.CurrentCell.RowIndex;
             string nazivArtikla = dgvStavke.Rows[odabrani_redak].Cells[2].Value.ToString();
             string kolicinaStavke = dgvStavke.Rows[odabrani_redak].Cells[3].Value.ToString();
             string masaStavke = dgvStavke.Rows[odabrani_redak].Cells[5].Value.ToString();
@@ -184,12 +191,20 @@ namespace Skladiste_ETI.Dokumenti
             string kolNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[4].Value.ToString();
             string masaNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[6].Value.ToString();
             string idArtikla = dgvStavke.Rows[odabrani_redak].Cells[1].Value.ToString();
+            string tip_dokumenta = dgvDokumenti.Rows[odabrani_redak2].Cells[1].Value.ToString();
 
-            Dokumenti.frmIzmjenaStavki frmIzmjena = new Dokumenti.frmIzmjenaStavki(nazivArtikla, kolicinaStavke, masaStavke, idStavke, kolNaSkladistu, masaNaSkladistu, idArtikla);
+            Dokumenti.frmIzmjenaStavki frmIzmjena = new Dokumenti.frmIzmjenaStavki(nazivArtikla, kolicinaStavke, masaStavke, idStavke, kolNaSkladistu, masaNaSkladistu, idArtikla, tip_dokumenta);
             frmIzmjena.Show();
+    
+            
         }
 
+        private void btnOdobri_Click(object sender, EventArgs e)
+        {
 
+        }
+
+  
     }
 
 }

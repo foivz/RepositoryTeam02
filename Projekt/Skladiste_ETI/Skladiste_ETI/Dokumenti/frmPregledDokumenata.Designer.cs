@@ -82,6 +82,7 @@
             this.btnChange.Size = new System.Drawing.Size(114, 98);
             this.btnChange.TabIndex = 2;
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             this.btnChange.MouseHover += new System.EventHandler(this.btnChange_MouseHover);
             // 
             // btnExit
@@ -117,7 +118,7 @@
             this.dgvStavke.Name = "dgvStavke";
             this.dgvStavke.ReadOnly = true;
             this.dgvStavke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStavke.Size = new System.Drawing.Size(647, 281);
+            this.dgvStavke.Size = new System.Drawing.Size(676, 281);
             this.dgvStavke.TabIndex = 5;
             // 
             // label1
@@ -138,7 +139,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(869, 661);
+            this.label10.Location = new System.Drawing.Point(898, 661);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 28);
             this.label10.TabIndex = 27;
@@ -151,7 +152,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(1061, 661);
+            this.label9.Location = new System.Drawing.Point(1090, 661);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 28);
             this.label9.TabIndex = 26;
@@ -164,7 +165,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(954, 661);
+            this.label8.Location = new System.Drawing.Point(983, 661);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 28);
             this.label8.TabIndex = 25;
@@ -175,7 +176,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(816, 457);
+            this.pictureBox1.Location = new System.Drawing.Point(845, 457);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(372, 201);
             this.pictureBox1.TabIndex = 24;

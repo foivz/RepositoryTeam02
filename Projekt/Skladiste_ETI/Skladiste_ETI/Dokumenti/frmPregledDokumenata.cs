@@ -47,9 +47,12 @@ namespace Skladiste_ETI.Dokumenti
         {
             
             public int id_stavke { get; set; }
+            public int id_artikla { get; set; }
             public string naziv_artikla { get; set; }
             public double kolicina { get; set; }
+            public double kol_na_skladistu { get; set; }
             public double masa { get; set; }
+            public double masa_na_skladistu { get; set; }
             public double cijena { get; set; }
             public double ukupno { get; set; }
 
@@ -143,9 +146,12 @@ namespace Skladiste_ETI.Dokumenti
                          select new stavke
                          {
                              id_stavke = stav.id_stavke,
+                             id_artikla = artikl.id_artikla,
                              naziv_artikla = artikl.naziv,
                              kolicina = stav.kolicina,
+                             kol_na_skladistu = artikl.kolicina,
                              masa = stav.masa,
+                             masa_na_skladistu = artikl.masa,
                              cijena = artikl.cijena,
                              ukupno = stav.masa * artikl.cijena
 
@@ -155,13 +161,32 @@ namespace Skladiste_ETI.Dokumenti
             dgvStavke.DataSource = stavke;
 
             dgvStavke.Columns[0].HeaderText = "ID Stavke";
-            dgvStavke.Columns[1].HeaderText = "Naziv artikla";
-            dgvStavke.Columns[1].Width = 150;
-            dgvStavke.Columns[2].HeaderText = "Količina/paleta";
-            dgvStavke.Columns[3].HeaderText = "Masa/kg";
-            dgvStavke.Columns[4].HeaderText = "Cijena";
-            dgvStavke.Columns[5].HeaderText = "Ukupno/kn";
+            dgvStavke.Columns[1].HeaderText = "ID Artikla";
+            dgvStavke.Columns[2].HeaderText = "Naziv artikla";
+            dgvStavke.Columns[2].Width = 150;
+            dgvStavke.Columns[3].HeaderText = "Količina/paleta";
+            dgvStavke.Columns[4].HeaderText = "Količina na skladištu";
+            dgvStavke.Columns[5].HeaderText = "Masa/kg";
+            dgvStavke.Columns[6].HeaderText = "Masa na skladištu";
+            dgvStavke.Columns[7].HeaderText = "Cijena";
+            dgvStavke.Columns[8].HeaderText = "Ukupno/kn";
            
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+
+            int odabrani_redak = dgvStavke.CurrentCell.RowIndex;
+            string nazivArtikla = dgvStavke.Rows[odabrani_redak].Cells[2].Value.ToString();
+            string kolicinaStavke = dgvStavke.Rows[odabrani_redak].Cells[3].Value.ToString();
+            string masaStavke = dgvStavke.Rows[odabrani_redak].Cells[5].Value.ToString();
+            string idStavke = dgvStavke.Rows[odabrani_redak].Cells[0].Value.ToString();
+            string kolNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[4].Value.ToString();
+            string masaNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[6].Value.ToString();
+            string idArtikla = dgvStavke.Rows[odabrani_redak].Cells[1].Value.ToString();
+
+            Dokumenti.frmIzmjenaStavki frmIzmjena = new Dokumenti.frmIzmjenaStavki(nazivArtikla, kolicinaStavke, masaStavke, idStavke, kolNaSkladistu, masaNaSkladistu, idArtikla);
+            frmIzmjena.Show();
         }
 
 

@@ -60,3 +60,4 @@ C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.fr
 C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
 C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzmjenaStavki.resources

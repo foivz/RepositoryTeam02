@@ -43,6 +43,7 @@
             this.cmbNovaPozicija = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTrenutnaPozicija = new System.Windows.Forms.TextBox();
+            this.chkChangePosition = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +127,7 @@
             this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
-            this.btnAddNew.Location = new System.Drawing.Point(92, 257);
+            this.btnAddNew.Location = new System.Drawing.Point(89, 267);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(60, 57);
             this.btnAddNew.TabIndex = 8;
@@ -138,7 +139,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(269, 257);
+            this.btnExit.Location = new System.Drawing.Point(268, 267);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 57);
             this.btnExit.TabIndex = 9;
@@ -178,12 +179,23 @@
             this.txtTrenutnaPozicija.Size = new System.Drawing.Size(88, 22);
             this.txtTrenutnaPozicija.TabIndex = 13;
             // 
+            // chkChangePosition
+            // 
+            this.chkChangePosition.AutoSize = true;
+            this.chkChangePosition.Location = new System.Drawing.Point(212, 242);
+            this.chkChangePosition.Name = "chkChangePosition";
+            this.chkChangePosition.Size = new System.Drawing.Size(146, 20);
+            this.chkChangePosition.TabIndex = 15;
+            this.chkChangePosition.Text = "Izmjena pozicije?";
+            this.chkChangePosition.UseVisualStyleBackColor = true;
+            // 
             // frmIzmjenaArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(400, 336);
+            this.Controls.Add(this.chkChangePosition);
             this.Controls.Add(this.txtTrenutnaPozicija);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbNovaPozicija);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.ComboBox cmbNovaPozicija;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTrenutnaPozicija;
+        private System.Windows.Forms.CheckBox chkChangePosition;
     }
 }

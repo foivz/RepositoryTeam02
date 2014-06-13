@@ -20,7 +20,8 @@ namespace Skladiste_ETI.Dokumenti
         {
             InitializeComponent();
 
-           
+            label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            label9.Text = DateTime.Now.DayOfWeek.ToString();
         }
 
         public class dokument 
@@ -50,6 +51,7 @@ namespace Skladiste_ETI.Dokumenti
             public double kolicina { get; set; }
             public double masa { get; set; }
             public double cijena { get; set; }
+            public double ukupno { get; set; }
 
         }
 
@@ -144,7 +146,8 @@ namespace Skladiste_ETI.Dokumenti
                              naziv_artikla = artikl.naziv,
                              kolicina = stav.kolicina,
                              masa = stav.masa,
-                             cijena = artikl.cijena
+                             cijena = artikl.cijena,
+                             ukupno = stav.masa * artikl.cijena
 
 
                          }).ToList();
@@ -153,9 +156,11 @@ namespace Skladiste_ETI.Dokumenti
 
             dgvStavke.Columns[0].HeaderText = "ID Stavke";
             dgvStavke.Columns[1].HeaderText = "Naziv artikla";
-            dgvStavke.Columns[2].HeaderText = "Količina";
-            dgvStavke.Columns[3].HeaderText = "Masa";
+            dgvStavke.Columns[1].Width = 150;
+            dgvStavke.Columns[2].HeaderText = "Količina/paleta";
+            dgvStavke.Columns[3].HeaderText = "Masa/kg";
             dgvStavke.Columns[4].HeaderText = "Cijena";
+            dgvStavke.Columns[5].HeaderText = "Ukupno/kn";
            
         }
 

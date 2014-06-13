@@ -105,7 +105,7 @@ namespace Skladiste_ETI
         private void btnOK_MouseHover(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnOK, "Potvrda unosa primke");
+            ToolTip1.SetToolTip(this.btnUnosPrimke, "Potvrda unosa opisa primke");
         }
 
         private void btnExit_MouseHover(object sender, EventArgs e)
@@ -114,123 +114,148 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnExit, "Izlaz");
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void btnUnosPrimke_MouseHover(object sender, EventArgs e)
         {
-            if(txtNacinDopreme.Text == "")
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnUnosStavki, "Unos stavke");
+        }
+
+
+        private void btnUnosPrimke_Click(object sender, EventArgs e)
+        {
+            if (txtNacinDopreme.Text == "") 
             {
-                MessageBox.Show("Niste unijeli način dopreme!");
+                MessageBox.Show("Niste unijeli način dopreme robe!");
             }
-            else if(txtOsnova.Text == "")
+            else if (txtOsnova.Text == "")
             {
                 MessageBox.Show("Niste unijeli popratni dokument!");
             }
-            else if(txtKolicina.Text == "")
+            else
             {
-                MessageBox.Show("Niste unijeli dopremljenu količinu robe!");
-            }
-            else if(txtMasa.Text == "")
-            {
-                MessageBox.Show("Niste unijeli dopremljenu masu robe!");
-            }
-            else{
 
-
-
-            using (var db = new T02_DBEntities())
-            {
-                DateTime datum1;
-                datum1 = dtpDatum.Value;
-                string idKorisnika = "";
-                string idPartnera1 = "";
-                foreach(char a in cmbKorisnik.Text)
+                using (var db = new T02_DBEntities())
                 {
-                    if(a == ' ')break;
-                    else
+                    DateTime datum1;
+                    datum1 = dtpDatum.Value;
+                    string idKorisnika = "";
+                    string idPartnera1 = "";
+                    foreach (char a in cmbKorisnik.Text)
                     {
-                        idKorisnika += a;
+                        if (a == ' ') break;
+                        else
+                        {
+                            idKorisnika += a;
+                        }
+
                     }
 
-                }
-
-                foreach (char a in cmbPartner.Text) 
-                {
-                    if (a == ' ') break;
-                    else 
+                    foreach (char a in cmbPartner.Text)
                     {
-                        idPartnera1 += a;
+                        if (a == ' ') break;
+                        else
+                        {
+                            idPartnera1 += a;
+                        }
                     }
-                }
 
 
-                dokument dokument = new dokument
-                {
+                    dokument dokument = new dokument
+                    {
+
+                        korisnik_id_korisnika = int.Parse(idKorisnika),
+                        tip_dokumenta_id_tipa = 1,
+                        poslovni_partner_id_partnera = int.Parse(idPartnera1),
+                        datum = datum1,
+                        stanje = cmbStanje.Text,
+                        osnova = txtOsnova.Text,
+                        način_trans = txtNacinDopreme.Text
+
+
+                    };
+                    db.dokument.Add(dokument);
+                    db.SaveChanges();
+
+
+                    txtNacinDopreme.Text = "";
+                    txtOsnova.Text = "";
+
                     
-                    korisnik_id_korisnika = int.Parse(idKorisnika),
-                    tip_dokumenta_id_tipa = 1,
-                    poslovni_partner_id_partnera = int.Parse(idPartnera1),
-                    datum = datum1,
-                    stanje = cmbStanje.Text,
-                    osnova = txtOsnova.Text,
-                    način_trans = txtNacinDopreme.Text
 
-                    
-                };
-                db.dokument.Add(dokument);
-                db.SaveChanges();
+                }//using
 
-                txtNacinDopreme.Text = "";
-                txtOsnova.Text = "";
-
-                string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
-                int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
-                string idArtikla1 = "";
-
-                
-
-                foreach (char a in cmbNazivArtikla.Text) 
-                {
-                    if (a == ' ') break;
-                    else 
-                    {
-                        idArtikla1 += a;
-                    }
-                
-                }
-
-                stavke stavke = new stavke
-                {
-                    dokument_id_dokumenta = id_dokumenta,
-                    artikli_id_artikla = int.Parse(idArtikla1),
-                    kolicina = float.Parse(txtKolicina.Text),
-                    masa = float.Parse(txtMasa.Text)
-
-                };
-                db.stavke.Add(stavke);
-
-                //spremi parametre za pohranjenu proceduru
-                id_artiklaParametar = int.Parse(idArtikla1);
-                dopremljenaKolicinaParametar = float.Parse(txtKolicina.Text);
-                dopremljenaMasaParametar = float.Parse(txtMasa.Text);
-
-                //izvrši pohranjenu proceduru nakon zaprimanja robe na skladište
-                db.UpdateArtikliDoprema(id_artiklaParametar, dopremljenaKolicinaParametar, dopremljenaMasaParametar);
-
-                db.SaveChanges();
-                
-                txtKolicina.Text = "";
-                txtMasa.Text = "";
-
-            }//using
-
-            MessageBox.Show("Primka je uspješno unesena!");
-            this.Close();
-           
+                MessageBox.Show("Primka je uspješno unesena!");
+            
             }//else
-
+        
         }//click
 
+        
+        private void btnUnosStavki_Click(object sender, EventArgs e)
+        {
+
+            if(txtKolicina.Text == "")
+            {
+                MessageBox.Show("Niste unijeli dopremljenu količinu!");
+            }
+            else if (txtMasa.Text == "")
+            {
+                MessageBox.Show("Niste unijeli dopremljenu masu!");
+            }
+            else
+            {
+
+                using (var db = new T02_DBEntities())
+                {
+
+                    string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
+                    int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
+                    string idArtikla1 = "";
 
 
+
+                    foreach (char a in cmbNazivArtikla.Text)
+                    {
+                        if (a == ' ') break;
+                        else
+                        {
+                            idArtikla1 += a;
+                        }
+
+                    }
+
+                    stavke stavke = new stavke
+                    {
+                        dokument_id_dokumenta = id_dokumenta,
+                        artikli_id_artikla = int.Parse(idArtikla1),
+                        kolicina = float.Parse(txtKolicina.Text),
+                        masa = float.Parse(txtMasa.Text)
+
+                    };
+                    db.stavke.Add(stavke);
+
+                    //spremi parametre za pohranjenu proceduru
+                    id_artiklaParametar = int.Parse(idArtikla1);
+                    dopremljenaKolicinaParametar = float.Parse(txtKolicina.Text);
+                    dopremljenaMasaParametar = float.Parse(txtMasa.Text);
+
+                    //izvrši pohranjenu proceduru nakon zaprimanja robe na skladište
+                    db.UpdateArtikliDoprema(id_artiklaParametar, dopremljenaKolicinaParametar, dopremljenaMasaParametar);
+
+                    db.SaveChanges();
+
+                    txtKolicina.Text = "";
+                    txtMasa.Text = "";
+
+                    
+
+                }//using
+
+                MessageBox.Show("Stavka je unesena!");
+            
+            }//else
+        
+        }//click
 
     }
 }

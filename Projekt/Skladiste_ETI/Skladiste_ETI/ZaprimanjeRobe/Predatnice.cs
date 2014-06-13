@@ -101,7 +101,7 @@ namespace Skladiste_ETI
         private void btnOK_MouseHover(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnOK, "Potvrda unosa predatnice");
+            ToolTip1.SetToolTip(this.btnUnosPredatnice, "Potvrda unosa opisa predatnice");
         }
 
         private void btnExit_MouseHover(object sender, EventArgs e)
@@ -110,27 +110,27 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnExit, "Izlaz");
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void btnUnosStavke_MouseHover(object sender, EventArgs e)
         {
-            if (txtNacinDopreme.Text == "")
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnUnosStavke, "Unos stavke");
+        }
+
+        private void btnUnosPredatnice_Click(object sender, EventArgs e)
+        {
+
+            if(txtNacinDopreme.Text == "")
             {
-                MessageBox.Show("Niste unijeli način dopreme!");
+                MessageBox.Show("Niste unijeli način dopreme robe!");
             }
             else if (txtOsnova.Text == "")
             {
-                MessageBox.Show("Niste unijeli popratni dokument!");
+                MessageBox.Show("NIste unijeli popratni dokument!");
             }
-            else if (txtKolicina.Text == "")
+            else
             {
-                MessageBox.Show("Niste unijeli dopremljenu količinu robe!");
-            }
-            else if (txtMasa.Text == "")
-            {
-                MessageBox.Show("Niste unijeli dopremljenu masu robe!");
-            }
-            else 
-            {
-                using (var db = new T02_DBEntities()) 
+
+                using (var db = new T02_DBEntities())
                 {
                     DateTime datum1;
                     datum1 = dtpDatum.Value;
@@ -147,10 +147,10 @@ namespace Skladiste_ETI
 
                     }
 
-                    foreach(char a in cmbPartner.Text)
+                    foreach (char a in cmbPartner.Text)
                     {
                         if (a == ' ') break;
-                        else 
+                        else
                         {
                             idPartnera1 += a;
                         }
@@ -174,6 +174,30 @@ namespace Skladiste_ETI
 
                     txtNacinDopreme.Text = "";
                     txtOsnova.Text = "";
+
+                }//using
+
+                MessageBox.Show("Podaci o opisu predatnice uneseni!");
+            }//else
+
+        }//click
+
+        private void btnUnosStavke_Click(object sender, EventArgs e)
+        {
+
+            using (var db = new T02_DBEntities())
+            {
+
+                if (txtKolicina.Text == "")
+                {
+                    MessageBox.Show("Niste unijeli dopremljenu kolicinu!");
+                }
+                else if (txtMasa.Text == "")
+                {
+                    MessageBox.Show("Niste unijeli dopremljenu masu!");
+                }
+                else
+                {
 
                     string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
                     int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
@@ -215,10 +239,11 @@ namespace Skladiste_ETI
 
                 }//using
 
-                MessageBox.Show("Predatnica je uspješno unesena!");
-                this.Close();
+                MessageBox.Show("Stavka je unesena!");
+                
             }//else
-        
+            
         }//click
+
     }
 }

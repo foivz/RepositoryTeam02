@@ -22,6 +22,7 @@ namespace Skladiste_ETI.Dokumenti
 
             label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label9.Text = DateTime.Now.DayOfWeek.ToString();
+            btnOdobri.Visible = false;
         }
 
         public class dokument 
@@ -61,7 +62,7 @@ namespace Skladiste_ETI.Dokumenti
 
         private void frmPregledDokumenata_Load(object sender, EventArgs e)
         {
-
+            
             var docs = from dok in context.dokument
                        join partner in context.poslovni_partner on dok.poslovni_partner_id_partnera equals partner.id_partnera
                        join skladistar in context.korisnik on dok.korisnik_id_korisnika equals skladistar.id_korisnika
@@ -98,6 +99,23 @@ namespace Skladiste_ETI.Dokumenti
             dgvDokumenti.Columns[7].Width = 150;
             dgvDokumenti.Columns[8].HeaderText = "Način transporta";
             dgvDokumenti.Columns[9].HeaderText = "Stanje";
+
+
+            foreach (DataGridViewColumn c in dgvDokumenti.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+
+                if (dgvDokumenti.CurrentRow.Cells[1].Value.ToString() == "Izdatnica" && dgvDokumenti.CurrentRow.Cells[9].Value.ToString() == "Kreirana")
+                {
+                    c.DefaultCellStyle.ForeColor = Color.Red;
+
+                }
+                else if(dgvDokumenti.CurrentRow.Cells[1].Value.ToString() == "Izdatnica" && dgvDokumenti.CurrentRow.Cells[9].Value.ToString() == "Odobrena")
+                {
+                    c.DefaultCellStyle.ForeColor = Color.Green;
+                }
+            }
+
 
         }
 
@@ -176,6 +194,12 @@ namespace Skladiste_ETI.Dokumenti
             dgvStavke.Columns[6].HeaderText = "Masa na skladištu";
             dgvStavke.Columns[7].HeaderText = "Cijena";
             dgvStavke.Columns[8].HeaderText = "Ukupno/kn";
+
+            foreach (DataGridViewColumn c in dgvStavke.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+
+            }
            
         }
 
@@ -201,7 +225,29 @@ namespace Skladiste_ETI.Dokumenti
 
         private void btnOdobri_Click(object sender, EventArgs e)
         {
+            int selectedRow = dgvDokumenti.CurrentCell.RowIndex;
+            string tip_dok = dgvDokumenti.Rows[selectedRow].Cells[1].Value.ToString();
+            string stanje = dgvDokumenti.Rows[selectedRow].Cells[9].Value.ToString();
 
+            if (tip_dok == "Izdatnica" && stanje == "Kreirana") 
+            {
+                btnOdobri.Visible = true;
+
+            }//if
+
+            using (var db = new T02_DBEntities())
+            {
+                string id_dokumenta = dgvDokumenti.Rows[selectedRow].Cells[0].Value.ToString();
+                int idDokumentaParametar = int.Parse(id_dokumenta);
+
+                //izvrši proceduru za promjenu stanja dokumenta
+                db.UpdateDokumentStanje(idDokumentaParametar);
+
+            }
+            
+            dgvDokumenti.Update();
+            dgvDokumenti.Refresh();
+            MessageBox.Show("Izdatnica uspješno odobrena!");
         }
 
   

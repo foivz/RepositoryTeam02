@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 
@@ -17,7 +18,13 @@ namespace Skladiste_ETI
 
         public frmLogin()
         {
+
+            Thread dretva = new Thread(new ThreadStart(splashscreen));
+            dretva.Start();
+            Thread.Sleep(1000);
             InitializeComponent();
+            dretva.Abort();
+            
             txtUser.Select();
 
             //ovo obavezno obrisati kad bu app gotova!!
@@ -25,7 +32,11 @@ namespace Skladiste_ETI
             txtPass.Text = "abc123";
         }
 
-  
+
+        private void splashscreen() 
+        {
+            Application.Run(new frmLoad());
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

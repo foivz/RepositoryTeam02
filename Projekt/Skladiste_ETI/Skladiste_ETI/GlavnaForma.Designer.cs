@@ -74,6 +74,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnPregledDokumenata = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.pregledDokumenataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -237,7 +238,8 @@
             this.upravljanjeArtiklimaToolStripMenuItem,
             this.otpremanjeRobeToolStripMenuItem,
             this.zaprimanjeRobeToolStripMenuItem,
-            this.administracijaToolStripMenuItem});
+            this.administracijaToolStripMenuItem,
+            this.pregledDokumenataToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -529,6 +531,13 @@
             this.label13.TabIndex = 30;
             this.label13.Text = "Pregled dokumenata";
             // 
+            // pregledDokumenataToolStripMenuItem
+            // 
+            this.pregledDokumenataToolStripMenuItem.Name = "pregledDokumenataToolStripMenuItem";
+            this.pregledDokumenataToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.pregledDokumenataToolStripMenuItem.Text = "Pregled dokumenata";
+            this.pregledDokumenataToolStripMenuItem.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -628,5 +637,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnPregledDokumenata;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolStripMenuItem pregledDokumenataToolStripMenuItem;
     }
 }

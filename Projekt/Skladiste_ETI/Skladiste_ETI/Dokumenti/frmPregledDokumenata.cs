@@ -13,17 +13,29 @@ namespace Skladiste_ETI.Dokumenti
     public partial class frmPregledDokumenata : Form
     {
         T02_DBEntities context = new T02_DBEntities();
-
+        int uloga2 = 0;
      
 
-        public frmPregledDokumenata()
+        public frmPregledDokumenata(int uloga)
         {
             InitializeComponent();
 
             label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label9.Text = DateTime.Now.DayOfWeek.ToString();
             btnOdobri.Visible = false;
-        }
+
+            uloga2 = uloga;
+
+            if (uloga2 == 2)
+            {
+                btnChange.Visible = true;
+            }
+            else 
+            {
+                btnChange.Visible = false;
+            }
+        
+        }//konstruktor
 
         public class dokument 
         {
@@ -89,14 +101,11 @@ namespace Skladiste_ETI.Dokumenti
             
             dgvDokumenti.Columns[0].HeaderText = "ID Dokumenta";
             dgvDokumenti.Columns[1].HeaderText = "Tip";
-            dgvDokumenti.Columns[2].HeaderText = "Naziv partnera";
-            dgvDokumenti.Columns[3].HeaderText = "Adresa partnera";
-            dgvDokumenti.Columns[3].Width = 150;
+           
             dgvDokumenti.Columns[4].HeaderText = "Ime skladištara";
             dgvDokumenti.Columns[5].HeaderText = "Prezime skladištara";
             dgvDokumenti.Columns[6].HeaderText = "Datum";
-            dgvDokumenti.Columns[7].HeaderText = "Osnova";
-            dgvDokumenti.Columns[7].Width = 150;
+           
             dgvDokumenti.Columns[8].HeaderText = "Način transporta";
             dgvDokumenti.Columns[9].HeaderText = "Stanje";
 
@@ -116,7 +125,24 @@ namespace Skladiste_ETI.Dokumenti
                 }
             }
 
+            dgvDokumenti.Columns[2].HeaderText = "Naziv partnera";
+            dgvDokumenti.Columns[2].Width = 160;
+            dgvDokumenti.Columns[3].HeaderText = "Adresa partnera";
+            dgvDokumenti.Columns[3].Width = 220;
 
+            dgvDokumenti.Columns[7].HeaderText = "Osnova";
+            dgvDokumenti.Columns[7].Width = 160;
+
+
+            int selectedRow2 = dgvDokumenti.CurrentCell.RowIndex;
+            string tip_dok2 = dgvDokumenti.Rows[selectedRow2].Cells[1].Value.ToString();
+            string stanje2 = dgvDokumenti.Rows[selectedRow2].Cells[9].Value.ToString();
+
+            if (tip_dok2 == "Izdatnica" && stanje2 == "Kreirana" && uloga2 == 2)
+            {
+                btnOdobri.Visible = true;
+
+            }//if
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -226,20 +252,11 @@ namespace Skladiste_ETI.Dokumenti
         private void btnOdobri_Click(object sender, EventArgs e)
         {
             int selectedRow = dgvDokumenti.CurrentCell.RowIndex;
-            string tip_dok = dgvDokumenti.Rows[selectedRow].Cells[1].Value.ToString();
-            string stanje = dgvDokumenti.Rows[selectedRow].Cells[9].Value.ToString();
-
-            if (tip_dok == "Izdatnica" && stanje == "Kreirana") 
-            {
-                btnOdobri.Visible = true;
-
-            }//if
-
+            string id_dokumenta = dgvDokumenti.Rows[selectedRow].Cells[0].Value.ToString();
+            int idDokumentaParametar = int.Parse(id_dokumenta);
+      
             using (var db = new T02_DBEntities())
             {
-                string id_dokumenta = dgvDokumenti.Rows[selectedRow].Cells[0].Value.ToString();
-                int idDokumentaParametar = int.Parse(id_dokumenta);
-
                 //izvrši proceduru za promjenu stanja dokumenta
                 db.UpdateDokumentStanje(idDokumentaParametar);
 

@@ -12,6 +12,8 @@ namespace Skladiste_ETI
 {
     public partial class frmMain : Form
     {
+
+        int ulogaParametar = 0;
         public frmMain(string username)
         {
             
@@ -26,17 +28,26 @@ namespace Skladiste_ETI
                 
                 
                 int uloga = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();//dohvaća id_tipa iz konteksta T02_DBEntities
-
+                ulogaParametar = uloga;
                 if (uloga == 1)
                 {
 
                     lblUloga.Text = "Skladištar";
+                    btnZaposlenici.Visible = false;
+                    btnPartneri.Visible = false;
+                    label11.Visible = false;
+                    label12.Visible = false;
+                    administracijaToolStripMenuItem.Visible = false;
                     
                 }
-                else {
+                else if (uloga == 2) {
 
                     lblUloga.Text = "Administrator";
-                
+                    btnZaposlenici.Visible = true;
+                    btnPartneri.Visible = true;
+                    label11.Visible = true;
+                    label12.Visible = true;
+                    administracijaToolStripMenuItem.Visible = true;
                 }
                 
             }
@@ -190,8 +201,9 @@ namespace Skladiste_ETI
 
         private void btnPregledDokumenata_Click(object sender, EventArgs e)
         {
-            new Dokumenti.frmPregledDokumenata().Show();
+            new Dokumenti.frmPregledDokumenata(ulogaParametar).Show();
         }
 
+ 
     }
 }

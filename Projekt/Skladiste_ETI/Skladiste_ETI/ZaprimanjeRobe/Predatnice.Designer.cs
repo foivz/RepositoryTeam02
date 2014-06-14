@@ -38,14 +38,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUnosPredatnice = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbPartner = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbStanje = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.txtOsnova = new System.Windows.Forms.TextBox();
@@ -73,9 +70,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
-            this.groupBox2.Location = new System.Drawing.Point(122, 343);
+            this.groupBox2.Location = new System.Drawing.Point(122, 316);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(518, 134);
+            this.groupBox2.Size = new System.Drawing.Size(518, 161);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Preuzeti artikli iz proizvodnje";
@@ -151,15 +148,6 @@
             this.label11.TabIndex = 11;
             this.label11.Text = "*Primljeno od vlastite proizvodnje";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 290);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(369, 16);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "*Napomena: predatnica uvijek ima stanje \"kreirana\"!";
-            // 
             // btnExit
             // 
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,7 +166,7 @@
             this.btnUnosPredatnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnosPredatnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnUnosPredatnice.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosPredatnice.Image")));
-            this.btnUnosPredatnice.Location = new System.Drawing.Point(400, 229);
+            this.btnUnosPredatnice.Location = new System.Drawing.Point(400, 203);
             this.btnUnosPredatnice.Name = "btnUnosPredatnice";
             this.btnUnosPredatnice.Size = new System.Drawing.Size(103, 77);
             this.btnUnosPredatnice.TabIndex = 8;
@@ -193,10 +181,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.cmbPartner);
             this.groupBox1.Controls.Add(this.btnUnosPredatnice);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.cmbStanje);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpDatum);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtOsnova);
@@ -209,7 +194,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(122, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(518, 325);
+            this.groupBox1.Size = new System.Drawing.Size(518, 298);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opis predatnice";
@@ -231,26 +216,9 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Primljeno od proizvodnje*:";
             // 
-            // cmbStanje
-            // 
-            this.cmbStanje.FormattingEnabled = true;
-            this.cmbStanje.Location = new System.Drawing.Point(303, 146);
-            this.cmbStanje.Name = "cmbStanje";
-            this.cmbStanje.Size = new System.Drawing.Size(200, 24);
-            this.cmbStanje.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Stanje*:";
-            // 
             // dtpDatum
             // 
-            this.dtpDatum.Location = new System.Drawing.Point(303, 176);
+            this.dtpDatum.Location = new System.Drawing.Point(303, 148);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 22);
             this.dtpDatum.TabIndex = 9;
@@ -258,7 +226,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 181);
+            this.label9.Location = new System.Drawing.Point(24, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 8;
@@ -366,9 +334,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbStanje;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbPartner;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

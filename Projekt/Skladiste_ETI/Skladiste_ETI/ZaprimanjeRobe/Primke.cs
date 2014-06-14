@@ -25,17 +25,6 @@ namespace Skladiste_ETI
             List<poslovni_partner> partner = new List<poslovni_partner>();
             InitializeComponent();
 
-
-
-            var stanje = new[] 
-                {
-                    "Kreirana", "Odobrena"
-
-                };
-
-            cmbStanje.DataSource = stanje;
-
-
             using(var db = new T02_DBEntities())
             {
 
@@ -167,7 +156,7 @@ namespace Skladiste_ETI
                         tip_dokumenta_id_tipa = 1,
                         poslovni_partner_id_partnera = int.Parse(idPartnera1),
                         datum = datum1,
-                        stanje = cmbStanje.Text,
+                        stanje = "Kreirana",
                         osnova = txtOsnova.Text,
                         način_trans = txtNacinDopreme.Text
 

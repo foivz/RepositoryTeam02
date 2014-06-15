@@ -47,7 +47,23 @@ namespace Skladiste_ETI
                     btnPartneri.Visible = true;
                     label11.Visible = true;
                     label12.Visible = true;
+                    btnArtikli.Visible = false;
+                    btnOtpremanje.Visible = false;
+                    btnZaprimanje.Visible = false;
+                    label5.Visible = false;
+                    label6.Visible = false;
+                    label7.Visible = false;
                     administracijaToolStripMenuItem.Visible = true;
+                    upravljanjeArtiklimaToolStripMenuItem.Visible = false;
+                    otpremanjeRobeToolStripMenuItem.Visible = false;
+                    zaprimanjeRobeToolStripMenuItem.Visible = false;
+                    btnZaposlenici.Location = new System.Drawing.Point(86, 232);
+                    btnPartneri.Location = new System.Drawing.Point(296, 232);
+                    btnPregledDokumenata.Location = new System.Drawing.Point(482, 232);
+                    label11.Location = new System.Drawing.Point(115, 391);
+                    label12.Location = new System.Drawing.Point(327, 391);
+                    label13.Location = new System.Drawing.Point(505, 391);
+                
                 }
                 
             }

@@ -62,3 +62,4 @@ C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.cs
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzmjenaStavki.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLoad.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Administracija.AdministratorSucelje.resources

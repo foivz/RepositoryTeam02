@@ -195,5 +195,74 @@ namespace Skladiste_ETI.OtpremanjeRobe
             }//else
 
         }
+
+        private void btnUnosStavki_Click(object sender, EventArgs e)
+        {
+            if (txtKolicina.Text == "")
+            {
+                MessageBox.Show("Niste unijeli količinu!");
+            }
+            else if (txtMasa.Text == "")
+            {
+                MessageBox.Show("Niste unijeli masu!");
+            }
+            else
+            {
+                using (var db = new T02_DBEntities())
+                {
+                    string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
+                    int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
+                    string idArtikla1 = "";
+                    string idDokumenta2 = "";
+
+                    foreach (char a in cmbNazivArtikla.Text)
+                    {
+                        if (a == ' ') break;
+                        else
+                        {
+                            idArtikla1 += a;
+                        }
+                    }
+
+                    foreach (char a in cmbOsnova.Text)
+                    {
+                        if (a == ' ') break;
+                        else
+                        {
+                            idDokumenta2 += a;
+                        }
+                    }
+
+                    string query2 = string.Format("SELECT stanje FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta2);
+                    string stanje2 = db.Database.SqlQuery<string>(query2).FirstOrDefault<string>();
+
+                    string query3 = string.Format("SELECT kolicina FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
+                    int kolicina = db.Database.SqlQuery<int>(query3).FirstOrDefault<int>();
+
+                    if (stanje2 == "Odobrena" && int.Parse(txtKolicina.Text) <= kolicina)
+                    {
+                        stavke stavke = new stavke
+                        {
+                            dokument_id_dokumenta = id_dokumenta,
+                            artikli_id_artikla = int.Parse(idArtikla1),
+                            kolicina = int.Parse(txtKolicina.Text),
+                            masa = int.Parse(txtMasa.Text)
+                        };
+                        db.stavke.Add(stavke);
+                        db.SaveChanges();
+
+                        txtKolicina.Text = "";
+                        txtMasa.Text = "";
+
+                        MessageBox.Show("Stavka je unesena!");
+
+                    }   //if
+                    else
+                    {
+                        MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili ste unijeli veću količinu nego što je na skladištu!");
+                    }
+                }   //using
+            }       //else
+        }
     }
 }

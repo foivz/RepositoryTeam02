@@ -224,6 +224,7 @@
             this.btnUnosStavki.Size = new System.Drawing.Size(75, 77);
             this.btnUnosStavki.TabIndex = 6;
             this.btnUnosStavki.UseVisualStyleBackColor = true;
+            this.btnUnosStavki.Click += new System.EventHandler(this.btnUnosStavki_Click);
             this.btnUnosStavki.MouseHover += new System.EventHandler(this.btnUnosStavki_MouseHover);
             // 
             // txtMasa

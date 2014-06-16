@@ -110,7 +110,7 @@ namespace Skladiste_ETI
 
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
-           // new frmOtpremnice().Show();
+            new Skladiste_ETI.OtpremanjeRobe.frmOtpremnica().Show();
            
         }
 

@@ -114,6 +114,12 @@
     <Compile Include="MsgBox.Designer.cs">
       <DependentUpon>MsgBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtpremanjeRobe\Izdatnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtpremanjeRobe\Izdatnice.Designer.cs">
+      <DependentUpon>Izdatnice.cs</DependentUpon>
+    </Compile>
     <Compile Include="poslovni_partner.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtpremanjeRobe\Izdatnice.resx">
+      <DependentUpon>Izdatnice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,9 +275,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OtpremanjeRobe\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

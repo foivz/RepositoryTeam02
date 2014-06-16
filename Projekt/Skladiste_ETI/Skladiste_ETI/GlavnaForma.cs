@@ -116,7 +116,7 @@ namespace Skladiste_ETI
 
         private void btnIzdatnica_Click(object sender, EventArgs e)
         {
-            //new frmIzdatnice().Show();
+            new frmIzdatnice().Show();
             
         }
 

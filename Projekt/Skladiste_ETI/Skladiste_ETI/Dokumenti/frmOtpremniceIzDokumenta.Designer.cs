@@ -1,6 +1,6 @@
-﻿namespace Skladiste_ETI
+﻿namespace Skladiste_ETI.Dokumenti
 {
-    partial class frmPrimke
+    partial class frmOtpremniceIzDokumenta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrimke));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOtpremniceIzDokumenta));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnUnosPrimke = new System.Windows.Forms.Button();
+            this.cmbOsnova = new System.Windows.Forms.ComboBox();
+            this.btnUnosOtpremnice = new System.Windows.Forms.Button();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtOsnova = new System.Windows.Forms.TextBox();
             this.txtNacinDopreme = new System.Windows.Forms.TextBox();
             this.cmbKorisnik = new System.Windows.Forms.ComboBox();
             this.cmbPartner = new System.Windows.Forms.ComboBox();
@@ -43,14 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnUnosStavki = new System.Windows.Forms.Button();
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.txtMasa = new System.Windows.Forms.TextBox();
             this.cmbNazivArtikla = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnUnosStavki = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,17 +62,27 @@
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 104);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(12, 305);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(103, 98);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnUnosPrimke);
+            this.groupBox1.Controls.Add(this.cmbOsnova);
+            this.groupBox1.Controls.Add(this.btnUnosOtpremnice);
             this.groupBox1.Controls.Add(this.dtpDatum);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtOsnova);
             this.groupBox1.Controls.Add(this.txtNacinDopreme);
             this.groupBox1.Controls.Add(this.cmbKorisnik);
             this.groupBox1.Controls.Add(this.cmbPartner);
@@ -82,25 +92,32 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(139, 12);
+            this.groupBox1.Location = new System.Drawing.Point(122, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 287);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(544, 268);
+            this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Opis primke";
+            this.groupBox1.Text = "Opis otpremnice";
             // 
-            // btnUnosPrimke
+            // cmbOsnova
             // 
-            this.btnUnosPrimke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnosPrimke.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUnosPrimke.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosPrimke.Image")));
-            this.btnUnosPrimke.Location = new System.Drawing.Point(400, 194);
-            this.btnUnosPrimke.Name = "btnUnosPrimke";
-            this.btnUnosPrimke.Size = new System.Drawing.Size(103, 77);
-            this.btnUnosPrimke.TabIndex = 9;
-            this.btnUnosPrimke.UseVisualStyleBackColor = true;
-            this.btnUnosPrimke.Click += new System.EventHandler(this.btnUnosPrimke_Click);
-            this.btnUnosPrimke.MouseHover += new System.EventHandler(this.btnUnosPrimke_MouseHover);
+            this.cmbOsnova.FormattingEnabled = true;
+            this.cmbOsnova.Location = new System.Drawing.Point(303, 116);
+            this.cmbOsnova.Name = "cmbOsnova";
+            this.cmbOsnova.Size = new System.Drawing.Size(200, 24);
+            this.cmbOsnova.TabIndex = 10;
+            // 
+            // btnUnosOtpremnice
+            // 
+            this.btnUnosOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnosOtpremnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUnosOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosOtpremnice.Image")));
+            this.btnUnosOtpremnice.Location = new System.Drawing.Point(400, 184);
+            this.btnUnosOtpremnice.Name = "btnUnosOtpremnice";
+            this.btnUnosOtpremnice.Size = new System.Drawing.Size(103, 77);
+            this.btnUnosOtpremnice.TabIndex = 9;
+            this.btnUnosOtpremnice.UseVisualStyleBackColor = true;
+            this.btnUnosOtpremnice.Click += new System.EventHandler(this.btnUnosOtpremnice_Click);
             // 
             // dtpDatum
             // 
@@ -117,13 +134,6 @@
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "Datum:";
-            // 
-            // txtOsnova
-            // 
-            this.txtOsnova.Location = new System.Drawing.Point(303, 116);
-            this.txtOsnova.Name = "txtOsnova";
-            this.txtOsnova.Size = new System.Drawing.Size(200, 22);
-            this.txtOsnova.TabIndex = 7;
             // 
             // txtNacinDopreme
             // 
@@ -180,14 +190,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 16);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Primljeno od (osoba/tvrtka dobavljač):";
+            this.label1.Text = "Za tvrtku:";
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnUnosStavki);
             this.groupBox2.Controls.Add(this.txtKolicina);
             this.groupBox2.Controls.Add(this.txtMasa);
@@ -197,25 +206,37 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
-            this.groupBox2.Location = new System.Drawing.Point(139, 305);
+            this.groupBox2.Location = new System.Drawing.Point(122, 272);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 157);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.Size = new System.Drawing.Size(544, 131);
+            this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dostavljeni artikli";
+            this.groupBox2.Text = "Artikli za otpremu";
+            // 
+            // btnUnosStavki
+            // 
+            this.btnUnosStavki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnosStavki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUnosStavki.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosStavki.Image")));
+            this.btnUnosStavki.Location = new System.Drawing.Point(400, 41);
+            this.btnUnosStavki.Name = "btnUnosStavki";
+            this.btnUnosStavki.Size = new System.Drawing.Size(103, 77);
+            this.btnUnosStavki.TabIndex = 8;
+            this.btnUnosStavki.UseVisualStyleBackColor = true;
+            this.btnUnosStavki.Click += new System.EventHandler(this.btnUnosStavki_Click);
             // 
             // txtKolicina
             // 
             this.txtKolicina.Location = new System.Drawing.Point(97, 65);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(200, 22);
+            this.txtKolicina.Size = new System.Drawing.Size(266, 22);
             this.txtKolicina.TabIndex = 6;
             // 
             // txtMasa
             // 
             this.txtMasa.Location = new System.Drawing.Point(97, 90);
             this.txtMasa.Name = "txtMasa";
-            this.txtMasa.Size = new System.Drawing.Size(200, 22);
+            this.txtMasa.Size = new System.Drawing.Size(266, 22);
             this.txtMasa.TabIndex = 5;
             // 
             // cmbNazivArtikla
@@ -223,7 +244,7 @@
             this.cmbNazivArtikla.FormattingEnabled = true;
             this.cmbNazivArtikla.Location = new System.Drawing.Point(97, 38);
             this.cmbNazivArtikla.Name = "cmbNazivArtikla";
-            this.cmbNazivArtikla.Size = new System.Drawing.Size(200, 24);
+            this.cmbNazivArtikla.Size = new System.Drawing.Size(266, 24);
             this.cmbNazivArtikla.TabIndex = 4;
             // 
             // label8
@@ -253,46 +274,20 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Naziv:";
             // 
-            // btnExit
-            // 
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(13, 340);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(103, 98);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
-            // 
-            // btnUnosStavki
-            // 
-            this.btnUnosStavki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnosStavki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUnosStavki.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosStavki.Image")));
-            this.btnUnosStavki.Location = new System.Drawing.Point(400, 41);
-            this.btnUnosStavki.Name = "btnUnosStavki";
-            this.btnUnosStavki.Size = new System.Drawing.Size(103, 77);
-            this.btnUnosStavki.TabIndex = 8;
-            this.btnUnosStavki.UseVisualStyleBackColor = true;
-            this.btnUnosStavki.Click += new System.EventHandler(this.btnUnosStavki_Click);
-            this.btnUnosStavki.MouseHover += new System.EventHandler(this.btnOK_MouseHover);
-            // 
-            // frmPrimke
+            // frmOtpremniceIzDokumenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(676, 474);
+            this.ClientSize = new System.Drawing.Size(687, 444);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmPrimke";
+            this.Name = "frmOtpremniceIzDokumenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Izrada primke";
+            this.Text = "Izrada otpremnice";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -305,8 +300,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtOsnova;
+        private System.Windows.Forms.ComboBox cmbOsnova;
+        private System.Windows.Forms.Button btnUnosOtpremnice;
+        private System.Windows.Forms.DateTimePicker dtpDatum;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNacinDopreme;
         private System.Windows.Forms.ComboBox cmbKorisnik;
         private System.Windows.Forms.ComboBox cmbPartner;
@@ -315,16 +314,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dtpDatum;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnUnosStavki;
         private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.TextBox txtMasa;
         private System.Windows.Forms.ComboBox cmbNazivArtikla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnUnosPrimke;
-        private System.Windows.Forms.Button btnUnosStavki;
     }
 }

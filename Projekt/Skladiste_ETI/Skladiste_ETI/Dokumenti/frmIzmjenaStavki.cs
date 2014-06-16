@@ -19,6 +19,7 @@ namespace Skladiste_ETI.Dokumenti
         private int masaNaSk;
         private int idArt;
         private string tip_dok;
+        
 
         public frmIzmjenaStavki(string naziv, string kolicina, string masa, string id_stav, string kolNaSk, string masNaSk, string idArtikla, string tip_dokumenta)
         {
@@ -36,6 +37,7 @@ namespace Skladiste_ETI.Dokumenti
             masaNaSk = int.Parse(masNaSk);
             idArt = int.Parse(idArtikla);
             tip_dok = tip_dokumenta;
+            
 
         }//konstruktor
 
@@ -63,16 +65,16 @@ namespace Skladiste_ETI.Dokumenti
             {
                 if(tip_dok == "Izdatnica"){
 
-                    if(novaKolicina < kolicinaNaSk && novaMasa < masaNaSk){
+                        if(novaKolicina < kolicinaNaSk && novaMasa < masaNaSk){
                 
-                    string upit = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'",idArt, novaKolicina, novaMasa, id_stav1);
-                    db.Database.ExecuteSqlCommand(upit);
+                        string upit = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'",idArt, novaKolicina, novaMasa, id_stav1);
+                        db.Database.ExecuteSqlCommand(upit);
 
                         //izvrši proceduru nad količinom u skladištu
                         
-                        db.UpdateArtikliStavkeMinus(idArt, razlikaKolicina, razlikaMasa);
+                        db.UpdateArtikliStavkePlus(idArt, razlikaKolicina, razlikaMasa);
                         db.SaveChanges();
-                        MessageBox.Show("Stavka otpremnice uspješno izmijenjena!");
+                        MessageBox.Show("Stavka izdatnice uspješno izmijenjena!");
                         this.Close();
                     }
                 
@@ -83,8 +85,17 @@ namespace Skladiste_ETI.Dokumenti
                 }//else
                 
                 }//if
+
+                else if(tip_dok == "Otpremnica")
+                {
+                    string upit2 = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'", idArt, novaKolicina, novaMasa, id_stav1);
+                    db.Database.ExecuteSqlCommand(upit2);
+
+                    db.SaveChanges();
+                    MessageBox.Show("Stavka otpremnice uspješno izmijenjena");
+                }
                 
-                if(tip_dok == "Primka" || tip_dok == "Predatnica")
+                else if(tip_dok == "Primka" || tip_dok == "Predatnica")
                 {
                     string upit2 = string.Format("UPDATE stavke SET artikli_id_artikla = '{0}', kolicina = '{1}', masa = '{2}' WHERE id_stavke = '{3}'", idArt, novaKolicina, novaMasa, id_stav1);
                     db.Database.ExecuteSqlCommand(upit2);

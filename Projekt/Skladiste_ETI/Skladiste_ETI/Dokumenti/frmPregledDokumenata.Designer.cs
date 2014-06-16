@@ -41,6 +41,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOdobri = new System.Windows.Forms.Button();
+            this.btnIzradaOtpremnice = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDokumenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -196,12 +197,26 @@
             this.btnOdobri.Click += new System.EventHandler(this.btnOdobri_Click);
             this.btnOdobri.MouseHover += new System.EventHandler(this.btnOdobri_MouseHover);
             // 
+            // btnIzradaOtpremnice
+            // 
+            this.btnIzradaOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnIzradaOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaOtpremnice.Image")));
+            this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 457);
+            this.btnIzradaOtpremnice.Name = "btnIzradaOtpremnice";
+            this.btnIzradaOtpremnice.Size = new System.Drawing.Size(114, 87);
+            this.btnIzradaOtpremnice.TabIndex = 29;
+            this.btnIzradaOtpremnice.UseVisualStyleBackColor = true;
+            this.btnIzradaOtpremnice.Click += new System.EventHandler(this.btnIzradaOtpremnice_Click);
+            this.btnIzradaOtpremnice.MouseHover += new System.EventHandler(this.btnIzradaOtpremnice_MouseHover);
+            // 
             // frmPregledDokumenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1229, 750);
+            this.Controls.Add(this.btnIzradaOtpremnice);
             this.Controls.Add(this.btnOdobri);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -242,5 +257,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOdobri;
+        private System.Windows.Forms.Button btnIzradaOtpremnice;
     }
 }

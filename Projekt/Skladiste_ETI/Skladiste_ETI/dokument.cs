@@ -32,5 +32,8 @@ namespace Skladiste_ETI
         public virtual poslovni_partner poslovni_partner { get; set; }
         public virtual tip_dokumenta tip_dokumenta { get; set; }
         public virtual ICollection<stavke> stavke { get; set; }
+
+        public int idDok { get; set; }
+        public string doc { get; set; }
     }
 }

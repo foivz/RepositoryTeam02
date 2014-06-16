@@ -110,13 +110,13 @@ namespace Skladiste_ETI
 
         private void btnOtpremnica_Click(object sender, EventArgs e)
         {
-            new frmOtpremnice().Show();
+           // new frmOtpremnice().Show();
            
         }
 
         private void btnIzdatnica_Click(object sender, EventArgs e)
         {
-            new frmIzdatnice().Show();
+            //new frmIzdatnice().Show();
             
         }
 

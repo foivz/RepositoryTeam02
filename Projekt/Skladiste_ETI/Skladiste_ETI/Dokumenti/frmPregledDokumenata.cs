@@ -29,10 +29,12 @@ namespace Skladiste_ETI.Dokumenti
             if (uloga2 == 2)
             {
                 btnChange.Visible = true;
+                btnIzradaOtpremnice.Visible = false;
             }
             else 
             {
                 btnChange.Visible = false;
+                btnIzradaOtpremnice.Visible = true;
             }
         
         }//konstruktor
@@ -97,8 +99,7 @@ namespace Skladiste_ETI.Dokumenti
                        };
 
             dgvDokumenti.DataSource = docs.ToList();
-         
-            
+
             dgvDokumenti.Columns[0].HeaderText = "ID Dokumenta";
             dgvDokumenti.Columns[1].HeaderText = "Tip";
            
@@ -110,21 +111,6 @@ namespace Skladiste_ETI.Dokumenti
             dgvDokumenti.Columns[9].HeaderText = "Stanje";
 
 
-            foreach (DataGridViewColumn c in dgvDokumenti.Columns)
-            {
-                c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
-
-                if (dgvDokumenti.CurrentRow.Cells[1].Value.ToString() == "Izdatnica" && dgvDokumenti.CurrentRow.Cells[9].Value.ToString() == "Kreirana")
-                {
-                    c.DefaultCellStyle.ForeColor = Color.Red;
-
-                }
-                else if(dgvDokumenti.CurrentRow.Cells[1].Value.ToString() == "Izdatnica" && dgvDokumenti.CurrentRow.Cells[9].Value.ToString() == "Odobrena")
-                {
-                    c.DefaultCellStyle.ForeColor = Color.Green;
-                }
-            }
-
             dgvDokumenti.Columns[2].HeaderText = "Naziv partnera";
             dgvDokumenti.Columns[2].Width = 160;
             dgvDokumenti.Columns[3].HeaderText = "Adresa partnera";
@@ -133,16 +119,25 @@ namespace Skladiste_ETI.Dokumenti
             dgvDokumenti.Columns[7].HeaderText = "Osnova";
             dgvDokumenti.Columns[7].Width = 160;
 
-
-            int selectedRow2 = dgvDokumenti.CurrentCell.RowIndex;
-            string tip_dok2 = dgvDokumenti.Rows[selectedRow2].Cells[1].Value.ToString();
-            string stanje2 = dgvDokumenti.Rows[selectedRow2].Cells[9].Value.ToString();
-
-            if (tip_dok2 == "Izdatnica" && stanje2 == "Kreirana" && uloga2 == 2)
+            foreach (DataGridViewRow r in dgvDokumenti.Rows)
             {
-                btnOdobri.Visible = true;
+                r.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
 
-            }//if
+                string tip = r.Cells[1].Value.ToString();
+                string stanje = r.Cells[9].Value.ToString();
+
+                if(tip == "Izdatnica" && stanje == "Kreirana")
+                {
+                    r.DefaultCellStyle.ForeColor = Color.Red;
+                }
+                else if(tip == "Izdatnica" && stanje == "Odobrena")
+                {
+                    r.DefaultCellStyle.ForeColor = Color.Green;
+                }
+
+            }
+         
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -172,6 +167,13 @@ namespace Skladiste_ETI.Dokumenti
         {
             System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(this.btnOdobri, "Odobri izdatnicu");
+        }
+
+
+        private void btnIzradaOtpremnice_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnIzradaOtpremnice, "Izrada otpremnice");
         }
 
         private string DohvatiIDDokumenta() 
@@ -226,7 +228,22 @@ namespace Skladiste_ETI.Dokumenti
                 c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
 
             }
-           
+
+
+            int selectedRow2 = dgvDokumenti.CurrentCell.RowIndex;
+            string tip_dok2 = dgvDokumenti.Rows[selectedRow2].Cells[1].Value.ToString();
+            string stanje2 = dgvDokumenti.Rows[selectedRow2].Cells[9].Value.ToString();
+
+            if (tip_dok2 == "Izdatnica" && stanje2 == "Kreirana" && uloga2 == 2)
+            {
+                btnOdobri.Visible = true;
+
+            }//if
+            else 
+            {
+                btnOdobri.Visible = false;
+            }
+
         }
 
         private void btnChange_Click(object sender, EventArgs e)
@@ -242,6 +259,7 @@ namespace Skladiste_ETI.Dokumenti
             string masaNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[6].Value.ToString();
             string idArtikla = dgvStavke.Rows[odabrani_redak].Cells[1].Value.ToString();
             string tip_dokumenta = dgvDokumenti.Rows[odabrani_redak2].Cells[1].Value.ToString();
+ 
 
             Dokumenti.frmIzmjenaStavki frmIzmjena = new Dokumenti.frmIzmjenaStavki(nazivArtikla, kolicinaStavke, masaStavke, idStavke, kolNaSkladistu, masaNaSkladistu, idArtikla, tip_dokumenta);
             frmIzmjena.Show();
@@ -253,20 +271,59 @@ namespace Skladiste_ETI.Dokumenti
         {
             int selectedRow = dgvDokumenti.CurrentCell.RowIndex;
             string id_dokumenta = dgvDokumenti.Rows[selectedRow].Cells[0].Value.ToString();
-            int idDokumentaParametar = int.Parse(id_dokumenta);
-      
+
             using (var db = new T02_DBEntities())
             {
-                //izvrši proceduru za promjenu stanja dokumenta
-                db.UpdateDokumentStanje(idDokumentaParametar);
 
-            }
+            //parametar za proceduru
+            int idDokumentaParametar = int.Parse(id_dokumenta);
+
+            //izvrši proceduru za promjenu stanja dokumenta
+            db.UpdateDokumentStanje(idDokumentaParametar);
+
+            foreach (DataGridViewRow r in dgvStavke.Rows)
+            {
+
+
+                string idArtikla = r.Cells[1].Value.ToString();
+                string kolicinaZaOtpremu = r.Cells[3].Value.ToString();
+                string masaZaOtpremu = r.Cells[5].Value.ToString();
+            
+                //parametri za proceduru
+                int idArtiklaParam = int.Parse(idArtikla);
+                int kolicinaZaOtpremuParam = int.Parse(kolicinaZaOtpremu);
+                int masaZaOtpremuParam = int.Parse(masaZaOtpremu);
+
+                //izvrši proceduru smanjenja robe na skladištu
+                db.UpdateArtikliOtprema(idArtiklaParam, kolicinaZaOtpremuParam, masaZaOtpremuParam);
+
+                }//foreach
+
+            }//using
+
+            dgvDokumenti.Rows[selectedRow].DefaultCellStyle.ForeColor = Color.Green;
+            dgvDokumenti.Rows[selectedRow].Cells[9].Value = "Odobrena";
             
             dgvDokumenti.Update();
             dgvDokumenti.Refresh();
             MessageBox.Show("Izdatnica uspješno odobrena!");
         }
 
+        private void btnIzradaOtpremnice_Click(object sender, EventArgs e)
+        {
+            int selectedRow3 = dgvDokumenti.CurrentCell.RowIndex;
+            
+            string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
+            string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+            string stanje = dgvDokumenti.Rows[selectedRow3].Cells[9].Value.ToString();
+            
+
+            frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje);
+            forma.Show();
+
+        }
+
+  
   
     }
 

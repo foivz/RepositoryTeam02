@@ -42,7 +42,7 @@ namespace Skladiste_ETI
                 roba = db.artikli.AsEnumerable().Select(a => new artikli()//napravi novu listu sa id i nazivom artikla
                 {
                     ida = a.id_artikla,
-                    naziv_artikla = a.id_artikla + " " + a.naziv//ubaci u listu id i naziv
+                    naziv_artikla = a.id_artikla + " | " + a.naziv//ubaci u listu id i naziv
 
 
                 }).ToList();

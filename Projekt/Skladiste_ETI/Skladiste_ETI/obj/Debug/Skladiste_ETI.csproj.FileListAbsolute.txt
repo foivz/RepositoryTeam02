@@ -138,3 +138,4 @@ C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladist
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.OtpremanjeRobe.frmOtpremnica.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.OtpremanjeRobe.frmOtpremnica.resources

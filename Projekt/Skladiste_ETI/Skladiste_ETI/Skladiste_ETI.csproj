@@ -77,7 +77,6 @@
     <Compile Include="dokument.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Dokumenti\datum.cs" />
     <Compile Include="Dokumenti\frmIzmjenaStavki.cs">
       <SubType>Form</SubType>
     </Compile>

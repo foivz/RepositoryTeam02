@@ -194,7 +194,7 @@ namespace Skladiste_ETI.OtpremanjeRobe
 
             }//else
 
-        }
+        }//click
 
         private void btnUnosStavki_Click(object sender, EventArgs e)
         {
@@ -261,8 +261,8 @@ namespace Skladiste_ETI.OtpremanjeRobe
                     {
                         MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili ste unijeli veću količinu nego što je na skladištu!");
                     }
-                }   //using
-            }       //else
-        }
+                }//using
+            }//else
+        }//click
     }
 }

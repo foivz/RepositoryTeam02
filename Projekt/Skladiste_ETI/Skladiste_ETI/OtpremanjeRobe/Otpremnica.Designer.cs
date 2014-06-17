@@ -61,7 +61,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(9, 329);
+            this.btnExit.Location = new System.Drawing.Point(9, 361);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(103, 98);
             this.btnExit.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.gbOpisOtpremnice.ForeColor = System.Drawing.Color.Red;
             this.gbOpisOtpremnice.Location = new System.Drawing.Point(118, 12);
             this.gbOpisOtpremnice.Name = "gbOpisOtpremnice";
-            this.gbOpisOtpremnice.Size = new System.Drawing.Size(560, 231);
+            this.gbOpisOtpremnice.Size = new System.Drawing.Size(518, 298);
             this.gbOpisOtpremnice.TabIndex = 2;
             this.gbOpisOtpremnice.TabStop = false;
             this.gbOpisOtpremnice.Text = "Opis otpremnice";
@@ -105,9 +105,9 @@
             this.btnUnosOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnosOtpremnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnUnosOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosOtpremnice.Image")));
-            this.btnUnosOtpremnice.Location = new System.Drawing.Point(456, 134);
+            this.btnUnosOtpremnice.Location = new System.Drawing.Point(419, 202);
             this.btnUnosOtpremnice.Name = "btnUnosOtpremnice";
-            this.btnUnosOtpremnice.Size = new System.Drawing.Size(75, 78);
+            this.btnUnosOtpremnice.Size = new System.Drawing.Size(80, 80);
             this.btnUnosOtpremnice.TabIndex = 10;
             this.btnUnosOtpremnice.UseVisualStyleBackColor = true;
             this.btnUnosOtpremnice.Click += new System.EventHandler(this.btnUnosOtpremnice_Click);
@@ -115,7 +115,7 @@
             // 
             // dtpDatum
             // 
-            this.dtpDatum.Location = new System.Drawing.Point(233, 150);
+            this.dtpDatum.Location = new System.Drawing.Point(299, 150);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 22);
             this.dtpDatum.TabIndex = 9;
@@ -123,14 +123,14 @@
             // cmbOsnova
             // 
             this.cmbOsnova.FormattingEnabled = true;
-            this.cmbOsnova.Location = new System.Drawing.Point(233, 118);
+            this.cmbOsnova.Location = new System.Drawing.Point(299, 118);
             this.cmbOsnova.Name = "cmbOsnova";
             this.cmbOsnova.Size = new System.Drawing.Size(200, 24);
             this.cmbOsnova.TabIndex = 8;
             // 
             // txtNacinDopreme
             // 
-            this.txtNacinDopreme.Location = new System.Drawing.Point(233, 89);
+            this.txtNacinDopreme.Location = new System.Drawing.Point(299, 89);
             this.txtNacinDopreme.Name = "txtNacinDopreme";
             this.txtNacinDopreme.Size = new System.Drawing.Size(200, 22);
             this.txtNacinDopreme.TabIndex = 7;
@@ -138,7 +138,7 @@
             // cmbKorisnik
             // 
             this.cmbKorisnik.FormattingEnabled = true;
-            this.cmbKorisnik.Location = new System.Drawing.Point(233, 59);
+            this.cmbKorisnik.Location = new System.Drawing.Point(299, 59);
             this.cmbKorisnik.Name = "cmbKorisnik";
             this.cmbKorisnik.Size = new System.Drawing.Size(200, 24);
             this.cmbKorisnik.TabIndex = 6;
@@ -146,7 +146,7 @@
             // cmbPartner
             // 
             this.cmbPartner.FormattingEnabled = true;
-            this.cmbPartner.Location = new System.Drawing.Point(233, 30);
+            this.cmbPartner.Location = new System.Drawing.Point(299, 30);
             this.cmbPartner.Name = "cmbPartner";
             this.cmbPartner.Size = new System.Drawing.Size(200, 24);
             this.cmbPartner.TabIndex = 5;
@@ -207,9 +207,9 @@
             this.gbArtikliZaOtpremu.Controls.Add(this.lblNaziv);
             this.gbArtikliZaOtpremu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbArtikliZaOtpremu.ForeColor = System.Drawing.Color.Red;
-            this.gbArtikliZaOtpremu.Location = new System.Drawing.Point(118, 297);
+            this.gbArtikliZaOtpremu.Location = new System.Drawing.Point(118, 316);
             this.gbArtikliZaOtpremu.Name = "gbArtikliZaOtpremu";
-            this.gbArtikliZaOtpremu.Size = new System.Drawing.Size(560, 134);
+            this.gbArtikliZaOtpremu.Size = new System.Drawing.Size(518, 161);
             this.gbArtikliZaOtpremu.TabIndex = 3;
             this.gbArtikliZaOtpremu.TabStop = false;
             this.gbArtikliZaOtpremu.Text = "Artikli za otpremu";
@@ -219,9 +219,9 @@
             this.btnUnosStavki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnosStavki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnUnosStavki.Image = ((System.Drawing.Image)(resources.GetObject("btnUnosStavki.Image")));
-            this.btnUnosStavki.Location = new System.Drawing.Point(456, 32);
+            this.btnUnosStavki.Location = new System.Drawing.Point(419, 39);
             this.btnUnosStavki.Name = "btnUnosStavki";
-            this.btnUnosStavki.Size = new System.Drawing.Size(75, 77);
+            this.btnUnosStavki.Size = new System.Drawing.Size(80, 80);
             this.btnUnosStavki.TabIndex = 6;
             this.btnUnosStavki.UseVisualStyleBackColor = true;
             this.btnUnosStavki.Click += new System.EventHandler(this.btnUnosStavki_Click);
@@ -231,22 +231,22 @@
             // 
             this.txtMasa.Location = new System.Drawing.Point(111, 95);
             this.txtMasa.Name = "txtMasa";
-            this.txtMasa.Size = new System.Drawing.Size(121, 22);
+            this.txtMasa.Size = new System.Drawing.Size(200, 22);
             this.txtMasa.TabIndex = 5;
             // 
             // txtKolicina
             // 
             this.txtKolicina.Location = new System.Drawing.Point(111, 66);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(121, 22);
+            this.txtKolicina.Size = new System.Drawing.Size(200, 22);
             this.txtKolicina.TabIndex = 4;
             // 
             // cmbNazivArtikla
             // 
             this.cmbNazivArtikla.FormattingEnabled = true;
-            this.cmbNazivArtikla.Location = new System.Drawing.Point(111, 32);
+            this.cmbNazivArtikla.Location = new System.Drawing.Point(111, 36);
             this.cmbNazivArtikla.Name = "cmbNazivArtikla";
-            this.cmbNazivArtikla.Size = new System.Drawing.Size(121, 24);
+            this.cmbNazivArtikla.Size = new System.Drawing.Size(200, 24);
             this.cmbNazivArtikla.TabIndex = 3;
             // 
             // lblMasa
@@ -270,7 +270,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(25, 32);
+            this.lblNaziv.Location = new System.Drawing.Point(25, 39);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(51, 16);
             this.lblNaziv.TabIndex = 0;
@@ -281,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(690, 443);
+            this.ClientSize = new System.Drawing.Size(651, 489);
             this.Controls.Add(this.gbArtikliZaOtpremu);
             this.Controls.Add(this.gbOpisOtpremnice);
             this.Controls.Add(this.pbSlika);

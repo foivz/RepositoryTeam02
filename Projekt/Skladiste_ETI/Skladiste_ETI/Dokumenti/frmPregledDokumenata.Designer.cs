@@ -72,6 +72,7 @@
             this.btnPrint.Size = new System.Drawing.Size(114, 114);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             this.btnPrint.MouseHover += new System.EventHandler(this.btnPrint_MouseHover);
             // 
             // btnChange
@@ -107,7 +108,7 @@
             this.lblStavke.ForeColor = System.Drawing.Color.Red;
             this.lblStavke.Location = new System.Drawing.Point(160, 417);
             this.lblStavke.Name = "lblStavke";
-            this.lblStavke.Size = new System.Drawing.Size(220, 16);
+            this.lblStavke.Size = new System.Drawing.Size(224, 16);
             this.lblStavke.TabIndex = 4;
             this.lblStavke.Text = "Stavke odabranog dokumenta:";
             // 
@@ -130,7 +131,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(160, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 16);
+            this.label1.Size = new System.Drawing.Size(144, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Kreirani dokumenti:";
             // 

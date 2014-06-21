@@ -80,6 +80,11 @@
     <Compile Include="dokument.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DokumentDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DokumentDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dokumenti\frmIzmjenaStavki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +102,18 @@
     </Compile>
     <Compile Include="Dokumenti\frmPregledDokumenata.Designer.cs">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PredatnicaIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PredatnicaIzvjestaj.Designer.cs">
+      <DependentUpon>PredatnicaIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimkaIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimkaIzvjestaj.Designer.cs">
+      <DependentUpon>PrimkaIzvjestaj.cs</DependentUpon>
     </Compile>
     <Compile Include="korisnik.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
@@ -209,6 +226,13 @@
     <EmbeddedResource Include="Dokumenti\frmPregledDokumenata.resx">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PredatnicaIzvjestaj.resx">
+      <DependentUpon>PredatnicaIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredatnicaReport.rdlc" />
+    <EmbeddedResource Include="PrimkaIzvjestaj.resx">
+      <DependentUpon>PrimkaIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,7 @@
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrimkaReport.rdlc" />
     <EmbeddedResource Include="UpravljanjeArtiklima\Artikli.resx">
       <DependentUpon>Artikli.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +274,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="DokumentDataset.xsc">
+      <DependentUpon>DokumentDataset.xsd</DependentUpon>
+    </None>
+    <None Include="DokumentDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DokumentDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DokumentDataset.xss">
+      <DependentUpon>DokumentDataset.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\artikli.datasource" />
     <None Include="Properties\DataSources\dokument.datasource" />

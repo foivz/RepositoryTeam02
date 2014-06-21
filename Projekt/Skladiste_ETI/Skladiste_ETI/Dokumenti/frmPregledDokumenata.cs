@@ -323,6 +323,27 @@ namespace Skladiste_ETI.Dokumenti
 
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            int selectedRow4 = dgvDokumenti.CurrentCell.RowIndex;
+
+            string id_dok3 = dgvDokumenti.Rows[selectedRow4].Cells[0].Value.ToString();
+            string tip_dok3 = dgvDokumenti.Rows[selectedRow4].Cells[1].Value.ToString();
+
+            if(tip_dok3 == "Primka")
+            {
+                frmPrimkaIzvjestaj primka = new frmPrimkaIzvjestaj(id_dok3);
+                primka.Show();
+            }
+
+            if(tip_dok3 == "Predatnica")
+            {
+                frmPredatnicaIzvjestaj predatnica = new frmPredatnicaIzvjestaj(id_dok3);
+                predatnica.Show();
+            }
+       
+        }
+
       
     }
 

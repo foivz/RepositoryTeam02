@@ -57,7 +57,6 @@ C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.fr
 C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
 C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzmjenaStavki.resources
-C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLoad.resources
 D:\Dropbox\ETI_aplikacija\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.exe
 D:\Dropbox\ETI_aplikacija\Skladiste_ETI\Skladiste_ETI\bin\Debug\Skladiste_ETI.pdb
@@ -139,3 +138,8 @@ C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladist
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Iva\Documents\GitHub\RepositoryTeam02\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.OtpremanjeRobe.frmOtpremnica.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.OtpremanjeRobe.frmOtpremnica.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\RdlCompile.cache
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\RdlCompile.compiled
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csprojResolveAssemblyReference.cache
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPrimkaIzvjestaj.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPredatnicaIzvjestaj.resources

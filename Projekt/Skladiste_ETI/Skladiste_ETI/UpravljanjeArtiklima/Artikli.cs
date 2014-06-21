@@ -286,6 +286,13 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnAddGoods, "Potvrda unosa");
         }
 
+        private void btnPrint_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPrint, "Ispis skladišnice");
+
+        }
+
         private void btnchange_Click(object sender, EventArgs e)
         {
             artikli selektiraniArtikl = artikliBindingSource.Current as artikli;
@@ -304,7 +311,12 @@ namespace Skladiste_ETI
             }
         }
 
-        
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            frmSkladisnicaIzvjestaj skladisnica = new frmSkladisnicaIzvjestaj();
+            skladisnica.Show();
+        }
 
+ 
     }
 }

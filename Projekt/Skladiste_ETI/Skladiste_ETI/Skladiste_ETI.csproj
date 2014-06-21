@@ -103,6 +103,18 @@
     <Compile Include="Dokumenti\frmPregledDokumenata.Designer.cs">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
     </Compile>
+    <Compile Include="IzdatnicaIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzdatnicaIzvjestaj.Designer.cs">
+      <DependentUpon>IzdatnicaIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtpremnicaIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtpremnicaIzvjestaj.Designer.cs">
+      <DependentUpon>OtpremnicaIzvjestaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="PredatnicaIzvjestaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     <Compile Include="Prijava.Designer.cs">
       <DependentUpon>Prijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="SkladisnicaIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladisnicaIzvjestaj.Designer.cs">
+      <DependentUpon>SkladisnicaIzvjestaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="SkladisteModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +189,11 @@
     </Compile>
     <Compile Include="stavke.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T02_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T02_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="tip_dokumenta.cs">
       <DependentUpon>SkladisteModel.tt</DependentUpon>
@@ -226,6 +249,14 @@
     <EmbeddedResource Include="Dokumenti\frmPregledDokumenata.resx">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IzdatnicaIzvjestaj.resx">
+      <DependentUpon>IzdatnicaIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzdatnicaReport.rdlc" />
+    <EmbeddedResource Include="OtpremnicaIzvjestaj.resx">
+      <DependentUpon>OtpremnicaIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtpremnicaReport.rdlc" />
     <EmbeddedResource Include="PredatnicaIzvjestaj.resx">
       <DependentUpon>PredatnicaIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +280,10 @@
       <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrimkaReport.rdlc" />
+    <EmbeddedResource Include="SkladisnicaReport.rdlc" />
+    <EmbeddedResource Include="SkladisnicaIzvjestaj.resx">
+      <DependentUpon>SkladisnicaIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpravljanjeArtiklima\Artikli.resx">
       <DependentUpon>Artikli.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +352,17 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SkladisteModel.edmx</DependentUpon>
       <LastGenOutput>SkladisteModel.cs</LastGenOutput>
+    </None>
+    <None Include="T02_DBDataSet.xsc">
+      <DependentUpon>T02_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="T02_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>T02_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="T02_DBDataSet.xss">
+      <DependentUpon>T02_DBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

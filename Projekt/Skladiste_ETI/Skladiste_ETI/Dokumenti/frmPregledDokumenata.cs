@@ -341,6 +341,18 @@ namespace Skladiste_ETI.Dokumenti
                 frmPredatnicaIzvjestaj predatnica = new frmPredatnicaIzvjestaj(id_dok3);
                 predatnica.Show();
             }
+
+            if(tip_dok3 == "Izdatnica")
+            {
+                frmIzdatnicaIzvjestaj izdatnica = new frmIzdatnicaIzvjestaj(id_dok3);
+                izdatnica.Show();
+            }
+
+            if(tip_dok3 == "Otpremnica")
+            {
+                frmOtpremnicaIzvjestaj otpremnica = new frmOtpremnicaIzvjestaj(id_dok3);
+                otpremnica.Show();
+            }
        
         }
 

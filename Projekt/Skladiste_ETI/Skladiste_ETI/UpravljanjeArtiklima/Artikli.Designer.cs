@@ -35,13 +35,7 @@
             this.btnchange = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvMjesto = new System.Windows.Forms.DataGridView();
-            this.idmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sektorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mjestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvArtikli = new System.Windows.Forms.DataGridView();
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDeletePosition = new System.Windows.Forms.Button();
             this.btnAddPosition = new System.Windows.Forms.Button();
@@ -61,6 +55,7 @@
             this.grbUnosArtikla = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMjesto = new System.Windows.Forms.ComboBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.idartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,12 +64,18 @@
             this.mjestoidmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idmjestaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sektorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mjestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjesto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.grbUnosArtikla.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -151,39 +152,6 @@
             this.dgvMjesto.TabIndex = 4;
             this.dgvMjesto.SelectionChanged += new System.EventHandler(this.dgvMjesto_SelectionChanged);
             // 
-            // idmjestaDataGridViewTextBoxColumn
-            // 
-            this.idmjestaDataGridViewTextBoxColumn.DataPropertyName = "id_mjesta";
-            this.idmjestaDataGridViewTextBoxColumn.HeaderText = "ID mjesta";
-            this.idmjestaDataGridViewTextBoxColumn.Name = "idmjestaDataGridViewTextBoxColumn";
-            this.idmjestaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // policaDataGridViewTextBoxColumn
-            // 
-            this.policaDataGridViewTextBoxColumn.DataPropertyName = "polica";
-            this.policaDataGridViewTextBoxColumn.HeaderText = "Polica";
-            this.policaDataGridViewTextBoxColumn.Name = "policaDataGridViewTextBoxColumn";
-            this.policaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sektorDataGridViewTextBoxColumn
-            // 
-            this.sektorDataGridViewTextBoxColumn.DataPropertyName = "sektor";
-            this.sektorDataGridViewTextBoxColumn.HeaderText = "Sektor";
-            this.sektorDataGridViewTextBoxColumn.Name = "sektorDataGridViewTextBoxColumn";
-            this.sektorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // artikliDataGridViewTextBoxColumn
-            // 
-            this.artikliDataGridViewTextBoxColumn.DataPropertyName = "artikli";
-            this.artikliDataGridViewTextBoxColumn.HeaderText = "artikli";
-            this.artikliDataGridViewTextBoxColumn.Name = "artikliDataGridViewTextBoxColumn";
-            this.artikliDataGridViewTextBoxColumn.ReadOnly = true;
-            this.artikliDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mjestoBindingSource
-            // 
-            this.mjestoBindingSource.DataSource = typeof(Skladiste_ETI.mjesto);
-            // 
             // dgvArtikli
             // 
             this.dgvArtikli.AllowUserToAddRows = false;
@@ -206,10 +174,6 @@
             this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArtikli.Size = new System.Drawing.Size(546, 348);
             this.dgvArtikli.TabIndex = 5;
-            // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataSource = typeof(Skladiste_ETI.artikli);
             // 
             // groupBox1
             // 
@@ -271,7 +235,7 @@
             this.lblSektor.ForeColor = System.Drawing.Color.Red;
             this.lblSektor.Location = new System.Drawing.Point(22, 55);
             this.lblSektor.Name = "lblSektor";
-            this.lblSektor.Size = new System.Drawing.Size(57, 16);
+            this.lblSektor.Size = new System.Drawing.Size(59, 16);
             this.lblSektor.TabIndex = 1;
             this.lblSektor.Text = "Sektor:";
             // 
@@ -282,7 +246,7 @@
             this.lblPolica.ForeColor = System.Drawing.Color.Red;
             this.lblPolica.Location = new System.Drawing.Point(22, 29);
             this.lblPolica.Name = "lblPolica";
-            this.lblPolica.Size = new System.Drawing.Size(56, 16);
+            this.lblPolica.Size = new System.Drawing.Size(58, 16);
             this.lblPolica.TabIndex = 0;
             this.lblPolica.Text = "Polica:";
             // 
@@ -306,7 +270,7 @@
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(6, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Naziv:";
             // 
@@ -317,7 +281,7 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(6, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(59, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Cijena:";
             // 
@@ -328,7 +292,7 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(6, 78);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.Size = new System.Drawing.Size(70, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Količina:";
             // 
@@ -339,7 +303,7 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(6, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 16);
+            this.label8.Size = new System.Drawing.Size(52, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "Masa:";
             // 
@@ -406,7 +370,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(6, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Pozicija:";
             // 
@@ -418,6 +382,19 @@
             this.cmbMjesto.Name = "cmbMjesto";
             this.cmbMjesto.Size = new System.Drawing.Size(121, 23);
             this.cmbMjesto.TabIndex = 17;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.Location = new System.Drawing.Point(188, 274);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(123, 113);
+            this.btnPrint.TabIndex = 18;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.MouseHover += new System.EventHandler(this.btnPrint_MouseHover);
             // 
             // idartiklaDataGridViewTextBoxColumn
             // 
@@ -478,12 +455,50 @@
             this.stavkeDataGridViewTextBoxColumn.ReadOnly = true;
             this.stavkeDataGridViewTextBoxColumn.Visible = false;
             // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataSource = typeof(Skladiste_ETI.artikli);
+            // 
+            // idmjestaDataGridViewTextBoxColumn
+            // 
+            this.idmjestaDataGridViewTextBoxColumn.DataPropertyName = "id_mjesta";
+            this.idmjestaDataGridViewTextBoxColumn.HeaderText = "ID mjesta";
+            this.idmjestaDataGridViewTextBoxColumn.Name = "idmjestaDataGridViewTextBoxColumn";
+            this.idmjestaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // policaDataGridViewTextBoxColumn
+            // 
+            this.policaDataGridViewTextBoxColumn.DataPropertyName = "polica";
+            this.policaDataGridViewTextBoxColumn.HeaderText = "Polica";
+            this.policaDataGridViewTextBoxColumn.Name = "policaDataGridViewTextBoxColumn";
+            this.policaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sektorDataGridViewTextBoxColumn
+            // 
+            this.sektorDataGridViewTextBoxColumn.DataPropertyName = "sektor";
+            this.sektorDataGridViewTextBoxColumn.HeaderText = "Sektor";
+            this.sektorDataGridViewTextBoxColumn.Name = "sektorDataGridViewTextBoxColumn";
+            this.sektorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // artikliDataGridViewTextBoxColumn
+            // 
+            this.artikliDataGridViewTextBoxColumn.DataPropertyName = "artikli";
+            this.artikliDataGridViewTextBoxColumn.HeaderText = "artikli";
+            this.artikliDataGridViewTextBoxColumn.Name = "artikliDataGridViewTextBoxColumn";
+            this.artikliDataGridViewTextBoxColumn.ReadOnly = true;
+            this.artikliDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mjestoBindingSource
+            // 
+            this.mjestoBindingSource.DataSource = typeof(Skladiste_ETI.mjesto);
+            // 
             // frmArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(931, 510);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.grbUnosArtikla);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvArtikli);
@@ -498,13 +513,13 @@
             this.Text = "Upravljanje artiklima";
             this.Load += new System.EventHandler(this.frmArtikli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjesto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grbUnosArtikla.ResumeLayout(false);
             this.grbUnosArtikla.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,5 +565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mjestoidmjestaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mjestoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stavkeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

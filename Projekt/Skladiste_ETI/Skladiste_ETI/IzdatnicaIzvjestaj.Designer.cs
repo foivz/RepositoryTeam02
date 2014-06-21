@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_ETI
 {
-    partial class frmPredatnicaIzvjestaj
+    partial class frmIzdatnicaIzvjestaj
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPredatnicaIzvjestaj));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIzdatnicaIzvjestaj));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,10 +72,10 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(824, 646);
+            this.btnExit.Location = new System.Drawing.Point(829, 678);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(62, 55);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -90,11 +90,11 @@
             reportDataSource2.Value = this.DataTable2BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skladiste_ETI.PredatnicaReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skladiste_ETI.IzdatnicaReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(874, 628);
-            this.reportViewer1.TabIndex = 2;
+            this.reportViewer1.Size = new System.Drawing.Size(879, 660);
+            this.reportViewer1.TabIndex = 3;
             // 
             // DataTable1TableAdapter
             // 
@@ -104,18 +104,18 @@
             // 
             this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
-            // frmPredatnicaIzvjestaj
+            // frmIzdatnicaIzvjestaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(898, 713);
+            this.ClientSize = new System.Drawing.Size(903, 745);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnExit);
-            this.Name = "frmPredatnicaIzvjestaj";
+            this.Name = "frmIzdatnicaIzvjestaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Predatnica firme";
-            this.Load += new System.EventHandler(this.frmPredatnicaIzvjestaj_Load);
+            this.Text = "Izdatnica";
+            this.Load += new System.EventHandler(this.frmIzdatnicaIzvjestaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DokumentDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();

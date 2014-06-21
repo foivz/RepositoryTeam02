@@ -27,9 +27,7 @@ namespace Skladiste_ETI
             
             txtUser.Select();
 
-            //ovo obavezno obrisati kad bu app gotova!!
-            txtUser.Text = "embalint";
-            txtPass.Text = "abcd";
+
         }
 
 

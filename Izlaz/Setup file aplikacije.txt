@@ -1,0 +1,1 @@
+Ovdje æe se nalaziti setup file aplikacije i svi posebni resursi za instalaciju.

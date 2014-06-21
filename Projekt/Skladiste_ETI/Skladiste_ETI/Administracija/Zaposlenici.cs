@@ -21,6 +21,7 @@ namespace Skladiste_ETI.Administracija
             {
                 c.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
             }
+
         }
 
         

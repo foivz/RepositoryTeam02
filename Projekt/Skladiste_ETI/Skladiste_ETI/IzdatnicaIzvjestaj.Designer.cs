@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIzdatnicaIzvjestaj));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DokumentDataset = new Skladiste_ETI.DokumentDataset();
             this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dokumentDataset1 = new Skladiste_ETI.DokumentDataset();
-            this.btnExit = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new Skladiste_ETI.DokumentDatasetTableAdapters.DataTable1TableAdapter();
             this.DataTable2TableAdapter = new Skladiste_ETI.DokumentDatasetTableAdapters.DataTable2TableAdapter();
@@ -66,24 +64,9 @@
             this.dokumentDataset1.DataSetName = "DokumentDataset";
             this.dokumentDataset1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(829, 678);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(62, 55);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // reportViewer1
             // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "dsDokument";
             reportDataSource1.Value = this.DataTable1BindingSource;
             reportDataSource2.Name = "dsStavke";
@@ -91,9 +74,9 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skladiste_ETI.IzdatnicaReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(879, 660);
+            this.reportViewer1.Size = new System.Drawing.Size(869, 713);
             this.reportViewer1.TabIndex = 3;
             // 
             // DataTable1TableAdapter
@@ -109,9 +92,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(903, 745);
+            this.ClientSize = new System.Drawing.Size(869, 713);
             this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.btnExit);
             this.Name = "frmIzdatnicaIzvjestaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izdatnica";
@@ -126,7 +108,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExit;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private DokumentDataset DokumentDataset;

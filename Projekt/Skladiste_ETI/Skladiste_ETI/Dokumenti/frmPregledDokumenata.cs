@@ -14,7 +14,8 @@ namespace Skladiste_ETI.Dokumenti
     {
         T02_DBEntities context = new T02_DBEntities();
         int uloga2 = 0;
-     
+
+        List<tip_dokumenta> tip = new List<tip_dokumenta>();
 
         public frmPregledDokumenata(int uloga)
         {
@@ -36,8 +37,28 @@ namespace Skladiste_ETI.Dokumenti
                 btnChange.Visible = false;
                 btnIzradaOtpremnice.Visible = true;
             }
+
+            using (var db = new T02_DBEntities())
+            {
+                tip = db.tip_dokumenta.AsEnumerable().Select(t => new tip_dokumenta()//napravi novu listu sa id i nazivom
+                {
+                    idTipa = t.id_tipa,
+                    listaTipova = t.naziv
+
+                }).ToList();
+
+                cmbTip.DataSource = tip;
+                cmbTip.DisplayMember = "listaTipova";
+                cmbTip.ValueMember = "idTipa";
+            }
         
         }//konstruktor
+
+        public class tip_dokumenta
+        {
+            public int idTipa { get; set; }
+            public string listaTipova{ get; set; }
+        }
 
         public class dokument 
         {
@@ -74,13 +95,15 @@ namespace Skladiste_ETI.Dokumenti
         }
 
 
-        private void frmPregledDokumenata_Load(object sender, EventArgs e)
+        private void cmbTip_SelectedValueChanged(object sender, EventArgs e)
         {
-            
+
+
             var docs = from dok in context.dokument
                        join partner in context.poslovni_partner on dok.poslovni_partner_id_partnera equals partner.id_partnera
                        join skladistar in context.korisnik on dok.korisnik_id_korisnika equals skladistar.id_korisnika
                        join tip in context.tip_dokumenta on dok.tip_dokumenta_id_tipa equals tip.id_tipa
+                       where tip.naziv == cmbTip.Text
                        select new dokument
                        {
                            id_dokumenta = dok.id_dokumenta,
@@ -88,12 +111,12 @@ namespace Skladiste_ETI.Dokumenti
                            naziv_partnera = partner.naziv,
                            adresa_partnera = partner.adresa,
                            ime_skladistara = skladistar.ime,
-                           prez_skladistara =  skladistar.prezime,
+                           prez_skladistara = skladistar.prezime,
                            datum = dok.datum.Value,
                            osnova = dok.osnova,
                            nacin_trans = dok.način_trans,
                            stanje = dok.stanje,
-                           
+
 
 
                        };
@@ -102,11 +125,11 @@ namespace Skladiste_ETI.Dokumenti
 
             dgvDokumenti.Columns[0].HeaderText = "ID Dokumenta";
             dgvDokumenti.Columns[1].HeaderText = "Tip";
-           
+
             dgvDokumenti.Columns[4].HeaderText = "Ime skladištara";
             dgvDokumenti.Columns[5].HeaderText = "Prezime skladištara";
             dgvDokumenti.Columns[6].HeaderText = "Datum";
-           
+
             dgvDokumenti.Columns[8].HeaderText = "Način transporta";
             dgvDokumenti.Columns[9].HeaderText = "Stanje";
 
@@ -126,19 +149,19 @@ namespace Skladiste_ETI.Dokumenti
                 string tip = r.Cells[1].Value.ToString();
                 string stanje = r.Cells[9].Value.ToString();
 
-                if(tip == "Izdatnica" && stanje == "Kreirana")
+                if (tip == "Izdatnica" && stanje == "Kreirana")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Red;
                 }
-                else if(tip == "Izdatnica" && stanje == "Odobrena")
+                else if (tip == "Izdatnica" && stanje == "Odobrena")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Green;
                 }
 
             }
-         
 
-        }
+
+        }//selectionChanged
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -316,9 +339,10 @@ namespace Skladiste_ETI.Dokumenti
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
             string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
             string stanje = dgvDokumenti.Rows[selectedRow3].Cells[9].Value.ToString();
+            string tip_dokk = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
             
 
-            frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje);
+            frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje, tip_dokk);
             forma.Show();
 
         }
@@ -354,9 +378,75 @@ namespace Skladiste_ETI.Dokumenti
                 otpremnica.Show();
             }
        
-        }
+        }//click
 
-      
+        private void frmPregledDokumenata_Load(object sender, EventArgs e)
+        {
+            var docs = from dok in context.dokument
+                       join partner in context.poslovni_partner on dok.poslovni_partner_id_partnera equals partner.id_partnera
+                       join skladistar in context.korisnik on dok.korisnik_id_korisnika equals skladistar.id_korisnika
+                       join tip in context.tip_dokumenta on dok.tip_dokumenta_id_tipa equals tip.id_tipa
+                       where tip.naziv == cmbTip.Text
+                       select new dokument
+                       {
+                           id_dokumenta = dok.id_dokumenta,
+                           tip = tip.naziv,
+                           naziv_partnera = partner.naziv,
+                           adresa_partnera = partner.adresa,
+                           ime_skladistara = skladistar.ime,
+                           prez_skladistara = skladistar.prezime,
+                           datum = dok.datum.Value,
+                           osnova = dok.osnova,
+                           nacin_trans = dok.način_trans,
+                           stanje = dok.stanje,
+
+
+
+                       };
+
+            dgvDokumenti.DataSource = docs.ToList();
+
+            dgvDokumenti.Columns[0].HeaderText = "ID Dokumenta";
+            dgvDokumenti.Columns[1].HeaderText = "Tip";
+
+            dgvDokumenti.Columns[4].HeaderText = "Ime skladištara";
+            dgvDokumenti.Columns[5].HeaderText = "Prezime skladištara";
+            dgvDokumenti.Columns[6].HeaderText = "Datum";
+
+            dgvDokumenti.Columns[8].HeaderText = "Način transporta";
+            dgvDokumenti.Columns[9].HeaderText = "Stanje";
+
+
+            dgvDokumenti.Columns[2].HeaderText = "Naziv partnera";
+            dgvDokumenti.Columns[2].Width = 160;
+            dgvDokumenti.Columns[3].HeaderText = "Adresa partnera";
+            dgvDokumenti.Columns[3].Width = 220;
+
+            dgvDokumenti.Columns[7].HeaderText = "Osnova";
+            dgvDokumenti.Columns[7].Width = 160;
+
+            foreach (DataGridViewRow r in dgvDokumenti.Rows)
+            {
+                r.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16, GraphicsUnit.Pixel);
+
+                string tip = r.Cells[1].Value.ToString();
+                string stanje = r.Cells[9].Value.ToString();
+
+                if (tip == "Izdatnica" && stanje == "Kreirana")
+                {
+                    r.DefaultCellStyle.ForeColor = Color.Red;
+                }
+                else if (tip == "Izdatnica" && stanje == "Odobrena")
+                {
+                    r.DefaultCellStyle.ForeColor = Color.Green;
+                }
+
+            }
+
+
+        }//click
+
+     
     }
 
 }

@@ -19,11 +19,7 @@ namespace Skladiste_ETI
             id_dok = int.Parse(id_dok1);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+  
         private void frmPrimkaIzvjestaj_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DokumentDataset.DataTable1' table. You can move, or remove it, as needed.

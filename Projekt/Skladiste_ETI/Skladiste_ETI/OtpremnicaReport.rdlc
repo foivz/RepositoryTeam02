@@ -44,7 +44,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Dokument kreirao:</Value>
+                <Value>Dokument kreirao/la:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -71,7 +71,7 @@
         <Top>1.35778cm</Top>
         <Left>1.7174cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.23396cm</Width>
+        <Width>4.63084cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -195,7 +195,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Kontrolirao:</Value>
+                <Value>Kontrolirao/la:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -210,7 +210,7 @@
         <Top>12.58941cm</Top>
         <Left>1.24211cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.76458cm</Width>
+        <Width>3.04584cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -347,7 +347,7 @@
         </Paragraphs>
         <rd:DefaultName>ime</rd:DefaultName>
         <Top>1.35778cm</Top>
-        <Left>6.21531cm</Left>
+        <Left>6.65566cm</Left>
         <Height>0.6cm</Height>
         <Width>2.84396cm</Width>
         <ZIndex>10</ZIndex>
@@ -381,7 +381,7 @@
         </Paragraphs>
         <rd:DefaultName>prezime</rd:DefaultName>
         <Top>1.35778cm</Top>
-        <Left>9.23566cm</Left>
+        <Left>9.67601cm</Left>
         <Height>0.6cm</Height>
         <Width>2.97625cm</Width>
         <ZIndex>11</ZIndex>
@@ -483,9 +483,9 @@
         </Paragraphs>
         <rd:DefaultName>ime</rd:DefaultName>
         <Top>12.58941cm</Top>
-        <Left>4.11252cm</Left>
+        <Left>4.39378cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.84396cm</Width>
+        <Width>2.27099cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -517,9 +517,9 @@
         </Paragraphs>
         <rd:DefaultName>prezime</rd:DefaultName>
         <Top>12.58941cm</Top>
-        <Left>7.13287cm</Left>
+        <Left>6.80588cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.97625cm</Width>
+        <Width>2.36675cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -712,7 +712,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Masa</Value>
+                              <Value>Masa/kg</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1131,7 +1131,7 @@
                               <Value>=sum(Fields!masa.Value*Fields!cijena.Value)</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <Format>0.00 'kn';(0.00 'kn')</Format>
+                                <Format>#,0.00 'kn';(#,0.00 'kn')</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1204,71 +1204,6 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox24">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>FILABETON d.o.o.</Value>
-                  <Style>
-                    <FontSize>14pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>Tomato</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <LineHeight>1.5pt</LineHeight>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Nikole Tesle 36</Value>
-                  <Style>
-                    <FontSize>14pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>Tomato</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <LineHeight>1.5pt</LineHeight>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>48260 Križevci</Value>
-                  <Style>
-                    <FontSize>14pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>Tomato</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <LineHeight>1.5pt</LineHeight>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox24</rd:DefaultName>
-          <Top>1.05785cm</Top>
-          <Left>1.7174cm</Left>
-          <Height>1.97583cm</Height>
-          <Width>4.77542cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="Textbox28">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -1304,7 +1239,6 @@
           <Left>1.7174cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1351,7 +1285,7 @@
           <Left>1.7174cm</Left>
           <Height>0.79389cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>2</ZIndex>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1398,7 +1332,7 @@
           <Left>1.7174cm</Left>
           <Height>0.6cm</Height>
           <Width>4.32153cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1431,7 +1365,7 @@
           <Left>13.45136cm</Left>
           <Height>0.6cm</Height>
           <Width>7.18854cm</Width>
-          <ZIndex>4</ZIndex>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1450,7 +1384,7 @@
           <Left>13.45136cm</Left>
           <Height>3.85479cm</Height>
           <Width>7.18854cm</Width>
-          <ZIndex>5</ZIndex>
+          <ZIndex>4</ZIndex>
           <Style>
             <Border>
               <Style>Double</Style>
@@ -1481,7 +1415,7 @@
           <Left>4.32323cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>6</ZIndex>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1523,7 +1457,7 @@
           <Left>6.99962cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>7</ZIndex>
+          <ZIndex>6</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1557,7 +1491,7 @@
           <Left>6.21531cm</Left>
           <Height>0.6cm</Height>
           <Width>5.06646cm</Width>
-          <ZIndex>8</ZIndex>
+          <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1591,7 +1525,7 @@
           <Left>4.39378cm</Left>
           <Height>0.6cm</Height>
           <Width>3.87583cm</Width>
-          <ZIndex>9</ZIndex>
+          <ZIndex>8</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1602,6 +1536,85 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Rectangle Name="Rectangle1">
+          <ReportItems>
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>FILABETON d.o.o.</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>Tomato</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Nikole Tesle 36</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>Tomato</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <LineHeight>1.5pt</LineHeight>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>48260 Križevci</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>Tomato</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <LineHeight>1.5pt</LineHeight>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox3</rd:DefaultName>
+              <Top>0.25076cm</Top>
+              <Left>0.42333cm</Left>
+              <Height>2.00229cm</Height>
+              <Width>4.6825cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Top>0.61306cm</Top>
+          <Left>1.7174cm</Left>
+          <Height>2.60583cm</Height>
+          <Width>5.59971cm</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>2pt</Width>
+            </Border>
+          </Style>
+        </Rectangle>
       </ReportItems>
       <Style>
         <Border>

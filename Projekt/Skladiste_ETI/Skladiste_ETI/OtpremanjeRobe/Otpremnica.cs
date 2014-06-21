@@ -69,6 +69,7 @@ namespace Skladiste_ETI.OtpremanjeRobe
                 cmbOsnova.ValueMember = "idDok";
 
 
+
             }//using
         }//konstruktor
 
@@ -165,9 +166,20 @@ namespace Skladiste_ETI.OtpremanjeRobe
                     string query = string.Format("SELECT stanje FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta);
                     string stanje = db.Database.SqlQuery<string>(query).FirstOrDefault<string>();
 
-
-                    if (stanje == "Odobrena")
+                    string query2 = string.Format("SELECT tip_dokumenta_id_tipa FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta);
+                    string tip_dok = db.Database.SqlQuery<string>(query2).FirstOrDefault<string>();
+                    
+                    if(stanje != "Odobrena")
                     {
+                        MessageBox.Show("Ne možete napraviti otpremnicu na temelju izdatnice koja nije odobrena!");
+                    }
+                    else if (tip_dok != "Izdatnica")
+                    {
+                        MessageBox.Show("Otpremnicu možete napraviti samo na temelju izdatnice!");
+                    }
+                    else
+                    {
+
                         dokument dokument = new dokument
                         {
                             korisnik_id_korisnika = int.Parse(idKorisnika),
@@ -183,12 +195,7 @@ namespace Skladiste_ETI.OtpremanjeRobe
 
                         txtNacinDopreme.Text = "";
                         MessageBox.Show("Otpremnica je uspješno unesena!");
-                    }//if
-                   
-                    else
-                    {
-                        MessageBox.Show("Ne možete napraviti otpremnicu na temelju izdatnice koja nije odobrena!");
-                    }
+                    }//else
 
                 }//using
 

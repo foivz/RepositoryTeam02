@@ -19,10 +19,7 @@ namespace Skladiste_ETI
             id_dok = int.Parse(id_dok1);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void frmIzdatnicaIzvjestaj_Load(object sender, EventArgs e)
         {

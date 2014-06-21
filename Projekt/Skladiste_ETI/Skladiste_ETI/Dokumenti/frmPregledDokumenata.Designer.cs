@@ -42,6 +42,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOdobri = new System.Windows.Forms.Button();
             this.btnIzradaOtpremnice = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbTip = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDokumenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,11 +56,11 @@
             this.dgvDokumenti.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDokumenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDokumenti.Location = new System.Drawing.Point(163, 64);
+            this.dgvDokumenti.Location = new System.Drawing.Point(163, 95);
             this.dgvDokumenti.Name = "dgvDokumenti";
             this.dgvDokumenti.ReadOnly = true;
             this.dgvDokumenti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDokumenti.Size = new System.Drawing.Size(1054, 333);
+            this.dgvDokumenti.Size = new System.Drawing.Size(1054, 302);
             this.dgvDokumenti.TabIndex = 0;
             this.dgvDokumenti.SelectionChanged += new System.EventHandler(this.dgvDokumenti_SelectionChanged);
             // 
@@ -211,12 +213,36 @@
             this.btnIzradaOtpremnice.Click += new System.EventHandler(this.btnIzradaOtpremnice_Click);
             this.btnIzradaOtpremnice.MouseHover += new System.EventHandler(this.btnIzradaOtpremnice_MouseHover);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(160, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 16);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Odaberite tip:";
+            // 
+            // cmbTip
+            // 
+            this.cmbTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbTip.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbTip.FormattingEnabled = true;
+            this.cmbTip.Location = new System.Drawing.Point(271, 60);
+            this.cmbTip.Name = "cmbTip";
+            this.cmbTip.Size = new System.Drawing.Size(138, 24);
+            this.cmbTip.TabIndex = 31;
+            this.cmbTip.SelectedValueChanged += new System.EventHandler(this.cmbTip_SelectedValueChanged);
+            // 
             // frmPregledDokumenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1229, 750);
+            this.Controls.Add(this.cmbTip);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnIzradaOtpremnice);
             this.Controls.Add(this.btnOdobri);
             this.Controls.Add(this.label10);
@@ -259,5 +285,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOdobri;
         private System.Windows.Forms.Button btnIzradaOtpremnice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbTip;
     }
 }

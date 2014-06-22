@@ -17,12 +17,15 @@ namespace Skladiste_ETI
             InitializeComponent();
         }
 
-        private void SkladisnicaIzvjestaj_Load(object sender, EventArgs e)
+        private void frmSkladisnicaIzvjestaj_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'T02_DBDataSet.artikli' table. You can move, or remove it, as needed.
-            this.artikliTableAdapter.Fill(this.T02_DBDataSet.artikli);
+            this.artikliTableAdapter.FillArtikli(this.T02_DBDataSet.artikli);
 
             this.reportViewer1.RefreshReport();
         }
+
+
+
     }
 }

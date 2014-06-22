@@ -236,17 +236,26 @@ namespace Skladiste_ETI
 
                 if (MessageBox.Show("Da li ste sigurni da želite obrisati artikl?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    using (var db = new T02_DBEntities())
+                    try
                     {
-                        db.artikli.Attach(odabraniArtikl);
-                        db.artikli.Remove(odabraniArtikl);
-                        db.SaveChanges();
+                        using (var db = new T02_DBEntities())
+                        {
+                            db.artikli.Attach(odabraniArtikl);
+                            db.artikli.Remove(odabraniArtikl);
+                            db.SaveChanges();
 
+                            PrikaziMjesto();
+                            PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                            MessageBox.Show("Artikl je uspješno obrisan!");
+
+                        }//using
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Ne možete obrisati artikl koji se veže na neki dokument!");
                         PrikaziMjesto();
                         PrikaziArtikle(mjestoBindingSource.Current as mjesto);
-                        MessageBox.Show("Artikl je uspješno obrisan!");
-
-                    }//using
+                    }
 
                 }//if
 

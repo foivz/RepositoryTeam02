@@ -266,7 +266,7 @@ namespace Skladiste_ETI.OtpremanjeRobe
                     }   //if
                     else
                     {
-                        MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili ste unijeli veću količinu nego što je na skladištu!");
+                        MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili" + Environment.NewLine + "ste unijeli veću količinu nego što je na skladištu!");
                     }
                 }//using
             }//else

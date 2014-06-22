@@ -216,7 +216,7 @@ namespace Skladiste_ETI
 
                     if(kolNaSkladistu < int.Parse(txtKolicina.Text))
                     {
-                        MessageBox.Show("Nedovoljna količina robe na skladištu! Provjerite unesenu količinu!");
+                        MessageBox.Show("Nedovoljna količina robe na skladištu!" + Environment.NewLine + "Provjerite unesenu količinu!");
                     }
                     else{
                   

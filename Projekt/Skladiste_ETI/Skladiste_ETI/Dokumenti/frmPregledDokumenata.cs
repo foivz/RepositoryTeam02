@@ -339,11 +339,18 @@ namespace Skladiste_ETI.Dokumenti
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
             string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
             string stanje = dgvDokumenti.Rows[selectedRow3].Cells[9].Value.ToString();
-            string tip_dokk = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
-            
+            string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
 
-            frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje, tip_dokk);
-            forma.Show();
+            if (tip_dok == "Izdatnica")
+            {
+
+                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje);
+                forma.Show();
+            }
+            else 
+            {
+                MessageBox.Show("Otpremnicu možete kreirati samo na temelju izdatnice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+            }
 
         }
 

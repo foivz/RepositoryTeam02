@@ -13,12 +13,12 @@ namespace Skladiste_ETI.Dokumenti
     public partial class frmOtpremniceIzDokumenta : Form
     {
         private string stanje2 = "";
-        private string tip_dok = "";
+        
         List<korisnik> zaposlenici = new List<korisnik>();
         List<poslovni_partner> partner = new List<poslovni_partner>();
         List<artikli> roba = new List<artikli>();
 
-        public frmOtpremniceIzDokumenta(string transport, string osnova, string stanje, string tip_dok1)
+        public frmOtpremniceIzDokumenta(string transport, string osnova, string stanje)
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace Skladiste_ETI.Dokumenti
             cmbOsnova.Text = osnova;
 
             stanje2 = stanje;
-            tip_dok = tip_dok1;
+            
 
             using (var db = new T02_DBEntities())
             {
@@ -102,10 +102,6 @@ namespace Skladiste_ETI.Dokumenti
             if (txtNacinDopreme.Text == "")
             {
                 MessageBox.Show("Niste unijeli način dopreme robe!");
-            }
-            else if(tip_dok != "Izdatnica")
-            {
-                MessageBox.Show("Otpremnicu možete napraviti samo na temelju izdatnice!");
             }
             else
             {

@@ -25,8 +25,8 @@
     <ProductName>Warehouse Digital - Standard Edition</ProductName>
     <PublisherName>ETITeam</PublisherName>
     <SuiteName>Warehouse software</SuiteName>
-    <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>2.0.36.%2a</ApplicationVersion>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>2.0.37.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>

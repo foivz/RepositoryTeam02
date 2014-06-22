@@ -231,14 +231,14 @@
             // 
             this.txtKolicina.Location = new System.Drawing.Point(97, 65);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(266, 22);
+            this.txtKolicina.Size = new System.Drawing.Size(297, 22);
             this.txtKolicina.TabIndex = 6;
             // 
             // txtMasa
             // 
             this.txtMasa.Location = new System.Drawing.Point(97, 90);
             this.txtMasa.Name = "txtMasa";
-            this.txtMasa.Size = new System.Drawing.Size(266, 22);
+            this.txtMasa.Size = new System.Drawing.Size(297, 22);
             this.txtMasa.TabIndex = 5;
             // 
             // cmbNazivArtikla
@@ -246,7 +246,7 @@
             this.cmbNazivArtikla.FormattingEnabled = true;
             this.cmbNazivArtikla.Location = new System.Drawing.Point(97, 38);
             this.cmbNazivArtikla.Name = "cmbNazivArtikla";
-            this.cmbNazivArtikla.Size = new System.Drawing.Size(266, 24);
+            this.cmbNazivArtikla.Size = new System.Drawing.Size(297, 24);
             this.cmbNazivArtikla.TabIndex = 4;
             // 
             // label8

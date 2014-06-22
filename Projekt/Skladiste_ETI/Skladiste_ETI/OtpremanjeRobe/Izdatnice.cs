@@ -214,9 +214,12 @@ namespace Skladiste_ETI
                     string query = string.Format("SELECT kolicina FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
                     int kolNaSkladistu = db.Database.SqlQuery<int>(query).FirstOrDefault<int>();
 
-                    if(kolNaSkladistu < int.Parse(txtKolicina.Text))
+                    string query2 = string.Format("SELECT masa FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
+                    int masaa = db.Database.SqlQuery<int>(query2).FirstOrDefault<int>();
+
+                    if(kolNaSkladistu < int.Parse(txtKolicina.Text) || masaa < int.Parse(txtMasa.Text))
                     {
-                        MessageBox.Show("Nedovoljna količina robe na skladištu!" + Environment.NewLine + "Provjerite unesenu količinu!");
+                        MessageBox.Show("Nedovoljna količina/masa robe na skladištu!" + Environment.NewLine + "Provjerite unesenu vrijednost!");
                     }
                     else{
                   

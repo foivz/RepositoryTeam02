@@ -20,10 +20,10 @@ namespace Skladiste_ETI
         }
     
         public int id_dokumenta { get; set; }
-        public Nullable<int> korisnik_id_korisnika { get; set; }
-        public Nullable<int> tip_dokumenta_id_tipa { get; set; }
-        public Nullable<int> poslovni_partner_id_partnera { get; set; }
-        public Nullable<System.DateTime> datum { get; set; }
+        public int korisnik_id_korisnika { get; set; }
+        public int tip_dokumenta_id_tipa { get; set; }
+        public int poslovni_partner_id_partnera { get; set; }
+        public System.DateTime datum { get; set; }
         public string stanje { get; set; }
         public string osnova { get; set; }
         public string način_trans { get; set; }

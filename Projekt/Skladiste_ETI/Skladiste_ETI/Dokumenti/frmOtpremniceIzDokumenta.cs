@@ -12,13 +12,13 @@ namespace Skladiste_ETI.Dokumenti
 {
     public partial class frmOtpremniceIzDokumenta : Form
     {
-        private string stanje2 = "";
+        
         
         List<korisnik> zaposlenici = new List<korisnik>();
         List<poslovni_partner> partner = new List<poslovni_partner>();
         List<artikli> roba = new List<artikli>();
 
-        public frmOtpremniceIzDokumenta(string transport, string osnova, string stanje)
+        public frmOtpremniceIzDokumenta(string transport, string osnova)
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace Skladiste_ETI.Dokumenti
             txtNacinDopreme.Text = transport;
             cmbOsnova.Text = osnova;
 
-            stanje2 = stanje;
+            
             
 
             using (var db = new T02_DBEntities())
@@ -133,9 +133,6 @@ namespace Skladiste_ETI.Dokumenti
                     }
 
 
-                    if (stanje2 == "Odobrena")
-                    {
-
                         dokument dokument = new dokument
 
                         {
@@ -156,11 +153,6 @@ namespace Skladiste_ETI.Dokumenti
                         txtNacinDopreme.Text = "";
                         MessageBox.Show("Otpremnica je uspješno unesena!");
 
-                    }//if
-                    else
-                    {
-                        MessageBox.Show("Ne možete napraviti otpremnicu na temelju izdatnice koja nije odobrena!");
-                    }
 
                 }//using
 
@@ -210,14 +202,14 @@ namespace Skladiste_ETI.Dokumenti
                         }
                     }
 
-                    string query2 = string.Format("SELECT stanje FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta2);
-                    string stanje2 = db.Database.SqlQuery<string>(query2).FirstOrDefault<string>();
 
                     string query3 = string.Format("SELECT kolicina FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
                     int kolicina = db.Database.SqlQuery<int>(query3).FirstOrDefault<int>();
 
+                    string query4 = string.Format("SELECT masa FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
+                    int masaa = db.Database.SqlQuery<int>(query4).FirstOrDefault<int>();
 
-                    if (stanje2 == "Odobrena" && int.Parse(txtKolicina.Text) <= kolicina)
+                    if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
                     {
                         stavke stavke = new stavke
                         {
@@ -239,7 +231,7 @@ namespace Skladiste_ETI.Dokumenti
                     }//if
                     else 
                     {
-                        MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili ste unijeli veću količinu nego što je na skladištu!");
+                        MessageBox.Show("Unijeli ste količinu ili masu stavke koja je veća od stanja na skladištu!");
                     }
                   
                 }//using

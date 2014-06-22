@@ -144,11 +144,20 @@
     <Compile Include="IzdatnicaIzvjestaj.Designer.cs">
       <DependentUpon>IzdatnicaIzvjestaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="korisnik.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mjesto.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="OtpremnicaIzvjestaj.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OtpremnicaIzvjestaj.Designer.cs">
       <DependentUpon>OtpremnicaIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="poslovni_partner.cs">
+      <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PredatnicaIzvjestaj.cs">
       <SubType>Form</SubType>
@@ -162,17 +171,11 @@
     <Compile Include="PrimkaIzvjestaj.Designer.cs">
       <DependentUpon>PrimkaIzvjestaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="korisnik.cs">
-      <DependentUpon>SkladisteModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Load.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Load.Designer.cs">
       <DependentUpon>Load.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mjesto.cs">
-      <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MsgBox.cs">
       <SubType>Form</SubType>
@@ -191,9 +194,6 @@
     </Compile>
     <Compile Include="OtpremanjeRobe\Otpremnica.Designer.cs">
       <DependentUpon>Otpremnica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="poslovni_partner.cs">
-      <DependentUpon>SkladisteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Prijava.cs">
       <SubType>Form</SubType>

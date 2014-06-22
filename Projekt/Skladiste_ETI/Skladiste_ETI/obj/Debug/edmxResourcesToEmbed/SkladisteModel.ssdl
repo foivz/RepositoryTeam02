@@ -54,13 +54,13 @@
       <PropertyRef Name="id_dokumenta" />
     </Key>
     <Property Name="id_dokumenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="korisnik_id_korisnika" Type="int" />
-    <Property Name="tip_dokumenta_id_tipa" Type="int" />
-    <Property Name="poslovni_partner_id_partnera" Type="int" />
-    <Property Name="datum" Type="date" />
-    <Property Name="stanje" Type="varchar" MaxLength="50" />
-    <Property Name="osnova" Type="varchar" MaxLength="50" />
-    <Property Name="način_trans" Type="varchar" MaxLength="50" />
+    <Property Name="korisnik_id_korisnika" Type="int" Nullable="false" />
+    <Property Name="tip_dokumenta_id_tipa" Type="int" Nullable="false" />
+    <Property Name="poslovni_partner_id_partnera" Type="int" Nullable="false" />
+    <Property Name="datum" Type="datetime" Nullable="false" />
+    <Property Name="stanje" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="osnova" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="način_trans" Type="varchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="korisnik">
     <Key>
@@ -73,7 +73,7 @@
     <Property Name="kor_ime" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="lozinka" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="status" Type="varchar" Nullable="false" MaxLength="20" />
-    <Property Name="tip_korisnika_id_tipa" Type="int" />
+    <Property Name="tip_korisnika_id_tipa" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="mjesto">
     <Key>
@@ -129,7 +129,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_korisnik">
-    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="0..1" />
+    <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="korisnik">
@@ -141,7 +141,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_poslovni_partner">
-    <End Role="poslovni_partner" Type="T02_DBModel.Store.poslovni_partner" Multiplicity="0..1" />
+    <End Role="poslovni_partner" Type="T02_DBModel.Store.poslovni_partner" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="poslovni_partner">
@@ -153,7 +153,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dokument_references_tip_dokumenta">
-    <End Role="tip_dokumenta" Type="T02_DBModel.Store.tip_dokumenta" Multiplicity="0..1" />
+    <End Role="tip_dokumenta" Type="T02_DBModel.Store.tip_dokumenta" Multiplicity="1" />
     <End Role="dokument" Type="T02_DBModel.Store.dokument" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tip_dokumenta">
@@ -165,7 +165,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_korisnik_references_tip_korisnika">
-    <End Role="tip_korisnika" Type="T02_DBModel.Store.tip_korisnika" Multiplicity="0..1" />
+    <End Role="tip_korisnika" Type="T02_DBModel.Store.tip_korisnika" Multiplicity="1" />
     <End Role="korisnik" Type="T02_DBModel.Store.korisnik" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tip_korisnika">

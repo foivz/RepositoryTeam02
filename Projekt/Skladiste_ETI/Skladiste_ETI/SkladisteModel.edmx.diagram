@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="47b6122469ef4fddafbabba5d95d33a1" Name="Diagram1">
-        <EntityTypeShape EntityType="T02_DBModel.artikli" Width="1.5" PointX="5.875" PointY="7.5" IsExpanded="true" />
+      <Diagram DiagramId="b9bdaec88d4e4a479f81cd1ea0920d97" Name="Diagram1">
+        <EntityTypeShape EntityType="T02_DBModel.artikli" Width="1.5" PointX="5.5" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.dokument" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.korisnik" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.mjesto" Width="1.5" PointX="3.625" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.poslovni_partner" Width="1.5" PointX="5.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.mjesto" Width="1.5" PointX="3.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.poslovni_partner" Width="1.875" PointX="3.125" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.stavke" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="T02_DBModel.tip_dokumenta" Width="1.5" PointX="3.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="T02_DBModel.tip_dokumenta" Width="1.5" PointX="5.5" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="T02_DBModel.tip_korisnika" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <AssociationConnector Association="T02_DBModel.FK_artikli_references_mjesto" ManuallyRouted="false" />
         <AssociationConnector Association="T02_DBModel.FK_stavke_references_artikli" ManuallyRouted="false" />

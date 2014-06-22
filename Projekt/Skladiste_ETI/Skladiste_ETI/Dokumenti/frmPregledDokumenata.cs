@@ -112,7 +112,7 @@ namespace Skladiste_ETI.Dokumenti
                            adresa_partnera = partner.adresa,
                            ime_skladistara = skladistar.ime,
                            prez_skladistara = skladistar.prezime,
-                           datum = dok.datum.Value,
+                           datum = dok.datum,
                            osnova = dok.osnova,
                            nacin_trans = dok.način_trans,
                            stanje = dok.stanje,
@@ -149,11 +149,11 @@ namespace Skladiste_ETI.Dokumenti
                 string tip = r.Cells[1].Value.ToString();
                 string stanje = r.Cells[9].Value.ToString();
 
-                if (tip == "Izdatnica" && stanje == "Kreirana")
+                if (tip == "Otpremnica" && stanje == "Kreirana")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Red;
                 }
-                else if (tip == "Izdatnica" && stanje == "Odobrena")
+                else if (tip == "Otpremnica" && stanje == "Odobrena")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Green;
                 }
@@ -257,7 +257,7 @@ namespace Skladiste_ETI.Dokumenti
             string tip_dok2 = dgvDokumenti.Rows[selectedRow2].Cells[1].Value.ToString();
             string stanje2 = dgvDokumenti.Rows[selectedRow2].Cells[9].Value.ToString();
 
-            if (tip_dok2 == "Izdatnica" && stanje2 == "Kreirana" && uloga2 == 2)
+            if (tip_dok2 == "Otpremnica" && stanje2 == "Kreirana" && uloga2 == 2)
             {
                 btnOdobri.Visible = true;
 
@@ -294,42 +294,50 @@ namespace Skladiste_ETI.Dokumenti
         {
             int selectedRow = dgvDokumenti.CurrentCell.RowIndex;
             string id_dokumenta = dgvDokumenti.Rows[selectedRow].Cells[0].Value.ToString();
+            string tip_dok = dgvDokumenti.Rows[selectedRow].Cells[1].Value.ToString();
 
-            using (var db = new T02_DBEntities())
+            if (tip_dok != "Otpremnica")
             {
-
-            //parametar za proceduru
-            int idDokumentaParametar = int.Parse(id_dokumenta);
-
-            //izvrši proceduru za promjenu stanja dokumenta
-            db.UpdateDokumentStanje(idDokumentaParametar);
-
-            foreach (DataGridViewRow r in dgvStavke.Rows)
+                MessageBox.Show("Odobravati možete samo otpremnicu");
+            }
+            else
             {
+                using (var db = new T02_DBEntities())
+                {
+
+                    //parametar za proceduru
+                    int idDokumentaParametar = int.Parse(id_dokumenta);
+
+                    //izvrši proceduru za promjenu stanja dokumenta
+                    db.UpdateDokumentStanje(idDokumentaParametar);
+
+                    foreach (DataGridViewRow r in dgvStavke.Rows)
+                    {
 
 
-                string idArtikla = r.Cells[1].Value.ToString();
-                string kolicinaZaOtpremu = r.Cells[3].Value.ToString();
-                string masaZaOtpremu = r.Cells[5].Value.ToString();
-            
-                //parametri za proceduru
-                int idArtiklaParam = int.Parse(idArtikla);
-                int kolicinaZaOtpremuParam = int.Parse(kolicinaZaOtpremu);
-                int masaZaOtpremuParam = int.Parse(masaZaOtpremu);
+                        string idArtikla = r.Cells[1].Value.ToString();
+                        string kolicinaZaOtpremu = r.Cells[3].Value.ToString();
+                        string masaZaOtpremu = r.Cells[5].Value.ToString();
 
-                //izvrši proceduru smanjenja robe na skladištu
-                db.UpdateArtikliOtprema(idArtiklaParam, kolicinaZaOtpremuParam, masaZaOtpremuParam);
+                        //parametri za proceduru
+                        int idArtiklaParam = int.Parse(idArtikla);
+                        int kolicinaZaOtpremuParam = int.Parse(kolicinaZaOtpremu);
+                        int masaZaOtpremuParam = int.Parse(masaZaOtpremu);
 
-                }//foreach
+                        //izvrši proceduru smanjenja robe na skladištu
+                        db.UpdateArtikliOtprema(idArtiklaParam, kolicinaZaOtpremuParam, masaZaOtpremuParam);
 
-            }//using
+                    }//foreach
+
+                }//using
+            }//else
 
             dgvDokumenti.Rows[selectedRow].DefaultCellStyle.ForeColor = Color.Green;
             dgvDokumenti.Rows[selectedRow].Cells[9].Value = "Odobrena";
             
             dgvDokumenti.Update();
             dgvDokumenti.Refresh();
-            MessageBox.Show("Izdatnica uspješno odobrena!");
+            MessageBox.Show("Otpremnica uspješno odobrena!");
         }
 
         private void btnIzradaOtpremnice_Click(object sender, EventArgs e)
@@ -338,13 +346,13 @@ namespace Skladiste_ETI.Dokumenti
             
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
             string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
-            string stanje = dgvDokumenti.Rows[selectedRow3].Cells[9].Value.ToString();
+            
             string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
 
             if (tip_dok == "Izdatnica")
             {
 
-                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova, stanje);
+                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova);
                 forma.Show();
             }
             else 
@@ -360,6 +368,7 @@ namespace Skladiste_ETI.Dokumenti
 
             string id_dok3 = dgvDokumenti.Rows[selectedRow4].Cells[0].Value.ToString();
             string tip_dok3 = dgvDokumenti.Rows[selectedRow4].Cells[1].Value.ToString();
+            string stanje = dgvDokumenti.Rows[selectedRow4].Cells[9].Value.ToString();
 
             if(tip_dok3 == "Primka")
             {
@@ -379,10 +388,14 @@ namespace Skladiste_ETI.Dokumenti
                 izdatnica.Show();
             }
 
-            if(tip_dok3 == "Otpremnica")
+            if (tip_dok3 == "Otpremnica" && stanje == "Odobrena")
             {
                 frmOtpremnicaIzvjestaj otpremnica = new frmOtpremnicaIzvjestaj(id_dok3);
                 otpremnica.Show();
+            }
+            else 
+            {
+                MessageBox.Show("Ne možete ispisivati otpremnicu koja nije odobrena!");
             }
        
         }//click
@@ -402,7 +415,7 @@ namespace Skladiste_ETI.Dokumenti
                            adresa_partnera = partner.adresa,
                            ime_skladistara = skladistar.ime,
                            prez_skladistara = skladistar.prezime,
-                           datum = dok.datum.Value,
+                           datum = dok.datum,
                            osnova = dok.osnova,
                            nacin_trans = dok.način_trans,
                            stanje = dok.stanje,
@@ -439,11 +452,11 @@ namespace Skladiste_ETI.Dokumenti
                 string tip = r.Cells[1].Value.ToString();
                 string stanje = r.Cells[9].Value.ToString();
 
-                if (tip == "Izdatnica" && stanje == "Kreirana")
+                if (tip == "Otpremnica" && stanje == "Kreirana")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Red;
                 }
-                else if (tip == "Izdatnica" && stanje == "Odobrena")
+                else if (tip == "Otpremnica" && stanje == "Odobrena")
                 {
                     r.DefaultCellStyle.ForeColor = Color.Green;
                 }

@@ -163,17 +163,12 @@ namespace Skladiste_ETI.OtpremanjeRobe
                         }
                     }
 
-                    string query = string.Format("SELECT stanje FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta);
-                    string stanje = db.Database.SqlQuery<string>(query).FirstOrDefault<string>();
 
                     string query2 = string.Format("SELECT tip_dokumenta_id_tipa FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta);
                     string tip_dok = db.Database.SqlQuery<string>(query2).FirstOrDefault<string>();
                     
-                    if(stanje != "Odobrena")
-                    {
-                        MessageBox.Show("Ne možete napraviti otpremnicu na temelju izdatnice koja nije odobrena!");
-                    }
-                    else if (tip_dok != "Izdatnica")
+                 
+                    if (tip_dok != "Izdatnica")
                     {
                         MessageBox.Show("Otpremnicu možete napraviti samo na temelju izdatnice!");
                     }
@@ -240,13 +235,13 @@ namespace Skladiste_ETI.OtpremanjeRobe
                         }
                     }
 
-                    string query2 = string.Format("SELECT stanje FROM dokument WHERE id_dokumenta = '{0}'", idDokumenta2);
-                    string stanje2 = db.Database.SqlQuery<string>(query2).FirstOrDefault<string>();
-
                     string query3 = string.Format("SELECT kolicina FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
                     int kolicina = db.Database.SqlQuery<int>(query3).FirstOrDefault<int>();
 
-                    if (stanje2 == "Odobrena" && int.Parse(txtKolicina.Text) <= kolicina)
+                    string query4 = string.Format("SELECT masa FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
+                    int masaa = db.Database.SqlQuery<int>(query4).FirstOrDefault<int>();
+
+                    if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
                     {
                         stavke stavke = new stavke
                         {
@@ -266,7 +261,7 @@ namespace Skladiste_ETI.OtpremanjeRobe
                     }   //if
                     else
                     {
-                        MessageBox.Show("Ne možete unijeti stavke otpremnice na temelju izdatnice koja nije odobrena ili" + Environment.NewLine + "ste unijeli veću količinu nego što je na skladištu!");
+                        MessageBox.Show("Unijeli ste količinu ili masu stavke koja je veća od stanja na skladištu!");
                     }
                 }//using
             }//else

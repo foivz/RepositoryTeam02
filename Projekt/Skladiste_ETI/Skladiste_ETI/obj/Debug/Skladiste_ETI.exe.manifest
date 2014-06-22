@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Double-J-Design-Origami-Colored-Pencil-Blue-home (1).ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Skladiste_ETI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Skladiste_ETI" version="2.0.34.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Skladiste_ETI.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -201,13 +201,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Skladiste_ETI.exe" size="4266496">
-      <assemblyIdentity name="Skladiste_ETI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Skladiste_ETI" version="2.0.34.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Kuxc37rlT0fR+jbU/bqi3oNbMLZdYI9Tn09j0jvngjI=</dsig:DigestValue>
+        <dsig:DigestValue>Yhbs4yPDsyBN7lErl4R9/fnk2zR+aS5bbam5RZpSzrE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

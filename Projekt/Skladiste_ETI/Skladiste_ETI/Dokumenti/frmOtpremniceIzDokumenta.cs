@@ -25,6 +25,7 @@ namespace Skladiste_ETI.Dokumenti
           
             txtNacinDopreme.Text = transport;
             cmbOsnova.Text = osnova;
+            btnUnosOtpremnice.Hide();
 
             
             
@@ -172,7 +173,7 @@ namespace Skladiste_ETI.Dokumenti
             }
             else
             {
-
+                btnUnosOtpremnice_Click(sender, e);
                 using (var db = new T02_DBEntities())
                 {
 

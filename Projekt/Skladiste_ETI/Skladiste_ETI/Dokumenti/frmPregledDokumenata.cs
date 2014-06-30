@@ -346,7 +346,9 @@ namespace Skladiste_ETI.Dokumenti
             
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
             string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
-            
+           // string partneri= dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
+           // string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() +" "+ dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
+        
             string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
 
             if (tip_dok == "Izdatnica")

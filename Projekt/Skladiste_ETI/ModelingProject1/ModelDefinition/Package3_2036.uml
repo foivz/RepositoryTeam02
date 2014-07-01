@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a75cca35-0dbb-4db7-b863-6305339002ff"
+  name="WinForms"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="46560037-f211-4a22-801a-25f1236607bc"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Reporting.WinForms"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7a4484c0-ecfa-4217-b234-dfb118c49d19"
+        name="ReportViewer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="36e6ec92-fa8b-4126-b48c-6eea108853e5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2Fassembly%2FGAC_MSIL%2FMicrosoft.ReportViewer.WinForms%2F11.0.0.0__89845dcd8080cc91%2FMicrosoft.ReportViewer.WinForms.dll Namespace%3DMicrosoft.Reporting.WinForms Type%3DReportViewer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a7bd03f3-fe0f-4604-b5d1-2b3bdf9c55e3"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bd54f9eb-d141-4b54-9081-bb8993a0b1be">
+                <propertyInstance
+                  Id="50d16f0e-ca9d-45f2-969f-694a235f6579"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="67e43ee2-b3a7-49ae-81f3-039027540a26">
+                <propertyInstance
+                  Id="2423e031-0b44-4d83-86bb-f8229a72be1d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76097b7e-eeba-420e-a43c-71c1cdc99a77">
+                <propertyInstance
+                  Id="6b8deb74-ac75-4063-a9cf-d1ecea35c5da"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a55d9fd-9990-46b4-a63f-4a861ae8800d">
+                <propertyInstance
+                  Id="152d9af2-5974-4850-b95e-5322f2187daa"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="624d21ec-2f3e-42b9-96ce-ec21a3d6c93f">
+                <propertyInstance
+                  Id="353f8f3c-8a0d-4c29-8088-b804e32e11b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

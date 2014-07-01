@@ -1,0 +1,1955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="89d24601-0c97-4082-9d29-bc6245f1ff98"
+  name="UpravljanjeArtiklima"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ac6ffe7f-57d6-46fd-a7f8-fa9b8bd33a2c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSkladiste_ETI.UpravljanjeArtiklima"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="88d92cf5-6060-4cfe-9c60-8f82ff1c4a47"
+        name="frmIzmjenaArtikla"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="89671663-79cb-463d-ba00-acabc86a8781"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="954dfa79-55c0-4fe5-ac32-ca7862dcb7b1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2801144-2950-4724-a8e2-e57adb88e69f">
+                <propertyInstance
+                  Id="06273c86-c764-4c8b-ad60-6cc4804d8d54"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e35a07c5-47a7-41ad-a978-81ffef1ccebc">
+                <propertyInstance
+                  Id="0aa78e54-643d-4e60-ae42-5c7e048a4ae1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fdef8cd-9329-4e65-b186-8e857d5d2473">
+                <propertyInstance
+                  Id="b2fc2aa1-a592-4f18-a570-8359f67ef537"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7eb0b53b-83d9-40cd-b861-3b9d8a93008f">
+                <propertyInstance
+                  Id="68dc89b0-480a-4330-b675-0c7788864c17"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="49b09931-a290-43a2-bc67-a97f48e1f463">
+                <propertyInstance
+                  Id="598e588b-eaf0-4113-8f57-46c8ccdd720b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="30ed6ef6-65fc-4e8e-adaa-a87f91fc9fde"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b090b8b6-8b55-4581-9ff6-9cc6e35d762c"
+              LastKnownName="Form"
+              LastKnownLocation="Package4_2035.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="22ca8d3b-5d66-4b66-949a-9876f133f099"
+            name="artiklZaIzmjenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="31518a25-d344-42cf-823f-e3ebfea6d651"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DartiklZaIzmjenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c43c0c7c-2e0b-43cd-b976-fb5e3adcd165"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11666b04-c658-47e2-8d5c-9404b1f722dd">
+                    <propertyInstance
+                      Id="7096abba-324e-4640-8f95-cc44060b79ff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86d9e910-79d6-4998-a6ff-7ceb7bd22279">
+                    <propertyInstance
+                      Id="77d1b20a-9674-4811-aa5b-a06f1ac11f8e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3867512-257a-4a3d-b7bd-29f603a59e1d">
+                    <propertyInstance
+                      Id="9ce38628-7dda-431c-9e32-f4b40e621e1f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c609bf3-8358-4cbb-b26f-cb7f45361e5d">
+                    <propertyInstance
+                      Id="bcf567b2-2704-4044-842f-5cdb1d6b9009"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbb10e20-c6ad-4b27-8413-f4c3f9f4386f">
+                    <propertyInstance
+                      Id="e36a0116-bf2a-46cd-ad23-1afb560cf6e2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="88ab6558-bf00-400e-95c1-7bd400353a98"
+                LastKnownName="artikli"
+                LastKnownLocation="Package_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="84b679db-070a-4ee1-b339-8a81a2f088f8"
+            name="btnAddNew"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9620c3f5-778d-41cc-a3d2-4968da69f6a3"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DbtnAddNew"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dff0789d-efbf-413d-9ed7-df86e36329fe"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab67bc4d-a474-45b8-b149-ca3542f4093c">
+                    <propertyInstance
+                      Id="f1610d1b-59e4-4c2a-ad81-f94d58952644"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="029e5015-9dc8-42f3-9562-8cc30817d40c">
+                    <propertyInstance
+                      Id="00ed23cc-2827-4afe-aab9-f7028ef1f689"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ac8b1d0-5dcb-4231-bc22-483ff6d03cff">
+                    <propertyInstance
+                      Id="41de591b-3025-4cd8-98cd-09d85cd24d53"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa5d233f-3c46-487e-98d3-585ae01ce566">
+                    <propertyInstance
+                      Id="43540a7c-89ae-4dc0-b1cf-ed610d0bebbf"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6dbe428-b7a3-44cf-9e91-a97afa2ecdbd">
+                    <propertyInstance
+                      Id="758beccc-8aac-4240-b8f2-8cd71436f097"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a91f3648-1fb9-454e-9226-7f8b59ce8109"
+                LastKnownName="Button"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2664f61e-eb67-4d8a-b4a1-834ef985cdee"
+            name="btnExit"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8e691162-39ec-4027-85d3-1401ce1c831c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DbtnExit"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="542b2c9c-5f0a-4a2e-a578-1e97512e8fbc"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5ff6e81-daff-4954-9ae9-e60327985dc9">
+                    <propertyInstance
+                      Id="e1443f5c-13f6-43ef-973c-a25a2b3000a3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1458e6ec-8127-4ddf-b829-6fc1f4482fd2">
+                    <propertyInstance
+                      Id="8802729a-71c1-494a-9e83-6143e1f14afb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="012b9b5b-fd7a-4f23-91ab-94ff8cb8764c">
+                    <propertyInstance
+                      Id="4f23b6b0-eaa9-44aa-ba4d-4ccd8685b00e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="117006c2-2bc9-4190-9e66-67aca16e7768">
+                    <propertyInstance
+                      Id="9d8e89de-420a-4198-b5e9-4f22bf27beed"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4c4209c-4258-45f3-b00a-3ac7ebaaee7f">
+                    <propertyInstance
+                      Id="29d5607b-fd49-49a2-b683-b2d151dc9648"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a91f3648-1fb9-454e-9226-7f8b59ce8109"
+                LastKnownName="Button"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="64ef4ff3-23a3-4464-a6d1-75ff2b39b1fb"
+            name="chkChangePosition"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4505fb31-99bf-4d9a-aee2-277f90cedcb6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DchkChangePosition"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f7f7d98d-532a-4a62-a759-413be21d61f6"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c18dc86-de76-4b11-859f-e533b2a3178b">
+                    <propertyInstance
+                      Id="760a19ad-9fc2-482f-a4c2-fc622af400e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8bcc7cc-274b-488d-8178-6d85e660f909">
+                    <propertyInstance
+                      Id="7316a9ef-6382-46d9-8223-bc161cc41cb7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe711f32-209b-4654-89d6-a05913075fbe">
+                    <propertyInstance
+                      Id="a908ab8f-cfcb-4690-a92a-0f41a2b7ceeb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52a1f48c-b648-4bdd-a950-9e5e629a238e">
+                    <propertyInstance
+                      Id="869e62e1-a06b-40c3-b17b-b8cd26128a3d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4766f813-1fbd-44bd-a63e-8b966d353019">
+                    <propertyInstance
+                      Id="f8529e41-348a-4c42-a5e0-3095970ba0ca"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="6922d0ee-bbd4-4521-b43d-e01477af6a5d"
+                LastKnownName="CheckBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="88fc4ebf-4d19-4da1-b934-0d71f096503b"
+            name="cmbNovaPozicija"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c23c4450-125b-4a05-b45d-6352c7c10597"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DcmbNovaPozicija"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eca5914f-a264-4828-9a1b-91958d2b43f9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0b01fbb-8aa5-4021-a9d4-12ac5811dacf">
+                    <propertyInstance
+                      Id="96724b34-bec1-4934-8fe9-d489cb61d062"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06978c1c-eafc-4628-b00e-e090559a7d99">
+                    <propertyInstance
+                      Id="42ad5faa-9f7b-4823-8931-c09fa7030898"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca6e88bb-239f-4d29-b80b-a3dca41e60eb">
+                    <propertyInstance
+                      Id="5a58fdc8-7b14-4e78-8239-982dd6913cd7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37673800-d265-4370-aaa7-887492375412">
+                    <propertyInstance
+                      Id="161d5116-a4e5-4eb3-b37f-91089723960d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cb97a67-2fe3-48ee-9116-91e25fe656fe">
+                    <propertyInstance
+                      Id="237a38c6-399f-47c9-bed6-8dde4b49b3f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="061e4a6a-1b54-4577-8882-9d4b27e42140"
+                LastKnownName="ComboBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="37548388-4ba7-4fc7-8d70-cbbaa3907510"
+            name="components"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="984b219b-419d-42af-a3b3-35290779f971"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dcomponents"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7361c4fd-bba9-4862-b75f-10836dfbf72a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86ba8ab6-ecdd-4b92-b144-6a85a65cdddd">
+                    <propertyInstance
+                      Id="a45cc476-6d17-4a61-be81-4401f0793459"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="800e9d00-ccb0-4d55-8d66-27b96506cc76">
+                    <propertyInstance
+                      Id="e7ca0100-d3ad-4ce6-ac91-43fa6e79a25c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1eb16d6c-4f57-466f-bca7-dd57a97cae6e">
+                    <propertyInstance
+                      Id="804ef56d-a957-485d-abd4-d908f6be20da"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00e35195-e731-450e-9be8-7a2b176e14b6">
+                    <propertyInstance
+                      Id="2720fc42-a75b-420d-9971-29a96458a989"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8a1e679-9d89-4d45-b85e-67586689e5dd">
+                    <propertyInstance
+                      Id="6e9fa2d6-e6dc-4876-a9a9-fedb438d9789"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c39f06f4-3232-4230-8d3e-b9d6bb2fb977"
+                LastKnownName="IContainer"
+                LastKnownLocation="Package2_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="72e45d91-b76f-47f9-8961-24413b6806a8"
+            name="idArtikla"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0a6efbd2-3766-4629-bdce-e5b30480477a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DidArtikla"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="26454566-2cde-45f5-8f53-65bb7055aaa8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a82c6b5b-9f92-4dcb-87af-0051031d1845">
+                    <propertyInstance
+                      Id="1cd07492-63a6-4f88-be6e-6037c3a8138e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f5ea8b8-8793-469c-ab99-d61e8bd89332">
+                    <propertyInstance
+                      Id="5df8a3a7-9c35-4e20-97c0-a46d3352e9ef"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddb69e38-4a1b-4029-8ccb-f62411c8cf87">
+                    <propertyInstance
+                      Id="b9250494-477b-4916-9f76-4e1290d38457"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ccc1f756-6f71-4ff5-b9d3-c4793c99809c">
+                    <propertyInstance
+                      Id="b3d84e78-2cca-482e-a1b6-633c559bf770"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea6d0578-e633-479f-93f5-b854f2010b63">
+                    <propertyInstance
+                      Id="a19f567c-29f6-49f7-afb5-b7839f28ff79"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="38cdee86-52a9-4894-9b4f-12e17e686817"
+            name="label1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e901c80b-a766-47cf-b4a6-bb9175162f0b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel1"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0aff2378-befa-4e77-a2c5-961ee2f298b6"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24a84947-ab18-4cf8-8c6e-a44c54c94df5">
+                    <propertyInstance
+                      Id="148f8fed-4445-4827-90c7-65c46ddf7956"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36f3425c-cc67-496c-bbb8-6ac4e0ce5f9d">
+                    <propertyInstance
+                      Id="4f808964-d49a-4562-9ab5-f26da8e957e7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a4b2b54-2ff0-49cb-81f0-0f689860ac6a">
+                    <propertyInstance
+                      Id="ed5701fd-43e2-40f8-8b9a-00f556cb5cbb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a365a228-11cf-4d1b-9678-a3c22ee08489">
+                    <propertyInstance
+                      Id="132ce2dd-0c1a-4608-acea-7ddcffc5cb80"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1814417-7c6f-47c5-b1a3-dda64489e44f">
+                    <propertyInstance
+                      Id="e3b59d5c-2638-4289-9729-61604b36ffc2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="16c15ad1-b6dd-423e-8c82-3ba7dce772c8"
+            name="label2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="58ade386-cabe-43b1-b851-c63248f17a08"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel2"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="98dde104-ca85-4ce3-887e-b77dd1c9b75b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf886626-0fa0-473e-86c5-d631b4510127">
+                    <propertyInstance
+                      Id="82d6ba59-1fea-4cd9-b06c-fb586b1bafaf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bd1199e-14a2-4fd8-a6b4-6c3e4edd7667">
+                    <propertyInstance
+                      Id="8c90fb3d-631d-4bf2-a8cd-9dd37d0cd7cb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba1b6c82-314d-4b56-ab5f-1f00592b1aef">
+                    <propertyInstance
+                      Id="dbdecef9-0357-421e-b359-c9c4a359d10c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1c48541-20bb-4511-b7a6-57c681597634">
+                    <propertyInstance
+                      Id="90c359a2-91de-4ba8-9505-a561a9a3d4e8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3ca66b9-0b57-4a8f-871c-417991098e9a">
+                    <propertyInstance
+                      Id="f8b0b14e-0f04-455f-9802-994a9c266064"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b2ccbb77-6317-49bc-966d-eadc4c3b86be"
+            name="label3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9296803d-6c0b-4fc8-8328-44d2db838ff2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel3"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5dbb0c67-2772-471c-a32a-20aa2989d6a0"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="762e7643-77f5-47da-a585-1afbe565a401">
+                    <propertyInstance
+                      Id="acfc6746-b8cb-4993-853c-84224ea40655"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45cf09d5-5438-411d-96cb-a6423e7b1ed8">
+                    <propertyInstance
+                      Id="41002f3f-df0d-4144-bcb8-3d2d74911f81"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab3aefb0-2805-46e6-9de7-8d659e7db156">
+                    <propertyInstance
+                      Id="a47cafaa-24f8-471f-b2d7-89042a761097"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6043ac2b-af65-4b80-a926-de53282a013c">
+                    <propertyInstance
+                      Id="6475a70d-1dec-4fe8-9226-d142c22523ad"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4be81af1-e857-4ea6-aabd-6b8a1d0d460d">
+                    <propertyInstance
+                      Id="56a71848-11dd-46af-96a3-b9e1a938e6e1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c47ea15d-3729-47b3-9aea-89704c6da4d0"
+            name="label4"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="adccd088-4c15-4fc2-9a7c-3a3b9bcdd6ca"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel4"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9014a2a8-7bf7-408a-9f23-17f57c2b8cae"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8eed8fe-55c7-408f-8f5c-511e8ef13c19">
+                    <propertyInstance
+                      Id="17e6ac22-265d-4c5a-96e9-f90ce37fb584"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dd89387-5bba-4952-aa4a-e7261f6e926b">
+                    <propertyInstance
+                      Id="af91ab06-2223-4839-9f8b-95ed060ecb55"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d2f96a9-f017-4adf-9832-968a675ab850">
+                    <propertyInstance
+                      Id="0e317571-496b-4aaa-9b7e-71db881aaeae"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87abe424-9529-41ff-8cb8-1eb02666b28f">
+                    <propertyInstance
+                      Id="0e92a477-137a-469f-b667-1d30e5826c88"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89f02e3c-281d-47b3-b934-274291c0a438">
+                    <propertyInstance
+                      Id="d3a31ce8-6e4e-4e2c-8f9b-2bfa2d3bd297"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="aee49568-6e40-48e4-a61b-3160bd041cfe"
+            name="label5"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="adf70e4f-5206-4cfc-a95a-ca0f7ea1825f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel5"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b464d29b-eea0-46d1-bec7-b7044fbc6f92"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1a7554e-13b8-49ca-aa26-d39a5b47fef0">
+                    <propertyInstance
+                      Id="55bd3537-ca94-466f-980d-85a59a3d6539"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d5de97c-a2c5-4084-ae28-dcbe5aedd712">
+                    <propertyInstance
+                      Id="b81f1a0c-248f-4962-974f-2337f076ff58"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce96b93d-13ca-464c-aca0-5e2853813b8d">
+                    <propertyInstance
+                      Id="a3f8c6e9-d17e-4c2a-84a0-5756255866bc"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="579ce457-3fe0-4694-8047-6f9e0f063050">
+                    <propertyInstance
+                      Id="3214f17d-ffef-41c9-9add-14d1560e0e9e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e9479ba-9e14-4bb6-9f6f-e80932c46000">
+                    <propertyInstance
+                      Id="6af6e2e7-93f2-4093-b1de-48d763fd537a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c51885f0-5a99-4d73-936b-0786149517ce"
+            name="label6"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f7004511-eea4-49bf-8469-0a7b33762f39"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dlabel6"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="73c6bf1a-df00-4a19-97c7-2bbfcbbc26c1"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ea4ab74-3962-4fad-96a1-a42105972c06">
+                    <propertyInstance
+                      Id="5295b094-cc22-418d-9c76-4ebdfe2903ad"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1afb2028-c666-4db8-8964-c2a0ed93c0e9">
+                    <propertyInstance
+                      Id="89b9e5ed-0824-4184-8b2b-9ddd46edb4d8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5834d005-06f6-4254-9c19-97c17a60363e">
+                    <propertyInstance
+                      Id="094d51a5-7447-40c7-9d1d-8f0961f9200e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="858c29ef-9b64-4912-8049-8481d5b75d20">
+                    <propertyInstance
+                      Id="56a007ce-9bac-447b-b9a4-36d1095b3f63"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce6bd6e0-60f1-4783-87f8-8fb93b76d2d5">
+                    <propertyInstance
+                      Id="012461e1-3660-4a29-b151-ee3df3d4afdb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="89b1c85a-b611-415c-a5ff-f761d163e6c1"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f4f65db3-68ff-4de5-a595-352e1cb7d1d8"
+            name="trenutna_poz"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="02dd0fcf-7d0b-4f06-98ef-79c0902d1d6f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3Dtrenutna_poz"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4a18c790-c94b-4851-8760-29a07c5bcc3b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d98965c7-2a1f-49de-890e-82895bbf5c5d">
+                    <propertyInstance
+                      Id="f3fdb0b7-a930-4451-85be-bbd317537b8d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45389560-202d-4d2a-81bd-d5dfb2544dc1">
+                    <propertyInstance
+                      Id="1d596d8a-0cf4-44d7-9bab-fd571f1f8c66"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68742da8-f6ee-4708-9172-63415cbfac3e">
+                    <propertyInstance
+                      Id="5694441d-5a31-454b-8baa-aed9f04e6bcb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e05030b-53e7-4452-be19-4b9bd9b9e81b">
+                    <propertyInstance
+                      Id="00877035-381f-4b41-87e5-be4d8098ead3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17fe127d-5e75-4097-b248-29d0313b9fb5">
+                    <propertyInstance
+                      Id="db2acbd1-b764-4369-9e80-be94853508af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="37438b97-9e76-43da-9fee-a1ee16f5c3ea"
+            name="txtCijenaZaIzmjenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="10f3f1c7-06ce-474e-bfb4-0c97185e426d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DtxtCijenaZaIzmjenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bed1f95b-4569-404d-a06d-c20824897333"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bdbc80f2-1798-4839-8758-725548330ae0">
+                    <propertyInstance
+                      Id="5c6d12b5-2b09-4be7-bf67-aac4fc149dc0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="deb21f3d-6179-40bb-b88f-fab61002a608">
+                    <propertyInstance
+                      Id="60663ace-5edf-4e29-b298-8654b9cd3fa0"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28b676db-b56e-425b-971f-fefa223cc442">
+                    <propertyInstance
+                      Id="a08b4910-6c15-4d6e-b52f-535c115ba97b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9897bbe8-74ef-4778-a661-2a98eaf69d18">
+                    <propertyInstance
+                      Id="2406b792-6361-4fee-a54b-5411c91e77ee"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="201e13d5-c7ed-4d5d-9cff-aff7da3f6afa">
+                    <propertyInstance
+                      Id="312be9f2-9ebf-49c4-a543-ff47c72c7074"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed4b619e-5f55-494f-bef4-a2c46d73f794"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b50b2f0c-d1d9-45cc-9028-e6d976959654"
+            name="txtKolicinaZaIzmjenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0f283541-ae4d-411d-8e45-b9180f77019e"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DtxtKolicinaZaIzmjenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="34bcdaaf-5cbd-4a23-97f8-4e455eec1323"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa461825-b912-4cf5-b1fb-e510541c8409">
+                    <propertyInstance
+                      Id="976a7abb-8ac7-42fc-b2b7-60f4f076c33b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98beb354-f4d5-4ad9-8c40-09426341a730">
+                    <propertyInstance
+                      Id="97ced4d1-6c7a-4cf1-aa0f-30a188abe9fb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e8b7c72-8579-468d-a979-33e1a700a95a">
+                    <propertyInstance
+                      Id="6bb34c62-07d2-4a74-ad8c-f63a8e08168e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5bf1ad4-9dae-4b86-85b9-7f374da7a84d">
+                    <propertyInstance
+                      Id="f627ba25-c813-44c3-982a-850b62b21b13"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70ddfa81-355c-4bdd-81f8-a1d4c05df1f0">
+                    <propertyInstance
+                      Id="aca35446-08cc-4f7f-ad8a-ccfa213df1f0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed4b619e-5f55-494f-bef4-a2c46d73f794"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ceff9c3d-c00c-41d6-ada1-e17730750e2c"
+            name="txtMasaZaIzmjenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="404a332f-df50-4a41-b83d-30f898748a28"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DtxtMasaZaIzmjenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fea96994-41fa-4c9a-ab9f-11b7881d2f27"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3e6f8fa-c3ca-4be8-b6ac-cdf1d577e469">
+                    <propertyInstance
+                      Id="a2d2152b-aa6b-4d1e-a84d-ede4b9d9034a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb650704-9304-4ff0-be14-a4a6229ba9bc">
+                    <propertyInstance
+                      Id="2b4b4d80-e20f-449c-955a-9daf615d0eb6"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2be4ef7d-2b42-4b89-8b7e-58187c35ba05">
+                    <propertyInstance
+                      Id="877b056e-56ce-45e2-b4d1-9cff5c3517a9"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f366cb07-740e-4814-95f3-a009cc79304e">
+                    <propertyInstance
+                      Id="9220be4d-dd3b-4dd0-b34f-07be7e266429"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd741b4a-dc8c-483f-b0f7-b32f09114df4">
+                    <propertyInstance
+                      Id="7edccb2f-d1fa-49b5-9344-56d64bf28ca3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed4b619e-5f55-494f-bef4-a2c46d73f794"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6845f57b-71b8-4b1c-8e47-209e05e3acb1"
+            name="txtNazivZaIzmjenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bcaef580-26c8-4c39-8808-fe592734a4cf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DtxtNazivZaIzmjenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="095563bb-8800-4523-a699-ff59910da114"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6a258af-27dc-4a0e-a4c7-26b28f4a0dba">
+                    <propertyInstance
+                      Id="3ec155a2-655d-4a8f-8b89-1241ac14f9f8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="828dad7e-6ae0-4fad-b291-5f505422a256">
+                    <propertyInstance
+                      Id="754c34cf-c14d-4c9a-b3fa-a530406dd9fc"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4faa38b0-d53e-43e5-a95a-2d83a93b5cdf">
+                    <propertyInstance
+                      Id="e6620087-d698-46b6-97e4-915f32963487"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54e5ab5d-e950-4b1d-8f0b-0a5ea0547bdf">
+                    <propertyInstance
+                      Id="5a672b8f-8978-4301-b2b0-beeb65522203"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce307d8f-0f46-4c50-9a47-c508dbcbc51f">
+                    <propertyInstance
+                      Id="7fa3e10f-8737-4e23-9dc6-f7d80bbf4b8f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed4b619e-5f55-494f-bef4-a2c46d73f794"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dc3b5fd0-3ac2-4ce7-a5a0-7a428a3447fb"
+            name="txtTrenutnaPozicija"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9cebd97a-88a5-4e57-a82b-97b7eb9c2d84"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DtxtTrenutnaPozicija"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="14c4bd0c-41ad-4928-845f-ec50fa8c9f85"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da48287d-0e8e-4214-a4d7-5d043a88c9f8">
+                    <propertyInstance
+                      Id="76ea1fb4-adce-4786-8efd-f70396a6dbc3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f457f00a-9e9f-4a97-98da-27cacb557c40">
+                    <propertyInstance
+                      Id="be12925e-a565-47cc-a075-ebd72d7eab9e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93782323-98fd-4469-91b3-7d09b9d8ea21">
+                    <propertyInstance
+                      Id="ffba738f-50c3-4fe4-a845-33f84086a452"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="887ecd9e-014e-450a-add0-349f7ca031ea">
+                    <propertyInstance
+                      Id="711fdbc1-a309-4d54-8b23-61449fd01964"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b43dca15-f240-4057-9429-4bd52c5a6a6c">
+                    <propertyInstance
+                      Id="03082b91-d072-46b8-b814-cf16891671aa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed4b619e-5f55-494f-bef4-a2c46d73f794"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_2035.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9d2ab196-734d-4e61-9492-8a40a658a813"
+            name="frmIzmjenaArtikla"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4dda4a97-9860-4072-9f1a-4e8d0d607dea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI Type%3Dartikli)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="51866ed9-f971-4ab4-9e05-37b50f54fedb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a18947c-889f-4839-96e3-e83008dbe14a">
+                    <propertyInstance
+                      Id="025702bb-e266-46f8-a7f9-63809df56cd4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e25fb04-ce47-4442-97b6-87b9db72a98f">
+                    <propertyInstance
+                      Id="0f602251-e013-4425-a2cc-46e02ebb9e9f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c17ff4ce-d4c2-42ba-9d2c-67911f7f17ae">
+                    <propertyInstance
+                      Id="934cbe06-4b87-497b-b002-df0c576cd695"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08d9d861-4641-4d2f-a39d-d415b907abd5">
+                    <propertyInstance
+                      Id="8f1aee73-f508-4857-9f14-f8ab9012bf51"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6c68b28-ae95-43fa-89b9-011e75c0a11f">
+                    <propertyInstance
+                      Id="e98cafef-0e9f-4bc8-8a4d-db4851034f4a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9469403-5c68-43cb-be02-3319eb9fdc5c">
+                    <propertyInstance
+                      Id="386586c1-043c-44b0-a3e7-f17f3a91a263"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a31ff6e4-a973-4185-805a-93d0e421643d"
+                  name="artikl"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="30b9cea1-61c7-447f-895a-dcef6d0b62c9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI Type%3Dartikli)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dartikl"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="88ab6558-bf00-400e-95c1-7bd400353a98"
+                      LastKnownName="artikli"
+                      LastKnownLocation="Package_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a1a1ad2-ab34-48df-bfe2-d45924320a8b"
+                  name="trenutna_pozicija"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0500a260-c377-4825-a9d4-a80eff2e6753"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI Type%3Dartikli)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtrenutna_pozicija"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b2b6de1d-529a-422a-b28e-710fb100324a"
+                  name="id_artikla"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c4f9322e-964f-40d2-af06-83b7d88aa85e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI Type%3Dartikli)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Did_artikla"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5ae29b8e-d608-4d7d-86a1-5160525c2668"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fa06eac7-8902-4117-a398-e39808582923"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fa3556ac-40e1-4834-99dc-57ca43759599"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6a48dba-c3b7-44cc-9d03-0847c6b2e341">
+                    <propertyInstance
+                      Id="7e8b259f-1170-4ac9-8647-32d6842945ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb1d986e-2b3c-4674-af95-3629b3809085">
+                    <propertyInstance
+                      Id="44329ec3-d532-4077-b17e-14fe77065904"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2619b78-deb3-4cb4-b0ae-c9c3ea628fb2">
+                    <propertyInstance
+                      Id="61ee5830-bc58-4667-9433-ef12950f61e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5d49ece-758b-4523-9afd-0f7a9d5a96ef">
+                    <propertyInstance
+                      Id="a0ba6f30-ed9b-4028-928b-12c1bf328cad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2668a42-b322-4905-877d-dc1dc190720f">
+                    <propertyInstance
+                      Id="ca8d470b-1acf-488d-abe4-2c323dd99425"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03afa40f-81a1-4357-9a16-f7ffa1cfc54d">
+                    <propertyInstance
+                      Id="75f37f2b-4b3d-416f-87db-72c035ab8573"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f379f5a-2e0e-4a09-b4c6-3b2ea865204e"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="96ea99f9-78a1-419b-8afb-4f8e682b0ced"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c0112986-0463-47c8-9d10-372b10224658"
+            name="btnAddNew_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="af9cd256-996e-4011-85b1-44852f5be932"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnAddNew_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="75156469-77a2-4836-b43d-ba898d960d76"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="160104ea-18ae-4ba8-89f5-750a1753cd46">
+                    <propertyInstance
+                      Id="699383c5-fa79-44bf-b37c-a5878ae672b9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8c711a9-e591-4721-b860-9b22af840d92">
+                    <propertyInstance
+                      Id="042d8aa2-c39a-4dac-85b2-d1f9f92e71d7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f479f698-01a7-4a47-871f-8cc05c01a75d">
+                    <propertyInstance
+                      Id="674c5d8d-e6da-4c0e-a48b-a541a1ec1e13"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7e4226c-f409-44e1-974e-c9cbca2f301f">
+                    <propertyInstance
+                      Id="7c2ed140-9a21-4b3a-9b91-a8824f24bcd4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0932501b-6757-4b2b-ad4c-cd2c6eea8270">
+                    <propertyInstance
+                      Id="b1049f51-f11f-435b-a9de-2aba9084cf12"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d05fc880-5dda-4b93-bfcb-aacf8bc5538c">
+                    <propertyInstance
+                      Id="af79e159-7cea-4f55-9465-a83354ea8689"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="149926be-f4d6-47a2-99a0-396ab0a5a4df"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="09ee34b5-b853-459e-a357-1afec974d3ab"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnAddNew_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1efa271b-497f-4445-b467-26c140fe5b31"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="69962575-d4df-49a3-8b59-837a05b017a0"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="482df8dd-dcd7-4132-95d0-02f4481339e6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnAddNew_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d4e50074-344e-42b8-946b-469f2481465c"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9efda90b-76c8-4bec-be70-8caa79285c2d"
+            name="btnExit_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e6abf563-ad0a-4ae1-ba87-80de6309b9ce"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnExit_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f27e4ae-e48d-430e-b511-2d48b1eafda7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e59630e-962b-459b-bc34-99cd315e665c">
+                    <propertyInstance
+                      Id="05919b7e-1b23-4c01-862d-0effdf61593f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75c31124-54d0-4e5e-ad44-6ed40fbd7ef8">
+                    <propertyInstance
+                      Id="641beae7-5339-4802-be78-273919195da9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbe689ee-cfe0-4ece-bccc-ffb2f84bc302">
+                    <propertyInstance
+                      Id="c0e82a0a-1c0e-45dc-9851-94337ace9ccc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33755992-f381-4e7d-9641-5b128330fecf">
+                    <propertyInstance
+                      Id="f0fdab9d-3748-4bb8-a135-af0e5207f279"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cefdeca3-3304-4624-837f-772c71366bb1">
+                    <propertyInstance
+                      Id="f7e90411-d8af-4be6-84b6-ddd175348ebe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b875ad76-e711-4615-9a51-989617db9b79">
+                    <propertyInstance
+                      Id="581e16f3-4e56-4e37-9480-efbd8349a43c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="331e67fe-8f5f-478f-834f-6b2208c5a965"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e5f5ca18-fc85-4e08-ad9e-87c8d5389221"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnExit_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1efa271b-497f-4445-b467-26c140fe5b31"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="706d210d-3fb5-4ef0-96e4-62ff515a44c2"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="60c44ed0-5cd1-42a3-b738-05a2ab1cd42e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DbtnExit_Click OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d4e50074-344e-42b8-946b-469f2481465c"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="150383d3-fcc1-4c66-895b-7eaba41c736b"
+            name="frmIzmjenaArtikla_Load"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="43140931-d375-415f-bd73-c6716147d9d4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DfrmIzmjenaArtikla_Load OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e65533dc-a1fa-4ac6-aaee-0c3d027c1bf9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41168ccf-d9ee-4017-810c-c62bf475d2c5">
+                    <propertyInstance
+                      Id="b0466eaf-3fb7-4b2d-a8d7-beb0a1c87289"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a394b3b3-8f37-4b25-a32a-78b1583d4f09">
+                    <propertyInstance
+                      Id="681cdb1f-5d1e-4297-8c2c-cfdfa4ab6bf9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ac425d3-746e-4c08-aeaa-b3b1af8f08a0">
+                    <propertyInstance
+                      Id="a36b5d09-b2ca-4555-a45b-4ed24c0dcdad"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="983df2cc-ef7b-4437-b83e-a4c8fc52ae24">
+                    <propertyInstance
+                      Id="40cd77f1-6f0e-4cf3-bf6d-f7da545457cd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45836f22-aa8a-49be-a34c-25128b0f14b9">
+                    <propertyInstance
+                      Id="6366e54f-186c-4ae0-92a8-cc9aef034129"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e37eceb7-bef8-4a6b-9ee8-0b1941cf4d64">
+                    <propertyInstance
+                      Id="8cced57d-819d-4571-8b1a-eb94140d68ef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ef63617-66d2-4894-86ad-4b1145dcea6f"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="19d4399d-d36d-415a-b337-88756626bb1f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DfrmIzmjenaArtikla_Load OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1efa271b-497f-4445-b467-26c140fe5b31"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1a153b8-1c59-4793-985a-8e61e75364b2"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="95107a1d-8c98-4385-a920-56335ff2da35"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3D(Name%3DfrmIzmjenaArtikla_Load OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d4e50074-344e-42b8-946b-469f2481465c"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_2035.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e72c173b-267c-437d-a8a0-091ab9b35568"
+            name="InitializeComponent"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2c19448f-ebf1-47b4-ba60-1b28c6faaa61"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.UpravljanjeArtiklima Type%3DfrmIzmjenaArtikla Member%3DInitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="943d0f76-29a1-481d-9bfd-e646c0179e0d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daae6aa3-59f6-4938-9e08-272207020f0b">
+                    <propertyInstance
+                      Id="9fdad50a-6b53-4fd5-ac57-81a91fc0165e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dc38db6-071a-4514-bd62-a8fd59b56edb">
+                    <propertyInstance
+                      Id="d53245ad-9920-4aca-b7f2-9df10cc8840b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4223df76-f239-4d99-a3ea-8fc975507228">
+                    <propertyInstance
+                      Id="eca13dc9-cba7-4f79-a1fb-2746cfdd1473"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="402bf50c-3252-4a61-a9d4-134f67f702f6">
+                    <propertyInstance
+                      Id="63bfb2e9-6f68-4867-a812-3ed53352c76b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="945487e1-baae-42c4-b3df-8ad8b48d0217">
+                    <propertyInstance
+                      Id="97143d84-17ce-4a40-b975-65c7ad7135af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7d14af4-0957-42f1-aced-29d5e078dea0">
+                    <propertyInstance
+                      Id="eb2fee19-f34a-4550-b10f-83e3ad96ae77"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

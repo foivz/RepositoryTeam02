@@ -32,12 +32,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cmbOsnova = new System.Windows.Forms.ComboBox();
             this.btnUnosOtpremnice = new System.Windows.Forms.Button();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNacinDopreme = new System.Windows.Forms.TextBox();
-            this.cmbKorisnik = new System.Windows.Forms.ComboBox();
             this.cmbPartner = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,12 +80,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.cmbOsnova);
             this.groupBox1.Controls.Add(this.btnUnosOtpremnice);
             this.groupBox1.Controls.Add(this.dtpDatum);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtNacinDopreme);
-            this.groupBox1.Controls.Add(this.cmbKorisnik);
             this.groupBox1.Controls.Add(this.cmbPartner);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -98,6 +99,14 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opis otpremnice";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(303, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(200, 22);
+            this.textBox1.TabIndex = 11;
             // 
             // cmbOsnova
             // 
@@ -141,14 +150,6 @@
             this.txtNacinDopreme.Name = "txtNacinDopreme";
             this.txtNacinDopreme.Size = new System.Drawing.Size(200, 22);
             this.txtNacinDopreme.TabIndex = 6;
-            // 
-            // cmbKorisnik
-            // 
-            this.cmbKorisnik.FormattingEnabled = true;
-            this.cmbKorisnik.Location = new System.Drawing.Point(303, 58);
-            this.cmbKorisnik.Name = "cmbKorisnik";
-            this.cmbKorisnik.Size = new System.Drawing.Size(200, 24);
-            this.cmbKorisnik.TabIndex = 5;
             // 
             // cmbPartner
             // 
@@ -274,12 +275,21 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Naziv:";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 125);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.Visible = false;
+            // 
             // frmOtpremniceIzDokumenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(687, 444);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
@@ -294,6 +304,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -307,7 +318,6 @@
         private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNacinDopreme;
-        private System.Windows.Forms.ComboBox cmbKorisnik;
         private System.Windows.Forms.ComboBox cmbPartner;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -321,5 +331,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -73,7 +73,8 @@ namespace Skladiste_ETI.Dokumenti
             public string osnova { get; set; }
             public string nacin_trans {get; set; }
             public string stanje { get; set; }
-            
+            public double id_skladistara { get; set; }
+            public double id_partnera { get; set; }
 
             
             
@@ -91,7 +92,8 @@ namespace Skladiste_ETI.Dokumenti
             public int masa_na_skladistu { get; set; }
             public double cijena { get; set; }
             public double ukupno { get; set; }
-
+          
+            
         }
 
 
@@ -116,8 +118,8 @@ namespace Skladiste_ETI.Dokumenti
                            osnova = dok.osnova,
                            nacin_trans = dok.način_trans,
                            stanje = dok.stanje,
-
-
+                           id_skladistara=skladistar.id_korisnika,
+                           id_partnera=partner.id_partnera
 
                        };
 
@@ -141,6 +143,9 @@ namespace Skladiste_ETI.Dokumenti
 
             dgvDokumenti.Columns[7].HeaderText = "Osnova";
             dgvDokumenti.Columns[7].Width = 160;
+            dgvDokumenti.Columns[10].HeaderText = "ID_skladistara";
+            dgvDokumenti.Columns[11].HeaderText = "ID_pos_partner";
+
 
             foreach (DataGridViewRow r in dgvDokumenti.Rows)
             {
@@ -282,6 +287,7 @@ namespace Skladiste_ETI.Dokumenti
             string masaNaSkladistu = dgvStavke.Rows[odabrani_redak].Cells[6].Value.ToString();
             string idArtikla = dgvStavke.Rows[odabrani_redak].Cells[1].Value.ToString();
             string tip_dokumenta = dgvDokumenti.Rows[odabrani_redak2].Cells[1].Value.ToString();
+           
  
 
             Dokumenti.frmIzmjenaStavki frmIzmjena = new Dokumenti.frmIzmjenaStavki(nazivArtikla, kolicinaStavke, masaStavke, idStavke, kolNaSkladistu, masaNaSkladistu, idArtikla, tip_dokumenta);
@@ -347,14 +353,15 @@ namespace Skladiste_ETI.Dokumenti
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
             string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
            // string partneri= dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
-           // string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() +" "+ dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
-        
+           string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() +" "+ dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
+           string id_skladistara = dgvDokumenti.Rows[selectedRow3].Cells[10].Value.ToString();
+           string id_partnera = dgvDokumenti.Rows[selectedRow3].Cells[11].Value.ToString();
             string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
 
             if (tip_dok == "Izdatnica")
             {
 
-                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova);
+                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova,skladistar,id_skladistara,id_partnera);
                 forma.Show();
             }
             else 
@@ -446,6 +453,10 @@ namespace Skladiste_ETI.Dokumenti
 
             dgvDokumenti.Columns[7].HeaderText = "Osnova";
             dgvDokumenti.Columns[7].Width = 160;
+
+
+            dgvDokumenti.Columns[10].HeaderText = "ID_skladistara";
+            dgvDokumenti.Columns[11].HeaderText = "ID_pos_partner";
 
             foreach (DataGridViewRow r in dgvDokumenti.Rows)
             {

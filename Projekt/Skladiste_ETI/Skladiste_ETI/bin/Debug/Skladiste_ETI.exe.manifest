@@ -80,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Skladiste_ETI.exe" size="4264448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Skladiste_ETI.exe" size="4265472">
       <assemblyIdentity name="Skladiste_ETI" version="2.0.34.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HkUpmwJQ8ShU3276wM4CQNndkzUmEtWy9gnjgcZ/IM4=</dsig:DigestValue>
+        <dsig:DigestValue>QHxK0L8GgkAiKe6lPEKGQ3mZiSBBxTWFEXRP8rslpUs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

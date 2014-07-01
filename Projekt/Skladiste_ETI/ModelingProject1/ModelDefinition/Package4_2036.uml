@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a41e06a3-4467-43e6-b1d0-4d83c510c704"
+  name="T02_DBDataSetTableAdapters"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="098b6a82-7173-4882-8102-8653a778505b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSkladiste_ETI.T02_DBDataSetTableAdapters"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="948c1d65-2dbc-4fa9-8f22-7addf6cb4a23"
+        name="artikliTableAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d45f906e-c0a0-482d-b52a-1d34825ab90d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fembalint%2FDesktop%2FSkladiste_ETI%2FSkladiste_ETI%2Fbin%2FDebug%2FSkladiste_ETI.exe Namespace%3DSkladiste_ETI.T02_DBDataSetTableAdapters Type%3DartikliTableAdapter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2766070b-967c-4bf2-908c-8a561a1be6e4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e025a134-0923-4fa3-bf2b-3e25ced38015">
+                <propertyInstance
+                  Id="9287d79b-4b11-4318-8e28-6055d40543cc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3732d7f3-f0d8-4cb4-9b44-64cf98870dc1">
+                <propertyInstance
+                  Id="e75125c1-17d3-46b2-b721-556275263117"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="31295870-bfd1-4ebc-af6e-14a986d5caea">
+                <propertyInstance
+                  Id="6600e79c-b044-4451-85fd-4022d14f294a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db7cbdb5-320a-4a37-8c75-2efe4f9a56d0">
+                <propertyInstance
+                  Id="9c8f00c5-4418-420f-b746-9a58d4441488"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6bc57a7c-8b1c-4516-a0f9-0d5d12e91e3e">
+                <propertyInstance
+                  Id="9229a799-32fc-4e1f-9908-d1a5e09e8130"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

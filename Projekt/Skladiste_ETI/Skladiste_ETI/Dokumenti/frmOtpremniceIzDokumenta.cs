@@ -18,15 +18,19 @@ namespace Skladiste_ETI.Dokumenti
         List<poslovni_partner> partner = new List<poslovni_partner>();
         List<artikli> roba = new List<artikli>();
 
-        public frmOtpremniceIzDokumenta(string transport, string osnova)
+        public frmOtpremniceIzDokumenta(string transport, string osnova,string skladistar,string id_skladistara, string id_partnera)
         {
             InitializeComponent();
-
+          
           
             txtNacinDopreme.Text = transport;
             cmbOsnova.Text = osnova;
             btnUnosOtpremnice.Hide();
-
+            textBox1.Text = skladistar + " " + id_skladistara;
+            textBox2.Text = id_skladistara;
+            
+      
+            
             
             
 
@@ -58,17 +62,7 @@ namespace Skladiste_ETI.Dokumenti
                 cmbPartner.ValueMember = "idPartnera";
 
 
-                zaposlenici = db.korisnik.AsEnumerable().Select(z => new korisnik()//napravi novu listu sa imenom i prezimenom
-                {
-                    id_zaposlenika = z.id_korisnika,
-                    zaposlenik = z.id_korisnika + " " + z.ime + " " + z.prezime//ubaci u listu ime i prezime
-
-
-                }).ToList();
-
-                cmbKorisnik.DataSource = zaposlenici;//prikaži listu sa imenom i prezimenom zaposlenika
-                cmbKorisnik.DisplayMember = "zaposlenik";
-                cmbKorisnik.ValueMember = "id_zaposlenika";
+               
 
             
             }//using
@@ -111,18 +105,10 @@ namespace Skladiste_ETI.Dokumenti
                 {
                     DateTime datum1;
                     datum1 = dtpDatum.Value;
-                    string idKorisnika = "";
+                   
                     string idPartnera1 = "";
                     
-                    foreach (char a in cmbKorisnik.Text)
-                    {
-                        if (a == ' ') break;
-                        else
-                        {
-                            idKorisnika += a;
-                        }
-
-                    }
+                    
 
                     foreach (char a in cmbPartner.Text)
                     {
@@ -137,8 +123,8 @@ namespace Skladiste_ETI.Dokumenti
                         dokument dokument = new dokument
 
                         {
-
-                            korisnik_id_korisnika = int.Parse(idKorisnika),
+                         
+                            korisnik_id_korisnika = int.Parse(textBox2.Text),
                             tip_dokumenta_id_tipa = 4,
                             poslovni_partner_id_partnera = int.Parse(idPartnera1),
                             datum = datum1,

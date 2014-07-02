@@ -12,13 +12,15 @@ namespace Skladiste_ETI.Dokumenti
 {
     public partial class frmOtpremniceIzDokumenta : Form
     {
-        
-        
+        string id_skladistar;
+        string id_partner;
+
+        T02_DBEntities context = new T02_DBEntities();
         List<korisnik> zaposlenici = new List<korisnik>();
         List<poslovni_partner> partner = new List<poslovni_partner>();
         List<artikli> roba = new List<artikli>();
 
-        public frmOtpremniceIzDokumenta(string transport, string osnova,string skladistar,string id_skladistara, string id_partnera)
+        public frmOtpremniceIzDokumenta(string transport, string osnova,string skladistar,string partneri,string id_skladistara, string id_partnera,string id_dok)
         {
             InitializeComponent();
           
@@ -26,45 +28,27 @@ namespace Skladiste_ETI.Dokumenti
             txtNacinDopreme.Text = transport;
             cmbOsnova.Text = osnova;
             btnUnosOtpremnice.Hide();
-            textBox1.Text = skladistar + " " + id_skladistara;
-            textBox2.Text = id_skladistara;
-            
-      
-            
-            
-            
+            textBox1.Text = skladistar ;
+            textBox2.Text = partneri;
+            id_skladistar = id_skladistara;
+            id_partner = id_partnera;
+            int id_d = int.Parse(id_dok);
 
             using (var db = new T02_DBEntities())
             {
-                roba = db.artikli.AsEnumerable().Select(a => new artikli()//napravi novu listu sa id i nazivom artikla
-                {
-                    ida = a.id_artikla,
-                    naziv_artikla = a.id_artikla + " | " + a.naziv + " | Na skladištu: " + a.kolicina//ubaci u listu id i naziv i količinu na skaldištu
+              
+               string upit = string.Format("SELECT artikli_id_artikla FROM stavke WHERE dokument_id_dokumenta ='{0}'", id_dok);
+               int count = (db.Database.SqlQuery<int>(upit).Count());
+               string upit2= string.Format("select naziv from  artikli join stavke ON artikli.id_artikla=stavke.artikli_id_artikla AND dokument_id_dokumenta = '{0}'", id_dok);
+                 for (int i = 0; i < count; i++)
+                 {
+
+                     cmbNazivArtikla.Items.Add(db.Database.SqlQuery<string>(upit2).ElementAtOrDefault(i));
 
 
-                }).ToList();
-
-                cmbNazivArtikla.DataSource = roba;//prikazi listu sa id i nazivom artikla
-                cmbNazivArtikla.DisplayMember = "naziv_artikla";
-                cmbNazivArtikla.ValueMember = "ida";
-
-
-
-                partner = db.poslovni_partner.AsEnumerable().Select(p => new poslovni_partner()//napravi novu listu sa id i nazivom
-                {
-                    idPartnera = p.id_partnera,
-                    pos_partner = p.id_partnera + " " + p.naziv
-
-                }).ToList();
-
-                cmbPartner.DataSource = partner;
-                cmbPartner.DisplayMember = "pos_partner";
-                cmbPartner.ValueMember = "idPartnera";
-
-
-               
-
+                }
             
+       
             }//using
         }//partner
 
@@ -105,28 +89,14 @@ namespace Skladiste_ETI.Dokumenti
                 {
                     DateTime datum1;
                     datum1 = dtpDatum.Value;
-                   
-                    string idPartnera1 = "";
-                    
-                    
-
-                    foreach (char a in cmbPartner.Text)
-                    {
-                        if (a == ' ') break;
-                        else
-                        {
-                            idPartnera1 += a;
-                        }
-                    }
-
-
+  
                         dokument dokument = new dokument
 
                         {
                          
-                            korisnik_id_korisnika = int.Parse(textBox2.Text),
+                            korisnik_id_korisnika = int.Parse(id_skladistar),
                             tip_dokumenta_id_tipa = 4,
-                            poslovni_partner_id_partnera = int.Parse(idPartnera1),
+                            poslovni_partner_id_partnera = int.Parse(id_partner),
                             datum = datum1,
                             stanje = "Kreirana",
                             osnova = cmbOsnova.Text,
@@ -137,7 +107,7 @@ namespace Skladiste_ETI.Dokumenti
                         db.dokument.Add(dokument);
                         db.SaveChanges();
 
-                        txtNacinDopreme.Text = "";
+                       
                         MessageBox.Show("Otpremnica je uspješno unesena!");
 
 
@@ -159,7 +129,7 @@ namespace Skladiste_ETI.Dokumenti
             }
             else
             {
-                btnUnosOtpremnice_Click(sender, e);
+               
                 using (var db = new T02_DBEntities())
                 {
 
@@ -212,7 +182,7 @@ namespace Skladiste_ETI.Dokumenti
 
                         txtKolicina.Text = "";
                         txtMasa.Text = "";
-
+                        btnUnosOtpremnice_Click(sender, e);
                         MessageBox.Show("Stavka je unesena!");
 
                     }//if

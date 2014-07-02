@@ -351,22 +351,26 @@ namespace Skladiste_ETI.Dokumenti
             int selectedRow3 = dgvDokumenti.CurrentCell.RowIndex;
             
             string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
-            string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Izdatnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
-           // string partneri= dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
-           string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() +" "+ dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
-           string id_skladistara = dgvDokumenti.Rows[selectedRow3].Cells[10].Value.ToString();
-           string id_partnera = dgvDokumenti.Rows[selectedRow3].Cells[11].Value.ToString();
+            string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Narudzbenica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+            string partneri= dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
+            string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() +" "+ dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
+            string id_skladistara = dgvDokumenti.Rows[selectedRow3].Cells[10].Value.ToString();
+            string id_partnera = dgvDokumenti.Rows[selectedRow3].Cells[11].Value.ToString();
             string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
+            string id_dok = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
 
-            if (tip_dok == "Izdatnica")
+            
+
+
+            if (tip_dok == "Narudzbenica")
             {
 
-                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova,skladistar,id_skladistara,id_partnera);
+                frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova,skladistar,partneri,id_skladistara,id_partnera,id_dok);
                 forma.Show();
             }
             else 
             {
-                MessageBox.Show("Otpremnicu možete kreirati samo na temelju izdatnice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+                MessageBox.Show("Otpremnicu možete kreirati samo na temelju narudzbenice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
             }
 
         }

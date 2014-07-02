@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cmbOsnova = new System.Windows.Forms.ComboBox();
             this.btnUnosOtpremnice = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,6 +98,14 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opis otpremnice";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(303, 33);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(200, 22);
+            this.textBox2.TabIndex = 12;
             // 
             // textBox1
             // 
@@ -222,6 +230,7 @@
             // 
             this.txtKolicina.Location = new System.Drawing.Point(97, 65);
             this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.ReadOnly = true;
             this.txtKolicina.Size = new System.Drawing.Size(266, 22);
             this.txtKolicina.TabIndex = 6;
             // 
@@ -229,6 +238,7 @@
             // 
             this.txtMasa.Location = new System.Drawing.Point(97, 90);
             this.txtMasa.Name = "txtMasa";
+            this.txtMasa.ReadOnly = true;
             this.txtMasa.Size = new System.Drawing.Size(266, 22);
             this.txtMasa.TabIndex = 5;
             // 
@@ -239,6 +249,7 @@
             this.cmbNazivArtikla.Name = "cmbNazivArtikla";
             this.cmbNazivArtikla.Size = new System.Drawing.Size(266, 24);
             this.cmbNazivArtikla.TabIndex = 4;
+            this.cmbNazivArtikla.SelectedIndexChanged += new System.EventHandler(this.cmbNazivArtikla_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -266,14 +277,6 @@
             this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Naziv:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(303, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
-            this.textBox2.TabIndex = 12;
             // 
             // frmOtpremniceIzDokumenta
             // 

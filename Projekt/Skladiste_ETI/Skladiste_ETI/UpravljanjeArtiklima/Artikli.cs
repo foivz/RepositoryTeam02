@@ -89,40 +89,7 @@ namespace Skladiste_ETI
             }
         }
 
-        private void btnAddPosition_Click(object sender, EventArgs e)
-        {
-            if(txtPolica.Text == "")
-            {
-                MessageBox.Show("Niste unijeli broj police!");
-            }
-            else if (txtSektor.Text == "")
-            {
-                MessageBox.Show("Niste unijeli sektor!");
-            }
-            else
-            {
-                using (var db = new T02_DBEntities())
-                {
-                    mjesto pozicija = new mjesto
-                    {
-                        polica = int.Parse(txtPolica.Text),
-                        sektor = txtSektor.Text
-
-                    };
-                    db.mjesto.Add(pozicija);
-                    db.SaveChanges();
-
-                    txtPolica.Text = "";
-                    txtSektor.Text = "";
-
-
-                    PrikaziMjesto();
-                    PrikaziArtikle(mjestoBindingSource.Current as mjesto);
-                    MessageBox.Show("Uspješno dodana pozicija!");
-                    
-                }//using
-            }//else
-        }//click
+     
 
         private void btnDeletePosition_Click(object sender, EventArgs e)
         {

@@ -12,9 +12,11 @@ namespace Skladiste_ETI.Dokumenti
 {
     public partial class frmOtpremniceIzDokumenta : Form
     {
+        int brojacGumba = 0;
         string id_skladistar;
         string id_partner;
-
+        string naziv ;
+        int id_d=0;
         T02_DBEntities context = new T02_DBEntities();
         List<korisnik> zaposlenici = new List<korisnik>();
         List<poslovni_partner> partner = new List<poslovni_partner>();
@@ -32,13 +34,14 @@ namespace Skladiste_ETI.Dokumenti
             textBox2.Text = partneri;
             id_skladistar = id_skladistara;
             id_partner = id_partnera;
-            int id_d = int.Parse(id_dok);
+            id_d = int.Parse(id_dok);
 
             using (var db = new T02_DBEntities())
             {
               
                string upit = string.Format("SELECT artikli_id_artikla FROM stavke WHERE dokument_id_dokumenta ='{0}'", id_dok);
                int count = (db.Database.SqlQuery<int>(upit).Count());
+              
                string upit2= string.Format("select naziv from  artikli join stavke ON artikli.id_artikla=stavke.artikli_id_artikla AND dokument_id_dokumenta = '{0}'", id_dok);
                  for (int i = 0; i < count; i++)
                  {
@@ -121,12 +124,9 @@ namespace Skladiste_ETI.Dokumenti
         {
             if (txtKolicina.Text == "")
             {
-                MessageBox.Show("Niste unijeli dopremljenu količinu!");
+                MessageBox.Show("Nemožete dva puta dodati istu stavku");
             }
-            else if (txtMasa.Text == "")
-            {
-                MessageBox.Show("Niste unijeli dopremljenu masu!");
-            }
+            
             else
             {
                
@@ -158,43 +158,78 @@ namespace Skladiste_ETI.Dokumenti
                             idDokumenta2 += a;
                         }
                     }
+                    brojacGumba++;
+                    if (brojacGumba < 2)
+                    {
+                        btnUnosOtpremnice_Click(sender, e);
+                    }
+                    naziv = cmbNazivArtikla.SelectedItem.ToString();
+                    string query3 = string.Format("select artikli.kolicina from artikli where naziv = '{0}'", naziv);
+                    int kolicina =(db.Database.SqlQuery<int>(query3).FirstOrDefault<int>());
+                   
 
 
-                    string query3 = string.Format("SELECT kolicina FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
-                    int kolicina = db.Database.SqlQuery<int>(query3).FirstOrDefault<int>();
-
-                    string query4 = string.Format("SELECT masa FROM artikli WHERE id_artikla = '{0}'", idArtikla1);
+                    string query4 = string.Format("select artikli.masa from artikli where naziv = '{0}'", naziv);
                     int masaa = db.Database.SqlQuery<int>(query4).FirstOrDefault<int>();
 
-                    if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
-                    {
-                        stavke stavke = new stavke
+                    string query5 = string.Format("select id_artikla from artikli where naziv = '{0}'", naziv);
+                    int idArtikla = db.Database.SqlQuery<int>(query5).FirstOrDefault<int>();
+
+                    string query6 = string.Format("select id_dokumenta from dokument ");
+                    int id_doc = db.Database.SqlQuery<int>(query6).LastOrDefault<int>();
+
+
+                   
+                        if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
                         {
-                            dokument_id_dokumenta = id_dokumenta,
-                            artikli_id_artikla = int.Parse(idArtikla1),
-                            kolicina = int.Parse(txtKolicina.Text),
-                            masa = int.Parse(txtMasa.Text)
+                            stavke stavke = new stavke
+                            {
+                                dokument_id_dokumenta = id_doc,
+                                artikli_id_artikla = idArtikla,
+                                kolicina = int.Parse(txtKolicina.Text),
+                                masa = int.Parse(txtMasa.Text)
 
-                        };
-                        db.stavke.Add(stavke);
+                            };
+                            db.stavke.Add(stavke);
 
-                        db.SaveChanges();
+                            db.SaveChanges();
 
-                        txtKolicina.Text = "";
-                        txtMasa.Text = "";
-                        btnUnosOtpremnice_Click(sender, e);
-                        MessageBox.Show("Stavka je unesena!");
+                            txtKolicina.Text = "";
+                            txtMasa.Text = "";
 
-                    }//if
-                    else 
-                    {
-                        MessageBox.Show("Unijeli ste količinu ili masu stavke koja je veća od stanja na skladištu!");
-                    }
-                  
+                            MessageBox.Show("Stavka je unesena!");
+
+
+                        }//if
+                        else
+                        {
+                            MessageBox.Show("Unijeli ste količinu ili masu stavke koja je veća od stanja na skladištu!");
+                        }
+                    
                 }//using
 
             }//else
 
+        }
+
+        private void cmbNazivArtikla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var db = new T02_DBEntities())
+            {
+                naziv = cmbNazivArtikla.SelectedItem.ToString();
+                string query5 = string.Format("select id_artikla from artikli where naziv = '{0}'", naziv);
+                int idArtikla = db.Database.SqlQuery<int>(query5).FirstOrDefault<int>();
+
+                string query7 = string.Format("select kolicina from stavke where dokument_id_dokumenta = '{0}' and artikli_id_artikla = '{1}' ", id_d,idArtikla);
+                int idStavkaKolicina = db.Database.SqlQuery<int>(query7).FirstOrDefault<int>();
+
+                string query8 = string.Format("select masa from stavke where dokument_id_dokumenta = '{0}'and artikli_id_artikla = '{1}' ", id_d, idArtikla);
+                int idStavkaMasa = db.Database.SqlQuery<int>(query8).FirstOrDefault<int>();
+
+
+                txtKolicina.Text = idStavkaKolicina.ToString();
+                txtMasa.Text = idStavkaMasa.ToString();
+            }
         }
 
 

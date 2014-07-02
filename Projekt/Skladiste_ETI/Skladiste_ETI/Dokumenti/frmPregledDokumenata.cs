@@ -50,6 +50,8 @@ namespace Skladiste_ETI.Dokumenti
                 cmbTip.DataSource = tip;
                 cmbTip.DisplayMember = "listaTipova";
                 cmbTip.ValueMember = "idTipa";
+               
+                
             }
         
         }//konstruktor

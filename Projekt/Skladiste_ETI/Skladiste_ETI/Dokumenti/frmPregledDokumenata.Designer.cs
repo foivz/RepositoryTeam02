@@ -44,6 +44,7 @@
             this.btnIzradaOtpremnice = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTip = new System.Windows.Forms.ComboBox();
+            this.btnIzradiPrimke = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDokumenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,7 +111,7 @@
             this.lblStavke.ForeColor = System.Drawing.Color.Red;
             this.lblStavke.Location = new System.Drawing.Point(160, 417);
             this.lblStavke.Name = "lblStavke";
-            this.lblStavke.Size = new System.Drawing.Size(224, 16);
+            this.lblStavke.Size = new System.Drawing.Size(220, 16);
             this.lblStavke.TabIndex = 4;
             this.lblStavke.Text = "Stavke odabranog dokumenta:";
             // 
@@ -133,7 +134,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(160, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 16);
+            this.label1.Size = new System.Drawing.Size(140, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Kreirani dokumenti:";
             // 
@@ -220,7 +221,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(160, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
+            this.label2.Size = new System.Drawing.Size(102, 16);
             this.label2.TabIndex = 30;
             this.label2.Text = "Odaberite tip:";
             // 
@@ -235,12 +236,23 @@
             this.cmbTip.TabIndex = 31;
             this.cmbTip.SelectedValueChanged += new System.EventHandler(this.cmbTip_SelectedValueChanged);
             // 
+            // btnIzradiPrimke
+            // 
+            this.btnIzradiPrimke.Location = new System.Drawing.Point(37, 581);
+            this.btnIzradiPrimke.Name = "btnIzradiPrimke";
+            this.btnIzradiPrimke.Size = new System.Drawing.Size(75, 23);
+            this.btnIzradiPrimke.TabIndex = 32;
+            this.btnIzradiPrimke.Text = "Primke";
+            this.btnIzradiPrimke.UseVisualStyleBackColor = true;
+            this.btnIzradiPrimke.Click += new System.EventHandler(this.btnIzradiPrimke_Click);
+            // 
             // frmPregledDokumenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1229, 750);
+            this.ClientSize = new System.Drawing.Size(1229, 741);
+            this.Controls.Add(this.btnIzradiPrimke);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnIzradaOtpremnice);
@@ -287,5 +299,6 @@
         private System.Windows.Forms.Button btnIzradaOtpremnice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTip;
+        private System.Windows.Forms.Button btnIzradiPrimke;
     }
 }

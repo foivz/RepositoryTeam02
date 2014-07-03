@@ -222,3 +222,4 @@ C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladi
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\RdlCompile.compiled
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.exe.manifest
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.application
+C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPrimkeIzDokumenata.resources

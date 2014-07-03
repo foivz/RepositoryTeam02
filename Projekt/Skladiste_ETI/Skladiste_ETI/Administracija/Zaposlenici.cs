@@ -121,8 +121,8 @@ namespace Skladiste_ETI.Administracija
                         br_telefona = txtBrTelefona.Text,
                         kor_ime = txtKorIme.Text,
                         lozinka = txtLozinka.Text,
-                        status = txtStatus.Text
-
+                        status = txtStatus.Text,
+                        tip_korisnika_id_tipa =1
                     };
 
                     db.korisnik.Add(zaposlenik);

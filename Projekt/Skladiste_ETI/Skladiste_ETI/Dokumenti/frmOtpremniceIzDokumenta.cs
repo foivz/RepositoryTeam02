@@ -133,31 +133,6 @@ namespace Skladiste_ETI.Dokumenti
                 using (var db = new T02_DBEntities())
                 {
 
-                    string upit = string.Format("SELECT MAX(id_dokumenta) FROM dokument");
-                    int id_dokumenta = db.Database.SqlQuery<int>(upit).FirstOrDefault<int>();
-                    string idArtikla1 = "";
-                    string idDokumenta2 = "";
-
-
-
-                    foreach (char a in cmbNazivArtikla.Text)
-                    {
-                        if (a == ' ') break;
-                        else
-                        {
-                            idArtikla1 += a;
-                        }
-
-                    }
-
-                    foreach (char a in cmbOsnova.Text)
-                    {
-                        if (a == ' ') break;
-                        else
-                        {
-                            idDokumenta2 += a;
-                        }
-                    }
                     brojacGumba++;
                     if (brojacGumba < 2)
                     {

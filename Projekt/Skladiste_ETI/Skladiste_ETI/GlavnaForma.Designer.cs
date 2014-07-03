@@ -31,13 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnArtikli = new System.Windows.Forms.Button();
-            this.btnOtpremanje = new System.Windows.Forms.Button();
-            this.btnZaprimanje = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnIzdatnica = new System.Windows.Forms.Button();
-            this.btnOtpremnica = new System.Windows.Forms.Button();
-            this.btnPrimka = new System.Windows.Forms.Button();
             this.btnPredatnica = new System.Windows.Forms.Button();
             this.lblUlogiran = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,13 +53,10 @@
             this.administracijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.poslovniPartneriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledDokumenataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -74,7 +67,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnPregledDokumenata = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.pregledDokumenataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,32 +86,6 @@
             this.btnArtikli.Click += new System.EventHandler(this.btnArtikli_Click);
             this.btnArtikli.MouseHover += new System.EventHandler(this.btnArtikl_MouseHover);
             // 
-            // btnOtpremanje
-            // 
-            this.btnOtpremanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnOtpremanje.FlatAppearance.BorderSize = 0;
-            this.btnOtpremanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtpremanje.Image = ((System.Drawing.Image)(resources.GetObject("btnOtpremanje.Image")));
-            this.btnOtpremanje.Location = new System.Drawing.Point(296, 232);
-            this.btnOtpremanje.Name = "btnOtpremanje";
-            this.btnOtpremanje.Size = new System.Drawing.Size(180, 156);
-            this.btnOtpremanje.TabIndex = 2;
-            this.btnOtpremanje.UseVisualStyleBackColor = false;
-            this.btnOtpremanje.MouseHover += new System.EventHandler(this.btnOtpremanje_MouseHover);
-            // 
-            // btnZaprimanje
-            // 
-            this.btnZaprimanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnZaprimanje.FlatAppearance.BorderSize = 0;
-            this.btnZaprimanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZaprimanje.Image = ((System.Drawing.Image)(resources.GetObject("btnZaprimanje.Image")));
-            this.btnZaprimanje.Location = new System.Drawing.Point(482, 232);
-            this.btnZaprimanje.Name = "btnZaprimanje";
-            this.btnZaprimanje.Size = new System.Drawing.Size(180, 156);
-            this.btnZaprimanje.TabIndex = 3;
-            this.btnZaprimanje.UseVisualStyleBackColor = false;
-            this.btnZaprimanje.MouseHover += new System.EventHandler(this.btnZaprimanje_MouseHover);
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -136,54 +102,24 @@
             this.btnIzdatnica.FlatAppearance.BorderSize = 0;
             this.btnIzdatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzdatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnIzdatnica.Image")));
-            this.btnIzdatnica.Location = new System.Drawing.Point(327, 195);
+            this.btnIzdatnica.Location = new System.Drawing.Point(308, 280);
             this.btnIzdatnica.Name = "btnIzdatnica";
             this.btnIzdatnica.Size = new System.Drawing.Size(127, 124);
             this.btnIzdatnica.TabIndex = 6;
             this.btnIzdatnica.UseVisualStyleBackColor = true;
-            this.btnIzdatnica.Visible = false;
             this.btnIzdatnica.Click += new System.EventHandler(this.btnIzdatnica_Click);
             this.btnIzdatnica.MouseHover += new System.EventHandler(this.btnIzdatnice_MouseHover);
-            // 
-            // btnOtpremnica
-            // 
-            this.btnOtpremnica.FlatAppearance.BorderSize = 0;
-            this.btnOtpremnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtpremnica.Image = ((System.Drawing.Image)(resources.GetObject("btnOtpremnica.Image")));
-            this.btnOtpremnica.Location = new System.Drawing.Point(327, 342);
-            this.btnOtpremnica.Name = "btnOtpremnica";
-            this.btnOtpremnica.Size = new System.Drawing.Size(127, 129);
-            this.btnOtpremnica.TabIndex = 7;
-            this.btnOtpremnica.UseVisualStyleBackColor = true;
-            this.btnOtpremnica.Visible = false;
-            this.btnOtpremnica.Click += new System.EventHandler(this.btnOtpremnica_Click);
-            this.btnOtpremnica.MouseHover += new System.EventHandler(this.btnOtpremnica_MouseHover);
-            // 
-            // btnPrimka
-            // 
-            this.btnPrimka.FlatAppearance.BorderSize = 0;
-            this.btnPrimka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrimka.Image = ((System.Drawing.Image)(resources.GetObject("btnPrimka.Image")));
-            this.btnPrimka.Location = new System.Drawing.Point(506, 342);
-            this.btnPrimka.Name = "btnPrimka";
-            this.btnPrimka.Size = new System.Drawing.Size(127, 129);
-            this.btnPrimka.TabIndex = 8;
-            this.btnPrimka.UseVisualStyleBackColor = true;
-            this.btnPrimka.Visible = false;
-            this.btnPrimka.Click += new System.EventHandler(this.btnPrimka_Click);
-            this.btnPrimka.MouseHover += new System.EventHandler(this.btnPrimka_MouseHover);
             // 
             // btnPredatnica
             // 
             this.btnPredatnica.FlatAppearance.BorderSize = 0;
             this.btnPredatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPredatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnPredatnica.Image")));
-            this.btnPredatnica.Location = new System.Drawing.Point(506, 195);
+            this.btnPredatnica.Location = new System.Drawing.Point(506, 280);
             this.btnPredatnica.Name = "btnPredatnica";
             this.btnPredatnica.Size = new System.Drawing.Size(127, 124);
             this.btnPredatnica.TabIndex = 9;
             this.btnPredatnica.UseVisualStyleBackColor = true;
-            this.btnPredatnica.Visible = false;
             this.btnPredatnica.Click += new System.EventHandler(this.btnPredatnica_Click);
             this.btnPredatnica.MouseEnter += new System.EventHandler(this.btnPredatnica_MouseEnter);
             // 
@@ -346,45 +282,32 @@
             this.poslovniPartneriToolStripMenuItem.Text = "Poslovni partneri";
             this.poslovniPartneriToolStripMenuItem.Click += new System.EventHandler(this.btnPartneri_Click);
             // 
+            // pregledDokumenataToolStripMenuItem
+            // 
+            this.pregledDokumenataToolStripMenuItem.Name = "pregledDokumenataToolStripMenuItem";
+            this.pregledDokumenataToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.pregledDokumenataToolStripMenuItem.Text = "Pregled dokumenata";
+            this.pregledDokumenataToolStripMenuItem.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(335, 168);
+            this.label1.Location = new System.Drawing.Point(305, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Izraditi izdatnice";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(335, 484);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Izraditi otpremnice";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(512, 168);
+            this.label3.Location = new System.Drawing.Point(493, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Izraditi predatnice";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(524, 484);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Izraditi primke";
             // 
             // label5
             // 
@@ -394,24 +317,6 @@
             this.label5.Size = new System.Drawing.Size(122, 13);
             this.label5.TabIndex = 18;
             this.label5.Text = "Upravljanje artiklima";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 391);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Otpremanje robe";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(512, 391);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 13);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Zaprimanje robe";
             // 
             // label8
             // 
@@ -531,20 +436,13 @@
             this.label13.TabIndex = 30;
             this.label13.Text = "Pregled dokumenata";
             // 
-            // pregledDokumenataToolStripMenuItem
-            // 
-            this.pregledDokumenataToolStripMenuItem.Name = "pregledDokumenataToolStripMenuItem";
-            this.pregledDokumenataToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
-            this.pregledDokumenataToolStripMenuItem.Text = "Pregled dokumenata";
-            this.pregledDokumenataToolStripMenuItem.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1220, 750);
+            this.ClientSize = new System.Drawing.Size(1220, 741);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnPregledDokumenata);
             this.Controls.Add(this.label12);
@@ -555,24 +453,16 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUloga);
             this.Controls.Add(this.lblZaposlenik);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblUlogiran);
             this.Controls.Add(this.btnPredatnica);
-            this.Controls.Add(this.btnPrimka);
-            this.Controls.Add(this.btnOtpremnica);
             this.Controls.Add(this.btnIzdatnica);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.btnZaprimanje);
-            this.Controls.Add(this.btnOtpremanje);
             this.Controls.Add(this.btnArtikli);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -594,13 +484,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnArtikli;
-        private System.Windows.Forms.Button btnOtpremanje;
-        private System.Windows.Forms.Button btnZaprimanje;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnIzdatnica;
-        private System.Windows.Forms.Button btnOtpremnica;
-        private System.Windows.Forms.Button btnPrimka;
         private System.Windows.Forms.Button btnPredatnica;
         private System.Windows.Forms.Label lblUlogiran;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -620,12 +506,8 @@
         private System.Windows.Forms.ToolStripMenuItem zaposleniciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem poslovniPartneriToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

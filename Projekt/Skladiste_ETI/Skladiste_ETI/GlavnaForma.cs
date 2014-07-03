@@ -48,11 +48,6 @@ namespace Skladiste_ETI
                     label11.Visible = true;
                     label12.Visible = true;
                     btnArtikli.Visible = false;
-                    btnOtpremanje.Visible = false;
-                    btnZaprimanje.Visible = false;
-                    label5.Visible = false;
-                    label6.Visible = false;
-                    label7.Visible = false;
                     administracijaToolStripMenuItem.Visible = true;
                     upravljanjeArtiklimaToolStripMenuItem.Visible = false;
                     otpremanjeRobeToolStripMenuItem.Visible = false;
@@ -70,9 +65,9 @@ namespace Skladiste_ETI
          
             this.lblUser.Text = UserInformation.CurrentLoggedInUser;
             label1.Visible = false;
-            label2.Visible = false;
+            
             label3.Visible = false;
-            label4.Visible = false;
+            
             label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label9.Text = DateTime.Now.DayOfWeek.ToString();
             
@@ -88,22 +83,18 @@ namespace Skladiste_ETI
         private void btnOtpremanje_MouseHover(object sender, EventArgs e)
         {
 
-            btnOtpremanje.Visible = false;
+            
             btnIzdatnica.Visible = true;
-            btnOtpremnica.Visible = true;
             label1.Visible = true;
-            label2.Visible = true;
-            label6.Visible = false;
+          
         }
 
         private void btnZaprimanje_MouseHover(object sender, EventArgs e)
         {
-            btnZaprimanje.Visible = false;
+            
             btnPredatnica.Visible = true;
-            btnPrimka.Visible = true;
             label3.Visible = true;
-            label4.Visible = true;
-            label7.Visible = false;
+        
         }
 
    
@@ -132,11 +123,7 @@ namespace Skladiste_ETI
             
         }
 
-        private void btnOtpremnica_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnOtpremnica, "Izraditi otpremnice");
-        }
+        
 
         private void btnIzdatnice_MouseHover(object sender, EventArgs e)
         {
@@ -144,11 +131,7 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnIzdatnica, "Izraditi izdatnice");
         }
 
-        private void btnPrimka_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnPrimka, "Izraditi primke");
-        }
+     
 
         private void btnPredatnica_MouseEnter(object sender, EventArgs e)
         {

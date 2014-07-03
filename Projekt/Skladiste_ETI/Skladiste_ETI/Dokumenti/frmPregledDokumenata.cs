@@ -267,11 +267,13 @@ namespace Skladiste_ETI.Dokumenti
             if (tip_dok2 == "Otpremnica" && stanje2 == "Kreirana" && uloga2 == 2)
             {
                 btnOdobri.Visible = true;
+                
 
             }//if
             else 
             {
                 btnOdobri.Visible = false;
+                
             }
 
         }
@@ -369,6 +371,7 @@ namespace Skladiste_ETI.Dokumenti
 
                 frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova,skladistar,partneri,id_skladistara,id_partnera,id_dok);
                 forma.Show();
+               
             }
             else 
             {
@@ -376,6 +379,37 @@ namespace Skladiste_ETI.Dokumenti
             }
 
         }
+
+        private void btnIzradiPrimke_Click(object sender, EventArgs e)
+        {
+            int selectedRow4 = dgvDokumenti.CurrentCell.RowIndex;
+
+            string trans = dgvDokumenti.Rows[selectedRow4].Cells[8].Value.ToString();
+            string osnova = dgvDokumenti.Rows[selectedRow4].Cells[0].Value.ToString() + " | " + " VanjskaOtpremnica br. " + dgvDokumenti.Rows[selectedRow4].Cells[0].Value.ToString();
+            string partneri = dgvDokumenti.Rows[selectedRow4].Cells[2].Value.ToString();
+            string skladistar = dgvDokumenti.Rows[selectedRow4].Cells[4].Value.ToString() + " " + dgvDokumenti.Rows[selectedRow4].Cells[5].Value.ToString();
+            string id_skladistara = dgvDokumenti.Rows[selectedRow4].Cells[10].Value.ToString();
+            string id_partnera = dgvDokumenti.Rows[selectedRow4].Cells[11].Value.ToString();
+            string tip_dok = dgvDokumenti.Rows[selectedRow4].Cells[1].Value.ToString();
+            string id_dok = dgvDokumenti.Rows[selectedRow4].Cells[0].Value.ToString();
+
+
+
+
+            if (tip_dok == "VanjskaOtpremnica")
+            {
+
+              
+                frmPrimkeIzDokumenata forma2 = new frmPrimkeIzDokumenata(trans, osnova, skladistar, partneri, id_skladistara, id_partnera, id_dok);
+                forma2.Show();
+            }
+            else
+            {
+                MessageBox.Show("Primku možete kreirati samo na temelju vanjske otpremnice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+            }
+        }
+
+
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
@@ -403,15 +437,16 @@ namespace Skladiste_ETI.Dokumenti
                 izdatnica.Show();
             }
 
-            if (tip_dok3 == "Otpremnica" && stanje == "Odobrena")
+            if (tip_dok3 == "Otpremnica" && stanje != "Odobrena")
             {
-                frmOtpremnicaIzvjestaj otpremnica = new frmOtpremnicaIzvjestaj(id_dok3);
-                otpremnica.Show();
-            }
-            else 
-            {
+              
                 MessageBox.Show("Ne možete ispisivati otpremnicu koja nije odobrena!");
             }
+            else if(tip_dok3 == "Otpremnica" && stanje == "Odobrena")
+                {
+                    frmOtpremnicaIzvjestaj otpremnica = new frmOtpremnicaIzvjestaj(id_dok3);
+                    otpremnica.Show();
+                }
        
         }//click
 
@@ -483,7 +518,10 @@ namespace Skladiste_ETI.Dokumenti
             }
 
 
-        }//click
+        }
+
+       
+        //click
 
      
     }

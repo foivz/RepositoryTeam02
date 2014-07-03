@@ -138,6 +138,12 @@
     <Compile Include="Dokumenti\frmPregledDokumenata.Designer.cs">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dokumenti\frmPrimkeIzDokumenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dokumenti\frmPrimkeIzDokumenata.Designer.cs">
+      <DependentUpon>frmPrimkeIzDokumenata.cs</DependentUpon>
+    </Compile>
     <Compile Include="IzdatnicaIzvjestaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dokumenti\frmPregledDokumenata.resx">
       <DependentUpon>frmPregledDokumenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dokumenti\frmPrimkeIzDokumenata.resx">
+      <DependentUpon>frmPrimkeIzDokumenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IzdatnicaIzvjestaj.resx">
       <DependentUpon>IzdatnicaIzvjestaj.cs</DependentUpon>

@@ -145,45 +145,52 @@ namespace Skladiste_ETI
             }
             else
             {
-
-                using (var db = new T02_DBEntities())
+                try
                 {
-
-                    string id_pozicije = "";
-
-                    foreach(char a in cmbMjesto.Text)
+                    using (var db = new T02_DBEntities())
                     {
-                        if (a == ' ') break;
-                        else 
+
+                        string id_pozicije = "";
+
+                        foreach (char a in cmbMjesto.Text)
                         {
-                            id_pozicije += a;
+                            if (a == ' ') break;
+                            else
+                            {
+                                id_pozicije += a;
+                            }
                         }
-                    }
 
-                    artikli roba = new artikli
-                    {
-                        naziv = txtNaziv.Text,
-                        cijena = float.Parse(txtCijena.Text),
-                        kolicina = int.Parse(txtKolicina.Text),
-                        masa = int.Parse(txtMasa.Text),
-                        mjesto_id_mjesta = int.Parse(id_pozicije)
-                    };
+                        artikli roba = new artikli
+                        {
+                            naziv = txtNaziv.Text,
+                            cijena = float.Parse(txtCijena.Text),
+                            kolicina = int.Parse(txtKolicina.Text),
+                            masa = int.Parse(txtMasa.Text),
+                            mjesto_id_mjesta = int.Parse(id_pozicije)
+                        };
 
-                    db.artikli.Add(roba);
-                    db.SaveChanges();
+                        db.artikli.Add(roba);
+                        db.SaveChanges();
 
 
-                }//using
+                    }//using
 
-                txtNaziv.Text = "";
-                txtCijena.Text = "";
-                txtKolicina.Text = "";
-                txtMasa.Text = "";
+                    txtNaziv.Text = "";
+                    txtCijena.Text = "";
+                    txtKolicina.Text = "";
+                    txtMasa.Text = "";
 
-                
-                PrikaziMjesto();
-                PrikaziArtikle(mjestoBindingSource.Current as mjesto);
-                MessageBox.Show("Artikl je uspješno dodan!");
+
+                    PrikaziMjesto();
+                    PrikaziArtikle(mjestoBindingSource.Current as mjesto);
+                    MessageBox.Show("Artikl je uspješno dodan!");
+                }
+                catch
+                {
+                    MessageBox.Show("Na mjesto cijene, mase i količine morate unijeti brojeve");
+
+                }
                 
             }//else
         }//click

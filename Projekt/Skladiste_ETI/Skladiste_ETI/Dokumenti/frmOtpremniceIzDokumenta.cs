@@ -154,7 +154,7 @@ namespace Skladiste_ETI.Dokumenti
                     int id_doc = db.Database.SqlQuery<int>(query6).LastOrDefault<int>();
 
 
-                   
+                    //micanje robe sa skladista i provjera minimalne kolicine
                         if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
                         {
                             stavke stavke = new stavke

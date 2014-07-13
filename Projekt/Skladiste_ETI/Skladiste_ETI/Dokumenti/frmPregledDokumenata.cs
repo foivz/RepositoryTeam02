@@ -31,11 +31,18 @@ namespace Skladiste_ETI.Dokumenti
             {
                 btnChange.Visible = true;
                 btnIzradaOtpremnice.Visible = false;
+                btnIzradiPrimke.Visible = false;
+                btnIzradaIzdatnice.Visible = false;
+                btnPredatnica.Visible = false;
+                   
             }
             else 
             {
                 btnChange.Visible = false;
                 btnIzradaOtpremnice.Visible = true;
+                btnIzradiPrimke.Visible = true;
+                btnIzradaIzdatnice.Visible = true;
+                btnPredatnica.Visible = true;
             }
 
             using (var db = new T02_DBEntities())
@@ -53,12 +60,8 @@ namespace Skladiste_ETI.Dokumenti
                
                 
             }
-           
-                if (cmbTip.SelectionLength == 12)
-                {
-                  
-                    cmbTip.ForeColor = Color.Red;
-                }
+
+            
 
                 
         
@@ -182,6 +185,25 @@ namespace Skladiste_ETI.Dokumenti
         {
             this.Close();
         }
+
+        private void btnPredatnica_MouseEnter(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnPredatnica, "Izrada predatnice");
+        }
+
+        private void btnIzradaIzdatnice_MouseEnter(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnIzradaIzdatnice, "Izrada izdatnice");
+        }
+
+        private void btnIzradiPrimke_MouseEnter(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.btnIzradiPrimke, "Izradi primku");
+        }
+
 
         private void btnPrint_MouseHover(object sender, EventArgs e)
         {
@@ -413,7 +435,7 @@ namespace Skladiste_ETI.Dokumenti
             }
             else
             {
-                MessageBox.Show("Predatnicu možete kreirati samo na temelju dokumenta o sirovinama!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+                MessageBox.Show("Predatnicu možete kreirati samo na temelju unutarnje otpremnice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
             }
         }
 

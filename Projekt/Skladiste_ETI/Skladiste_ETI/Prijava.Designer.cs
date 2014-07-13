@@ -74,9 +74,9 @@
             // btnIzlaz
             // 
             this.btnIzlaz.Image = ((System.Drawing.Image)(resources.GetObject("btnIzlaz.Image")));
-            this.btnIzlaz.Location = new System.Drawing.Point(253, 317);
+            this.btnIzlaz.Location = new System.Drawing.Point(259, 317);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(72, 57);
+            this.btnIzlaz.Size = new System.Drawing.Size(66, 57);
             this.btnIzlaz.TabIndex = 4;
             this.btnIzlaz.UseVisualStyleBackColor = true;
             this.btnIzlaz.Click += new System.EventHandler(this.button2_Click);
@@ -93,9 +93,9 @@
             // btnSubmit
             // 
             this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
-            this.btnSubmit.Location = new System.Drawing.Point(62, 317);
+            this.btnSubmit.Location = new System.Drawing.Point(187, 317);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(72, 57);
+            this.btnSubmit.Size = new System.Drawing.Size(66, 57);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.button1_Click);

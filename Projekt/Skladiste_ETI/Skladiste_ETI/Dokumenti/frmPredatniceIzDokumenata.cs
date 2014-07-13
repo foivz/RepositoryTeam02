@@ -156,8 +156,7 @@ namespace Skladiste_ETI.Dokumenti
 
 
 
-                    if (int.Parse(txtKolicina.Text) <= kolicina && int.Parse(txtMasa.Text) <= masaa)
-                    {
+                   //dodavanje na skladiste
                         stavke stavke = new stavke
                         {
                             dokument_id_dokumenta = id_doc,
@@ -184,11 +183,7 @@ namespace Skladiste_ETI.Dokumenti
                         MessageBox.Show("Predatnica je unesena!");
 
 
-                    }//if
-                    else
-                    {
-                        MessageBox.Show("Unijeli ste količinu ili masu stavke koja je veća od stanja na skladištu!");
-                    }
+                   
 
                 }//using
 

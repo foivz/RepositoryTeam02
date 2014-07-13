@@ -208,7 +208,7 @@
             this.btnIzradaOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.Black;
             this.btnIzradaOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaOtpremnice.Image")));
-            this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 366);
+            this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 458);
             this.btnIzradaOtpremnice.Name = "btnIzradaOtpremnice";
             this.btnIzradaOtpremnice.Size = new System.Drawing.Size(114, 87);
             this.btnIzradaOtpremnice.TabIndex = 29;
@@ -243,12 +243,13 @@
             this.btnIzradiPrimke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzradiPrimke.ForeColor = System.Drawing.Color.Black;
             this.btnIzradiPrimke.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradiPrimke.Image")));
-            this.btnIzradiPrimke.Location = new System.Drawing.Point(23, 459);
+            this.btnIzradiPrimke.Location = new System.Drawing.Point(23, 366);
             this.btnIzradiPrimke.Name = "btnIzradiPrimke";
             this.btnIzradiPrimke.Size = new System.Drawing.Size(114, 86);
             this.btnIzradiPrimke.TabIndex = 32;
             this.btnIzradiPrimke.UseVisualStyleBackColor = true;
             this.btnIzradiPrimke.Click += new System.EventHandler(this.btnIzradiPrimke_Click);
+            this.btnIzradiPrimke.MouseEnter += new System.EventHandler(this.btnIzradiPrimke_MouseEnter);
             // 
             // btnIzradaIzdatnice
             // 
@@ -260,6 +261,7 @@
             this.btnIzradaIzdatnice.TabIndex = 33;
             this.btnIzradaIzdatnice.UseVisualStyleBackColor = true;
             this.btnIzradaIzdatnice.Click += new System.EventHandler(this.btnIzradaIzdatnice_Click);
+            this.btnIzradaIzdatnice.MouseEnter += new System.EventHandler(this.btnIzradaIzdatnice_MouseEnter);
             // 
             // btnPredatnica
             // 
@@ -271,6 +273,7 @@
             this.btnPredatnica.TabIndex = 34;
             this.btnPredatnica.UseVisualStyleBackColor = true;
             this.btnPredatnica.Click += new System.EventHandler(this.btnPredatnica_Click);
+            this.btnPredatnica.MouseEnter += new System.EventHandler(this.btnPredatnica_MouseEnter);
             // 
             // frmPregledDokumenata
             // 

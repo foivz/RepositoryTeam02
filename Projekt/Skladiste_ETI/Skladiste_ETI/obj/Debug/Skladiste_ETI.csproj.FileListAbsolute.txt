@@ -105,7 +105,9 @@ C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladi
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmLogin.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmArtikli.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.UpravljanjeArtiklima.frmIzmjenaArtikla.resources
+C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPredatnice.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmMain.resources
+C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPrimke.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Properties.Resources.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\embalint\Desktop\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmIzdatnice.resources
@@ -212,6 +214,8 @@ C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladi
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmOtpremnicaIzvjestaj.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPredatnicaIzvjestaj.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPrimkaIzvjestaj.resources
+C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmIzdatnice.resources
+C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.OtpremanjeRobe.frmOtpremnica.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmSkladisnicaIzvjestaj.resources
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\RdlCompile.cache
 C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\RdlCompile.compiled
@@ -220,6 +224,3 @@ C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladi
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPrimkeIzDokumenata.resources
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPredatniceIzDokumenata.resources
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzdatniceIzDokumenata.resources
-C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzdatniceIzDokumenata.resources
-C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPredatniceIzDokumenata.resources
-C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPrimkeIzDokumenata.resources

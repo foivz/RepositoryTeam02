@@ -53,11 +53,11 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.Red;
             this.lblPass.Location = new System.Drawing.Point(58, 258);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(87, 24);
+            this.lblPass.Size = new System.Drawing.Size(101, 25);
             this.lblPass.TabIndex = 1;
             this.lblPass.Text = "Lozinka:";
             // 
@@ -74,9 +74,9 @@
             // btnIzlaz
             // 
             this.btnIzlaz.Image = ((System.Drawing.Image)(resources.GetObject("btnIzlaz.Image")));
-            this.btnIzlaz.Location = new System.Drawing.Point(250, 322);
+            this.btnIzlaz.Location = new System.Drawing.Point(253, 317);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(75, 40);
+            this.btnIzlaz.Size = new System.Drawing.Size(72, 57);
             this.btnIzlaz.TabIndex = 4;
             this.btnIzlaz.UseVisualStyleBackColor = true;
             this.btnIzlaz.Click += new System.EventHandler(this.button2_Click);
@@ -93,9 +93,9 @@
             // btnSubmit
             // 
             this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
-            this.btnSubmit.Location = new System.Drawing.Point(62, 322);
+            this.btnSubmit.Location = new System.Drawing.Point(62, 317);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(86, 40);
+            this.btnSubmit.Size = new System.Drawing.Size(72, 57);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.button1_Click);

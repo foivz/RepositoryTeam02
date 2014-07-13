@@ -33,8 +33,6 @@
             this.btnArtikli = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnIzdatnica = new System.Windows.Forms.Button();
-            this.btnPredatnica = new System.Windows.Forms.Button();
             this.lblUlogiran = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblZaposlenik = new System.Windows.Forms.Label();
@@ -44,18 +42,10 @@
             this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odjavaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upravljanjeArtiklimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otpremanjeRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izraditiIzdatniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izraditiOtpremniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zaprimanjeRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izraditiPrimkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izraditiPredatniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.poslovniPartneriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledDokumenataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -96,32 +86,6 @@
             this.lblUser.Size = new System.Drawing.Size(129, 32);
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "UserName";
-            // 
-            // btnIzdatnica
-            // 
-            this.btnIzdatnica.FlatAppearance.BorderSize = 0;
-            this.btnIzdatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzdatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnIzdatnica.Image")));
-            this.btnIzdatnica.Location = new System.Drawing.Point(308, 280);
-            this.btnIzdatnica.Name = "btnIzdatnica";
-            this.btnIzdatnica.Size = new System.Drawing.Size(127, 124);
-            this.btnIzdatnica.TabIndex = 6;
-            this.btnIzdatnica.UseVisualStyleBackColor = true;
-            this.btnIzdatnica.Click += new System.EventHandler(this.btnIzdatnica_Click);
-            this.btnIzdatnica.MouseHover += new System.EventHandler(this.btnIzdatnice_MouseHover);
-            // 
-            // btnPredatnica
-            // 
-            this.btnPredatnica.FlatAppearance.BorderSize = 0;
-            this.btnPredatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPredatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnPredatnica.Image")));
-            this.btnPredatnica.Location = new System.Drawing.Point(506, 280);
-            this.btnPredatnica.Name = "btnPredatnica";
-            this.btnPredatnica.Size = new System.Drawing.Size(127, 124);
-            this.btnPredatnica.TabIndex = 9;
-            this.btnPredatnica.UseVisualStyleBackColor = true;
-            this.btnPredatnica.Click += new System.EventHandler(this.btnPredatnica_Click);
-            this.btnPredatnica.MouseEnter += new System.EventHandler(this.btnPredatnica_MouseEnter);
             // 
             // lblUlogiran
             // 
@@ -172,8 +136,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aplikacijaToolStripMenuItem,
             this.upravljanjeArtiklimaToolStripMenuItem,
-            this.otpremanjeRobeToolStripMenuItem,
-            this.zaprimanjeRobeToolStripMenuItem,
             this.administracijaToolStripMenuItem,
             this.pregledDokumenataToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -213,52 +175,6 @@
             this.upravljanjeArtiklimaToolStripMenuItem.Text = "Upravljanje artiklima";
             this.upravljanjeArtiklimaToolStripMenuItem.Click += new System.EventHandler(this.btnArtikli_Click);
             // 
-            // otpremanjeRobeToolStripMenuItem
-            // 
-            this.otpremanjeRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izraditiIzdatniceToolStripMenuItem,
-            this.izraditiOtpremniceToolStripMenuItem});
-            this.otpremanjeRobeToolStripMenuItem.Name = "otpremanjeRobeToolStripMenuItem";
-            this.otpremanjeRobeToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
-            this.otpremanjeRobeToolStripMenuItem.Text = "Otpremanje robe";
-            // 
-            // izraditiIzdatniceToolStripMenuItem
-            // 
-            this.izraditiIzdatniceToolStripMenuItem.Name = "izraditiIzdatniceToolStripMenuItem";
-            this.izraditiIzdatniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.izraditiIzdatniceToolStripMenuItem.Text = "Izraditi izdatnice";
-            this.izraditiIzdatniceToolStripMenuItem.Click += new System.EventHandler(this.btnIzdatnica_Click);
-            // 
-            // izraditiOtpremniceToolStripMenuItem
-            // 
-            this.izraditiOtpremniceToolStripMenuItem.Name = "izraditiOtpremniceToolStripMenuItem";
-            this.izraditiOtpremniceToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.izraditiOtpremniceToolStripMenuItem.Text = "Izraditi otpremnice";
-            this.izraditiOtpremniceToolStripMenuItem.Click += new System.EventHandler(this.btnOtpremnica_Click);
-            // 
-            // zaprimanjeRobeToolStripMenuItem
-            // 
-            this.zaprimanjeRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izraditiPrimkeToolStripMenuItem,
-            this.izraditiPredatniceToolStripMenuItem});
-            this.zaprimanjeRobeToolStripMenuItem.Name = "zaprimanjeRobeToolStripMenuItem";
-            this.zaprimanjeRobeToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.zaprimanjeRobeToolStripMenuItem.Text = "Zaprimanje robe";
-            // 
-            // izraditiPrimkeToolStripMenuItem
-            // 
-            this.izraditiPrimkeToolStripMenuItem.Name = "izraditiPrimkeToolStripMenuItem";
-            this.izraditiPrimkeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.izraditiPrimkeToolStripMenuItem.Text = "Izraditi primke";
-            this.izraditiPrimkeToolStripMenuItem.Click += new System.EventHandler(this.btnPrimka_Click);
-            // 
-            // izraditiPredatniceToolStripMenuItem
-            // 
-            this.izraditiPredatniceToolStripMenuItem.Name = "izraditiPredatniceToolStripMenuItem";
-            this.izraditiPredatniceToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.izraditiPredatniceToolStripMenuItem.Text = "Izraditi predatnice";
-            this.izraditiPredatniceToolStripMenuItem.Click += new System.EventHandler(this.btnPredatnica_Click);
-            // 
             // administracijaToolStripMenuItem
             // 
             this.administracijaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -288,26 +204,6 @@
             this.pregledDokumenataToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.pregledDokumenataToolStripMenuItem.Text = "Pregled dokumenata";
             this.pregledDokumenataToolStripMenuItem.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(305, 224);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Izraditi izdatnice";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(493, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Izraditi predatnice";
             // 
             // label5
             // 
@@ -419,7 +315,7 @@
             this.btnPregledDokumenata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregledDokumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPregledDokumenata.Image = ((System.Drawing.Image)(resources.GetObject("btnPregledDokumenata.Image")));
-            this.btnPregledDokumenata.Location = new System.Drawing.Point(690, 255);
+            this.btnPregledDokumenata.Location = new System.Drawing.Point(323, 240);
             this.btnPregledDokumenata.Name = "btnPregledDokumenata";
             this.btnPregledDokumenata.Size = new System.Drawing.Size(123, 110);
             this.btnPregledDokumenata.TabIndex = 29;
@@ -430,7 +326,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(691, 391);
+            this.label13.Location = new System.Drawing.Point(323, 391);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 13);
             this.label13.TabIndex = 30;
@@ -454,14 +350,10 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUloga);
             this.Controls.Add(this.lblZaposlenik);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblUlogiran);
-            this.Controls.Add(this.btnPredatnica);
-            this.Controls.Add(this.btnIzdatnica);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnArtikli);
             this.Controls.Add(this.menuStrip1);
@@ -486,8 +378,6 @@
         private System.Windows.Forms.Button btnArtikli;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button btnIzdatnica;
-        private System.Windows.Forms.Button btnPredatnica;
         private System.Windows.Forms.Label lblUlogiran;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblZaposlenik;
@@ -496,17 +386,9 @@
         private System.Windows.Forms.ToolStripMenuItem aplikacijaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izlazToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem upravljanjeArtiklimaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otpremanjeRobeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izraditiIzdatniceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izraditiOtpremniceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zaprimanjeRobeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izraditiPrimkeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izraditiPredatniceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administracijaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zaposleniciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem poslovniPartneriToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

@@ -50,8 +50,7 @@ namespace Skladiste_ETI
                     btnArtikli.Visible = false;
                     administracijaToolStripMenuItem.Visible = true;
                     upravljanjeArtiklimaToolStripMenuItem.Visible = false;
-                    otpremanjeRobeToolStripMenuItem.Visible = false;
-                    zaprimanjeRobeToolStripMenuItem.Visible = false;
+                   
                     btnZaposlenici.Location = new System.Drawing.Point(86, 232);
                     btnPartneri.Location = new System.Drawing.Point(296, 232);
                     btnPregledDokumenata.Location = new System.Drawing.Point(482, 232);
@@ -64,9 +63,9 @@ namespace Skladiste_ETI
             }
          
             this.lblUser.Text = UserInformation.CurrentLoggedInUser;
-            label1.Visible = false;
             
-            label3.Visible = false;
+            
+           
             
             label8.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label9.Text = DateTime.Now.DayOfWeek.ToString();
@@ -80,64 +79,7 @@ namespace Skladiste_ETI
             ToolTip1.SetToolTip(this.btnArtikli, "Upravljanje artiklima");
         }
 
-        private void btnOtpremanje_MouseHover(object sender, EventArgs e)
-        {
-
-            
-            btnIzdatnica.Visible = true;
-            label1.Visible = true;
-          
-        }
-
-        private void btnZaprimanje_MouseHover(object sender, EventArgs e)
-        {
-            
-            btnPredatnica.Visible = true;
-            label3.Visible = true;
-        
-        }
-
    
-
-        private void btnOtpremnica_Click(object sender, EventArgs e)
-        {
-            new Skladiste_ETI.OtpremanjeRobe.frmOtpremnica().Show();
-           
-        }
-
-        private void btnIzdatnica_Click(object sender, EventArgs e)
-        {
-            new frmIzdatnice().Show();
-            
-        }
-
-        private void btnPrimka_Click(object sender, EventArgs e)
-        {
-            new frmPrimke().Show();
-            
-        }
-
-        private void btnPredatnica_Click(object sender, EventArgs e)
-        {
-            new frmPredatnice().Show();
-            
-        }
-
-        
-
-        private void btnIzdatnice_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnIzdatnica, "Izraditi izdatnice");
-        }
-
-     
-
-        private void btnPredatnica_MouseEnter(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.btnPredatnica, "Izraditi predatnice");
-        }
 
         private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -177,18 +119,18 @@ namespace Skladiste_ETI
         private void btnZaposlenici_Click(object sender, EventArgs e)
         {
             Administracija.frmZaposlenici zaposlenici = new Administracija.frmZaposlenici();
-            zaposlenici.Show();
+            zaposlenici.ShowDialog();
         }
 
         private void btnPartneri_Click(object sender, EventArgs e)
         {
             Administracija.frmPartneri partneri = new Administracija.frmPartneri();
-            partneri.Show();
+            partneri.ShowDialog();
         }
 
         private void btnArtikli_Click(object sender, EventArgs e)
         {
-            new frmArtikli().Show();
+            new frmArtikli().ShowDialog();
         }
 
         private void btnPregledDokumenata_MouseHover(object sender, EventArgs e)
@@ -200,7 +142,7 @@ namespace Skladiste_ETI
 
         private void btnPregledDokumenata_Click(object sender, EventArgs e)
         {
-            new Dokumenti.frmPregledDokumenata(ulogaParametar).Show();
+            new Dokumenti.frmPregledDokumenata(ulogaParametar).ShowDialog();
         }
 
  

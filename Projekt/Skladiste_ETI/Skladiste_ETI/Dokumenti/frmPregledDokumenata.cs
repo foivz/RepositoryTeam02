@@ -53,6 +53,14 @@ namespace Skladiste_ETI.Dokumenti
                
                 
             }
+           
+                if (cmbTip.SelectionLength == 12)
+                {
+                  
+                    cmbTip.ForeColor = Color.Red;
+                }
+
+                
         
         }//konstruktor
 
@@ -350,6 +358,65 @@ namespace Skladiste_ETI.Dokumenti
             MessageBox.Show("Otpremnica uspješno odobrena!");
         }
 
+        private void btnIzradaIzdatnice_Click(object sender, EventArgs e)
+        {
+            int selectedRow3 = dgvDokumenti.CurrentCell.RowIndex;
+
+            string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
+            string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Zahtjevnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+            string partneri = dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
+            string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() + " " + dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
+            string id_skladistara = dgvDokumenti.Rows[selectedRow3].Cells[10].Value.ToString();
+            string id_partnera = dgvDokumenti.Rows[selectedRow3].Cells[11].Value.ToString();
+            string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
+            string id_dok = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+
+
+
+
+            if (tip_dok == "Zahtjevnica")
+            {
+
+                frmIzdatniceIzDokumenata forma = new frmIzdatniceIzDokumenata(trans, osnova, skladistar, partneri, id_skladistara, id_partnera, id_dok);
+                forma.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Izdatnicu možete kreirati samo na temelju zahtjevnice!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+            }
+        }
+
+
+        private void btnPredatnica_Click(object sender, EventArgs e)
+        {
+            int selectedRow3 = dgvDokumenti.CurrentCell.RowIndex;
+
+            string trans = dgvDokumenti.Rows[selectedRow3].Cells[8].Value.ToString();
+            string osnova = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString() + " | " + " Unutarnja otpremnica br. " + dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+            string partneri = dgvDokumenti.Rows[selectedRow3].Cells[2].Value.ToString();
+            string skladistar = dgvDokumenti.Rows[selectedRow3].Cells[4].Value.ToString() + " " + dgvDokumenti.Rows[selectedRow3].Cells[5].Value.ToString();
+            string id_skladistara = dgvDokumenti.Rows[selectedRow3].Cells[10].Value.ToString();
+            string id_partnera = dgvDokumenti.Rows[selectedRow3].Cells[11].Value.ToString();
+            string tip_dok = dgvDokumenti.Rows[selectedRow3].Cells[1].Value.ToString();
+            string id_dok = dgvDokumenti.Rows[selectedRow3].Cells[0].Value.ToString();
+
+
+
+
+            if (tip_dok == "UnutarnjaOtpremnica")
+            {
+
+                frmPredatniceIzDokumenata forma = new frmPredatniceIzDokumenata(trans, osnova, skladistar, partneri, id_skladistara, id_partnera, id_dok);
+                forma.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Predatnicu možete kreirati samo na temelju dokumenta o sirovinama!" + Environment.NewLine + "Provjerite tip odabranog dokumenta!");
+            }
+        }
+
         private void btnIzradaOtpremnice_Click(object sender, EventArgs e)
         {
             int selectedRow3 = dgvDokumenti.CurrentCell.RowIndex;
@@ -370,7 +437,7 @@ namespace Skladiste_ETI.Dokumenti
             {
 
                 frmOtpremniceIzDokumenta forma = new frmOtpremniceIzDokumenta(trans, osnova,skladistar,partneri,id_skladistara,id_partnera,id_dok);
-                forma.Show();
+                forma.ShowDialog();
                
             }
             else 
@@ -401,7 +468,7 @@ namespace Skladiste_ETI.Dokumenti
 
               
                 frmPrimkeIzDokumenata forma2 = new frmPrimkeIzDokumenata(trans, osnova, skladistar, partneri, id_skladistara, id_partnera, id_dok);
-                forma2.Show();
+                forma2.ShowDialog();
             }
             else
             {
@@ -519,6 +586,10 @@ namespace Skladiste_ETI.Dokumenti
 
 
         }
+
+       
+
+        
 
        
         //click

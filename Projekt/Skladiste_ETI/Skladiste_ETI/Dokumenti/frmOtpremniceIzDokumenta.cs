@@ -111,7 +111,7 @@ namespace Skladiste_ETI.Dokumenti
                         db.SaveChanges();
 
                        
-                        MessageBox.Show("Otpremnica je uspješno unesena!");
+                        
 
 
                 }//using
@@ -172,7 +172,7 @@ namespace Skladiste_ETI.Dokumenti
                             txtKolicina.Text = "";
                             txtMasa.Text = "";
 
-                            MessageBox.Show("Stavka je unesena!");
+                            MessageBox.Show("Otpremnica je unesena!");
 
 
                         }//if

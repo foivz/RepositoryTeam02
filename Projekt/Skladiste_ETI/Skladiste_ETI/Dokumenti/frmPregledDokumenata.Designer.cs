@@ -45,6 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.btnIzradiPrimke = new System.Windows.Forms.Button();
+            this.btnIzradaIzdatnice = new System.Windows.Forms.Button();
+            this.btnPredatnica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDokumenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +63,7 @@
             this.dgvDokumenti.Name = "dgvDokumenti";
             this.dgvDokumenti.ReadOnly = true;
             this.dgvDokumenti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDokumenti.Size = new System.Drawing.Size(1054, 302);
+            this.dgvDokumenti.Size = new System.Drawing.Size(1175, 302);
             this.dgvDokumenti.TabIndex = 0;
             this.dgvDokumenti.SelectionChanged += new System.EventHandler(this.dgvDokumenti_SelectionChanged);
             // 
@@ -70,7 +72,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(23, 45);
+            this.btnPrint.Location = new System.Drawing.Point(23, 25);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(114, 114);
             this.btnPrint.TabIndex = 1;
@@ -83,9 +85,9 @@
             this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
-            this.btnChange.Location = new System.Drawing.Point(23, 174);
+            this.btnChange.Location = new System.Drawing.Point(415, 4);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(114, 98);
+            this.btnChange.Size = new System.Drawing.Size(102, 85);
             this.btnChange.TabIndex = 2;
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
@@ -96,7 +98,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(23, 642);
+            this.btnExit.Location = new System.Drawing.Point(23, 607);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 96);
             this.btnExit.TabIndex = 3;
@@ -120,11 +122,11 @@
             this.dgvStavke.AllowUserToAddRows = false;
             this.dgvStavke.AllowUserToDeleteRows = false;
             this.dgvStavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStavke.Location = new System.Drawing.Point(163, 457);
+            this.dgvStavke.Location = new System.Drawing.Point(163, 436);
             this.dgvStavke.Name = "dgvStavke";
             this.dgvStavke.ReadOnly = true;
             this.dgvStavke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStavke.Size = new System.Drawing.Size(676, 281);
+            this.dgvStavke.Size = new System.Drawing.Size(676, 267);
             this.dgvStavke.TabIndex = 5;
             // 
             // label1
@@ -182,7 +184,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(845, 457);
+            this.pictureBox1.Location = new System.Drawing.Point(966, 457);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(372, 201);
             this.pictureBox1.TabIndex = 24;
@@ -193,9 +195,9 @@
             this.btnOdobri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnOdobri.Image = ((System.Drawing.Image)(resources.GetObject("btnOdobri.Image")));
-            this.btnOdobri.Location = new System.Drawing.Point(23, 305);
+            this.btnOdobri.Location = new System.Drawing.Point(523, 4);
             this.btnOdobri.Name = "btnOdobri";
-            this.btnOdobri.Size = new System.Drawing.Size(114, 92);
+            this.btnOdobri.Size = new System.Drawing.Size(101, 85);
             this.btnOdobri.TabIndex = 28;
             this.btnOdobri.UseVisualStyleBackColor = true;
             this.btnOdobri.Click += new System.EventHandler(this.btnOdobri_Click);
@@ -204,9 +206,9 @@
             // btnIzradaOtpremnice
             // 
             this.btnIzradaOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.Black;
             this.btnIzradaOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaOtpremnice.Image")));
-            this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 457);
+            this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 366);
             this.btnIzradaOtpremnice.Name = "btnIzradaOtpremnice";
             this.btnIzradaOtpremnice.Size = new System.Drawing.Size(114, 87);
             this.btnIzradaOtpremnice.TabIndex = 29;
@@ -238,20 +240,46 @@
             // 
             // btnIzradiPrimke
             // 
-            this.btnIzradiPrimke.Location = new System.Drawing.Point(37, 581);
+            this.btnIzradiPrimke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzradiPrimke.ForeColor = System.Drawing.Color.Black;
+            this.btnIzradiPrimke.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradiPrimke.Image")));
+            this.btnIzradiPrimke.Location = new System.Drawing.Point(23, 459);
             this.btnIzradiPrimke.Name = "btnIzradiPrimke";
-            this.btnIzradiPrimke.Size = new System.Drawing.Size(75, 23);
+            this.btnIzradiPrimke.Size = new System.Drawing.Size(114, 86);
             this.btnIzradiPrimke.TabIndex = 32;
-            this.btnIzradiPrimke.Text = "Primke";
             this.btnIzradiPrimke.UseVisualStyleBackColor = true;
             this.btnIzradiPrimke.Click += new System.EventHandler(this.btnIzradiPrimke_Click);
+            // 
+            // btnIzradaIzdatnice
+            // 
+            this.btnIzradaIzdatnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzradaIzdatnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaIzdatnice.Image")));
+            this.btnIzradaIzdatnice.Location = new System.Drawing.Point(23, 180);
+            this.btnIzradaIzdatnice.Name = "btnIzradaIzdatnice";
+            this.btnIzradaIzdatnice.Size = new System.Drawing.Size(114, 87);
+            this.btnIzradaIzdatnice.TabIndex = 33;
+            this.btnIzradaIzdatnice.UseVisualStyleBackColor = true;
+            this.btnIzradaIzdatnice.Click += new System.EventHandler(this.btnIzradaIzdatnice_Click);
+            // 
+            // btnPredatnica
+            // 
+            this.btnPredatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPredatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnPredatnica.Image")));
+            this.btnPredatnica.Location = new System.Drawing.Point(23, 273);
+            this.btnPredatnica.Name = "btnPredatnica";
+            this.btnPredatnica.Size = new System.Drawing.Size(114, 87);
+            this.btnPredatnica.TabIndex = 34;
+            this.btnPredatnica.UseVisualStyleBackColor = true;
+            this.btnPredatnica.Click += new System.EventHandler(this.btnPredatnica_Click);
             // 
             // frmPregledDokumenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1229, 741);
+            this.ClientSize = new System.Drawing.Size(1350, 741);
+            this.Controls.Add(this.btnPredatnica);
+            this.Controls.Add(this.btnIzradaIzdatnice);
             this.Controls.Add(this.btnIzradiPrimke);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.label2);
@@ -300,5 +328,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTip;
         private System.Windows.Forms.Button btnIzradiPrimke;
+        private System.Windows.Forms.Button btnIzradaIzdatnice;
+        private System.Windows.Forms.Button btnPredatnica;
     }
 }

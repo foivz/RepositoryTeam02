@@ -19,7 +19,6 @@ C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.csproj.GenerateResource.Cache
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmArtikli.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmIzdatnice.resources
-C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPredatnice.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmMain.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.frmPrimke.resources
 C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\bin\Debug\EntityFramework.dll
@@ -224,3 +223,6 @@ C:\Users\embalint\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladi
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPrimkeIzDokumenata.resources
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPredatniceIzDokumenata.resources
 C:\Users\embalint\Desktop\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzdatniceIzDokumenata.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmIzdatniceIzDokumenata.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPredatniceIzDokumenata.resources
+C:\Users\Techo\Documents\GitHub\RepositoryTeam02\Projekt\Skladiste_ETI\Skladiste_ETI\obj\Debug\Skladiste_ETI.Dokumenti.frmPrimkeIzDokumenata.resources

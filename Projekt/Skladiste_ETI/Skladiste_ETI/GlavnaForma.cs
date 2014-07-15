@@ -47,6 +47,7 @@ namespace Skladiste_ETI
                     btnPartneri.Visible = true;
                     label11.Visible = true;
                     label12.Visible = true;
+                    label5.Visible = false;
                     btnArtikli.Visible = false;
                     administracijaToolStripMenuItem.Visible = true;
                     upravljanjeArtiklimaToolStripMenuItem.Visible = false;

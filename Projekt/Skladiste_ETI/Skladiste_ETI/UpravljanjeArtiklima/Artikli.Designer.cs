@@ -75,7 +75,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(37, 39);
+            this.btnAdd.Location = new System.Drawing.Point(21, 39);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(112, 105);
             this.btnAdd.TabIndex = 0;
@@ -88,7 +88,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(38, 157);
+            this.btnDelete.Location = new System.Drawing.Point(22, 157);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(111, 103);
             this.btnDelete.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.btnchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnchange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnchange.Image = ((System.Drawing.Image)(resources.GetObject("btnchange.Image")));
-            this.btnchange.Location = new System.Drawing.Point(38, 274);
+            this.btnchange.Location = new System.Drawing.Point(22, 274);
             this.btnchange.Name = "btnchange";
             this.btnchange.Size = new System.Drawing.Size(111, 93);
             this.btnchange.TabIndex = 2;
@@ -114,7 +114,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(37, 373);
+            this.btnExit.Location = new System.Drawing.Point(22, 383);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(112, 100);
             this.btnExit.TabIndex = 3;
@@ -401,7 +401,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(188, 274);
+            this.btnPrint.Location = new System.Drawing.Point(770, 16);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(123, 113);
             this.btnPrint.TabIndex = 18;

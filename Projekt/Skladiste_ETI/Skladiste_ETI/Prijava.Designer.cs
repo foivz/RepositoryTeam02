@@ -53,11 +53,11 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPass.ForeColor = System.Drawing.Color.Red;
             this.lblPass.Location = new System.Drawing.Point(58, 258);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(101, 25);
+            this.lblPass.Size = new System.Drawing.Size(76, 20);
             this.lblPass.TabIndex = 1;
             this.lblPass.Text = "Lozinka:";
             // 
@@ -73,6 +73,8 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzlaz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIzlaz.Image = ((System.Drawing.Image)(resources.GetObject("btnIzlaz.Image")));
             this.btnIzlaz.Location = new System.Drawing.Point(259, 317);
             this.btnIzlaz.Name = "btnIzlaz";
@@ -92,8 +94,10 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
-            this.btnSubmit.Location = new System.Drawing.Point(187, 317);
+            this.btnSubmit.Location = new System.Drawing.Point(63, 317);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(66, 57);
             this.btnSubmit.TabIndex = 3;

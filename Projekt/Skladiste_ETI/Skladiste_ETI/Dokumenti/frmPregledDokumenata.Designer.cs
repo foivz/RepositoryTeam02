@@ -195,7 +195,7 @@
             this.btnOdobri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnOdobri.Image = ((System.Drawing.Image)(resources.GetObject("btnOdobri.Image")));
-            this.btnOdobri.Location = new System.Drawing.Point(523, 4);
+            this.btnOdobri.Location = new System.Drawing.Point(534, 4);
             this.btnOdobri.Name = "btnOdobri";
             this.btnOdobri.Size = new System.Drawing.Size(101, 85);
             this.btnOdobri.TabIndex = 28;
@@ -206,7 +206,7 @@
             // btnIzradaOtpremnice
             // 
             this.btnIzradaOtpremnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.Black;
+            this.btnIzradaOtpremnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIzradaOtpremnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaOtpremnice.Image")));
             this.btnIzradaOtpremnice.Location = new System.Drawing.Point(23, 458);
             this.btnIzradaOtpremnice.Name = "btnIzradaOtpremnice";
@@ -241,9 +241,9 @@
             // btnIzradiPrimke
             // 
             this.btnIzradiPrimke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzradiPrimke.ForeColor = System.Drawing.Color.Black;
+            this.btnIzradiPrimke.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIzradiPrimke.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradiPrimke.Image")));
-            this.btnIzradiPrimke.Location = new System.Drawing.Point(23, 366);
+            this.btnIzradiPrimke.Location = new System.Drawing.Point(23, 347);
             this.btnIzradiPrimke.Name = "btnIzradiPrimke";
             this.btnIzradiPrimke.Size = new System.Drawing.Size(114, 86);
             this.btnIzradiPrimke.TabIndex = 32;
@@ -254,8 +254,9 @@
             // btnIzradaIzdatnice
             // 
             this.btnIzradaIzdatnice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzradaIzdatnice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIzradaIzdatnice.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaIzdatnice.Image")));
-            this.btnIzradaIzdatnice.Location = new System.Drawing.Point(23, 180);
+            this.btnIzradaIzdatnice.Location = new System.Drawing.Point(23, 159);
             this.btnIzradaIzdatnice.Name = "btnIzradaIzdatnice";
             this.btnIzradaIzdatnice.Size = new System.Drawing.Size(114, 87);
             this.btnIzradaIzdatnice.TabIndex = 33;
@@ -266,8 +267,9 @@
             // btnPredatnica
             // 
             this.btnPredatnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPredatnica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPredatnica.Image = ((System.Drawing.Image)(resources.GetObject("btnPredatnica.Image")));
-            this.btnPredatnica.Location = new System.Drawing.Point(23, 273);
+            this.btnPredatnica.Location = new System.Drawing.Point(23, 252);
             this.btnPredatnica.Name = "btnPredatnica";
             this.btnPredatnica.Size = new System.Drawing.Size(114, 87);
             this.btnPredatnica.TabIndex = 34;

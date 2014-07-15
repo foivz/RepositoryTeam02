@@ -67,9 +67,9 @@
             this.btnArtikli.FlatAppearance.BorderSize = 0;
             this.btnArtikli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArtikli.Image = ((System.Drawing.Image)(resources.GetObject("btnArtikli.Image")));
-            this.btnArtikli.Location = new System.Drawing.Point(86, 232);
+            this.btnArtikli.Location = new System.Drawing.Point(97, 240);
             this.btnArtikli.Name = "btnArtikli";
-            this.btnArtikli.Size = new System.Drawing.Size(180, 156);
+            this.btnArtikli.Size = new System.Drawing.Size(141, 139);
             this.btnArtikli.TabIndex = 1;
             this.btnArtikli.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnArtikli.UseVisualStyleBackColor = false;
@@ -269,9 +269,9 @@
             this.btnZaposlenici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZaposlenici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnZaposlenici.Image = ((System.Drawing.Image)(resources.GetObject("btnZaposlenici.Image")));
-            this.btnZaposlenici.Location = new System.Drawing.Point(311, 528);
+            this.btnZaposlenici.Location = new System.Drawing.Point(310, 537);
             this.btnZaposlenici.Name = "btnZaposlenici";
-            this.btnZaposlenici.Size = new System.Drawing.Size(165, 164);
+            this.btnZaposlenici.Size = new System.Drawing.Size(165, 144);
             this.btnZaposlenici.TabIndex = 25;
             this.btnZaposlenici.UseVisualStyleBackColor = true;
             this.btnZaposlenici.Click += new System.EventHandler(this.btnZaposlenici_Click);
@@ -315,9 +315,9 @@
             this.btnPregledDokumenata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregledDokumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPregledDokumenata.Image = ((System.Drawing.Image)(resources.GetObject("btnPregledDokumenata.Image")));
-            this.btnPregledDokumenata.Location = new System.Drawing.Point(323, 240);
+            this.btnPregledDokumenata.Location = new System.Drawing.Point(310, 264);
             this.btnPregledDokumenata.Name = "btnPregledDokumenata";
-            this.btnPregledDokumenata.Size = new System.Drawing.Size(123, 110);
+            this.btnPregledDokumenata.Size = new System.Drawing.Size(153, 115);
             this.btnPregledDokumenata.TabIndex = 29;
             this.btnPregledDokumenata.UseVisualStyleBackColor = true;
             this.btnPregledDokumenata.Click += new System.EventHandler(this.btnPregledDokumenata_Click);
